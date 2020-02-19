@@ -1,9 +1,16 @@
 import { NextPage } from 'next'
 import Link from 'next/link'
 
-const Home: NextPage<{ userAgent: string }> = ({ userAgent }) => (
+interface Props {
+  userAgent: string
+}
+
+const Home: NextPage<Props> = ({ userAgent }) => (
   <>
-    <h1>Hello world! - user agent: {userAgent}</h1>
+    <h1>
+      Hello world! - user agent:
+      {userAgent}
+    </h1>
     <Link href="/music">to music page</Link>
   </>
 )
