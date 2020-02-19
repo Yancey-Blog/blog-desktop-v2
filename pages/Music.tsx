@@ -1,1 +1,1 @@
-export default () => <p>Music Page</p>
+export default () => <p>I am Music Page</p>
