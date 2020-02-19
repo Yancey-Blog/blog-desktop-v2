@@ -5,7 +5,7 @@ import { onError } from 'apollo-link-error'
 import { setContext } from 'apollo-link-context'
 
 const httpLink = new BatchHttpLink({
-  uri: process.env.REACT_APP_GRAPHQL_URL,
+  uri: process.env.BASE_URL,
 })
 
 const authLink = setContext((_, { headers }) => {

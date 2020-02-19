@@ -8,6 +8,6 @@
     "react/prop-types": "off",
     "@typescript-eslint/semi": "off",
     "jsx-a11y/anchor-is-valid": "off",
-    "arrow-parens": "off",
+    "arrow-parens": "off"
   }
 }

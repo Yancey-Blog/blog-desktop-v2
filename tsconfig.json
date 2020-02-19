@@ -13,12 +13,8 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "preserve",
-    "baseUrl": ".",
-    "paths": {
-      "pages/*": ["./pages/*"]
-    }
+    "jsx": "preserve"
   },
-  "include": ["pages", "config"],
+  "include": ["pages/**/*", "lib/**/*"],
   "exclude": ["node_modules"]
 }

@@ -1,25 +1,9 @@
-import { NextPage } from 'next'
-import Link from 'next/link'
+import { ApolloProvider } from '@apollo/react-hooks'
+import client from '../lib/config/apolloClient'
+import Layout from '../lib/components/Layout'
 
-interface Props {
-  userAgent: string
-}
-
-const Home: NextPage<Props> = ({ userAgent }) => (
-  <>
-    <h1>
-      Hello world! - user agent:
-      {userAgent}
-    </h1>
-    <Link href="/music">
-      <a>to music page</a>
-    </Link>
-  </>
+export default () => (
+  // <ApolloProvider client={client}>
+  <Layout />
+  // </ApolloProvider>
 )
-
-Home.getInitialProps = async ({ req }) => {
-  const userAgent = req ? req.headers['user-agent'] || '' : navigator.userAgent
-  return { userAgent }
-}
-
-export default Home
