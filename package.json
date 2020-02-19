@@ -6,7 +6,7 @@
   "author": "Yancey Leo <yanceyofficial@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "next dev",
+    "dev": "next",
     "build": "next build",
     "start": "next start"
   },
