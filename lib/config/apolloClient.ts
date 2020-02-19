@@ -1,17 +1,13 @@
 import { ApolloClient } from 'apollo-client'
+import withApollo from 'next-with-apollo'
 import { InMemoryCache } from 'apollo-cache-inmemory'
 import { BatchHttpLink } from 'apollo-link-batch-http'
 import { onError } from 'apollo-link-error'
 import { setContext } from 'apollo-link-context'
 import fetch from 'isomorphic-unfetch'
 
-// @ts-ignore
-if (!process.browser) {
-  // @ts-ignore
-  global.fetch = fetch
-}
-
 const httpLink = new BatchHttpLink({
+  fetch,
   uri: process.env.BASE_URL,
 })
 
@@ -37,10 +33,11 @@ const errorLink = onError(({ graphQLErrors, networkError }) => {
   }
 })
 
-const client = new ApolloClient({
-  cache: new InMemoryCache(),
-  resolvers: {},
-  link: errorLink.concat(authLink).concat(httpLink),
-})
-
-export default client
+export default withApollo(
+  ({ initialState }) =>
+    new ApolloClient({
+      resolvers: {},
+      link: errorLink.concat(authLink).concat(httpLink),
+      cache: new InMemoryCache().restore(initialState || {}),
+    }),
+)

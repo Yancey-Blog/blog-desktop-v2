@@ -1,7 +1,6 @@
-import React, { FC } from 'react'
+import React from 'react'
 import gql from 'graphql-tag'
 import { useQuery } from '@apollo/react-hooks'
-import Layout from '../lib/components/Layout'
 
 interface IAnnouncement {
   _id: string
@@ -25,18 +24,18 @@ const ANNOUNCEMENTS = gql`
   }
 `
 
-const Announcement: FC = () => {
+const Announcement = () => {
   const { data } = useQuery<Query>(ANNOUNCEMENTS, {
     notifyOnNetworkStatusChange: true,
   })
 
   return (
-    <Layout>
+    <div>
       {data &&
         data.getAnnouncements
           .reverse()
           .map(v => <p key={v._id}>{v.content}</p>)}
-    </Layout>
+    </div>
   )
 }
 

@@ -4,12 +4,13 @@
     "project": "./tsconfig.json"
   },
   "rules": {
-    "react/react-in-jsx-scope": "off",
-    "react/prop-types": "off",
-    "@typescript-eslint/semi": "off",
-    "jsx-a11y/anchor-is-valid": "off",
     "arrow-parens": "off",
     "no-underscore-dangle": "off",
-    "operator-linebreak": "off"
+    "operator-linebreak": "off",
+    "implicit-arrow-linebreak": "off",
+    "@typescript-eslint/semi": "off",
+    "jsx-a11y/anchor-is-valid": "off",
+    "react/prop-types": "off",
+    "react/jsx-props-no-spreading": "off"
   }
 }

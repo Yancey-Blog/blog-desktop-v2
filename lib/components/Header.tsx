@@ -1,3 +1,4 @@
+import React from 'react'
 import Link from 'next/link'
 
 export default () => (
@@ -11,8 +12,8 @@ export default () => (
     <Link href="/">
       <a>home </a>
     </Link>
-    <Link href="/announcement">
-      <a>announcement</a>
+    <Link href="/music">
+      <a>music</a>
     </Link>
   </header>
 )
