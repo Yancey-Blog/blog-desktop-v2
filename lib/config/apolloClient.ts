@@ -3,6 +3,13 @@ import { InMemoryCache } from 'apollo-cache-inmemory'
 import { BatchHttpLink } from 'apollo-link-batch-http'
 import { onError } from 'apollo-link-error'
 import { setContext } from 'apollo-link-context'
+import fetch from 'isomorphic-unfetch'
+
+// @ts-ignore
+if (!process.browser) {
+  // @ts-ignore
+  global.fetch = fetch
+}
 
 const httpLink = new BatchHttpLink({
   uri: process.env.BASE_URL,
