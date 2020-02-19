@@ -2,11 +2,7 @@
   "compilerOptions": {
     "strict": true,
     "target": "es5",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
@@ -20,15 +16,9 @@
     "jsx": "preserve",
     "baseUrl": ".",
     "paths": {
-      "pages/*": [
-        "./pages/*"
-      ]
+      "pages/*": ["./pages/*"]
     }
   },
-  "include": [
-    "pages"
-  ],
-  "exclude": [
-    "node_modules"
-  ]
+  "include": ["pages", "config"],
+  "exclude": ["node_modules"]
 }
