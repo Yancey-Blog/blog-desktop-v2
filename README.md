@@ -2,7 +2,7 @@
 
 # Blog PC v2
 
-The **PC** for Yancey blog with React, Apollo Client, Material-UI and GraphQL.
+The **PC frontend** for Yancey blog with React, Next.js, Apollo Client and GraphQL.
 
 _This library is part of the [BPG (Blog Project Group)](https://github.com/Yancey-Blog)_ ecosystem 📖
 
