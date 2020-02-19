@@ -61,7 +61,6 @@
   },
   "lint-staged": {
     "*.{ts,js,tsx,jsx}": [
-      "--escape",
       "yarn format",
       "yarn lint",
       "git add"
