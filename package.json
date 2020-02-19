@@ -9,7 +9,12 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "analyze": "next analyze"
+    "commit": "npx git-cz",
+    "push": "git push --follow-tags origin master",
+    "release:major": "node_modules/.bin/standard-version --release-as major && yarn push",
+    "release:minor": "node_modules/.bin/standard-version --release-as minor && yarn push",
+    "release:patch": "node_modules/.bin/standard-version --release-as patch && yarn push",
+    "lint": "eslint src --ext .ts,.tsx"
   },
   "dependencies": {
     "next": "9.2.2",
