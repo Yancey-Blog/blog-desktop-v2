@@ -14,8 +14,7 @@
     "release:major": "node_modules/.bin/standard-version --release-as major && yarn push",
     "release:minor": "node_modules/.bin/standard-version --release-as minor && yarn push",
     "release:patch": "node_modules/.bin/standard-version --release-as patch && yarn push",
-    "lint": "eslint pages components lib shared --ext .ts,.tsx",
-    "fuck": "echo 'hello'"
+    "lint": "eslint pages components lib shared --ext .ts,.tsx"
   },
   "dependencies": {
     "@apollo/react-hooks": "^3.1.3",
