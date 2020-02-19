@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.2.0](https://github.com/Yancey-Blog/blog-pc-v2/compare/v0.1.0...v0.2.0) (2020-02-19)
+
+
+### Features
+
+* add lib fold ([7bb0153](https://github.com/Yancey-Blog/blog-pc-v2/commit/7bb0153fb9fdefad967e0c5eaaa10cb4c1fceb60))
+* delete useless codes ([172332e](https://github.com/Yancey-Blog/blog-pc-v2/commit/172332e41245fd52cf12b0e4c7576b91a4ce8b59))
+* delete useless files ([946916a](https://github.com/Yancey-Blog/blog-pc-v2/commit/946916a9731c1365efb536458bd6d6bc9d673d3c))
+* support graphql ([549f304](https://github.com/Yancey-Blog/blog-pc-v2/commit/549f3047705853848635fde9ceab11d96ff502cd))
+* support graphql ([cb164b2](https://github.com/Yancey-Blog/blog-pc-v2/commit/cb164b2d18ee323228a92322090e7d1154b772e4))
+* support graphql for whole pages ([ca01df9](https://github.com/Yancey-Blog/blog-pc-v2/commit/ca01df95951d20f4cd025d5e3ca91807096954aa))
+* update .eslintrc ([f6fc5d7](https://github.com/Yancey-Blog/blog-pc-v2/commit/f6fc5d70dc4bbfbf37d999417dfe5928f978810e))
+* use prettier lint ([254ae59](https://github.com/Yancey-Blog/blog-pc-v2/commit/254ae59c2a59ff624512c5f031ac1756345a53c0))
+
 ## 0.1.0 (2020-02-19)
 
 
