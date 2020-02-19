@@ -11,7 +11,9 @@ const Home: NextPage<Props> = ({ userAgent }) => (
       Hello world! - user agent:
       {userAgent}
     </h1>
-    <Link href="/music">to music page</Link>
+    <Link href="/music">
+      <a>to music page</a>
+    </Link>
   </>
 )
 
