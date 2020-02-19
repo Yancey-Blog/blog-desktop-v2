@@ -9,7 +9,6 @@ module.exports = (phase, { defaultConfig }) => {
         : 'http://localhost:3002/graphql',
     },
     assetPrefix: isEnvProduction ? 'https://cdn.yanceyleo.com' : '',
-    // target: 'serverless',
     compress: false,
   }
 }
