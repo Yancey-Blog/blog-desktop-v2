@@ -2,7 +2,7 @@ import React from 'react'
 import App from 'next/app'
 import { ApolloProvider } from '@apollo/react-hooks'
 import { ApolloClient } from 'apollo-client'
-import withApolloClient from '../lib/apolloClient'
+import withApollo from '../lib/withApollo'
 
 interface Props {
   apollo: ApolloClient<{}>
@@ -20,4 +20,4 @@ class MyApp extends App<Props> {
   }
 }
 
-export default withApolloClient(MyApp)
+export default withApollo(MyApp)
