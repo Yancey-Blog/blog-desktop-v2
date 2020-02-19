@@ -27,5 +27,17 @@
     "prettier": "^1.19.1",
     "standard-version": "^7.1.0",
     "typescript": "^3.7.5"
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-conventional-changelog"
+    }
+  },
+  "lint-staged": {
+    "*.{ts,js,tsx,jsx}": [
+      "prettier --write",
+      "yarn lint",
+      "git add"
+    ]
   }
 }
