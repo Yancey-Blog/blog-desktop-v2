@@ -57,7 +57,7 @@
     }
   },
   "lint-staged": {
-    "*.{ts,js,tsx,jsx}": [
+    "**/*.ts?(x).{ts,js,tsx,jsx}": [
       "prettier --write",
       "yarn lint",
       "git add"
