@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.1](https://github.com/Yancey-Blog/blog-pc-v2/compare/v0.2.0...v0.2.1) (2020-02-19)
+
+
+### Features
+
+* add constants ([c03ad06](https://github.com/Yancey-Blog/blog-pc-v2/commit/c03ad06e6cc6bd1ab124171d2b1233b9300c47ce))
+
 ## [0.2.0](https://github.com/Yancey-Blog/blog-pc-v2/compare/v0.1.0...v0.2.0) (2020-02-19)
 
 
