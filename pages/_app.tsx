@@ -2,13 +2,14 @@ import React from 'react'
 import App from 'next/app'
 import { ApolloProvider } from '@apollo/react-hooks'
 import { ApolloClient } from 'apollo-client'
+import { getDataFromTree } from '@apollo/react-ssr'
 import withApollo from '../lib/withApollo'
 
-interface Props {
+interface IProps {
   apollo: ApolloClient<{}>
 }
 
-class MyApp extends App<Props> {
+class MyApp extends App<IProps> {
   render() {
     const { Component, pageProps, apollo } = this.props
 
@@ -20,4 +21,4 @@ class MyApp extends App<Props> {
   }
 }
 
-export default withApollo(MyApp)
+export default withApollo(MyApp, { getDataFromTree })
