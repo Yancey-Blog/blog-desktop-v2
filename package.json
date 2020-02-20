@@ -32,6 +32,7 @@
     "normalize.css": "^8.0.1",
     "react": "16.12.0",
     "react-dom": "16.12.0",
+    "styled-components": "^5.0.1",
     "yancey-js-util": "^1.1.1"
   },
   "devDependencies": {
@@ -40,6 +41,7 @@
     "@types/node": "^13.7.2",
     "@types/react": "^16.9.20",
     "@typescript-eslint/eslint-plugin": "^2.20.0",
+    "babel-plugin-styled-components": "^1.10.7",
     "cz-conventional-changelog": "^3.1.0",
     "eslint": "^6.8.0",
     "eslint-config-airbnb-typescript": "^7.0.0",
