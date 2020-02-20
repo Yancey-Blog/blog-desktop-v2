@@ -5,16 +5,11 @@ import { getDataFromTree } from '@apollo/react-ssr'
 import { ApolloClient } from 'apollo-client'
 import { ThemeProvider } from 'styled-components'
 import withApollo from '../lib/withApollo'
+import theme from '../lib/theme'
 import 'normalize.css'
 
 interface IProps {
   apollo: ApolloClient<{}>
-}
-
-const theme = {
-  colors: {
-    primary: '#cccccc',
-  },
 }
 
 class MyApp extends App<IProps> {
