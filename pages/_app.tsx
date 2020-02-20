@@ -4,6 +4,7 @@ import { ApolloProvider } from '@apollo/react-hooks'
 import { ApolloClient } from 'apollo-client'
 import { getDataFromTree } from '@apollo/react-ssr'
 import withApollo from '../lib/withApollo'
+import 'normalize.css'
 
 interface IProps {
   apollo: ApolloClient<{}>

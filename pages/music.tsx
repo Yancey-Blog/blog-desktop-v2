@@ -1,6 +1,7 @@
 import React from 'react'
 import { useQuery } from '@apollo/react-hooks'
 import gql from 'graphql-tag'
+import Layout from '../components/Layout'
 import Announcement from '../components/Announcement'
 
 const Music = () => {
@@ -20,9 +21,9 @@ const Music = () => {
   })
 
   return (
-    <div>
+    <Layout>
       <Announcement data={data?.getAnnouncements || []} />
-    </div>
+    </Layout>
   )
 }
 
