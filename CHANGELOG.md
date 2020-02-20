@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.2](https://github.com/Yancey-Blog/blog-pc-v2/compare/v0.2.1...v0.2.2) (2020-02-20)
+
+
+### Features
+
+* update graphql ssr ([8af5d90](https://github.com/Yancey-Blog/blog-pc-v2/commit/8af5d90d53ff72bde1c81c4530e12a0ff74f9d4f))
+* update withApollo ([81936ef](https://github.com/Yancey-Blog/blog-pc-v2/commit/81936ef1f2850c45d496dd7776eb216233784daf))
+
 ### [0.2.1](https://github.com/Yancey-Blog/blog-pc-v2/compare/v0.2.0...v0.2.1) (2020-02-19)
 
 
