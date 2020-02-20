@@ -1,4 +1,11 @@
 import React from 'react'
-import Layout from '../components/Layout'
 
-export default () => <Layout>我是主页哦</Layout>
+const Index = () => {
+  return (
+    <div>
+      <h1>静态主页</h1>
+    </div>
+  )
+}
+
+export default Index

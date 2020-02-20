@@ -1,40 +1,22 @@
 import React from 'react'
-import gql from 'graphql-tag'
-import { useQuery } from '@apollo/react-hooks'
 
-interface IAnnouncement {
+export interface IAnnouncement {
   _id: string
   content: string
   createdAt: string
   updatedAt: string
 }
 
-interface Query {
-  getAnnouncements: IAnnouncement[]
+interface IProps {
+  data: IAnnouncement[]
 }
 
-const ANNOUNCEMENTS = gql`
-  query GetAnnouncements {
-    getAnnouncements {
-      _id
-      content
-      createdAt
-      updatedAt
-    }
-  }
-`
-
-const Announcement = () => {
-  const { data } = useQuery<Query>(ANNOUNCEMENTS, {
-    notifyOnNetworkStatusChange: true,
-  })
-
+const Announcement = ({ data }: IProps) => {
   return (
     <div>
-      {data &&
-        data.getAnnouncements
-          .reverse()
-          .map(v => <p key={v._id}>{v.content}</p>)}
+      {data.map(announcement => {
+        return <div key={announcement._id}>{announcement.content}</div>
+      })}
     </div>
   )
 }
