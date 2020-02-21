@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.3](https://github.com/Yancey-Blog/blog-fe-v2/compare/v0.2.2...v0.2.3) (2020-02-21)
+
+
+### Features
+
+* make theme file to lib ([e19bd54](https://github.com/Yancey-Blog/blog-fe-v2/commit/e19bd547bcc23636e75ef8c3720804e5c26e6581))
+* support styled-component ([bf6086f](https://github.com/Yancey-Blog/blog-fe-v2/commit/bf6086f61dad954cf9cb60e8d0c745ac613b7082))
+* support styled-components ([efc0e82](https://github.com/Yancey-Blog/blog-fe-v2/commit/efc0e829bb2d797d7bb3943b84f463a8b5ff41ab))
+* update project name ([5f885d5](https://github.com/Yancey-Blog/blog-fe-v2/commit/5f885d58bae3d5064aca84d4c37965a73d720af3))
+* use graphql-tag ([6eb578e](https://github.com/Yancey-Blog/blog-fe-v2/commit/6eb578eb37ff4fa3754f908a03922808bca244f0))
+* use normalize.css ([55620ac](https://github.com/Yancey-Blog/blog-fe-v2/commit/55620acb45478f7f4995e139369d2d954a3d60fd))
+
 ### [0.2.2](https://github.com/Yancey-Blog/blog-fe-v2/compare/v0.2.1...v0.2.2) (2020-02-20)
 
 
