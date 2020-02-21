@@ -56,7 +56,7 @@
     "lint-staged": "^10.0.7",
     "prettier": "^1.19.1",
     "standard-version": "^7.1.0",
-    "typescript": "^3.7.5"
+    "typescript": "^3.8.2"
   },
   "config": {
     "commitizen": {
