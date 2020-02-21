@@ -10,7 +10,7 @@
           "preventFullImport": true
         },
         "@material-ui/icons": {
-          "transform": "@material-ui/icons/esm/${member}",
+          "transform": "@material-ui/icons/${member}",
           "preventFullImport": true
         }
       }
