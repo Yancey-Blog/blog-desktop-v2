@@ -30,3 +30,11 @@ export const onePixel = (color = '#000000', zIndex = -1) => css`
     z-index: ${zIndex};
   }
 `
+
+export const transitionMixin = (
+  property: string,
+  delay = 300,
+  timingFunction = 'ease',
+) => css`
+  transition: ${property} ${delay}ms ${timingFunction};
+`

@@ -8,7 +8,7 @@ import {
   Apps,
   Face,
 } from '@material-ui/icons'
-import { Header, NavLink, NavLinkTxt } from './styled'
+import { Header, NavLink } from './styled'
 
 export default () => (
   <Header>
@@ -16,7 +16,7 @@ export default () => (
       <Link href="/">
         <a>
           <Home />
-          <NavLinkTxt>Home</NavLinkTxt>
+          Home
         </a>
       </Link>
     </NavLink>
@@ -24,7 +24,7 @@ export default () => (
       <Link href="/blog">
         <a>
           <LibraryBooks />
-          <NavLinkTxt>Blog</NavLinkTxt>
+          Blog
         </a>
       </Link>
     </NavLink>
@@ -32,7 +32,7 @@ export default () => (
       <Link href="/archive">
         <a>
           <Archive />
-          <NavLinkTxt>Archive</NavLinkTxt>
+          Archive
         </a>
       </Link>
     </NavLink>
@@ -40,7 +40,7 @@ export default () => (
       <Link href="/music">
         <a>
           <Headset />
-          <NavLinkTxt>Music</NavLinkTxt>
+          Music
         </a>
       </Link>
     </NavLink>
@@ -48,7 +48,7 @@ export default () => (
       <Link href="/apps">
         <a>
           <Apps />
-          <NavLinkTxt>Apps</NavLinkTxt>
+          Apps
         </a>
       </Link>
     </NavLink>
@@ -56,7 +56,7 @@ export default () => (
       <Link href="/cv">
         <a>
           <Face />
-          <NavLinkTxt>CV</NavLinkTxt>
+          CV
         </a>
       </Link>
     </NavLink>

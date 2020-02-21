@@ -7,18 +7,18 @@ import { ThemeProvider } from 'styled-components'
 import 'normalize.css'
 import GlobalStyle from '../lib/globalStyles'
 import withApollo from '../lib/withApollo'
-import theme from '../lib/themes/lightTheme'
+import { lightTheme } from '../lib/theme'
 
 interface IProps {
   apollo: ApolloClient<{}>
 }
 
 class MyApp extends App<IProps> {
-  render() {
+  public render() {
     const { Component, pageProps, apollo } = this.props
 
     return (
-      <ThemeProvider theme={theme}>
+      <ThemeProvider theme={lightTheme}>
         <GlobalStyle />
         <ApolloProvider client={apollo}>
           <Component {...pageProps} />
