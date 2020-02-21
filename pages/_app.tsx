@@ -4,9 +4,9 @@ import { ApolloProvider } from '@apollo/react-hooks'
 import { getDataFromTree } from '@apollo/react-ssr'
 import { ApolloClient } from 'apollo-client'
 import { ThemeProvider } from 'styled-components'
+import CssBaseline from '@material-ui/core/CssBaseline'
 import withApollo from '../lib/withApollo'
 import theme from '../lib/theme'
-import 'normalize.css'
 
 interface IProps {
   apollo: ApolloClient<{}>
@@ -18,6 +18,7 @@ class MyApp extends App<IProps> {
 
     return (
       <ThemeProvider theme={theme}>
+        <CssBaseline />
         <ApolloProvider client={apollo}>
           <Component {...pageProps} />
         </ApolloProvider>

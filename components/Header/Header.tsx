@@ -1,19 +1,14 @@
 import React from 'react'
 import Link from 'next/link'
+import Header from './styled'
 
 export default () => (
-  <header
-    style={{
-      width: '100%',
-      height: '60px',
-      background: 'green',
-    }}
-  >
+  <Header>
     <Link href="/">
       <a>home </a>
     </Link>
     <Link href="/music">
       <a>music</a>
     </Link>
-  </header>
+  </Header>
 )
