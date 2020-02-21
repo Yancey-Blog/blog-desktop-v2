@@ -7,7 +7,7 @@ import { ThemeProvider } from 'styled-components'
 import 'normalize.css'
 import GlobalStyle from '../lib/globalStyles'
 import withApollo from '../lib/withApollo'
-import theme from '../lib/theme'
+import theme from '../lib/themes/lightTheme'
 
 interface IProps {
   apollo: ApolloClient<{}>

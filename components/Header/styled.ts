@@ -47,7 +47,7 @@ export const NavLink = styled.div`
   a {
     ${flexMixin()}
     text-decoration: none;
-    color: #666666;
+    color: ${props => props.theme.colors.primary};
     transition: color 300ms ease;
   }
 
