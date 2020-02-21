@@ -1,4 +1,5 @@
 import React from 'react'
+import styled from 'styled-components'
 
 export interface IAnnouncement {
   _id: string
@@ -11,13 +12,18 @@ interface IProps {
   data: IAnnouncement[]
 }
 
+const Item = styled.div`
+  font-size: 50px;
+  color: ${({ theme }) => theme.colors.primary};
+`
+
 const Announcement = ({ data }: IProps) => {
   return (
-    <div>
+    <Item>
       {data.map(announcement => {
         return <div key={announcement._id}>{announcement.content}</div>
       })}
-    </div>
+    </Item>
   )
 }
 
