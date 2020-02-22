@@ -1,7 +1,7 @@
 import React, { FC } from 'react'
 import Head from './Head'
 import Header from './Header/Header'
-import Footer from './Footer'
+import Footer from './Footer/Footer'
 
 const Layout: FC = props => {
   const { children } = props
@@ -12,7 +12,7 @@ const Layout: FC = props => {
     >
       <Head />
       <Header />
-      <main style={{ flex: 1 }}>{children}</main>
+      <main style={{ flex: 1, marginTop: '65px' }}>{children}</main>
       <Footer />
     </section>
   )

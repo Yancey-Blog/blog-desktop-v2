@@ -16,7 +16,11 @@ const GlobalStyle = createGlobalStyle`
 
   a {
     text-decoration: none;
-  }   
+  }  
+
+  p, figure {
+    margin: 0
+  } 
 `
 
 export default GlobalStyle

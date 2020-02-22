@@ -2,7 +2,9 @@ import styled from 'styled-components'
 import { flexMixin, transitionMixin } from '../../lib/mixins'
 
 export const Header = styled.header`
+  position: fixed;
   ${flexMixin()}
+  width: 100%;
   font-family: 'Ubuntu';
   background: ${({ theme }) => theme.colors.background};
   opacity: 0.95;
