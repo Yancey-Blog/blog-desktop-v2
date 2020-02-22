@@ -1,13 +1,15 @@
 import React from 'react'
+import svgSprite from '../public/svg-sprite.svg'
 
 export default () => (
   <footer
     style={{
       width: '100%',
       height: '60px',
-      background: 'blue',
     }}
   >
-    footer
+    <svg>
+      <use xlinkHref={`${svgSprite}#icon-graphql`} />
+    </svg>
   </footer>
 )

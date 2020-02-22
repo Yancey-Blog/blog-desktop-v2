@@ -10,5 +10,17 @@ module.exports = (phase, { defaultConfig }) => {
     },
     assetPrefix: isEnvProduction ? 'https://cdn.yanceyleo.com' : '',
     compress: false,
+    webpack: (config, options) => {
+      config.module.rules.push({
+        test: /\.svg/,
+        use: [
+          {
+            loader: 'url-loader',
+          },
+        ],
+      })
+
+      return config
+    },
   }
 }
