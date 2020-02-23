@@ -2,6 +2,7 @@ const basicTheme = {
   colors: {
     orange: '#ffa500',
     black: '#000000',
+    red: '#f05228',
   },
 }
 
