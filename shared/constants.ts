@@ -14,28 +14,19 @@ export const byNcSa =
 export const livere = 'MTAyMC8zOTU5NC8xNjEyMQ=='
 
 export const socialMedia = {
-  github: {
-    url: 'https://github.com/YanceyOfficial/',
-  },
-  twitter: {
-    url: 'https://twitter.com/YanceyOfficial/',
-  },
-  instagram: {
-    url: 'https://www.instagram.com/yancey_leo/',
-  },
-  soundCloud: {
-    url: 'https://soundcloud.com/yancey-leo/',
-  },
-  telegram: {
-    url: 'https://t.me/YanceyOfficial',
-  },
-  paypal: {
-    url: 'https://www.paypal.me/yanceyleo/10usd',
-  },
-  wechat: {
-    url: '/',
-  },
-  email: {
-    url: 'mailto:yanceyofficial@gmail.com',
-  },
+  github: 'https://github.com/YanceyOfficial/',
+
+  twitter: 'https://twitter.com/YanceyOfficial/',
+
+  instagram: 'https://www.instagram.com/yancey_leo/',
+
+  soundCloud: 'https://soundcloud.com/yancey-leo/',
+
+  telegram: 'https://t.me/YanceyOfficial',
+
+  paypal: 'https://www.paypal.me/yanceyleo/10usd',
+
+  wechat: '/',
+
+  email: 'mailto:yanceyofficial@gmail.com',
 }
