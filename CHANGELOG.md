@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.3.0](https://github.com/Yancey-Blog/blog-fe-v2/compare/v0.2.3...v0.3.0) (2020-02-24)
+
+
+### Features
+
+* finish Footer ([51abd8f](https://github.com/Yancey-Blog/blog-fe-v2/commit/51abd8f6558a9cfde06f8361f7a43852775c679d))
+* finish Footer ([e7fdb4b](https://github.com/Yancey-Blog/blog-fe-v2/commit/e7fdb4b6521894475bcb70d01902b8d48cc4acc7))
+* finish half header ([aedfa9d](https://github.com/Yancey-Blog/blog-fe-v2/commit/aedfa9d9aa6d2c9f8146820bdd7853f4ce291d0f))
+* finsish Layouts style ([b538a86](https://github.com/Yancey-Blog/blog-fe-v2/commit/b538a86d7a02eb4a039a2883b7880132534cb5a0))
+* support GA ([f3bddab](https://github.com/Yancey-Blog/blog-fe-v2/commit/f3bddab02d4f2145f1c99f28719406ecb434a3f0))
+* support svg sprite ([286ec04](https://github.com/Yancey-Blog/blog-fe-v2/commit/286ec044cd3db0b3fa3d4b40a9e495b5ad327367))
+* use styled-component ([1365194](https://github.com/Yancey-Blog/blog-fe-v2/commit/1365194b75e61e63f9e5b19f5171a3f485692a2b))
+* use theme ([f647313](https://github.com/Yancey-Blog/blog-fe-v2/commit/f6473130ba2b9260774a6fa779dbd72fce29a761))
+
 ### [0.2.3](https://github.com/Yancey-Blog/blog-fe-v2/compare/v0.2.2...v0.2.3) (2020-02-21)
 
 
