@@ -1,5 +1,23 @@
-export default {
+const basicTheme = {
   colors: {
-    primary: '#cccccc',
+    orange: '#ffa500',
+    black: '#000000',
+    red: '#f05228',
+  },
+}
+
+export const lightTheme = {
+  colors: {
+    text: '#666666',
+    background: '#ffffff',
+    ...basicTheme.colors,
+  },
+}
+
+export const darkTheme = {
+  colors: {
+    text: '#c3bfb6',
+    background: '#181a1b',
+    ...basicTheme.colors,
   },
 }
