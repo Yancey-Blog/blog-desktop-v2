@@ -60,7 +60,7 @@
     "lint-staged": "^10.0.7",
     "prettier": "^1.19.1",
     "standard-version": "^7.1.0",
-    "typescript": "^3.8.2",
+    "typescript": "^3.8.3",
     "url-loader": "^3.0.0"
   },
   "config": {
