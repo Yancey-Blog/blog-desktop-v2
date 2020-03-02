@@ -44,7 +44,7 @@
     "@types/node": "^13.7.4",
     "@types/react": "^16.9.22",
     "@types/styled-components": "^5.0.0",
-    "@typescript-eslint/eslint-plugin": "^2.20.0",
+    "@typescript-eslint/eslint-plugin": "^2.22.0",
     "babel-plugin-styled-components": "^1.10.7",
     "babel-plugin-transform-imports": "^2.0.0",
     "cz-conventional-changelog": "^3.1.0",
