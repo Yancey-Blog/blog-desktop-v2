@@ -29,7 +29,7 @@
     "graphql": "^14.6.0",
     "graphql-tag": "^2.10.3",
     "isomorphic-unfetch": "^3.0.0",
-    "next": "9.2.2",
+    "next": "9.3.1",
     "next-with-apollo": "^5.0.0",
     "normalize.css": "^8.0.1",
     "react": "16.13.0",
@@ -61,7 +61,7 @@
     "prettier": "^1.19.1",
     "standard-version": "^7.1.0",
     "typescript": "^3.8.3",
-    "url-loader": "^3.0.0"
+    "url-loader": "^4.0.0"
   },
   "config": {
     "commitizen": {
