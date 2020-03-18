@@ -11,9 +11,9 @@
     "start": "next start",
     "commit": "npx git-cz",
     "push": "git push --follow-tags origin master",
-    "release:major": "node_modules/.bin/standard-version --release-as major && yarn push",
-    "release:minor": "node_modules/.bin/standard-version --release-as minor && yarn push",
-    "release:patch": "node_modules/.bin/standard-version --release-as patch && yarn push",
+    "release:major": "standard-version --release-as major && yarn push",
+    "release:minor": "standard-version --release-as minor && yarn push",
+    "release:patch": "standard-version --release-as patch && yarn push",
     "format": "prettier --write \"pages/**/*.tsx\" \"components/**/*.tsx\" \"lib/**/*.ts\" \"shared/**/*.ts\"",
     "lint": "eslint pages components lib shared --ext .ts,.tsx"
   },
