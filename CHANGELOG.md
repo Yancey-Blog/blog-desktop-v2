@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.3.1](https://github.com/Yancey-Blog/blog-fe-v2/compare/v0.3.0...v0.3.1) (2020-03-18)
+
+
+### Features
+
+* update fragile dependencies ([4d43176](https://github.com/Yancey-Blog/blog-fe-v2/commit/4d43176e7cb24e100e74870f52cc6f13a8a1d558))
+
 ## [0.3.0](https://github.com/Yancey-Blog/blog-fe-v2/compare/v0.2.3...v0.3.0) (2020-02-24)
 
 
