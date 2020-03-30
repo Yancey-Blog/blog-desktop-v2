@@ -36,7 +36,7 @@
     "react-dom": "16.13.0",
     "react-ga": "^2.7.0",
     "styled-components": "^5.0.1",
-    "yancey-js-util": "^1.1.1"
+    "yancey-js-util": "^2.0.1"
   },
   "devDependencies": {
     "@commitlint/cli": "^8.3.5",
