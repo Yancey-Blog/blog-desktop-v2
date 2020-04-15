@@ -9,7 +9,7 @@ import {
   InnerLink,
   FooterBottom,
 } from './styled'
-import { socialMedia } from '../../shared/constants'
+import { SOCIAL_MEDIA } from '../../shared/constants'
 
 export default () => (
   <Footer>
@@ -32,7 +32,7 @@ export default () => (
         <Link href="apps">
           <InnerLink>Apps</InnerLink>
         </Link>
-        <InnerLink href={socialMedia.email}>Contact</InnerLink>
+        <InnerLink href={SOCIAL_MEDIA.email}>Contact</InnerLink>
       </nav>
     </FooterBottom>
   </Footer>
