@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { flexMixin, transitionMixin } from '../../lib/mixins'
+import { flexMixin, transitionMixin } from '../../shared/mixins'
 
 export const Header = styled.header`
   position: fixed;

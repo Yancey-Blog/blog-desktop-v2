@@ -1,10 +1,11 @@
 import React from 'react'
-import Layout from '../src/components/Layout/Layout'
+import Layout from 'src/components/Layout/Layout'
+import Home from 'src/containers/Home/Home'
 
 const Index = () => {
   return (
     <Layout>
-      <h1>静态主页d</h1>
+      <Home />
     </Layout>
   )
 }
