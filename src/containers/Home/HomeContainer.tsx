@@ -12,7 +12,7 @@ import Motto from './components/Motto'
 import OpenSource from './components/OpenSource'
 import Cover from './components/Cover'
 
-const Home: FC = () => {
+const HomeContainer: FC = () => {
   const { data: covers } = useQuery<CoverQuery>(COVERS)
   const { data: announcements } = useQuery<AnnouncementQuery>(ANNOUNCEMENTS)
   const { data: openSources } = useQuery<OpenSourceQuery>(OPEN_SOURCES)
@@ -30,4 +30,4 @@ const Home: FC = () => {
   )
 }
 
-export default Home
+export default HomeContainer
