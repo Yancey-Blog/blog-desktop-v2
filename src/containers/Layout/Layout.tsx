@@ -1,8 +1,8 @@
 import React, { FC, useEffect } from 'react'
 import { initGA, logPageView } from 'src/shared/analytics'
-import Head from '../Head/Head'
-import Header from '../Header/Header'
-import Footer from '../Footer/Footer'
+import Head from '../../components/Head/Head'
+import Header from '../../components/Header/Header'
+import Footer from '../../components/Footer/Footer'
 import { Layouts, Main } from './styled'
 
 const Layout: FC = (props) => {
