@@ -8,6 +8,7 @@
     "no-underscore-dangle": "off",
     "operator-linebreak": "off",
     "implicit-arrow-linebreak": "off",
+    "import/prefer-default-export": "off",
     "@typescript-eslint/semi": "off",
     "jsx-a11y/anchor-is-valid": "off",
     "react/prop-types": "off",

@@ -12,7 +12,7 @@ const httpLink = new BatchHttpLink({
 
 const errorLink = onError(({ graphQLErrors, networkError }) => {
   if (graphQLErrors) {
-    graphQLErrors.forEach(err => {
+    graphQLErrors.forEach((err) => {
       console.log(err)
     })
   }

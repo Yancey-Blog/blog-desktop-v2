@@ -5,7 +5,7 @@ import Footer from '../Footer/Footer'
 import { Layouts, Main } from './styled'
 // import { initGA, logPageView } from '../../shared/analytics'
 
-const Layout: FC = props => {
+const Layout: FC = (props) => {
   const { children } = props
 
   // useEffect(() => {

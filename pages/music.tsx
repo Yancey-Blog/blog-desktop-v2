@@ -1,8 +1,8 @@
 import React from 'react'
 import { useQuery } from '@apollo/react-hooks'
 import gql from 'graphql-tag'
-import Layout from '../components/Layout/Layout'
-import Announcement from '../components/Home/Announcement'
+import Layout from '../src/components/Layout/Layout'
+import Announcement from '../src/components/Home/Announcement'
 
 const Music = () => {
   const ANNOUNCEMENTS = gql`

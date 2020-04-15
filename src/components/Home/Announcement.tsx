@@ -20,7 +20,7 @@ const Item = styled.div`
 const Announcement = ({ data }: IProps) => {
   return (
     <Item>
-      {data.map(announcement => {
+      {data.map((announcement) => {
         return <div key={announcement._id}>{announcement.content}</div>
       })}
     </Item>

@@ -14,8 +14,8 @@
     "release:major": "standard-version --release-as major && yarn push",
     "release:minor": "standard-version --release-as minor && yarn push",
     "release:patch": "standard-version --release-as patch && yarn push",
-    "format": "prettier --write \"pages/**/*.tsx\" \"components/**/*.tsx\" \"lib/**/*.ts\" \"shared/**/*.ts\"",
-    "lint": "eslint pages components lib shared --ext .ts,.tsx"
+    "format": "prettier --write \"pages/**/*.tsx\" \"src/**/*.ts\" \"src/**/*.tsx\"",
+    "lint": "eslint pages src --ext .ts,.tsx"
   },
   "dependencies": {
     "@apollo/react-hooks": "^3.1.3",

@@ -5,9 +5,9 @@ import { getDataFromTree } from '@apollo/react-ssr'
 import { ApolloClient } from 'apollo-client'
 import { ThemeProvider } from 'styled-components'
 import 'normalize.css'
-import GlobalStyle from '../lib/globalStyles'
-import withApollo from '../lib/withApollo'
-import { lightTheme } from '../lib/theme'
+import GlobalStyle from '../src/lib/globalStyles'
+import withApollo from '../src/lib/withApollo'
+import { darkTheme } from '../src/lib/theme'
 
 interface IProps {
   apollo: ApolloClient<{}>
@@ -18,7 +18,7 @@ class MyApp extends App<IProps> {
     const { Component, pageProps, apollo } = this.props
 
     return (
-      <ThemeProvider theme={lightTheme}>
+      <ThemeProvider theme={darkTheme}>
         <GlobalStyle />
         <ApolloProvider client={apollo}>
           <Component {...pageProps} />
