@@ -1,17 +1,17 @@
 import styled from 'styled-components'
 import { flexMixin, transitionMixin } from '../../shared/mixins'
 
-export const Header = styled.header`
+export const NavBar = styled.nav`
   position: fixed;
   ${flexMixin()}
   width: 100%;
   font-family: 'Ubuntu';
-  background: ${({ theme }) => theme.colors.background};
+  background: ${({ theme }) => theme.background.primary};
   opacity: 0.95;
   box-shadow: 0 1px 40px -8px rgba(0, 0, 0, 0.5);
 `
 
-export const NavLink = styled.div`
+export const NavBarItem = styled.div`
   display: flex;
   position: relative;
   margin-right: 24px;
@@ -24,12 +24,12 @@ export const NavLink = styled.div`
     }
 
     a {
-      color: ${({ theme }) => theme.colors.orange};
+      color: ${({ theme }) => theme.link.secondary};
       ${transitionMixin('color')}
     }
 
     svg {
-      fill: ${({ theme }) => theme.colors.orange};
+      fill: ${({ theme }) => theme.link.secondary};
       ${transitionMixin('fill')}
     }
   }
@@ -41,21 +41,21 @@ export const NavLink = styled.div`
     left: 0;
     width: 0;
     height: 4px;
-    background: ${({ theme }) => theme.colors.orange};
+    background: ${({ theme }) => theme.link.secondary};
     ${transitionMixin('width')}
   }
 
   a {
     ${flexMixin()}
     font-size: 16px;
-    color: ${({ theme }) => theme.colors.text};
+    color: ${({ theme }) => theme.link.primary};
     ${transitionMixin('color')}
   }
 
   svg {
     margin-right: 8px;
     width: 20px;
-    fill: ${({ theme }) => theme.colors.text};
+    fill: ${({ theme }) => theme.link.primary};
     ${transitionMixin('fill')}
   }
 `

@@ -8,57 +8,41 @@ import {
   Apps,
   Face,
 } from '@material-ui/icons'
-import { Header, NavLink } from './styled'
+import { NavBar, NavBarItem } from './styled'
 
 export default () => (
-  <Header>
-    <NavLink>
+  <NavBar>
+    <NavBarItem>
       <Link href="/">
         <a>
-          <Home />
-          Home
+          <Home /> Home
         </a>
       </Link>
-    </NavLink>
-    <NavLink>
       <Link href="/blog">
         <a>
-          <LibraryBooks />
-          Blog
+          <LibraryBooks /> Blog
         </a>
       </Link>
-    </NavLink>
-    <NavLink>
       <Link href="/archive">
         <a>
-          <Archive />
-          Archive
+          <Archive /> Archive
         </a>
       </Link>
-    </NavLink>
-    <NavLink>
       <Link href="/music">
         <a>
-          <Headset />
-          Music
+          <Headset /> Music
         </a>
       </Link>
-    </NavLink>
-    <NavLink>
       <Link href="/apps">
         <a>
-          <Apps />
-          Apps
+          <Apps /> Apps
         </a>
       </Link>
-    </NavLink>
-    <NavLink>
-      <Link href="/cv">
+      <Link href="/about">
         <a>
-          <Face />
-          CV
+          <Face /> About
         </a>
       </Link>
-    </NavLink>
-  </Header>
+    </NavBarItem>
+  </NavBar>
 )

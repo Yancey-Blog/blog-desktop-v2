@@ -4,12 +4,12 @@ import { ApolloProvider } from '@apollo/react-hooks'
 import { getDataFromTree } from '@apollo/react-ssr'
 import { ApolloClient } from 'apollo-client'
 import { SnackbarProvider } from 'notistack'
-import { ThemeProvider } from 'styled-components'
 import 'normalize.css'
+import ThemeProviderComponent from 'src/components/ThemeProvider/ThemeProvider'
 import { SnackbarUtilsConfigurator } from 'src/components/Toast/Toast'
-import GlobalStyle from 'src/shared/globalStyles'
+
 import withApollo from 'src/shared/withApollo'
-import { lightTheme } from 'src/shared/theme'
+
 import {
   SNACKBAR_ANCHOR_ORIGIN,
   SNACKBAR_MAX_NUM,
@@ -25,8 +25,7 @@ class YanceyBlog extends App<IProps> {
     const { Component, pageProps, apollo } = this.props
 
     return (
-      <ThemeProvider theme={lightTheme}>
-        <GlobalStyle />
+      <ThemeProviderComponent>
         <ApolloProvider client={apollo}>
           <SnackbarProvider
             maxSnack={SNACKBAR_MAX_NUM}
@@ -39,7 +38,7 @@ class YanceyBlog extends App<IProps> {
             </>
           </SnackbarProvider>
         </ApolloProvider>
-      </ThemeProvider>
+      </ThemeProviderComponent>
     )
   }
 }

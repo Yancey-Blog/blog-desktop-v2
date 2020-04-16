@@ -9,7 +9,7 @@ export const Footer = styled.footer`
 
 export const CopyRight = styled.p`
   font-size: 13px;
-  color: ${({ theme }) => theme.colors.text};
+  /* color: ${({ theme }) => theme.colors.text}; */
 `
 
 export const TechStacks = styled.p`
@@ -41,7 +41,7 @@ export const InnerLink = styled.a`
   margin-right: 8px;
   padding-right: 8px;
   font-size: 13px;
-  color: ${({ theme }) => theme.colors.text};
+  /* color: ${({ theme }) => theme.colors.text}; */
   cursor: pointer;
 
   &:last-child {
