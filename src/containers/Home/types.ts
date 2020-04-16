@@ -27,7 +27,7 @@ export interface MottoQuery {
 }
 
 export interface CoverQuery {
-  getCovers: ICover[]
+  getAllPublicCovers: ICover[]
 }
 
 export interface OpenSourceQuery {

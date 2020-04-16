@@ -17,8 +17,8 @@ export const MOTTOS = gql`
 `
 
 export const COVERS = gql`
-  query GetCovers {
-    getCovers {
+  query GetAllPublicCovers {
+    getAllPublicCovers {
       title
       coverUrl
     }
