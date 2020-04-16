@@ -21,7 +21,7 @@ const light = {
 
 const dark = {
   background: {
-    primary: '#050505',
+    primary: '#181a1b',
     secondary: '#111111',
     inset: '#111111',
     input: 'rgba(191,193,201,0.12)',
@@ -35,7 +35,7 @@ const dark = {
     onPrimary: '#050505',
   },
   link: {
-    primary: '#666666',
+    primary: '#c3bfb6',
     secondary: '#ffa500',
   },
 }

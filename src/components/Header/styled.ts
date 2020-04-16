@@ -5,7 +5,7 @@ import { wrench } from 'src/styled/animations'
 export const NavBar = styled.nav`
   position: sticky;
   ${flexMixin('space-between')}
-  padding:0 0.9rem;
+  padding:0 1.2rem;
   font-family: 'Ubuntu';
   background: ${({ theme }) => theme.background.primary};
   opacity: 0.95;
