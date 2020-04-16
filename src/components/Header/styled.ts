@@ -1,11 +1,11 @@
 import styled from 'styled-components'
-import { flexMixin, transitionMixin } from 'src/styled/mixins'
+import { flexMixin, transitionMixin, backgroundMixin } from 'src/styled/mixins'
 import { wrench } from 'src/styled/animations'
 
 export const NavBar = styled.nav`
   position: sticky;
-  ${flexMixin()}
-  width: 100%;
+  ${flexMixin('space-between')}
+  padding:0 0.9rem;
   font-family: 'Ubuntu';
   background: ${({ theme }) => theme.background.primary};
   opacity: 0.95;
@@ -18,10 +18,10 @@ export const NavBarItem = styled.div`
   a {
     position: relative;
     ${flexMixin()}
-    margin:0 0.8rem;
+    margin-left: 1.6rem;
     padding: 0 0.2rem;
     height: 5rem;
-    font-size: 16px;
+    font-size: 1.0666666666666667rem;
     color: ${({ theme }) => theme.link.primary};
     ${transitionMixin('color')}
 
@@ -58,4 +58,11 @@ export const NavBarItem = styled.div`
     fill: ${({ theme }) => theme.link.primary};
     ${transitionMixin('fill')}
   }
+`
+
+export const Logo = styled.a`
+  width: 14.666666666666666rem;
+  height: 2.933333333333333rem;
+  background: url('/static/logo-with-text.png');
+  ${backgroundMixin()}
 `

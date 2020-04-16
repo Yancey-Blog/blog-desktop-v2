@@ -8,10 +8,13 @@ import {
   Apps,
   Face,
 } from '@material-ui/icons'
-import { NavBar, NavBarItem } from './styled'
+import { Logo, NavBar, NavBarItem } from './styled'
 
 export default () => (
   <NavBar>
+    <Link href="/">
+      <Logo />
+    </Link>
     <NavBarItem>
       <Link href="/">
         <a>
