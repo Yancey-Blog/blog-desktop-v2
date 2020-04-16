@@ -1,8 +1,9 @@
 import styled from 'styled-components'
-import { flexMixin, transitionMixin } from '../../shared/mixins'
+import { flexMixin, transitionMixin } from 'src/styled/mixins'
+import { wrench } from 'src/styled/animations'
 
 export const NavBar = styled.nav`
-  position: fixed;
+  position: sticky;
   ${flexMixin()}
   width: 100%;
   font-family: 'Ubuntu';
@@ -13,43 +14,42 @@ export const NavBar = styled.nav`
 
 export const NavBarItem = styled.div`
   display: flex;
-  position: relative;
-  margin-right: 24px;
-  padding: 0 4px;
-  height: 65px;
-
-  &:hover {
-    &::after {
-      width: 100%;
-    }
-
-    a {
-      color: ${({ theme }) => theme.link.secondary};
-      ${transitionMixin('color')}
-    }
-
-    svg {
-      fill: ${({ theme }) => theme.link.secondary};
-      ${transitionMixin('fill')}
-    }
-  }
-
-  &::after {
-    position: absolute;
-    content: '';
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 4px;
-    background: ${({ theme }) => theme.link.secondary};
-    ${transitionMixin('width')}
-  }
 
   a {
+    position: relative;
     ${flexMixin()}
+    margin:0 0.8rem;
+    padding: 0 0.2rem;
+    height: 5rem;
     font-size: 16px;
     color: ${({ theme }) => theme.link.primary};
     ${transitionMixin('color')}
+
+    &:hover {
+      color: ${({ theme }) => theme.link.secondary};
+      ${transitionMixin('color')}
+
+      &::after {
+        width: 100%;
+      }
+
+      svg {
+        fill: ${({ theme }) => theme.link.secondary};
+        ${transitionMixin('fill')}
+        animation: ${wrench} 2s ease infinite;
+      }
+    }
+
+    &::after {
+      position: absolute;
+      content: '';
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 0.4rem;
+      background: ${({ theme }) => theme.link.secondary};
+      ${transitionMixin('width')}
+    }
   }
 
   svg {
