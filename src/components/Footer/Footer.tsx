@@ -32,7 +32,7 @@ export default () => (
         <Link href="apps">
           <InnerLink>Apps</InnerLink>
         </Link>
-        <InnerLink href={SOCIAL_MEDIA.email}>Contact</InnerLink>
+        <InnerLink href={SOCIAL_MEDIA.email.url}>Contact</InnerLink>
       </nav>
     </FooterBottom>
   </Footer>
