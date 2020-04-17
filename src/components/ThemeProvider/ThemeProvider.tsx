@@ -6,7 +6,7 @@ import { useDarkMode, ThemeMode } from 'src/hooks/useDarkMode'
 
 const ThemeProviderComponent: FC = ({ children }) => {
   const [theme] = useDarkMode()
-  const themeMode = theme !== ThemeMode.LIGHT ? darkTheme : lightTheme
+  const themeMode = theme === ThemeMode.LIGHT ? darkTheme : lightTheme
 
   return (
     <ThemeProvider theme={themeMode}>
