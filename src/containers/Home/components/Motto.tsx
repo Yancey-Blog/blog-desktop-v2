@@ -8,7 +8,7 @@ import svgIcons from '../../../../static/yancey-official-blog-svg-icons.svg'
 export const MottoBar = styled.section`
   position: relative;
   background: ${({ theme }) => theme.colors.halfOpcityBlack};
-  padding: 1rem 1.6rem;
+  padding: 1.2rem 1.6rem;
   border-radius: 0.7rem;
 `
 
