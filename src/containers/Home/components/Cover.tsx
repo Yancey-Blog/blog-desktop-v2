@@ -16,6 +16,14 @@ const Cover: FC<Props> = ({ covers }) => {
     background-attachment: fixed;
     ${backgroundMixin()};
     margin-top: -${({ theme }) => theme.headerHeight};
+
+    &::after {
+      position: absolute;
+      content: '';
+      width: 100%;
+      height: 100%;
+      background: url('/static/dot.gif');
+    }
   `
 
   return <Covers />

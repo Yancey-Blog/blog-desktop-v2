@@ -4,15 +4,11 @@ import { noUserSelectMixin } from 'src/styled/mixins'
 import { glitchLoop1, glitchLoop2 } from 'src/styled/animations'
 
 const Slogans = styled.h2`
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  margin: 0 auto 1.5rem;
+  margin-bottom: 2.4rem;
   font-family: 'Ubuntu', sans-serif;
   font-size: 5rem;
   text-align: center;
   color: ${({ theme }) => theme.colors.white};
-  transform: translate3d(-50%, -40%, 0);
   ${noUserSelectMixin()}
 
   &::before,

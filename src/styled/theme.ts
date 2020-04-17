@@ -6,8 +6,8 @@ const light = {
     input: 'rgba(65,67,78,0.12)',
   },
   text: {
-    primary: '#050505',
-    secondary: '#2f3037',
+    primary: '#1c1e21',
+    secondary: '#eaeadf',
     tertiary: '#525560',
     quarternary: '#9194a1',
     placeholder: 'rgba(82,85,96,0.5)',
@@ -27,7 +27,7 @@ const dark = {
     input: 'rgba(191,193,201,0.12)',
   },
   text: {
-    primary: '#fbfbfc',
+    primary: '#f5f6f7',
     secondary: '#e3e4e8',
     tertiary: '#a9abb6',
     quarternary: '#6c6f7e',
@@ -59,6 +59,7 @@ const defaultTheme = {
     black: '#000000',
     sloganBlue: '#00a7e0',
     sloganRed: '#ff3f1a',
+    halfOpcityBlack: 'rgba(0, 0, 0, .5)',
   },
   zIndex: {
     fixed: 200,
