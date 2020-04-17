@@ -3,13 +3,16 @@ import { flexMixin, transitionMixin, backgroundMixin } from 'src/styled/mixins'
 import { wrench } from 'src/styled/animations'
 
 export const NavBar = styled.nav`
-  position: sticky;
+  box-sizing: border-box;
+  position: fixed;
   ${flexMixin('space-between')}
-  padding:0 1.2rem;
+  width:100%;
+  padding: 0 1.2rem;
   font-family: 'Ubuntu';
   background: ${({ theme }) => theme.background.primary};
   opacity: 0.95;
   box-shadow: 0 1px 40px -8px rgba(0, 0, 0, 0.5);
+  z-index: ${({ theme }) => theme.zIndex.fixed};
 `
 
 export const NavBarItem = styled.div`
@@ -20,7 +23,7 @@ export const NavBarItem = styled.div`
     ${flexMixin()}
     margin-left: 1.6rem;
     padding: 0 0.2rem;
-    height: 5rem;
+    height: ${({ theme }) => theme.headerHeight};
     font-size: 1.0666666666666667rem;
     color: ${({ theme }) => theme.link.primary};
     ${transitionMixin('color')}

@@ -65,7 +65,11 @@ const defaultTheme = {
   colors: {
     red: '#f05228',
   },
-  // ...
+  zIndex: {
+    fixed: 200,
+    verlay: 400,
+  },
+  headerHeight: '5rem',
 }
 
 export const lightTheme = { ...defaultTheme, ...light }

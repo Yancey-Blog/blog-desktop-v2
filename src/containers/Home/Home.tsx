@@ -20,12 +20,13 @@ const Home: FC = () => {
 
   return (
     <section>
+      <Cover covers={covers ? covers.getAllPublicCovers : []} />
       <Announcement
         announcements={announcements ? announcements.getAnnouncements : []}
       />
-      <OpenSource openSources={openSources ? openSources.getOpenSources : []} />
+
       <Motto mottos={mottos ? mottos.getMottos : []} />
-      <Cover covers={covers ? covers.getAllPublicCovers : []} />
+      <OpenSource openSources={openSources ? openSources.getOpenSources : []} />
     </section>
   )
 }

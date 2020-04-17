@@ -8,5 +8,5 @@ export const Layouts = styled.section`
 
 export const Main = styled.main`
   flex: 1;
-  padding-top: 65px;
+  padding-top: ${({ theme }) => theme.headerHeight};
 `
