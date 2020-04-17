@@ -9,6 +9,15 @@ const GlobalStyle = createGlobalStyle`
   font-display: fallback;
 }
 
+@font-face {
+  font-family: 'Ubuntu';
+  src: url('https://static.yanceyleo.com/fonts/Ubuntu-Bold.ttf') format('truetype');
+  font-style: normal;
+  font-weight: bold;
+  font-display: fallback;
+}
+
+
   body {
     font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, PingFang SC, Microsoft YaHei, Source Han Sans SC, Noto Sans CJK SC, WenQuanYi Micro Hei, sans-serif;
     -webkit-font-smoothing: antialiased;

@@ -41,15 +41,6 @@ const dark = {
 }
 
 const defaultTheme = {
-  fontSizes: [
-    '14px', // 0
-    '16px', // 1
-    '18px', // 2
-    '22px', // 3
-    '26px', // 4
-    '32px', // 5
-    '40px', // 6
-  ],
   fontWeights: {
     body: 400,
     subheading: 500,
@@ -64,6 +55,10 @@ const defaultTheme = {
   },
   colors: {
     red: '#f05228',
+    white: '#ffffff',
+    black: '#000000',
+    sloganBlue: '#00a7e0',
+    sloganRed: '#ff3f1a',
   },
   zIndex: {
     fixed: 200,

@@ -123,3 +123,69 @@ export const tada = keyframes`
     transform: scale(1) rotate(0);
   }
 `
+
+export const mains = keyframes`
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+`
+
+export const glitchLoop1 = keyframes`
+   0% {
+    clip: rect(36px, 9999px, 9px, 0);
+  }
+
+  25% {
+    clip: rect(25px, 9999px, 99px, 0);
+  }
+
+  50% {
+    clip: rect(50px, 9999px, 102px, 0);
+  }
+
+  75% {
+    clip: rect(30px, 9999px, 92px, 0);
+  }
+
+  100% {
+    clip: rect(91px, 9999px, 98px, 0);
+  }
+`
+
+export const glitchLoop2 = keyframes`
+ 0% {
+    top: -1px;
+    left: 1px;
+    clip: rect(65px, 9999px, 119px, 0);
+  }
+
+  25% {
+    top: -6px;
+    left: 4px;
+    clip: rect(79px, 9999px, 19px, 0);
+  }
+
+  50% {
+    top: -3px;
+    left: 2px;
+    clip: rect(68px, 9999px, 11px, 0);
+  }
+
+  75% {
+    top: 0;
+    left: -4px;
+    clip: rect(95px, 9999px, 53px, 0);
+  }
+
+  100% {
+    top: -1px;
+    left: -1px;
+    clip: rect(31px, 9999px, 149px, 0);
+  }
+`

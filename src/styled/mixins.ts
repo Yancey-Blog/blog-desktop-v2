@@ -38,3 +38,8 @@ export const transitionMixin = (
 ) => css`
   transition: ${property} ${delay}ms ${timingFunction};
 `
+
+export const noUserSelectMixin = () =>
+  css`
+    user-select: none;
+  `

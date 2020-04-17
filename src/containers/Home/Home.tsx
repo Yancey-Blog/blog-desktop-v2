@@ -1,5 +1,6 @@
 import React, { FC } from 'react'
 import { useQuery } from '@apollo/react-hooks'
+import { HomeContainer } from './styled'
 import { COVERS, ANNOUNCEMENTS, OPEN_SOURCES, MOTTOS } from './typeDefs'
 import {
   AnnouncementQuery,
@@ -11,6 +12,7 @@ import Announcement from './components/Announcement'
 import Motto from './components/Motto'
 import OpenSource from './components/OpenSource'
 import Cover from './components/Cover'
+import Slogan from './components/Slogan'
 
 const Home: FC = () => {
   const { data: covers } = useQuery<CoverQuery>(COVERS)
@@ -19,15 +21,16 @@ const Home: FC = () => {
   const { data: mottos } = useQuery<MottoQuery>(MOTTOS)
 
   return (
-    <section>
+    <HomeContainer>
       <Cover covers={covers ? covers.getAllPublicCovers : []} />
+      <Slogan />
       <Announcement
         announcements={announcements ? announcements.getAnnouncements : []}
       />
 
       <Motto mottos={mottos ? mottos.getMottos : []} />
       <OpenSource openSources={openSources ? openSources.getOpenSources : []} />
-    </section>
+    </HomeContainer>
   )
 }
 
