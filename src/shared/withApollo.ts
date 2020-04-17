@@ -24,15 +24,12 @@ const errorLink = onError(({ graphQLErrors, networkError }) => {
 })
 
 export default withApollo(
-  () =>
+  ({ initialState }) =>
     new ApolloClient({
-      cache: new InMemoryCache(),
       resolvers: {},
       link: errorLink.concat(httpLink),
+      cache: new InMemoryCache().restore(initialState || {}),
       defaultOptions: {
-        watchQuery: {
-          fetchPolicy: 'cache-and-network',
-        },
         query: {
           fetchPolicy: 'network-only',
           errorPolicy: 'all',
