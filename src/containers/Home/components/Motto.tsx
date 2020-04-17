@@ -5,14 +5,14 @@ import { flexMixin } from 'src/styled/mixins'
 import { IMotto } from '../types'
 import svgIcons from '../../../../static/yancey-official-blog-svg-icons.svg'
 
-export const MottoBar = styled.section`
+const MottoBar = styled.section`
   position: relative;
   background: ${({ theme }) => theme.colors.halfOpcityBlack};
   padding: 1.2rem 1.6rem;
   border-radius: 0.7rem;
 `
 
-export const MottoContent = styled.p`
+const MottoContent = styled.p`
   margin-bottom: 1.4rem;
   font-size: 1.1rem;
   color: ${({ theme }) => theme.colors.white};
@@ -23,7 +23,7 @@ export const MottoContent = styled.p`
   overflow: hidden;
 `
 
-export const UpTriangle = styled.span`
+const UpTriangle = styled.span`
   position: absolute;
   width: 0;
   height: 0;
@@ -33,18 +33,18 @@ export const UpTriangle = styled.span`
   left: 5rem;
 `
 
-export const SocialMediaIconWrapper = styled.div`
+const SocialMediaIconWrapper = styled.div`
   ${flexMixin()}
 `
 
-export const Svg = styled.svg`
+const Svg = styled.svg`
   width: 1.3rem;
   height: 1.3rem;
   margin: 0 1rem;
   cursor: pointer;
 `
 
-export const QRCode = css`
+const QRCode = css`
   position: relative;
 
   &::after,
@@ -84,7 +84,7 @@ export const QRCode = css`
   }
 `
 
-export const TwitterQRCodeLink = styled.a`
+const TwitterQRCodeLink = styled.a`
   ${QRCode}
   &::after {
     background: rgba(0, 0, 0, 0.5)
@@ -95,7 +95,7 @@ export const TwitterQRCodeLink = styled.a`
   }
 `
 
-export const WeChatQRCodeLink = styled.a`
+const WeChatQRCodeLink = styled.a`
   ${QRCode}
   &::after {
     background: rgba(0, 0, 0, 0.5)

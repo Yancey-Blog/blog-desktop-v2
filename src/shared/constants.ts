@@ -22,41 +22,6 @@ export const POST_LICENSE_URL =
 
 export const LIVERE_KEY = 'MTAyMC8zOTU5NC8xNjEyMQ=='
 
-export const SOCIAL_MEDIA: SocialMedia = {
-  github: {
-    url: 'https://github.com/YanceyOfficial/',
-    icon: '#github',
-  },
-  twitter: {
-    url: 'https://twitter.com/YanceyOfficial/',
-    icon: '#twitter',
-  },
-  instagram: {
-    url: 'https://www.instagram.com/yancey_leo/',
-    icon: '#instagram',
-  },
-  soundCloud: {
-    url: 'https://soundcloud.com/yancey-leo/',
-    icon: '#soundcloud',
-  },
-  telegram: {
-    url: 'https://t.me/YanceyOfficial',
-    icon: '#telegram',
-  },
-  paypal: {
-    url: 'https://www.paypal.me/yanceyleo/10usd',
-    icon: '#paypal',
-  },
-  wechat: {
-    url: '/',
-    icon: '#wechat',
-  },
-  email: {
-    url: 'mailto:yanceyofficial@gmail.com',
-    icon: '#mail',
-  },
-}
-
 export const SVG_SPRITE = {
   telegram: '#telegram',
   github: '#github',
@@ -117,4 +82,39 @@ export const SVG_SPRITE = {
   planet: '#twitter-1',
   astronaut: '#astronaut',
   close: '#close',
+}
+
+export const SOCIAL_MEDIA: SocialMedia = {
+  github: {
+    url: 'https://github.com/YanceyOfficial/',
+    icon: SVG_SPRITE.github,
+  },
+  twitter: {
+    url: 'https://twitter.com/YanceyOfficial/',
+    icon: SVG_SPRITE.twitter1,
+  },
+  instagram: {
+    url: 'https://www.instagram.com/yancey_leo/',
+    icon: SVG_SPRITE.instagram,
+  },
+  soundCloud: {
+    url: 'https://soundcloud.com/yancey-leo/',
+    icon: SVG_SPRITE.soundcloud,
+  },
+  telegram: {
+    url: 'https://t.me/YanceyOfficial',
+    icon: SVG_SPRITE.telegram,
+  },
+  paypal: {
+    url: 'https://www.paypal.me/yanceyleo/10usd',
+    icon: SVG_SPRITE.paypal,
+  },
+  wechat: {
+    url: '/',
+    icon: SVG_SPRITE.wechat,
+  },
+  email: {
+    url: 'mailto:yanceyofficial@gmail.com',
+    icon: SVG_SPRITE.mail,
+  },
 }
