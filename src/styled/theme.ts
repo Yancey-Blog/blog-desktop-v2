@@ -65,7 +65,7 @@ const defaultTheme = {
     fixed: 200,
     verlay: 400,
   },
-  headerHeight: '5rem',
+  headerHeight: '4rem',
 }
 
 export const lightTheme = { ...defaultTheme, ...light }
