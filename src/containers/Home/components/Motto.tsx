@@ -1,9 +1,53 @@
 import React, { FC } from 'react'
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import { SOCIAL_MEDIA } from 'src/shared/constants'
 import { flexMixin } from 'src/styled/mixins'
 import { IMotto } from '../types'
 import svgIcons from '../../../../static/yancey-official-blog-svg-icons.svg'
+
+export const QRCode = css`
+  &::after,
+  &::before {
+    position: absolute;
+    content: '';
+    opacity: 0;
+    visibility: hidden;
+    transform: translate3d(0, 16px, 0);
+    transition: 700ms all ease;
+  }
+
+  &::after {
+    width: 120px;
+    height: 120px;
+    padding: 10px;
+    border-radius: 12px;
+    background-size: cover;
+    background-origin: content-box;
+    top: 62px;
+    left: -58px;
+  }
+
+  &::before {
+    width: 0;
+    height: 0;
+    border: 16px solid transparent;
+    border-bottom-color: rgba(0, 0, 0, 0.5);
+    top: 30px;
+    left: -4px;
+
+    background: rgba(0, 0, 0, 0.5)
+      url(https://static.yancey.app/blog-fe-static/official-account-qr-code.jpg)
+      no-repeat center top;
+  }
+
+  &:hover::after,
+  &:hover::before {
+    opacity: 1;
+    visibility: visible;
+    transform: translate3d(0, 0, 0);
+    transition: 700ms all ease;
+  }
+`
 
 export const MottoBar = styled.section`
   position: relative;
@@ -44,6 +88,53 @@ export const Svg = styled.svg`
   cursor: pointer;
 `
 
+export const Link = styled.a`
+  position: relative;
+
+  &::after,
+  &::before {
+    position: absolute;
+    content: '';
+    opacity: 0;
+    visibility: hidden;
+    transform: translate3d(0, 16px, 0);
+    transition: 700ms all ease;
+  }
+
+  &::after {
+    width: 120px;
+    height: 120px;
+    padding: 10px;
+    border-radius: 12px;
+    top: 62px;
+    left: -44px;
+    background: rgba(0, 0, 0, 0.5)
+      url(https://static.yancey.app/blog-fe-static/official-account-qr-code.jpg)
+      no-repeat center top;
+    background-size: cover;
+    background-origin: content-box;
+  }
+
+  &::before {
+    width: 0;
+    height: 0;
+    border: 16px solid transparent;
+    border-bottom-color: rgba(0, 0, 0, 0.5);
+    top: 30px;
+    left: 10px;
+  }
+
+  &:hover {
+    &::after,
+    &::before {
+      opacity: 1;
+      visibility: visible;
+      transform: translate3d(0, 0, 0);
+      transition: 700ms all ease;
+    }
+  }
+`
+
 interface Props {
   mottos: IMotto[]
 }
@@ -56,7 +147,7 @@ const Motto: FC<Props> = ({ mottos }) => {
 
       <SocialMediaIconWrapper>
         {Object.keys(SOCIAL_MEDIA).map((key) => (
-          <a
+          <Link
             key={key}
             href={SOCIAL_MEDIA[key].url}
             target="_blank"
@@ -65,7 +156,7 @@ const Motto: FC<Props> = ({ mottos }) => {
             <Svg>
               <use xlinkHref={`${svgIcons}${SOCIAL_MEDIA[key].icon}`} />
             </Svg>
-          </a>
+          </Link>
         ))}
       </SocialMediaIconWrapper>
     </MottoBar>
