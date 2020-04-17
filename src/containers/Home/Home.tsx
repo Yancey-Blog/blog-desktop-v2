@@ -1,6 +1,6 @@
 import React, { FC } from 'react'
 import { useQuery } from '@apollo/react-hooks'
-import { HomeContainer, MottoSocialMediaBar } from './styled'
+import { HomeContainer, MottoSocialMediaBar, HomeMain } from './styled'
 import { COVERS, ANNOUNCEMENTS, OPEN_SOURCES, MOTTOS } from './typeDefs'
 import {
   AnnouncementQuery,
@@ -29,11 +29,15 @@ const Home: FC = () => {
         <Motto mottos={mottos ? mottos.getMottos : []} />
       </MottoSocialMediaBar>
 
-      <Announcement
-        announcements={announcements ? announcements.getAnnouncements : []}
-      />
+      <HomeMain>
+        <Announcement
+          announcements={announcements ? announcements.getAnnouncements : []}
+        />
 
-      <OpenSource openSources={openSources ? openSources.getOpenSources : []} />
+        <OpenSource
+          openSources={openSources ? openSources.getOpenSources : []}
+        />
+      </HomeMain>
     </HomeContainer>
   )
 }
