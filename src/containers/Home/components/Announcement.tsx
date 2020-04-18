@@ -11,15 +11,13 @@ interface Props {
 const AnnouncementWrapper = styled.section`
   display: flex;
   align-items: center;
-  width: 100%;
-  margin: 0 auto;
+  padding: 1.8rem;
+  font-size: 1.2rem;
+  color: ${({ theme }) => theme.text.secondary};
+  background: ${({ theme }) => theme.background.secondary};
   border: 1px dashed;
   border-color: ${({ theme }) => theme.colors.border};
-  color: ${({ theme }) => theme.text.secondary};
-  padding: 1.8rem;
-  border-radius: 10px;
-  font-size: 1.2rem;
-  background: ${({ theme }) => theme.background.secondary};
+  border-radius: 0.8rem;
 `
 
 const SVG = styled.svg`
