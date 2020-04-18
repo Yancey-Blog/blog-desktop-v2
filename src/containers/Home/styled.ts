@@ -13,5 +13,5 @@ export const MottoSocialMediaBar = styled.section`
 
 export const HomeMain = styled.section`
   margin: 0 auto;
-  max-width: 60rem;
+  max-width: 56.5rem;
 `

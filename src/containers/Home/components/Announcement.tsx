@@ -8,23 +8,32 @@ interface Props {
   announcements: IAnnouncement[]
 }
 
-export const AnnouncementWrapper = styled.section`
+const AnnouncementWrapper = styled.section`
+  display: flex;
+  align-items: center;
   width: 100%;
   margin: 0 auto;
-  border: 1px dashed #e6e6e6;
-  color: #969696;
-  padding: 1rem;
+  border: 1px dashed;
+  border-color: ${({ theme }) => theme.colors.border};
+  color: ${({ theme }) => theme.text.secondary};
+  padding: 1.8rem;
   border-radius: 10px;
-  font-size: 0.8rem;
-  background: #fbfbfb;
+  font-size: 1.2rem;
+  background: ${({ theme }) => theme.background.secondary};
+`
+
+const SVG = styled.svg`
+  width: 1.8rem;
+  height: 1.8rem;
+  margin-right: 1rem;
 `
 
 const Announcement: FC<Props> = ({ announcements }) => {
   return (
     <AnnouncementWrapper>
-      <svg>
+      <SVG>
         <use xlinkHref={`${svgIcons}${SVG_SPRITE.megaphone}`} />
-      </svg>
+      </SVG>
       {announcements[0]?.content}
     </AnnouncementWrapper>
   )

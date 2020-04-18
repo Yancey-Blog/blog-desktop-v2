@@ -1,16 +1,13 @@
 const light = {
   background: {
     primary: '#ffffff',
-    secondary: '#ffffff',
+    secondary: '#fbfbfb',
     inset: '#e2e4e8',
     input: 'rgba(65,67,78,0.12)',
   },
   text: {
-    primary: '#1c1e21',
-    secondary: '#eaeadf',
-    tertiary: '#525560',
-    quarternary: '#9194a1',
-    placeholder: 'rgba(82,85,96,0.5)',
+    primary: '#666666',
+    secondary: '#969696',
     onPrimary: '#ffffff',
   },
   link: {
@@ -29,9 +26,6 @@ const dark = {
   text: {
     primary: '#f5f6f7',
     secondary: '#e3e4e8',
-    tertiary: '#a9abb6',
-    quarternary: '#6c6f7e',
-    placeholder: 'rgba(145,148,161,0.5)',
     onPrimary: '#050505',
   },
   link: {
@@ -60,12 +54,13 @@ const defaultTheme = {
     sloganBlue: '#00a7e0',
     sloganRed: '#ff3f1a',
     halfOpcityBlack: 'rgba(0, 0, 0, .5)',
+    border: '#e6e6e6',
   },
   zIndex: {
     fixed: 200,
     verlay: 400,
   },
-  headerHeight: '4rem',
+  headerHeight: '4.5rem',
 }
 
 export const lightTheme = { ...defaultTheme, ...light }

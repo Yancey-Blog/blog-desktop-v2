@@ -17,11 +17,14 @@ const GlobalStyle = createGlobalStyle`
   font-display: fallback;
 }
 
+  html {
+    font-size: 15px;
+  }
+
 
   body {
     font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, PingFang SC, Microsoft YaHei, Source Han Sans SC, Noto Sans CJK SC, WenQuanYi Micro Hei, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    font-size: 15px;
+    -webkit-font-smoothing: antialiased;  
   }
 
   a {

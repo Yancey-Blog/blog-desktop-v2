@@ -8,13 +8,13 @@ import svgIcons from '../../../../static/yancey-official-blog-svg-icons.svg'
 const MottoBar = styled.section`
   position: relative;
   background: ${({ theme }) => theme.colors.halfOpcityBlack};
-  padding: 1.2rem 1.6rem;
+  padding: 1.4rem 1.8rem;
   border-radius: 0.7rem;
 `
 
 const MottoContent = styled.p`
   margin-bottom: 1.4rem;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   color: ${({ theme }) => theme.colors.white};
   font-weight: bold;
   text-align: center;
@@ -38,8 +38,8 @@ const SocialMediaIconWrapper = styled.div`
 `
 
 const Svg = styled.svg`
-  width: 1.3rem;
-  height: 1.3rem;
+  width: 1.4rem;
+  height: 1.4rem;
   margin: 0 1rem;
   cursor: pointer;
 `
