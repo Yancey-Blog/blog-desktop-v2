@@ -33,7 +33,7 @@ const dark = {
     onPrimary: '#050505',
   },
   link: {
-    primary: '#c3bfb6',
+    primary: '#f5f6f7',
     secondary: '#ffa500',
   },
   border: '#383838',
@@ -59,9 +59,12 @@ const defaultTheme = {
     red: '#f05228',
     white: '#ffffff',
     black: '#000000',
+    orange: '#ffa500',
     sloganBlue: '#00a7e0',
     sloganRed: '#ff3f1a',
-    halfOpcityBlack: 'rgba(0, 0, 0, .5)',
+    fiveOpcityBlack: 'rgba(0, 0, 0, .5)',
+    sixOpcityBlack: 'rgba(0, 0, 0, .5)',
+    sevenOpcityBlack: 'rgba(0, 0, 0, .5)',
   },
   zIndex: {
     fixed: 200,

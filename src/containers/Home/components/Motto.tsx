@@ -7,7 +7,7 @@ import svgIcons from '../../../../static/yancey-official-blog-svg-icons.svg'
 
 const MottoBar = styled.section`
   position: relative;
-  background: ${({ theme }) => theme.colors.halfOpcityBlack};
+  background: ${({ theme }) => theme.colors.fiveOpcityBlack};
   padding: 1.4rem 1.8rem;
   border-radius: 0.7rem;
 `
@@ -28,7 +28,7 @@ const UpTriangle = styled.span`
   width: 0;
   height: 0;
   border: 1rem solid transparent;
-  border-bottom-color: ${({ theme }) => theme.colors.halfOpcityBlack};
+  border-bottom-color: ${({ theme }) => theme.colors.fiveOpcityBlack};
   top: -2rem;
   left: 5rem;
 `

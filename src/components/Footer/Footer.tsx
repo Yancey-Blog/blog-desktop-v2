@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
-import { Favorite } from '@material-ui/icons'
+import { SVG_SPRITE } from 'src/shared/constants'
+import svgIcons from '../../../static/yancey-official-blog-svg-icons.svg'
 import {
   Footer,
   Divider,
@@ -14,7 +15,11 @@ import { SOCIAL_MEDIA } from '../../shared/constants'
 export default () => (
   <Footer>
     <TechStacks>
-      Crafted with <Favorite /> by Yancey
+      Crafted with{' '}
+      <svg>
+        <use xlinkHref={`${svgIcons}${SVG_SPRITE.heart}`} />
+      </svg>{' '}
+      by Yancey
     </TechStacks>
     <Divider />
     <FooterBottom>

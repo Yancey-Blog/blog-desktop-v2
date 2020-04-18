@@ -1,4 +1,4 @@
-import { css } from 'styled-components'
+import { css, Keyframes } from 'styled-components'
 
 export const flexMixin = (
   justifyContent = 'center',
@@ -38,6 +38,16 @@ export const transitionMixin = (
 ) => css`
   transition: ${property} ${delay}ms ${timingFunction};
 `
+
+export const animationMixin = (
+  name: Keyframes,
+  delay: number,
+  timingFunction: string,
+  iterationCount: string,
+) =>
+  css`
+    animation: ${name} ${delay}ms ${timingFunction} ${iterationCount};
+  `
 
 export const noUserSelectMixin = () =>
   css`

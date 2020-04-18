@@ -1,6 +1,16 @@
 import styled from 'styled-components'
-import { flexMixin, transitionMixin, backgroundMixin } from 'src/styled/mixins'
+import {
+  flexMixin,
+  transitionMixin,
+  backgroundMixin,
+  animationMixin,
+} from 'src/styled/mixins'
 import { wrench } from 'src/styled/animations'
+
+export const HomeSVG = styled.svg`
+  width: 1.2rem !important;
+  height: 1.2rem !important;
+`
 
 export const NavBar = styled.nav`
   box-sizing: border-box;
@@ -8,15 +18,16 @@ export const NavBar = styled.nav`
   ${flexMixin('space-between')}
   width:100%;
   padding: 0 1.2rem;
-  font-family: 'Ubuntu';
+  font-family: 'Ubuntu', sans-serif;
   background: ${({ theme }) => theme.background.primary};
   opacity: 0.95;
-  box-shadow: 0 1px 40px -8px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 1px 40px -8px ${({ theme }) => theme.colors.fiveOpcityBlack};
   z-index: ${({ theme }) => theme.zIndex.fixed};
+  ${transitionMixin('background', 250, 'linear')};
 `
 
 export const NavBarItem = styled.div`
-  display: flex;
+  ${flexMixin('flex-start')}
   margin-right: 10rem;
 
   a {
@@ -25,12 +36,12 @@ export const NavBarItem = styled.div`
     margin-left: 1.6rem;
     padding: 0 0.2rem;
     height: ${({ theme }) => theme.headerHeight};
-    font-size: 1.0666666666666667rem;
-    color: ${({ theme }) => theme.link.primary};
+    font-size: 1.1rem;
+    color: ${({ theme }) => theme.text.primary};
     ${transitionMixin('color')}
 
     &:hover {
-      color: ${({ theme }) => theme.link.secondary};
+      color: ${({ theme }) => theme.colors.orange};
       ${transitionMixin('color')}
 
       &::after {
@@ -38,9 +49,9 @@ export const NavBarItem = styled.div`
       }
 
       svg {
-        fill: ${({ theme }) => theme.link.secondary};
+        fill: ${({ theme }) => theme.colors.orange};
         ${transitionMixin('fill')}
-        animation: ${wrench} 2s ease infinite;
+        ${animationMixin(wrench, 2000, 'ease', 'infinite')}
       }
     }
 
@@ -51,15 +62,16 @@ export const NavBarItem = styled.div`
       left: 0;
       width: 0;
       height: 0.4rem;
-      background: ${({ theme }) => theme.link.secondary};
+      background: ${({ theme }) => theme.colors.orange};
       ${transitionMixin('width')}
     }
   }
 
   svg {
-    margin-right: 8px;
-    width: 20px;
-    fill: ${({ theme }) => theme.link.primary};
+    margin-right: 0.5rem;
+    width: 1rem;
+    height: 1rem;
+    fill: ${({ theme }) => theme.text.primary};
     ${transitionMixin('fill')}
   }
 `

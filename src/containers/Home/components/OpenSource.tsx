@@ -77,7 +77,7 @@ const Overlay = styled.div`
   bottom: 0;
   left: 0;
   margin: auto;
-  background: ${({ theme }) => theme.colors.halfOpcityBlack};
+  background: ${({ theme }) => theme.colors.sevenOpcityBlack};
   transition: all 400ms linear;
 `
 

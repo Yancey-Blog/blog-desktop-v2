@@ -6,7 +6,7 @@ import svgIcons from '../../../../static/yancey-official-blog-svg-icons.svg'
 const Header = styled.h2`
   ${flexMixin('flex-start')}
   margin: 4rem auto 2rem;
-  padding-bottom: 0.8rem;
+  padding-bottom: 0.6rem;
   width: 100%;
   font-size: 1.3rem;
   font-weight: 400;

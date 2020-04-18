@@ -31,8 +31,6 @@ const ToggleContainer = styled.button`
   top: 0.75rem;
   right: 1.4rem;
   z-index: 200;
-
-  outline: none;
 `
 
 const Image = styled.img<ButtonProps>`
@@ -42,12 +40,12 @@ const Image = styled.img<ButtonProps>`
 
   &:first-child {
     transform: ${({ lightTheme }) =>
-      lightTheme ? 'translateY(0)' : 'translateY(100px)'};
+      lightTheme ? 'translateY(-2px)' : 'translateY(100px)'};
   }
 
   &:nth-child(2) {
     transform: ${({ lightTheme }) =>
-      lightTheme ? 'translateY(-100px)' : 'translateY(0)'};
+      lightTheme ? 'translateY(-100px)' : 'translateY(-2px)'};
   }
 `
 

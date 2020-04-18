@@ -1,7 +1,8 @@
 import React, { FC } from 'react'
 import Link from 'next/link'
-import { Home, Headset, LibraryBooks, Archive, Face } from '@material-ui/icons'
-import { Logo, NavBar, NavBarItem } from './styled'
+import { SVG_SPRITE } from 'src/shared/constants'
+import svgIcons from '../../../static/yancey-official-blog-svg-icons.svg'
+import { Logo, NavBar, NavBarItem, HomeSVG } from './styled'
 
 const Header: FC = () => {
   return (
@@ -12,27 +13,42 @@ const Header: FC = () => {
       <NavBarItem>
         <Link href="/">
           <a>
-            <Home /> Home
+            <HomeSVG>
+              <use xlinkHref={`${svgIcons}${SVG_SPRITE.home}`} />
+            </HomeSVG>
+            Home
           </a>
         </Link>
         <Link href="/blog">
           <a>
-            <LibraryBooks /> Blog
+            <svg>
+              <use xlinkHref={`${svgIcons}${SVG_SPRITE.blog}`} />
+            </svg>
+            Blog
           </a>
         </Link>
         <Link href="/archive">
           <a>
-            <Archive /> Archive
+            <svg>
+              <use xlinkHref={`${svgIcons}${SVG_SPRITE.archive}`} />
+            </svg>
+            Archive
           </a>
         </Link>
         <Link href="/music">
           <a>
-            <Headset /> Music
+            <svg>
+              <use xlinkHref={`${svgIcons}${SVG_SPRITE.music}`} />
+            </svg>
+            Music
           </a>
         </Link>
         <Link href="/about">
           <a>
-            <Face /> About
+            <svg>
+              <use xlinkHref={`${svgIcons}${SVG_SPRITE.cv}`} />
+            </svg>
+            About
           </a>
         </Link>
       </NavBarItem>
