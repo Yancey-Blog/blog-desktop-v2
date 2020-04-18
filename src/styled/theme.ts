@@ -23,7 +23,7 @@ const light = {
 const dark = {
   background: {
     primary: '#181a1b',
-    secondary: '#111111',
+    secondary: '#181a1b',
     inset: '#111111',
     input: 'rgba(191,193,201,0.12)',
   },
@@ -44,7 +44,7 @@ const dark = {
 
 const defaultTheme = {
   fontWeights: {
-    body: 400,
+    normal: 400,
     subheading: 500,
     link: 600,
     bold: 700,
@@ -62,13 +62,14 @@ const defaultTheme = {
     orange: '#ffa500',
     sloganBlue: '#00a7e0',
     sloganRed: '#ff3f1a',
+    threeOpcityBlack: 'rgba(0, 0, 0, .3)',
     fiveOpcityBlack: 'rgba(0, 0, 0, .5)',
-    sixOpcityBlack: 'rgba(0, 0, 0, .5)',
-    sevenOpcityBlack: 'rgba(0, 0, 0, .5)',
+    sixOpcityBlack: 'rgba(0, 0, 0, .6)',
+    sevenOpcityBlack: 'rgba(0, 0, 0, .7)',
   },
   zIndex: {
     fixed: 200,
-    verlay: 400,
+    overlay: 400,
   },
   headerHeight: '4.5rem',
 }

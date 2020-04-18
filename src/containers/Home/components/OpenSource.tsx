@@ -15,8 +15,8 @@ const OpenSourceItem = styled.figure`
   height: 11rem;
   ${backgroundMixin()}
   border-radius: 0.8rem;
+  box-shadow: 1px 1px 3px ${({ theme }) => theme.colors.threeOpcityBlack};
   overflow: hidden;
-  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
   transition: all 400ms linear;
 
   &::after {

@@ -1,7 +1,8 @@
 import React, { FC } from 'react'
 import styled from 'styled-components'
-import MoonIcon from '../../../static/moon.svg'
-import SunIcon from '../../../static/sun.svg'
+import { flexMixin, transitionMixin } from 'src/styled/mixins'
+import { SVG_SPRITE } from 'src/shared/constants'
+import svgIcons from '../../../static/yancey-official-blog-svg-icons.svg'
 
 interface Props {
   theme: string
@@ -13,48 +14,47 @@ interface ButtonProps {
 }
 
 const ToggleContainer = styled.button`
-  background: ${({ theme }) => theme.gradient};
-  border: 2px solid ${({ theme }) => theme.toggleBorder};
-  border-radius: 30px;
-  cursor: pointer;
-  display: flex;
-  font-size: 0.5rem;
-  justify-content: space-between;
-  margin: 0 auto;
-  overflow: hidden;
-  padding: 0.5rem;
-  position: relative;
-  width: 8rem;
-  height: 3rem;
-
   position: fixed;
   top: 0.75rem;
   right: 1.4rem;
+  ${flexMixin('space-between')}
+  width: 8rem;
+  height: 3rem;
+  background: ${({ theme }) => theme.gradient};
+  border: 2px solid ${({ theme }) => theme.toggleBorder};
+  border-radius: 3rem;
+  cursor: pointer;
+  overflow: hidden;
   z-index: 200;
 `
 
-const Image = styled.img<ButtonProps>`
-  height: auto;
+const SVG = styled.svg<ButtonProps>`
   width: 2rem;
-  transition: all 0.3s linear;
+  ${transitionMixin('all', 300, 'linear')}
 
   &:first-child {
     transform: ${({ lightTheme }) =>
-      lightTheme ? 'translateY(-2px)' : 'translateY(100px)'};
+      lightTheme ? 'translateY(-55px)' : 'translateY(0)'};
   }
 
   &:nth-child(2) {
     transform: ${({ lightTheme }) =>
-      lightTheme ? 'translateY(-100px)' : 'translateY(-2px)'};
+      lightTheme ? 'translateY(0)' : 'translateY(-55px)'};
   }
 `
 
 const ToggleTheme: FC<Props> = ({ theme, onToggle }) => {
   return (
-    <ToggleContainer onClick={() => onToggle()}>
-      <Image src={SunIcon} alt="SunIcon" lightTheme={theme === 'light'} />
-      <Image src={MoonIcon} alt="MoonIcon" lightTheme={theme === 'light'} />
-    </ToggleContainer>
+    <>
+      <ToggleContainer onClick={() => onToggle()}>
+        <SVG lightTheme={theme === 'light'}>
+          <use xlinkHref={`${svgIcons}${SVG_SPRITE.sun}`} />
+        </SVG>
+        <SVG lightTheme={theme === 'light'}>
+          <use xlinkHref={`${svgIcons}${SVG_SPRITE.moon}`} />
+        </SVG>
+      </ToggleContainer>
+    </>
   )
 }
 

@@ -82,6 +82,8 @@ export const SVG_SPRITE: Dict = {
   planet: '#twitter-1',
   astronaut: '#astronaut',
   close: '#close',
+  sun: '#sun',
+  moon: '#moon',
 }
 
 export const SOCIAL_MEDIA: SocialMedia = {

@@ -9,7 +9,6 @@ export const Footer = styled.footer`
 
 export const CopyRight = styled.p`
   font-size: 13px;
-  /* color: ${({ theme }) => theme.colors.text}; */
 `
 
 export const TechStacks = styled.p`
