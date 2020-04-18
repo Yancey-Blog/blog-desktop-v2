@@ -1,6 +1,6 @@
 import React, { FC } from 'react'
 import styled from 'styled-components'
-import { flexMixin, backgroundMixin } from 'src/styled/mixins'
+import { flexMixin, backgroundMixin, transitionMixin } from 'src/styled/mixins'
 import { SVG_SPRITE } from 'src/shared/constants'
 import SubTitle from './SubTitle'
 import { IOpenSource } from '../types'
@@ -17,7 +17,7 @@ const OpenSourceItem = styled.figure`
   border-radius: 0.8rem;
   box-shadow: 1px 1px 3px ${({ theme }) => theme.colors.threeOpcityBlack};
   overflow: hidden;
-  transition: all 400ms linear;
+  ${transitionMixin('all', 400, 'linear')}
 
   &::after {
     position: absolute;
@@ -30,7 +30,7 @@ const OpenSourceItem = styled.figure`
     text-align: center;
     color: ${({ theme }) => theme.colors.white};
     background: ${({ theme }) => theme.colors.black};
-    transition: all 400ms linear;
+    ${transitionMixin('all', 400, 'linear')}
   }
 
   &::before {
@@ -45,14 +45,14 @@ const OpenSourceItem = styled.figure`
     color: #bbb;
     transform: translate3d(-50%, -50%, 0);
     z-index: 2;
-    transition: all 400ms linear;
+    ${transitionMixin('all', 400, 'linear')}
   }
 
   &:hover {
     .openSourceOverlay {
       visibility: visible;
       opacity: 1;
-      transition: all 400ms linear;
+      ${transitionMixin('all', 400, 'linear')}
     }
   }
 
@@ -78,7 +78,7 @@ const Overlay = styled.div`
   left: 0;
   margin: auto;
   background: ${({ theme }) => theme.colors.sevenOpcityBlack};
-  transition: all 400ms linear;
+  ${transitionMixin('all', 400, 'linear')}
 `
 
 interface Props {
