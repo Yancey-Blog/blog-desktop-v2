@@ -1,28 +1,14 @@
-import React from 'react'
-import { useQuery } from '@apollo/react-hooks'
-import gql from 'graphql-tag'
-import Layout from '../components/Layout/Layout'
-import Announcement from '../components/Home/Announcement'
+import React, { useEffect } from 'react'
+import Layout from 'src/containers/Layout/Layout'
+import MusicContainer from 'src/containers/Music/MusicContainer'
 
 const Music = () => {
-  const ANNOUNCEMENTS = gql`
-    query GetAnnouncements {
-      getAnnouncements {
-        _id
-        content
-        createdAt
-        updatedAt
-      }
-    }
-  `
-
-  const { data } = useQuery(ANNOUNCEMENTS, {
-    notifyOnNetworkStatusChange: true,
-  })
-
+  useEffect(() => {
+    document.title = 'ミュージック | Yancey Inc.'
+  }, [])
   return (
     <Layout>
-      <Announcement data={data?.getAnnouncements || []} />
+      <MusicContainer />
     </Layout>
   )
 }

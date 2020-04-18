@@ -1,13 +1,12 @@
 import React from 'react'
 import Layout from 'src/containers/Layout/Layout'
-import HomeContainer from 'src/containers/Home/Home'
 
-const Index = () => {
+const NotFound = () => {
   return (
     <Layout>
-      <HomeContainer />
+      <h1>404 not found</h1>
     </Layout>
   )
 }
 
-export default Index
+export default NotFound
