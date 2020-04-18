@@ -1,6 +1,7 @@
 import React, { FC } from 'react'
 import styled from 'styled-components'
 import { SVG_SPRITE } from 'src/shared/constants'
+import { flexMixin } from 'src/styled/mixins'
 import { IAnnouncement } from '../types'
 import svgIcons from '../../../../static/yancey-official-blog-svg-icons.svg'
 
@@ -9,8 +10,7 @@ interface Props {
 }
 
 const AnnouncementWrapper = styled.section`
-  display: flex;
-  align-items: center;
+  ${flexMixin('flex-start')}
   padding: 1.8rem;
   font-size: 1.2rem;
   color: ${({ theme }) => theme.text.secondary};
