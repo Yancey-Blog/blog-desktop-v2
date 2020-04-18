@@ -13,6 +13,7 @@ import { ThemeProvider } from 'styled-components'
 import { lightTheme, darkTheme } from 'src/styled/theme'
 import GlobalStyle from 'src/styled/globalStyles'
 import { useDarkMode, ThemeMode } from 'src/hooks/useDarkMode'
+import ToggleTheme from 'src/components/ToggleTheme/ToggleTheme'
 
 import { SnackbarProvider } from 'notistack'
 import { SnackbarUtilsConfigurator } from 'src/components/Toast/Toast'
@@ -49,9 +50,8 @@ const YanceyBlog = ({ Component, pageProps, apollo }: AppProps & IProps) => {
             <SnackbarUtilsConfigurator />
             <Component {...pageProps} />
             <Player />
-            <button type="button" onClick={toggleTheme}>
-              click me
-            </button>
+
+            <ToggleTheme theme={theme} onToggle={toggleTheme} />
           </>
         </SnackbarProvider>
       </ApolloProvider>

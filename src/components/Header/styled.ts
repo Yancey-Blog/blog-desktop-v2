@@ -17,6 +17,7 @@ export const NavBar = styled.nav`
 
 export const NavBarItem = styled.div`
   display: flex;
+  margin-right: 10rem;
 
   a {
     position: relative;

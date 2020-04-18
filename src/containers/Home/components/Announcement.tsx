@@ -16,7 +16,7 @@ const AnnouncementWrapper = styled.section`
   color: ${({ theme }) => theme.text.secondary};
   background: ${({ theme }) => theme.background.secondary};
   border: 1px dashed;
-  border-color: ${({ theme }) => theme.colors.border};
+  border-color: ${({ theme }) => theme.border};
   border-radius: 0.8rem;
 `
 

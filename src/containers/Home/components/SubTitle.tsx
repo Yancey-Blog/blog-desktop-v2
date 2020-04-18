@@ -11,7 +11,8 @@ const Header = styled.h2`
   font-size: 1.3rem;
   font-weight: 400;
   color: ${({ theme }) => theme.text.primary};
-  border-bottom: 1px dashed #ececec;
+  border-bottom: 1px dashed;
+  border-bottom-color: ${({ theme }) => theme.border};
 `
 
 const SVG = styled.svg`

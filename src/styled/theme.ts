@@ -14,6 +14,10 @@ const light = {
     primary: '#666666',
     secondary: '#ffa500',
   },
+  border: '#e6e6e6',
+
+  toggleBorder: '#FFF',
+  gradient: 'linear-gradient(#39598A, #79D7ED)',
 }
 
 const dark = {
@@ -32,6 +36,10 @@ const dark = {
     primary: '#c3bfb6',
     secondary: '#ffa500',
   },
+  border: '#383838',
+
+  toggleBorder: '#6B8096',
+  gradient: 'linear-gradient(#091236, #1E215D)',
 }
 
 const defaultTheme = {
@@ -54,7 +62,6 @@ const defaultTheme = {
     sloganBlue: '#00a7e0',
     sloganRed: '#ff3f1a',
     halfOpcityBlack: 'rgba(0, 0, 0, .5)',
-    border: '#e6e6e6',
   },
   zIndex: {
     fixed: 200,
