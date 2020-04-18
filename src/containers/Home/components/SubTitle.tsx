@@ -1,0 +1,39 @@
+import React, { FC } from 'react'
+import styled from 'styled-components'
+import { flexMixin } from 'src/styled/mixins'
+import svgIcons from '../../../../static/yancey-official-blog-svg-icons.svg'
+
+const Header = styled.h2`
+  ${flexMixin('flex-start')}
+  margin: 4rem auto 2rem;
+  padding-bottom: 0.8rem;
+  width: 100%;
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: ${({ theme }) => theme.text.primary};
+  border-bottom: 1px dashed #ececec;
+`
+
+const SVG = styled.svg`
+  width: 1.8rem;
+  height: 1.8rem;
+  margin-right: 0.8rem;
+`
+
+interface Props {
+  icon: string
+  title: string
+}
+
+const SubTitle: FC<Props> = ({ icon, title }) => {
+  return (
+    <Header>
+      <SVG>
+        <use xlinkHref={`${svgIcons}${icon}`} />
+      </SVG>
+      {title}
+    </Header>
+  )
+}
+
+export default SubTitle

@@ -9,3 +9,7 @@ export interface SnackbarOrigin {
   vertical: 'top' | 'bottom'
   horizontal: 'left' | 'center' | 'right'
 }
+
+export interface Dict {
+  [x: string]: string
+}

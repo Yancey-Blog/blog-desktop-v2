@@ -28,6 +28,7 @@ export const COVERS = gql`
 export const OPEN_SOURCES = gql`
   query GetOpenSources {
     getOpenSources {
+      _id
       title
       description
       url

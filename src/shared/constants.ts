@@ -1,4 +1,4 @@
-import { SnackbarOrigin, SocialMedia } from './types'
+import { SnackbarOrigin, SocialMedia, Dict } from './types'
 
 export const SNACKBAR_ANCHOR_ORIGIN: SnackbarOrigin = {
   vertical: 'top',
@@ -22,7 +22,7 @@ export const POST_LICENSE_URL =
 
 export const LIVERE_KEY = 'MTAyMC8zOTU5NC8xNjEyMQ=='
 
-export const SVG_SPRITE = {
+export const SVG_SPRITE: Dict = {
   telegram: '#telegram',
   github: '#github',
   soundcloud: '#soundcloud',

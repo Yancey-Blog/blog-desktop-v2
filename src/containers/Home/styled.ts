@@ -7,7 +7,7 @@ export const HomeContainer = styled.section`
 export const MottoSocialMediaBar = styled.section`
   position: absolute;
   left: 50%;
-  top: 50%;
+  top: 40%;
   transform: translate3d(-50%, -50%, 0);
 `
 

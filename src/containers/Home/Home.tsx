@@ -12,6 +12,7 @@ import Announcement from './components/Announcement'
 import Motto from './components/Motto'
 import OpenSource from './components/OpenSource'
 import Cover from './components/Cover'
+import PostList from './components/PostList'
 import Slogan from './components/Slogan'
 
 const Home: FC = () => {
@@ -37,6 +38,8 @@ const Home: FC = () => {
         <OpenSource
           openSources={openSources ? openSources.getOpenSources : []}
         />
+
+        <PostList />
       </HomeMain>
     </HomeContainer>
   )

@@ -1,13 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
-import {
-  Home,
-  Headset,
-  LibraryBooks,
-  Archive,
-  Apps,
-  Face,
-} from '@material-ui/icons'
+import { Home, Headset, LibraryBooks, Archive, Face } from '@material-ui/icons'
 import { Logo, NavBar, NavBarItem } from './styled'
 
 export default () => (
@@ -34,11 +27,6 @@ export default () => (
       <Link href="/music">
         <a>
           <Headset /> Music
-        </a>
-      </Link>
-      <Link href="/apps">
-        <a>
-          <Apps /> Apps
         </a>
       </Link>
       <Link href="/about">
