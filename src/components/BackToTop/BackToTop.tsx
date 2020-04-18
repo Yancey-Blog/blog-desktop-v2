@@ -12,7 +12,7 @@ const BackToTop: FC = () => {
       throttle(() => {
         const top =
           document.documentElement.scrollTop || document.body.scrollTop
-        if (top > 100) {
+        if (top > 800) {
           setShowCat('showCat')
         } else {
           setShowCat('')

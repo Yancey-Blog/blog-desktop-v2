@@ -1,4 +1,15 @@
 {
   "presets": ["next/babel"],
-  "plugins": [["styled-components", { "ssr": true }]]
+  "plugins": [
+    ["styled-components", { "ssr": true }],
+    [
+      "babel-plugin-transform-imports",
+      {
+        "@material-ui/core": {
+          "transform": "@material-ui/core/esm/${member}",
+          "preventFullImport": true
+        }
+      }
+    ]
+  ]
 }
