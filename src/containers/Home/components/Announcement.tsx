@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { SVG_SPRITE } from 'src/shared/constants'
 import { flexMixin } from 'src/styled/mixins'
 import { IAnnouncement } from '../types'
-import svgIcons from '../../../../static/yancey-official-blog-svg-icons.svg'
+import svgIcons from '../../../../static/svg-sprite.svg'
 
 interface Props {
   announcements: IAnnouncement[]

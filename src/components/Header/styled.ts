@@ -79,7 +79,7 @@ export const NavBarItem = styled.div`
 export const Logo = styled.a`
   width: 14.666666666666666rem;
   height: 2.933333333333333rem;
-  background: url('/static/logo-with-text.png');
+  background: url('/static/yancey-official-blog-logo.png');
   cursor: pointer;
   ${backgroundMixin()}
 `

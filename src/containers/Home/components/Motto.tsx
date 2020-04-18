@@ -3,7 +3,7 @@ import styled, { css } from 'styled-components'
 import { SOCIAL_MEDIA, ALI_OSS_URL } from 'src/shared/constants'
 import { flexMixin, transitionMixin, backgroundMixin } from 'src/styled/mixins'
 import { IMotto } from '../types'
-import svgIcons from '../../../../static/yancey-official-blog-svg-icons.svg'
+import svgIcons from '../../../../static/svg-sprite.svg'
 
 const MottoBar = styled.section`
   position: relative;

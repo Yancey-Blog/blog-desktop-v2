@@ -1,7 +1,7 @@
 import React, { FC } from 'react'
 import Link from 'next/link'
 import { SVG_SPRITE } from 'src/shared/constants'
-import svgIcons from '../../../static/yancey-official-blog-svg-icons.svg'
+import svgIcons from '../../../static/svg-sprite.svg'
 import { Logo, NavBar, NavBarItem, HomeSVG } from './styled'
 
 const Header: FC = () => {
