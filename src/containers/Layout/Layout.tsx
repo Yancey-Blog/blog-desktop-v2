@@ -3,6 +3,7 @@ import { initGA, logPageView } from 'src/shared/analytics'
 import Head from 'src/components/Head/Head'
 import Header from 'src/components/Header/Header'
 import Footer from 'src/components/Footer/Footer'
+import BackToTop from 'src/components/BackToTop/BackToTop'
 import { Layouts, Main } from './styled'
 
 const Layout: FC = (props) => {
@@ -24,6 +25,7 @@ const Layout: FC = (props) => {
       <Header />
       <Main>{children}</Main>
       <Footer />
+      <BackToTop />
     </Layouts>
   )
 }

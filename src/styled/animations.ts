@@ -189,3 +189,14 @@ export const glitchLoop2 = keyframes`
     clip: rect(31px, 9999px, 149px, 0);
   }
 `
+
+export const float = keyframes`
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+  100% {
+    transform: translateY(0);
+  }`
