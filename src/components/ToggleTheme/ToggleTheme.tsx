@@ -45,16 +45,14 @@ const SVG = styled.svg<ButtonProps>`
 
 const ToggleTheme: FC<Props> = ({ theme, onToggle }) => {
   return (
-    <>
-      <ToggleContainer onClick={() => onToggle()}>
-        <SVG lightTheme={theme === 'light'}>
-          <use xlinkHref={`${svgIcons}${SVG_SPRITE.sun}`} />
-        </SVG>
-        <SVG lightTheme={theme === 'light'}>
-          <use xlinkHref={`${svgIcons}${SVG_SPRITE.moon}`} />
-        </SVG>
-      </ToggleContainer>
-    </>
+    <ToggleContainer onClick={() => onToggle()}>
+      <SVG lightTheme={theme === 'light'}>
+        <use xlinkHref={`${svgIcons}${SVG_SPRITE.sun}`} />
+      </SVG>
+      <SVG lightTheme={theme === 'light'}>
+        <use xlinkHref={`${svgIcons}${SVG_SPRITE.moon}`} />
+      </SVG>
+    </ToggleContainer>
   )
 }
 
