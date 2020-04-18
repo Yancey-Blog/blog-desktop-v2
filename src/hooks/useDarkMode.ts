@@ -6,23 +6,31 @@ export enum ThemeMode {
 }
 
 export const useDarkMode = () => {
-  const [theme, setTheme] = useState(ThemeMode.LIGHT)
+  const [theme, setTheme] = useState('light')
+  const [componentMounted, setComponentMounted] = useState(false)
+
+  const setMode = (mode: string) => {
+    window.localStorage.setItem('theme', mode)
+    setTheme(mode)
+  }
+
   const toggleTheme = () => {
-    if (theme === ThemeMode.LIGHT) {
-      window.localStorage.setItem('theme', ThemeMode.DARK)
-      setTheme(ThemeMode.DARK)
+    if (theme === 'light') {
+      setMode('dark')
     } else {
-      window.localStorage.setItem('theme', ThemeMode.LIGHT)
-      setTheme(ThemeMode.LIGHT)
+      setMode('light')
     }
   }
 
   useEffect(() => {
-    const localTheme = window.localStorage.getItem('theme') as ThemeMode | null
+    const localTheme = window.localStorage.getItem('theme')
     if (localTheme) {
       setTheme(localTheme)
+    } else {
+      setMode('light')
     }
+    setComponentMounted(true)
   }, [])
 
-  return [theme, toggleTheme]
+  return { theme, toggleTheme, componentMounted }
 }
