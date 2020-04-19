@@ -1,7 +1,8 @@
 import React, { FC } from 'react'
 import Link from 'next/link'
 import { SVG_SPRITE } from 'src/shared/constants'
-import svgIcons from '../../../../static/svg-sprite.svg'
+import { formatDate } from 'src/shared/utils'
+import svgIcons from '../../../../../static/svg-sprite.svg'
 import {
   PostCardWrapper,
   PosterAnchor,
@@ -15,16 +16,19 @@ import {
   Summary,
   ReadMoreSVG,
 } from './styled'
+import { IPostItem } from '../../types'
 
-const PostCard: FC = () => {
+interface Props {
+  post: IPostItem
+}
+
+const PostCard: FC<Props> = ({ post }) => {
+  const { _id, createdAt, posterUrl, title, pv, like, tags, summary } = post
   return (
     <PostCardWrapper>
-      <Link href="about">
+      <Link href={`/p/${_id}`}>
         <PosterAnchor>
-          <Poster
-            src="https://static.yancey.app/1f56269b-006e-4bc5-ae05-db6dffa01b91.jpg"
-            alt="poster"
-          />
+          <Poster src={posterUrl} alt={title} />
         </PosterAnchor>
       </Link>
       <SummaryWrapper>
@@ -32,12 +36,12 @@ const PostCard: FC = () => {
           <SVG className="timesvg">
             <use xlinkHref={`${svgIcons}${SVG_SPRITE.time}`} />
           </SVG>
-          Released At 2019-11-25 22:19:07
+          Released At {formatDate(createdAt)}
         </ReleasedAt>
 
-        <Link href="about">
+        <Link href={`/p/${_id}`}>
           <a>
-            <Title>聊一聊 TypeScript 的工程引用</Title>
+            <Title>{title}</Title>
           </a>
         </Link>
 
@@ -46,30 +50,25 @@ const PostCard: FC = () => {
             <SVG>
               <use xlinkHref={`${svgIcons}${SVG_SPRITE.eye}`} />
             </SVG>
-            102 PV
+            {pv} PV
           </MetaItem>
           <MetaItem>
             <SVG>
               <use xlinkHref={`${svgIcons}${SVG_SPRITE.comments1}`} />
             </SVG>
-            3 Likes
+            {like} Likes
           </MetaItem>
           <MetaItem>
             <SVG>
               <use xlinkHref={`${svgIcons}${SVG_SPRITE.closeFolder}`} />
             </SVG>
-            <Link href="about">
-              <a>TypeScript</a>
+            <Link href={`/tag/${tags[0]}`}>
+              <a>{tags[0]}</a>
             </Link>
           </MetaItem>
         </Meta>
 
-        <Summary>
-          这里是《写给前端工程师的 HTTP
-          系列》，记得有位大佬曾经说过：“大厂前端面试对 HTTP 的要求比 CSS
-          还要高”，由此可见 HTTP
-          的重要程度不可小视。文章写作计划如下，视情况可能有一定的删减，本篇是的重要程度不可小视。文章写作计划如下，视情况可能有一定的删减，本篇是
-        </Summary>
+        <Summary>{summary}</Summary>
 
         <Link href="about">
           <ReadMoreSVG>
