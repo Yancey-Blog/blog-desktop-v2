@@ -2,7 +2,7 @@ import React, { FC } from 'react'
 import styled from 'styled-components'
 import { flexMixin, transitionMixin } from 'src/styled/mixins'
 import { SVG_SPRITE } from 'src/shared/constants'
-import svgIcons from '../../../static/svg-sprite.svg'
+import svgIcons from 'src/static/svg-sprite.svg'
 
 interface Props {
   theme: string

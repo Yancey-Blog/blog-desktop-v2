@@ -6,6 +6,7 @@ import {
   animationMixin,
 } from 'src/styled/mixins'
 import { wrench } from 'src/styled/animations'
+import { ALI_OSS_URL } from 'src/shared/constants'
 
 export const HomeSVG = styled.svg`
   width: 1.2rem !important;
@@ -79,7 +80,7 @@ export const NavBarItem = styled.div`
 export const Logo = styled.a`
   width: 14.67rem;
   height: 2.93rem;
-  background: url('/static/yancey-official-blog-logo.png');
+background: url('${ALI_OSS_URL}/yancey-inc-logo/brand.png');
   cursor: pointer;
   ${backgroundMixin()}
 `

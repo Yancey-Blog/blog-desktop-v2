@@ -12,13 +12,13 @@ const Covers = styled.figure`
   margin-top: -${({ theme }) => theme.headerHeight};
   margin-bottom: 3.2rem;
 
-  &::after {
+  /* &::after {
     position: absolute;
     content: '';
     width: 100%;
     height: 100%;
     background: url('/static/dot.gif');
-  }
+  } */
 `
 
 interface Props {

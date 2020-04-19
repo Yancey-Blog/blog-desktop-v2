@@ -2,7 +2,7 @@ import React, { FC } from 'react'
 import Link from 'next/link'
 import { SVG_SPRITE } from 'src/shared/constants'
 import { formatDate } from 'src/shared/utils'
-import svgIcons from '../../../../../static/svg-sprite.svg'
+import svgIcons from 'src/static/svg-sprite.svg'
 import {
   PostCardWrapper,
   PosterAnchor,
