@@ -20,7 +20,7 @@ export const TechStacks = styled.p`
     margin: 0 4px;
     width: 20px;
     height: 20px;
-    fill: ${({ theme }) => theme.colors.red};
+    fill: ${({ theme }) => theme.colors.heartRed};
   }
 `
 

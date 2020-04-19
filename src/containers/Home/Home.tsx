@@ -19,6 +19,7 @@ import OpenSource from './components/OpenSource'
 import Cover from './components/Cover'
 import PostList from './components/PostList'
 import Slogan from './components/Slogan'
+import ShowMore from './components/ShowMore'
 
 const Home: FC = () => {
   const { data: covers } = useQuery<CoverQuery>(COVERS)
@@ -47,6 +48,8 @@ const Home: FC = () => {
         />
 
         <PostList />
+
+        <ShowMore />
       </HomeMain>
     </HomeContainer>
   )

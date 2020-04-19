@@ -14,6 +14,7 @@ export const MottoSocialMediaBar = styled.section`
 export const HomeMain = styled.section`
   margin: 0 auto;
   max-width: 59rem;
+  text-align: center;
 `
 
 export const CoverWrapper = styled.div`

@@ -58,7 +58,7 @@ const defaultTheme = {
     code: 1.6,
   },
   colors: {
-    red: '#f05228',
+    heartRed: '#f05228',
     white: '#ffffff',
     black: '#000000',
     orange: '#ffa500',
