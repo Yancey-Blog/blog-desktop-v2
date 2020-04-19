@@ -3,6 +3,7 @@ import styled from 'styled-components'
 export const Header = styled.figure`
   width: 100%;
   height: 32rem;
+  margin-bottom: 4rem;
   text-align: center;
   background-repeat: no-repeat;
   background-position: center top;
