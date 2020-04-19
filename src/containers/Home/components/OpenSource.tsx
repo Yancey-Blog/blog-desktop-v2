@@ -11,7 +11,7 @@ const OpenSourceWrapper = styled.section`
 
 const OpenSourceItem = styled.figure`
   position: relative;
-  width: 18.5rem;
+  width: 19.2rem;
   height: 11rem;
   ${backgroundMixin()}
   border-radius: 0.8rem;
@@ -22,7 +22,7 @@ const OpenSourceItem = styled.figure`
   &::after {
     position: absolute;
     content: attr(data-title);
-    left: 18.5rem;
+    left: 19.2rem;
     margin-top: 1.4rem;
     padding: 0.5rem 0;
     width: 100%;

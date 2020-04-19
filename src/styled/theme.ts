@@ -8,7 +8,7 @@ const light = {
   text: {
     primary: '#666666',
     secondary: '#969696',
-    onPrimary: '#ffffff',
+    header: '#504e4e',
   },
   link: {
     primary: '#666666',
@@ -30,7 +30,7 @@ const dark = {
   text: {
     primary: '#f5f6f7',
     secondary: '#e3e4e8',
-    onPrimary: '#050505',
+    header: '#cbc8c0',
   },
   link: {
     primary: '#f5f6f7',
@@ -62,6 +62,7 @@ const defaultTheme = {
     orange: '#ffa500',
     sloganBlue: '#00a7e0',
     sloganRed: '#ff3f1a',
+    oneOpcityBlack: 'rgba(0, 0, 0, .1)',
     threeOpcityBlack: 'rgba(0, 0, 0, .3)',
     fiveOpcityBlack: 'rgba(0, 0, 0, .5)',
     sixOpcityBlack: 'rgba(0, 0, 0, .6)',

@@ -1,6 +1,11 @@
 import React, { FC } from 'react'
 import { useQuery } from '@apollo/react-hooks'
-import { HomeContainer, MottoSocialMediaBar, HomeMain } from './styled'
+import {
+  HomeContainer,
+  MottoSocialMediaBar,
+  HomeMain,
+  CoverWrapper,
+} from './styled'
 import { COVERS, ANNOUNCEMENTS, OPEN_SOURCES, MOTTOS } from './typeDefs'
 import {
   AnnouncementQuery,
@@ -23,12 +28,14 @@ const Home: FC = () => {
 
   return (
     <HomeContainer>
-      <Cover covers={covers ? covers.getAllPublicCovers : []} />
+      <CoverWrapper>
+        <Cover covers={covers ? covers.getAllPublicCovers : []} />
 
-      <MottoSocialMediaBar>
-        <Slogan />
-        <Motto mottos={mottos ? mottos.getMottos : []} />
-      </MottoSocialMediaBar>
+        <MottoSocialMediaBar>
+          <Slogan />
+          <Motto mottos={mottos ? mottos.getMottos : []} />
+        </MottoSocialMediaBar>
+      </CoverWrapper>
 
       <HomeMain>
         <Announcement
