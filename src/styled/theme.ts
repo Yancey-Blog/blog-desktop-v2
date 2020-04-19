@@ -3,8 +3,7 @@ const light = {
     primary: '#ffffff',
     secondary: '#fbfbfb',
     postCard: '#ffffff',
-    inset: '#e2e4e8',
-    input: 'rgba(65,67,78,0.12)',
+    blurCard: 'rgba(245, 245, 245, .8)',
   },
   text: {
     primary: '#666666',
@@ -26,13 +25,12 @@ const dark = {
     primary: '#181a1b',
     secondary: '#1d1f27',
     postCard: '#1d1f27',
-    inset: '#111111',
-    input: 'rgba(191,193,201,0.12)',
+    blurCard: 'rgba(27, 29, 30, .8)',
   },
   text: {
     primary: '#f5f6f7',
-    secondary: '#e3e4e8',
-    header: '#cbc8c0',
+    secondary: '#cbc8c0',
+    header: '#f5f6f7',
   },
   link: {
     primary: '#f5f6f7',
