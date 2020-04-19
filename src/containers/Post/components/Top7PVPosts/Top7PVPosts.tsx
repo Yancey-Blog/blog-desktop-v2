@@ -1,9 +1,10 @@
-import React from 'react'
+import React, { FC } from 'react'
 import Link from 'next/link'
 import styled from 'styled-components'
 import { flexMixin } from 'src/styled/mixins'
-import { SVG_SPRITE } from 'src/shared/constants'
+import { SVG_SPRITE, DOMAIN } from 'src/shared/constants'
 import SubHeader from '../SubTitle/SubTitle'
+import { IPostItem } from '../../types'
 
 const CardItem = styled.div`
   position: relative;
@@ -62,58 +63,39 @@ const Thumb = styled.img`
   object-fit: cover;
 `
 
-const Top7PVPosts = () => {
+interface Props {
+  topPVPosts: IPostItem[]
+}
+
+const Top7PVPosts: FC<Props> = ({ topPVPosts }) => {
   return (
     <>
       <SubHeader title="Top 7 Most Viewed" icon={SVG_SPRITE.crown} />
 
-      <Link href="about">
-        <a>
-          <CardItem>
-            <BlurBg
-              style={{
-                backgroundImage:
-                  'url(https://static.yancey.app/150be0_a045e63424e74c0cb0e578f5e7d8d1e1_mv2_d_2048_1365_s_2.jpg)',
-              }}
-            />
+      {topPVPosts.map((post) => {
+        const { _id, title, posterUrl } = post
+        return (
+          <Link href={`/post/${_id}`}>
+            <a>
+              <CardItem>
+                <BlurBg
+                  style={{
+                    backgroundImage: `url(${posterUrl})`,
+                  }}
+                />
 
-            <CardContent>
-              <span>
-                <Title>[HTTP 系列] 第 2 篇 —— HTTP 协议那些事</Title>
-                <Url>https://yanceyleo.com/p/5bc202a26b48dfee0a0dcedf</Url>
-              </span>
-              <Thumb
-                alt="xxxx"
-                src="https://static.yancey.app/150be0_a045e63424e74c0cb0e578f5e7d8d1e1_mv2_d_2048_1365_s_2.jpg"
-              />
-            </CardContent>
-          </CardItem>
-        </a>
-      </Link>
-
-      <Link href="about">
-        <a>
-          <CardItem>
-            <BlurBg
-              style={{
-                backgroundImage:
-                  'url(https://static.yancey.app/150be0_a045e63424e74c0cb0e578f5e7d8d1e1_mv2_d_2048_1365_s_2.jpg)',
-              }}
-            />
-
-            <CardContent>
-              <span>
-                <Title>Grid Layout</Title>
-                <Url>https://yanceyleo.com/p/5bc202a26b48dfee0a0dcedf</Url>
-              </span>
-              <Thumb
-                alt="xxxx"
-                src="https://static.yancey.app/150be0_a045e63424e74c0cb0e578f5e7d8d1e1_mv2_d_2048_1365_s_2.jpg"
-              />
-            </CardContent>
-          </CardItem>
-        </a>
-      </Link>
+                <CardContent>
+                  <span>
+                    <Title>{title}</Title>
+                    <Url>{`${DOMAIN}/post/${_id}`}</Url>
+                  </span>
+                  <Thumb alt={title} src={posterUrl} />
+                </CardContent>
+              </CardItem>
+            </a>
+          </Link>
+        )
+      })}
     </>
   )
 }

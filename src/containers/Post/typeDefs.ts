@@ -29,7 +29,6 @@ export const GET_TOP_PV_POSTS = gql`
       _id
       title
       posterUrl
-      pv
     }
   }
 `
