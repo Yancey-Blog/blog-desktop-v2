@@ -26,7 +26,7 @@ const PostCard: FC<Props> = ({ post }) => {
   const { _id, createdAt, posterUrl, title, pv, like, tags, summary } = post
   return (
     <PostCardWrapper>
-      <Link href={`/p/${_id}`}>
+      <Link href={`/post/${_id}`}>
         <PosterAnchor>
           <Poster src={posterUrl} alt={title} />
         </PosterAnchor>
@@ -39,7 +39,7 @@ const PostCard: FC<Props> = ({ post }) => {
           Released At {formatDate(createdAt)}
         </ReleasedAt>
 
-        <Link href={`/p/${_id}`}>
+        <Link href={`/post/${_id}`}>
           <a>
             <Title>{title}</Title>
           </a>
@@ -70,7 +70,7 @@ const PostCard: FC<Props> = ({ post }) => {
 
         <Summary>{summary}</Summary>
 
-        <Link href={`/p/${_id}`}>
+        <Link href={`/post/${_id}`}>
           <a>
             <ReadMoreSVG>
               <use xlinkHref={`${svgIcons}${SVG_SPRITE.more}`} />
