@@ -8,7 +8,7 @@ import { PostQuery, PostVars } from './types'
 import { PostContent, PostItemContainer } from './styled'
 
 const PostList = () => {
-  const { data } = useQuery<PostQuery, PostVars>(POSTS, {
+  const { data: posts } = useQuery<PostQuery, PostVars>(POSTS, {
     notifyOnNetworkStatusChange: true,
     variables: {
       input: {
@@ -27,9 +27,9 @@ const PostList = () => {
 
       <PostContent>
         <PostItemContainer>
-          {!data
+          {!posts
             ? null
-            : data.posts.items.map((post) => (
+            : posts.posts.items.map((post) => (
                 <PostCard post={post} key={post._id} />
               ))}
         </PostItemContainer>

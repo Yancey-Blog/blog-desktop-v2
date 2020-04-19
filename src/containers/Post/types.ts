@@ -30,3 +30,31 @@ export interface PostVars {
     title?: string
   }
 }
+
+export interface GetTopPVPostsQuery {
+  getTopPVPosts: IPostItem[]
+}
+
+export interface GetTopPVPostsVars {
+  limit: number
+}
+
+export interface GetAllTagsQuery {
+  getAllTags: { tags: string[] }
+}
+
+export interface UpdateLikeMutation {
+  updateLike: IPostItem
+}
+
+export interface UpdateLikeVars {
+  id: string
+}
+
+export interface UpdatePVMutation {
+  updatePV: IPostItem
+}
+
+export interface UpdatePVVars {
+  id: string
+}
