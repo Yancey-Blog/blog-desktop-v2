@@ -8,6 +8,7 @@ export const PostCardWrapper = styled.section`
   font-family: 'Ubuntu', sans-serif;
   text-align: right;
   color: ${({ theme }) => theme.text.secondary};
+  background: ${({ theme }) => theme.background.postCard};
   border-radius: 0.5rem;
   box-shadow: 0 1px 20px -8px ${({ theme }) => theme.colors.fiveOpcityBlack};
   text-shadow: 0 0 1px ${({ theme }) => theme.colors.oneOpcityBlack};
@@ -78,6 +79,7 @@ export const MetaItem = styled.div`
 
 export const Summary = styled.p`
   margin: 1.4rem 0 1rem;
+  min-height: 8rem;
   font-size: 1.1rem;
   line-height: 1.5;
   color: ${({ theme }) => theme.text.header};

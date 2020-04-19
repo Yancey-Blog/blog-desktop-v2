@@ -2,6 +2,7 @@ const light = {
   background: {
     primary: '#ffffff',
     secondary: '#fbfbfb',
+    postCard: '#ffffff',
     inset: '#e2e4e8',
     input: 'rgba(65,67,78,0.12)',
   },
@@ -23,7 +24,8 @@ const light = {
 const dark = {
   background: {
     primary: '#181a1b',
-    secondary: '#181a1b',
+    secondary: '#1d1f27',
+    postCard: '#1d1f27',
     inset: '#111111',
     input: 'rgba(191,193,201,0.12)',
   },
@@ -36,7 +38,7 @@ const dark = {
     primary: '#f5f6f7',
     secondary: '#ffa500',
   },
-  border: '#383838',
+  border: '#5b5b5b',
 
   toggleBorder: '#6B8096',
   gradient: 'linear-gradient(#091236, #1E215D)',

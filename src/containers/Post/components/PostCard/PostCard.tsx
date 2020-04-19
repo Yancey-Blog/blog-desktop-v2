@@ -70,10 +70,12 @@ const PostCard: FC<Props> = ({ post }) => {
 
         <Summary>{summary}</Summary>
 
-        <Link href="about">
-          <ReadMoreSVG>
-            <use xlinkHref={`${svgIcons}${SVG_SPRITE.more}`} />
-          </ReadMoreSVG>
+        <Link href={`/p/${_id}`}>
+          <a>
+            <ReadMoreSVG>
+              <use xlinkHref={`${svgIcons}${SVG_SPRITE.more}`} />
+            </ReadMoreSVG>
+          </a>
         </Link>
       </SummaryWrapper>
     </PostCardWrapper>
