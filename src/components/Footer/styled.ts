@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import { flexMixin } from '../../styled/mixins'
 
-export const Footer = styled.footer`
+export const FooterWrapper = styled.footer`
   margin: 36px auto;
   width: 800px;
   font-family: 'Ubuntu', sans-serif;

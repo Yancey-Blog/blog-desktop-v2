@@ -120,3 +120,9 @@ export const SOCIAL_MEDIA: SocialMedia = {
     icon: SVG_SPRITE.mail,
   },
 }
+
+export const initialGlobalSetting = {
+  cvPostId: '',
+  releasePostId: '',
+  isGrayTheme: false,
+}

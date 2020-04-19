@@ -8,6 +8,7 @@ import { ApolloClient } from 'apollo-client'
 import withApollo from 'src/shared/withApollo'
 
 import 'normalize.css'
+import 'aplayer/dist/APlayer.min.css'
 
 import { ThemeProvider } from 'styled-components'
 import { lightTheme, darkTheme } from 'src/styled/theme'
@@ -22,8 +23,6 @@ import {
   SNACKBAR_MAX_NUM,
   SNACKBAR_AUTO_HIDE_DURATION,
 } from 'src/shared/constants'
-
-import 'aplayer/dist/APlayer.min.css'
 
 interface IProps {
   apollo: ApolloClient<{}>
@@ -50,7 +49,6 @@ const YanceyBlog = ({ Component, pageProps, apollo }: AppProps & IProps) => {
             <SnackbarUtilsConfigurator />
             <Component {...pageProps} />
             <Player />
-
             <ToggleTheme theme={theme} onToggle={toggleTheme} />
           </>
         </SnackbarProvider>

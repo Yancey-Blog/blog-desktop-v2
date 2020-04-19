@@ -2,9 +2,16 @@ import React, { FC } from 'react'
 import Link from 'next/link'
 import { SVG_SPRITE } from 'src/shared/constants'
 import svgIcons from 'src/static/svg-sprite.svg'
+import { IGlobalSetting } from 'src/containers/GlobalSetting/types'
 import { Logo, NavBar, NavBarItem, HomeSVG } from './styled'
 
-const Header: FC = () => {
+interface Props {
+  globalSetting: IGlobalSetting
+}
+
+const Header: FC<Props> = ({ globalSetting }) => {
+  const { cvPostId } = globalSetting
+
   return (
     <NavBar>
       <Link href="/">
@@ -19,7 +26,7 @@ const Header: FC = () => {
             Home
           </a>
         </Link>
-        <Link href="/blog">
+        <Link href="/post">
           <a>
             <svg>
               <use xlinkHref={`${svgIcons}${SVG_SPRITE.blog}`} />
@@ -43,7 +50,7 @@ const Header: FC = () => {
             Music
           </a>
         </Link>
-        <Link href="/about">
+        <Link href={`/p/${cvPostId}`}>
           <a>
             <svg>
               <use xlinkHref={`${svgIcons}${SVG_SPRITE.cv}`} />
