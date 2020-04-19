@@ -9,7 +9,7 @@ const Covers = styled.figure`
   height: 100vh;
   background-attachment: fixed;
   ${backgroundMixin()};
-  margin-top: -${({ theme }) => theme.headerHeight};
+  /* margin-top: -${({ theme }) => theme.headerHeight}; */
   margin-bottom: 3.2rem;
 
   /* &::after {
