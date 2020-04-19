@@ -25,7 +25,7 @@ const Button = styled.button`
 
 const ShowMore = () => {
   return (
-    <Link href="/blog">
+    <Link href="/post">
       <a>
         <Button>More</Button>
       </a>
