@@ -36,7 +36,7 @@ const Footer: FC<Props> = ({ globalSetting }) => {
         </CopyRight>
         <nav>
           <Link href={`/post/${releasePostId}`}>
-            <InnerLink>Changed Log</InnerLink>
+            <InnerLink>Release Log</InnerLink>
           </Link>
           <Link href="privacy-policy">
             <InnerLink>Privacy Policy</InnerLink>

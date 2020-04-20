@@ -75,7 +75,7 @@ const Top7PVPosts: FC<Props> = ({ topPVPosts }) => {
       {topPVPosts.map((post) => {
         const { _id, title, posterUrl } = post
         return (
-          <Link href={`/post/${_id}`}>
+          <Link href={`/post/${_id}`} key={_id}>
             <a>
               <CardItem>
                 <BlurBg
