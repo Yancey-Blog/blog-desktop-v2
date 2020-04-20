@@ -10,6 +10,7 @@ import {
   CopyRight,
   InnerLink,
   FooterBottom,
+  Email,
 } from './styled'
 
 interface Props {
@@ -36,15 +37,16 @@ const Footer: FC<Props> = ({ globalSetting }) => {
         </CopyRight>
         <nav>
           <Link href={`/post/${releasePostId}`}>
-            <InnerLink>Release Log</InnerLink>
+            <a>
+              <InnerLink>Release Log</InnerLink>
+            </a>
           </Link>
-          <Link href="privacy-policy">
-            <InnerLink>Privacy Policy</InnerLink>
+          <Link href="/legal/privacy-policy">
+            <a>
+              <InnerLink>Privacy Policy</InnerLink>
+            </a>
           </Link>
-          <Link href="apps">
-            <InnerLink>Apps</InnerLink>
-          </Link>
-          <InnerLink href={SOCIAL_MEDIA.email.url}>Contact</InnerLink>
+          <Email href={SOCIAL_MEDIA.email.url}>Contact</Email>
         </nav>
       </FooterBottom>
     </FooterWrapper>

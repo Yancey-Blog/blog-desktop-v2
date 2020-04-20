@@ -36,17 +36,13 @@ export const Divider = styled.hr`
   border: 0;
 `
 
-export const InnerLink = styled.a`
-  margin-right: 8px;
-  padding-right: 8px;
+export const InnerLink = styled.span`
   font-size: 13px;
-  /* color: ${({ theme }) => theme.colors.text}; */
-  cursor: pointer;
+  margin-right: 16px;
+`
 
-  &:last-child {
-    margin: 0;
-    padding: 0;
-  }
+export const Email = styled.a`
+  font-size: 13px;
 `
 
 export const FooterBottom = styled.div`
