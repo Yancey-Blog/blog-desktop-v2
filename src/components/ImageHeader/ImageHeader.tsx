@@ -3,7 +3,7 @@ import { ALI_OSS_URL } from 'src/shared/constants'
 import { Header, Title } from './styled'
 
 interface Props {
-  title: string
+  title?: string
   imageUrl: string
 }
 

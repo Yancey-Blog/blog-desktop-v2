@@ -60,6 +60,7 @@ const defaultTheme = {
     white: '#ffffff',
     black: '#000000',
     orange: '#ffa500',
+    linkBlue: '#0070ba',
     sloganBlue: '#00a7e0',
     sloganRed: '#ff3f1a',
     oneOpcityBlack: 'rgba(0, 0, 0, .1)',
