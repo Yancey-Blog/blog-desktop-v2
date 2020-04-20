@@ -58,3 +58,20 @@ export const UPDATE_PV = gql`
     }
   }
 `
+
+export const ARCHIVE = gql`
+  query Archive {
+    archive {
+      _id
+      months {
+        month
+        days {
+          id
+          title
+          pv
+          createdAt
+        }
+      }
+    }
+  }
+`

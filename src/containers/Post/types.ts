@@ -58,3 +58,24 @@ export interface UpdatePVMutation {
 export interface UpdatePVVars {
   id: string
 }
+
+export interface IArchiveDay {
+  id: string
+  title: string
+  pv: number
+  createdAt: string
+}
+
+export interface IArchiveMonth {
+  month: number
+  days: IArchiveDay[]
+}
+
+export interface IArchive {
+  _id: number
+  months: IArchiveMonth[]
+}
+
+export interface ArchiveQuery {
+  archive: IArchive[]
+}
