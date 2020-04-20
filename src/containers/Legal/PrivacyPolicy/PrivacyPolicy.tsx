@@ -548,13 +548,13 @@ const PrivacyPolicy: FC = () => (
       </p>
       <Anchor id="Owner_and_Data_Controller" />
       <h2>IX. Owner and Data Controller</h2>
-      <p>Yancey Inc.</p>
+      <p>Yancey Inc. and its affiliates.</p>
       <p>
         <span>Owner contact email: </span>
         {SOCIAL_MEDIA.email.url.split(':')[1]}
       </p>
       <hr />
-      <UpdateDate>Date of last revision: Tuesday, August 28, 2018</UpdateDate>
+      <UpdateDate>Date of last revision: Monday, April 20, 2020</UpdateDate>
     </Article>
   </>
 )
