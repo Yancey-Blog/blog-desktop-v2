@@ -2,6 +2,35 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.5.0](https://github.com/Yancey-Blog/blog-fe-v2/compare/v0.4.0...v0.5.0) (2020-04-21)
+
+
+### Features
+
+* add btn ([33b81e4](https://github.com/Yancey-Blog/blog-fe-v2/commit/33b81e433faa6036602fc63fe740c340cb98c7de))
+* add Post page ([bf22176](https://github.com/Yancey-Blog/blog-fe-v2/commit/bf22176b18863d052ee2a059e4a217daf32bbde1))
+* add SubTitle component ([358aac6](https://github.com/Yancey-Blog/blog-fe-v2/commit/358aac69bbeef366795957b2861fa713b00e3d47))
+* add types for Post component ([ef5cafb](https://github.com/Yancey-Blog/blog-fe-v2/commit/ef5cafbc138ccdf17032c9e515537f67bea81567))
+* delete useless file ([72dd0f6](https://github.com/Yancey-Blog/blog-fe-v2/commit/72dd0f6b74ff090e513712a2c0adfcbdd232bfd8))
+* delete useless files ([e0179b2](https://github.com/Yancey-Blog/blog-fe-v2/commit/e0179b22a2c61e912f73c783f089fac73339345d))
+* finish Archive ([99af53f](https://github.com/Yancey-Blog/blog-fe-v2/commit/99af53f1a5eb86043c9fd49d6d79642b6fc7a32c))
+* finish Post ([a12379c](https://github.com/Yancey-Blog/blog-fe-v2/commit/a12379c871427d395209e85b7b9333515069c8e1))
+* finish post component ([70c2885](https://github.com/Yancey-Blog/blog-fe-v2/commit/70c28858cbb82d8c6ea896aef1f686619b050617))
+* finish PostItem component ([fbd29bb](https://github.com/Yancey-Blog/blog-fe-v2/commit/fbd29bb8504dbc2a863695d9ffd542770b0bd793))
+* finish privacy policy component ([1f79116](https://github.com/Yancey-Blog/blog-fe-v2/commit/1f791160f91bc02ca5daea35cb2d2bc2e904639c))
+* finish style of Top7PVPosts component ([5b3db3f](https://github.com/Yancey-Blog/blog-fe-v2/commit/5b3db3f751ea006dead0baacd55f97930e5fc0b8))
+* finish Top 7 Most Viewed ([bde799d](https://github.com/Yancey-Blog/blog-fe-v2/commit/bde799da4242aa62a5ced9664a2e72b47cb80e4f))
+* iniitial archive page ([e4ecd6d](https://github.com/Yancey-Blog/blog-fe-v2/commit/e4ecd6d41bcd5fa010805cbb57b2a062ff30b083))
+* package ImageHeader component ([72a95d1](https://github.com/Yancey-Blog/blog-fe-v2/commit/72a95d1cc71d7d85f225d50ee46d6c59723b8e5f))
+* refactor post ([97596c0](https://github.com/Yancey-Blog/blog-fe-v2/commit/97596c0012bbd57c1cc8d1c1b279f3234fe2cd85))
+* style optimization ([197fb38](https://github.com/Yancey-Blog/blog-fe-v2/commit/197fb383e652c392eeb37db043f5bffaaeac1924))
+* support GlobalSetting ([cc8d81c](https://github.com/Yancey-Blog/blog-fe-v2/commit/cc8d81cb44ce98e85a92548d9f87e8bd8c003c58))
+* top7PVPosts ([dbe8d08](https://github.com/Yancey-Blog/blog-fe-v2/commit/dbe8d08462c3ec2665eaf4a6723707c800226d2c))
+* update Footer ([359bca9](https://github.com/Yancey-Blog/blog-fe-v2/commit/359bca9869038ddb6fd44b41130177a4d9231705))
+* update Footer and create Lega page ([37f5ed7](https://github.com/Yancey-Blog/blog-fe-v2/commit/37f5ed716f51c2607a0c7f1dc6d8894a31dcf82a))
+* update PrivacyPolicy component of UpdateDate ([f9e939a](https://github.com/Yancey-Blog/blog-fe-v2/commit/f9e939a549fe7affee89c88ea4e640482fb558f1))
+* update static file folder ([4bc3de5](https://github.com/Yancey-Blog/blog-fe-v2/commit/4bc3de59b1b3e0a3211c79baf5d8d060e1bfb562))
+
 ## [0.4.0](https://github.com/Yancey-Blog/blog-fe-v2/compare/v0.3.1...v0.4.0) (2020-04-18)
 
 
