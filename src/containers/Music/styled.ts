@@ -25,6 +25,12 @@ export const MusicNotes = styled.div`
   grid-row-gap: 1.6rem;
 `
 
+export const BestAlbumWrapper = styled.div`
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 1.6rem;
+`
+
 export const YanceyMusicWrapper = styled.div`
   display: grid;
   grid-template-columns: repeat(4, 1fr);

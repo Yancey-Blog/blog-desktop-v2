@@ -5,6 +5,7 @@ import { POSTS } from 'src/containers/Post/typeDefs'
 import { PostQuery, PostVars } from 'src/containers/Post/types'
 import LiveTour from './components/LiveTour'
 import Card from './components/Card'
+import BestAlbum from './components/BestAlbum'
 import { LiveTourQuery, YanceyMusicQuery, BestAlbumQuery } from './types'
 import { LIVE_TOURS, YANCEY_MUSIC, BEST_ALBUMS } from './typeDefs'
 import {
@@ -12,6 +13,7 @@ import {
   SubTitle,
   LiveToursMusicNotes,
   MusicNotes,
+  BestAlbumWrapper,
   YanceyMusicWrapper,
 } from './styled'
 
@@ -29,7 +31,6 @@ const Music = () => {
     },
   })
 
-  console.log(bestAlbums, yanceymusics)
   return (
     <>
       <ImageHeader
@@ -61,6 +62,19 @@ const Music = () => {
             </MusicNotes>
           </div>
         </LiveToursMusicNotes>
+
+        <div>
+          <SubTitle>BEST ALBUM</SubTitle>
+          <BestAlbumWrapper>
+            {!bestAlbums
+              ? null
+              : bestAlbums.getBestAlbums
+                  .slice(0, 4)
+                  .map((bestAlbum) => (
+                    <BestAlbum key={bestAlbum._id} bestAlbum={bestAlbum} />
+                  ))}
+          </BestAlbumWrapper>
+        </div>
 
         <div>
           <SubTitle>YANCEY MUSIC</SubTitle>
