@@ -10,6 +10,7 @@ import {
   Year,
   YearList,
   Month,
+  MonthTxt,
   DayList,
   DayItem,
   Day,
@@ -37,19 +38,21 @@ const Archive: FC = () => {
               {year.months.map((month) => (
                 <li key={month.month}>
                   <input
-                    id={`tab_${year._id}_${month.month}`}
+                    id={`archive_${year._id}_${month.month}`}
                     type="checkbox"
                     name="tabs"
                     defaultChecked
                   />
-                  <label htmlFor={`tab_${year._id}_${month.month}`}>
+                  <label htmlFor={`archive_${year._id}_${month.month}`}>
                     <Month>
-                      {month.month}
-                      {'. '}({month.days.length}{' '}
-                      {month.days.length > 1 ? 'posts' : 'post'})
+                      <MonthTxt>
+                        {moment().month(month.month).format('MMM')}
+                        {'. '}({month.days.length}{' '}
+                        {month.days.length > 1 ? 'posts' : 'post'})
+                      </MonthTxt>
                     </Month>
                   </label>
-                  <DayList className="day_list_container">
+                  <DayList className="dayListContainer">
                     {month.days.map((day) => (
                       <DayItem key={day.id}>
                         <Day>

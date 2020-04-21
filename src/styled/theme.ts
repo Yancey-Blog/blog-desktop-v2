@@ -62,6 +62,7 @@ const defaultTheme = {
     orange: '#ffa500',
     linkBlue: '#0070ba',
     sloganBlue: '#00a7e0',
+    archiveBlue: '#6ecaf5',
     sloganRed: '#ff3f1a',
     oneOpcityBlack: 'rgba(0, 0, 0, .1)',
     threeOpcityBlack: 'rgba(0, 0, 0, .3)',
