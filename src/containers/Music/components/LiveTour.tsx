@@ -1,14 +1,39 @@
 import React, { FC } from 'react'
 import styled from 'styled-components'
 import Carousel from 'nuka-carousel'
+import { formatDate } from 'src/shared/utils'
 import { ILiveTour } from '../types'
 
-const LiveTourWrapper = styled.div`
+const LiveTourContent = styled.div`
+  position: relative;
   height: 38rem;
 `
 
 const LiveTourMeta = styled.div`
-  background: rgba(255, 255, 255, 0.9);
+  box-sizing: border-box;
+  position: absolute;
+  bottom: 0;
+  padding: 2rem 3rem;
+  width: 100%;
+  height: 10rem;
+  background: ${({ theme }) => theme.background.blurCard};
+`
+
+const Img = styled.img`
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+`
+
+const Date = styled.time`
+  font-size: 0.9rem;
+  color: ${({ theme }) => theme.colors.pink};
+`
+
+const Title = styled.p`
+  padding: 1rem 0 0.5rem;
+  color: ${({ theme }) => theme.text.header};
+  font-size: 1.8rem;
 `
 
 interface Props {
@@ -17,28 +42,27 @@ interface Props {
 
 const LiveTour: FC<Props> = ({ liveTours }) => {
   return (
-    <LiveTourWrapper>
-      <Carousel
-        autoplay
-        autoplayInterval={2000}
-        transitionMode="fade"
-        wrapAround
-      >
-        {liveTours.map((liveTour) => (
-          <LiveTourMeta key={liveTour._id}>
-            <img
-              key={liveTour._id}
-              src={liveTour.posterUrl}
-              alt={liveTour.title}
-            />
-            <div>
-              <time>{liveTour.showTime}</time>
-              <p>{liveTour.title}</p>
-            </div>
+    <Carousel
+      autoplay
+      autoplayInterval={2000}
+      transitionMode="fade"
+      wrapAround
+      withoutControls
+    >
+      {liveTours.map((liveTour) => (
+        <LiveTourContent key={liveTour._id}>
+          <Img
+            key={liveTour._id}
+            src={liveTour.posterUrl}
+            alt={liveTour.title}
+          />
+          <LiveTourMeta>
+            <Date>{formatDate(liveTour.showTime, 'YYYY-MM-DD')}</Date>
+            <Title>{liveTour.title}</Title>
           </LiveTourMeta>
-        ))}
-      </Carousel>
-    </LiveTourWrapper>
+        </LiveTourContent>
+      ))}
+    </Carousel>
   )
 }
 
