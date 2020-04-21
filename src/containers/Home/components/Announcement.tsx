@@ -2,8 +2,8 @@ import React, { FC } from 'react'
 import styled from 'styled-components'
 import { SVG_SPRITE } from 'src/shared/constants'
 import { flexMixin } from 'src/styled/mixins'
+import svgIcons from 'src/static/svg-sprite.svg'
 import { IAnnouncement } from '../types'
-import svgIcons from '../../../../static/svg-sprite.svg'
 
 interface Props {
   announcements: IAnnouncement[]

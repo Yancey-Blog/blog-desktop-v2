@@ -32,6 +32,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   a {
+    color: ${({ theme }: { theme: any }) => theme.text.secondary};
     text-decoration: none;
   }  
 

@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import Layout from 'src/containers/Layout/Layout'
-import MusicContainer from 'src/containers/Music/MusicContainer'
+import MusicContainer from 'src/containers/Music/Music'
 
 const Music = () => {
   useEffect(() => {

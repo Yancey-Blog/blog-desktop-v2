@@ -1,6 +1,6 @@
 import React, { FC, useState, useEffect } from 'react'
 import throttle from 'lodash.throttle'
-import { scrollToTop, noop } from 'src/shared/tools'
+import { scrollToTop, noop } from 'src/shared/utils'
 import { Cat } from './styled'
 
 const BackToTop: FC = () => {

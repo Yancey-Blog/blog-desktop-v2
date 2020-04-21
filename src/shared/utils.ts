@@ -1,3 +1,5 @@
+import moment from 'moment'
+
 export const scrollToTop = () => {
   let timer: number = 0
   cancelAnimationFrame(timer)
@@ -17,3 +19,6 @@ export const scrollToTop = () => {
 }
 
 export const noop = () => {}
+
+export const formatDate = (ISOString: string) =>
+  moment(ISOString).format('YYYY-MM-DD HH:mm:ss')

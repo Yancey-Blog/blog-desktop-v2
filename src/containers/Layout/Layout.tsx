@@ -1,13 +1,18 @@
 import React, { FC, useEffect } from 'react'
+import { useQuery } from '@apollo/react-hooks'
 import { initGA, logPageView } from 'src/shared/analytics'
+import { initialGlobalSetting } from 'src/shared/constants'
 import Head from 'src/components/Head/Head'
 import Header from 'src/components/Header/Header'
 import Footer from 'src/components/Footer/Footer'
 import BackToTop from 'src/components/BackToTop/BackToTop'
+import { GET_GLOBAL_SETTING } from 'src/containers/GlobalSetting/typeDefs'
+import { GlobalSettingQuery } from 'src/containers/GlobalSetting/types'
+
 import { Layouts, Main } from './styled'
 
-const Layout: FC = (props) => {
-  const { children } = props
+const Layout: FC = ({ children }) => {
+  const { data } = useQuery<GlobalSettingQuery>(GET_GLOBAL_SETTING)
 
   useEffect(() => {
     // @ts-ignore
@@ -22,9 +27,13 @@ const Layout: FC = (props) => {
   return (
     <Layouts>
       <Head />
-      <Header />
+      <Header
+        globalSetting={data ? data.getGlobalSetting : initialGlobalSetting}
+      />
       <Main>{children}</Main>
-      <Footer />
+      <Footer
+        globalSetting={data ? data.getGlobalSetting : initialGlobalSetting}
+      />
       <BackToTop />
     </Layouts>
   )

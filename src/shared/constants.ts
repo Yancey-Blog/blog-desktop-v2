@@ -9,6 +9,8 @@ export const SNACKBAR_MAX_NUM = 1
 
 export const SNACKBAR_AUTO_HIDE_DURATION = 3000
 
+export const DOMAIN = 'https://yanceyleo.com'
+
 export const ALI_OSS_URL = 'https://static.yanceyleo.com'
 
 export const WEBP_SUFFIX = '?x-oss-process=image/format,webp'
@@ -119,4 +121,10 @@ export const SOCIAL_MEDIA: SocialMedia = {
     url: 'mailto:yanceyofficial@gmail.com',
     icon: SVG_SPRITE.mail,
   },
+}
+
+export const initialGlobalSetting = {
+  cvPostId: '',
+  releasePostId: '',
+  isGrayTheme: false,
 }
