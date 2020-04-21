@@ -3,12 +3,10 @@ import styled from 'styled-components'
 import { flexMixin } from 'src/styled/mixins'
 import svgIcons from 'src/static/svg-sprite.svg'
 
-const Header = styled.h2`
+const SubTitleWrapper = styled.h3`
   ${flexMixin('flex-start')}
-  margin: 4rem auto 2rem;
-  padding-bottom: 0.6rem;
-  width: 100%;
-  font-size: 1.3rem;
+  padding-bottom: .6rem;
+  width: 20rem;
   font-weight: 400;
   color: ${({ theme }) => theme.text.primary};
   border-bottom: 1px dashed;
@@ -28,12 +26,12 @@ interface Props {
 
 const SubTitle: FC<Props> = ({ icon, title }) => {
   return (
-    <Header>
+    <SubTitleWrapper>
       <SVG>
         <use xlinkHref={`${svgIcons}${icon}`} />
       </SVG>
       {title}
-    </Header>
+    </SubTitleWrapper>
   )
 }
 

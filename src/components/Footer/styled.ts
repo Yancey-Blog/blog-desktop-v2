@@ -1,8 +1,8 @@
 import styled from 'styled-components'
 import { flexMixin } from '../../styled/mixins'
 
-export const Footer = styled.footer`
-  margin: 36px auto;
+export const FooterWrapper = styled.footer`
+  margin: 72px auto 36px;
   width: 800px;
   font-family: 'Ubuntu', sans-serif;
 `
@@ -20,7 +20,7 @@ export const TechStacks = styled.p`
     margin: 0 4px;
     width: 20px;
     height: 20px;
-    fill: ${({ theme }) => theme.colors.red};
+    fill: ${({ theme }) => theme.colors.heartRed};
   }
 `
 
@@ -36,17 +36,13 @@ export const Divider = styled.hr`
   border: 0;
 `
 
-export const InnerLink = styled.a`
-  margin-right: 8px;
-  padding-right: 8px;
+export const InnerLink = styled.span`
   font-size: 13px;
-  /* color: ${({ theme }) => theme.colors.text}; */
-  cursor: pointer;
+  margin-right: 16px;
+`
 
-  &:last-child {
-    margin: 0;
-    padding: 0;
-  }
+export const Email = styled.a`
+  font-size: 13px;
 `
 
 export const FooterBottom = styled.div`

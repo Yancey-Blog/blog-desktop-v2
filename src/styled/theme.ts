@@ -2,13 +2,13 @@ const light = {
   background: {
     primary: '#ffffff',
     secondary: '#fbfbfb',
-    inset: '#e2e4e8',
-    input: 'rgba(65,67,78,0.12)',
+    postCard: '#ffffff',
+    blurCard: 'rgba(245, 245, 245, .8)',
   },
   text: {
     primary: '#666666',
     secondary: '#969696',
-    onPrimary: '#ffffff',
+    header: '#504e4e',
   },
   link: {
     primary: '#666666',
@@ -23,20 +23,20 @@ const light = {
 const dark = {
   background: {
     primary: '#181a1b',
-    secondary: '#181a1b',
-    inset: '#111111',
-    input: 'rgba(191,193,201,0.12)',
+    secondary: '#1d1f27',
+    postCard: '#1d1f27',
+    blurCard: 'rgba(27, 29, 30, .8)',
   },
   text: {
     primary: '#f5f6f7',
-    secondary: '#e3e4e8',
-    onPrimary: '#050505',
+    secondary: '#cbc8c0',
+    header: '#f5f6f7',
   },
   link: {
     primary: '#f5f6f7',
     secondary: '#ffa500',
   },
-  border: '#383838',
+  border: '#5b5b5b',
 
   toggleBorder: '#6B8096',
   gradient: 'linear-gradient(#091236, #1E215D)',
@@ -56,12 +56,15 @@ const defaultTheme = {
     code: 1.6,
   },
   colors: {
-    red: '#f05228',
+    heartRed: '#f05228',
     white: '#ffffff',
     black: '#000000',
     orange: '#ffa500',
+    linkBlue: '#0070ba',
     sloganBlue: '#00a7e0',
+    archiveBlue: '#6ecaf5',
     sloganRed: '#ff3f1a',
+    oneOpcityBlack: 'rgba(0, 0, 0, .1)',
     threeOpcityBlack: 'rgba(0, 0, 0, .3)',
     fiveOpcityBlack: 'rgba(0, 0, 0, .5)',
     sixOpcityBlack: 'rgba(0, 0, 0, .6)',

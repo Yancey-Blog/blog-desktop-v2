@@ -7,11 +7,16 @@ export const HomeContainer = styled.section`
 export const MottoSocialMediaBar = styled.section`
   position: absolute;
   left: 50%;
-  top: 40%;
+  top: 50%;
   transform: translate3d(-50%, -50%, 0);
 `
 
 export const HomeMain = styled.section`
   margin: 0 auto;
-  max-width: 56.5rem;
+  max-width: 59rem;
+  text-align: center;
+`
+
+export const CoverWrapper = styled.div`
+  position: relative;
 `

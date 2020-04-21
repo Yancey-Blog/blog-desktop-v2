@@ -9,16 +9,16 @@ const Covers = styled.figure`
   height: 100vh;
   background-attachment: fixed;
   ${backgroundMixin()};
-  margin-top: -${({ theme }) => theme.headerHeight};
+  /* margin-top: -${({ theme }) => theme.headerHeight}; */
   margin-bottom: 3.2rem;
 
-  &::after {
+  /* &::after {
     position: absolute;
     content: '';
     width: 100%;
     height: 100%;
     background: url('/static/dot.gif');
-  }
+  } */
 `
 
 interface Props {
