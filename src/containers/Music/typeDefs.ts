@@ -14,14 +14,16 @@ export const PLAYERS = gql`
 
 export const BEST_ALBUMS = gql`
   query GetBestAlbums {
-    _id
-    title
-    artist
-    coverUrl
-    mvUrl
-    releaseDate
-    createdAt
-    updatedAt
+    getBestAlbums {
+      _id
+      title
+      artist
+      coverUrl
+      mvUrl
+      releaseDate
+      createdAt
+      updatedAt
+    }
   }
 `
 
