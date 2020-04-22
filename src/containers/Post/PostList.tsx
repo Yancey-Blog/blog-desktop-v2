@@ -1,5 +1,5 @@
-import React from 'react'
-import { useQuery } from '@apollo/react-hooks'
+import React, { FC, useState, useEffect, ChangeEvent } from 'react'
+import { useQuery, useLazyQuery } from '@apollo/react-hooks'
 import Pagination from '@material-ui/lab/Pagination'
 import ImageHeader from 'src/components/ImageHeader/ImageHeader'
 import PostCard from './components/PostCard/PostCard'
@@ -13,15 +13,15 @@ import {
 } from './types'
 import { PostContent, PostItemContainer } from './styled'
 
-const PostList = () => {
-  const { data: posts } = useQuery<PostQuery, PostVars>(POSTS, {
+const PostList: FC = () => {
+  const [page, setPage] = useState(1)
+
+  const [getPosts, { loading, data: posts }] = useLazyQuery<
+    PostQuery,
+    PostVars
+  >(POSTS, {
+    fetchPolicy: 'cache-and-network',
     notifyOnNetworkStatusChange: true,
-    variables: {
-      input: {
-        page: 1,
-        pageSize: 10,
-      },
-    },
   })
 
   const { data: topPVPosts } = useQuery<GetTopPVPostsQuery, GetTopPVPostsVars>(
@@ -33,6 +33,31 @@ const PostList = () => {
       },
     },
   )
+
+  const fetchPosts = (currPage = 1, title?: string, tag?: string) => {
+    getPosts({
+      variables: {
+        input: {
+          page: currPage,
+          pageSize: 10,
+          title,
+          tag,
+        },
+      },
+    })
+  }
+
+  // @ts-ignore
+  const handlePageChange = (e: ChangeEvent<unknown>, val: number) => {
+    setPage(val)
+    fetchPosts(val)
+  }
+
+  useEffect(() => {
+    fetchPosts()
+  }, [])
+
+  // if (!posts) return <div>loading...</div>
 
   return (
     <>
@@ -48,7 +73,18 @@ const PostList = () => {
             : posts.posts.items.map((post) => (
                 <PostCard post={post} key={post._id} />
               ))}
-          <Pagination count={10} color="primary" />
+
+          {loading || (
+            <Pagination
+              count={
+                !posts ? 0 : Math.ceil(posts.posts.total / posts.posts.pageSize)
+              }
+              color="primary"
+              variant="outlined"
+              page={page}
+              onChange={handlePageChange}
+            />
+          )}
         </PostItemContainer>
 
         <div>
