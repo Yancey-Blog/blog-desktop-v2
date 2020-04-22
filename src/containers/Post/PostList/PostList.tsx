@@ -2,15 +2,15 @@ import React, { FC, useState, useEffect, ChangeEvent } from 'react'
 import { useQuery, useLazyQuery } from '@apollo/react-hooks'
 import Pagination from '@material-ui/lab/Pagination'
 import ImageHeader from 'src/components/ImageHeader/ImageHeader'
-import PostCard from './components/PostCard/PostCard'
-import Top7PVPosts from './components/Top7PVPosts/Top7PVPosts'
-import { POSTS, GET_TOP_PV_POSTS } from './typeDefs'
+import PostCard from '../components/PostCard/PostCard'
+import Top7PVPosts from '../components/Top7PVPosts/Top7PVPosts'
+import { POSTS, GET_TOP_PV_POSTS } from '../typeDefs'
 import {
   PostQuery,
   PostVars,
   GetTopPVPostsQuery,
   GetTopPVPostsVars,
-} from './types'
+} from '../types'
 import { PostContent, PostItemContainer } from './styled'
 
 const PostList: FC = () => {

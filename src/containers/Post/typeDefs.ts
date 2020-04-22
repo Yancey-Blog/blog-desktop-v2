@@ -1,5 +1,22 @@
 import gql from 'graphql-tag'
 
+const POST_ITEM_FRAGMENT = gql`
+  fragment PostItemFragment on PostItemModel {
+    _id
+    posterUrl
+    title
+    summary
+    content
+    tags
+    lastModifiedDate
+    like
+    pv
+    isPublic
+    createdAt
+    updatedAt
+  }
+`
+
 export const POSTS = gql`
   query Posts($input: PaginationInput!) {
     posts(input: $input) {
@@ -7,20 +24,20 @@ export const POSTS = gql`
       page
       pageSize
       items {
-        _id
-        posterUrl
-        title
-        summary
-        content
-        tags
-        lastModifiedDate
-        like
-        pv
-        createdAt
-        updatedAt
+        ...PostItemFragment
       }
     }
   }
+  ${POST_ITEM_FRAGMENT}
+`
+
+export const GET_POST_BY_ID = gql`
+  query GetPostById($id: ID!) {
+    getPostById(id: $id) {
+      ...PostItemFragment
+    }
+  }
+  ${POST_ITEM_FRAGMENT}
 `
 
 export const GET_TOP_PV_POSTS = gql`

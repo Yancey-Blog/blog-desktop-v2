@@ -32,6 +32,14 @@ export interface PostVars {
   }
 }
 
+export interface GetPostByIdQuery {
+  getPostById: IPostItem
+}
+
+export interface GetPostByIdVar {
+  id: string
+}
+
 export interface GetTopPVPostsQuery {
   getTopPVPosts: IPostItem[]
 }
