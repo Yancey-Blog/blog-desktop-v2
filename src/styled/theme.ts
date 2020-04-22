@@ -4,6 +4,7 @@ const light = {
     secondary: '#fbfbfb',
     postCard: '#ffffff',
     blurCard: 'rgba(245, 245, 245, .8)',
+    bestAlbumCard: '#e6e6e6',
   },
   text: {
     primary: '#666666',
@@ -26,6 +27,7 @@ const dark = {
     secondary: '#1d1f27',
     postCard: '#1d1f27',
     blurCard: 'rgba(27, 29, 30, .8)',
+    bestAlbumCard: '#000000',
   },
   text: {
     primary: '#f5f6f7',
