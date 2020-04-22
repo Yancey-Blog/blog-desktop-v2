@@ -9,6 +9,7 @@ import withApollo from 'src/shared/withApollo'
 
 import 'normalize.css'
 import 'aplayer/dist/APlayer.min.css'
+import 'highlight.js/styles/solarized-dark.css'
 
 import { ThemeProvider } from 'styled-components'
 import { lightTheme, darkTheme } from 'src/styled/theme'

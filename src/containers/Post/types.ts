@@ -4,7 +4,7 @@ export interface IPostItem {
   title: string
   summary: string
   content: string
-  tags: string
+  tags: string[]
   lastModifiedDate: string
   like: number
   pv: number
