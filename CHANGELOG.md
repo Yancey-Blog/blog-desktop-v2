@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.6.0](https://github.com/Yancey-Blog/blog-fe-v2/compare/v0.5.0...v0.6.0) (2020-04-22)
+
+
+### Features
+
+* add types and typeDefs for Music component ([1c7f5ab](https://github.com/Yancey-Blog/blog-fe-v2/commit/1c7f5ab0389acd0d986a11600072a00cde882718))
+* add types for PostVars ([6059b41](https://github.com/Yancey-Blog/blog-fe-v2/commit/6059b41c7ccb254aed66968712ad879d571d7c42))
+* finish LiveTours ([a331e15](https://github.com/Yancey-Blog/blog-fe-v2/commit/a331e154de40092bb98c1bee0437c57d55cc6f8f))
+* finish Music ([ec0d899](https://github.com/Yancey-Blog/blog-fe-v2/commit/ec0d899b20e1d1cb228419b56722f7a5c49bd2c8))
+* finish Music ([2463abf](https://github.com/Yancey-Blog/blog-fe-v2/commit/2463abf6e85b7073dc2dd3ff3040e256311b4904))
+* initial Music component ([4d879e5](https://github.com/Yancey-Blog/blog-fe-v2/commit/4d879e59594428b1f9d3c021cb91674aab48520b))
+
 ## [0.5.0](https://github.com/Yancey-Blog/blog-fe-v2/compare/v0.4.0...v0.5.0) (2020-04-21)
 
 
