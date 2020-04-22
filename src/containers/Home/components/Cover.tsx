@@ -1,11 +1,8 @@
 import React, { FC } from 'react'
 import styled from 'styled-components'
 import { backgroundMixin } from 'src/styled/mixins'
+import { PosterProps } from 'src/shared/types'
 import { ICover } from '../types'
-
-interface PosterProps {
-  readonly imageUrl: string
-}
 
 const Covers = styled.figure<PosterProps>`
   position: relative;

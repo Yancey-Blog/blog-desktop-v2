@@ -3,12 +3,9 @@ import Link from 'next/link'
 import styled from 'styled-components'
 import { flexMixin } from 'src/styled/mixins'
 import { SVG_SPRITE, DOMAIN } from 'src/shared/constants'
+import { PosterProps } from 'src/shared/types'
 import SubHeader from '../SubTitle/SubTitle'
 import { IPostItem } from '../../types'
-
-interface PosterProps {
-  readonly imageUrl: string
-}
 
 const CardItem = styled.div`
   position: relative;

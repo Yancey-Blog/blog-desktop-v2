@@ -1,9 +1,6 @@
 import styled from 'styled-components'
 import { backgroundMixin } from 'src/styled/mixins'
-
-interface PosterProps {
-  readonly imageUrl: string
-}
+import { PosterProps } from 'src/shared/types'
 
 export const Poster = styled.figure<PosterProps>`
   width: 100%;

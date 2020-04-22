@@ -2,12 +2,9 @@ import React, { FC } from 'react'
 import styled from 'styled-components'
 import { flexMixin, backgroundMixin, transitionMixin } from 'src/styled/mixins'
 import { SVG_SPRITE } from 'src/shared/constants'
+import { PosterProps } from 'src/shared/types'
 import SubTitle from './SubTitle'
 import { IOpenSource } from '../types'
-
-interface PosterProps {
-  readonly imageUrl: string
-}
 
 const OpenSourceWrapper = styled.section`
   ${flexMixin('space-between')}

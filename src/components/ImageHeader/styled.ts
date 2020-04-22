@@ -1,8 +1,5 @@
 import styled from 'styled-components'
-
-interface PosterProps {
-  readonly imageUrl: string
-}
+import { PosterProps } from 'src/shared/types'
 
 export const Header = styled.figure<PosterProps>`
   width: 100%;
