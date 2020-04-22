@@ -5,14 +5,19 @@ import { SVG_SPRITE } from 'src/shared/constants'
 import SubTitle from './SubTitle'
 import { IOpenSource } from '../types'
 
+interface PosterProps {
+  readonly imageUrl: string
+}
+
 const OpenSourceWrapper = styled.section`
   ${flexMixin('space-between')}
 `
 
-const OpenSourceItem = styled.figure`
+const OpenSourceItem = styled.figure<PosterProps>`
   position: relative;
   width: 19.2rem;
   height: 11rem;
+  background-image: url(${({ imageUrl }) => imageUrl});
   ${backgroundMixin()}
   border-radius: 0.8rem;
   box-shadow: 1px 1px 3px ${({ theme }) => theme.colors.threeOpcityBlack};
@@ -99,9 +104,7 @@ const OpenSource: FC<Props> = ({ openSources }) => {
             key={openSource._id}
           >
             <OpenSourceItem
-              style={{
-                backgroundImage: `url(${openSource.posterUrl})`,
-              }}
+              imageUrl={openSource.posterUrl}
               data-title={openSource.title}
               data-intro={openSource.description}
             >
