@@ -20,5 +20,5 @@ export const scrollToTop = () => {
 
 export const noop = () => {}
 
-export const formatDate = (ISOString: string) =>
-  moment(ISOString).format('YYYY-MM-DD HH:mm:ss')
+export const formatDate = (ISOString: string, format = 'YYYY-MM-DD HH:mm:ss') =>
+  moment(ISOString).format(format)

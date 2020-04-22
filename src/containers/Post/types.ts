@@ -28,6 +28,7 @@ export interface PostVars {
     page: number
     pageSize: number
     title?: string
+    tag?: string
   }
 }
 

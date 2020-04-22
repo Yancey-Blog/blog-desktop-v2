@@ -60,6 +60,8 @@ const defaultTheme = {
     white: '#ffffff',
     black: '#000000',
     orange: '#ffa500',
+    pink: '#d62b6b',
+    green: '#35c0c0',
     linkBlue: '#0070ba',
     sloganBlue: '#00a7e0',
     archiveBlue: '#6ecaf5',
