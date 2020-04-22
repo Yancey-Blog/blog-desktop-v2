@@ -8,7 +8,7 @@ interface PosterProps {
 export const Poster = styled.figure<PosterProps>`
   width: 100%;
   height: 40rem;
-  background-image: url(${(props) => props.imageUrl});
+  background-image: url(${({ imageUrl }) => imageUrl});
   ${backgroundMixin()}
 `
 

@@ -3,10 +3,15 @@ import styled from 'styled-components'
 import { backgroundMixin } from 'src/styled/mixins'
 import { ICover } from '../types'
 
-const Covers = styled.figure`
+interface PosterProps {
+  readonly imageUrl: string
+}
+
+const Covers = styled.figure<PosterProps>`
   position: relative;
   width: 100vw;
   height: 100vh;
+  background-image: url(${({ imageUrl }) => imageUrl});
   background-attachment: fixed;
   ${backgroundMixin()};
   /* margin-top: -${({ theme }) => theme.headerHeight}; */
@@ -26,7 +31,7 @@ interface Props {
 }
 
 const Cover: FC<Props> = ({ covers }) => {
-  return <Covers style={{ backgroundImage: `url(${covers[0]?.coverUrl})` }} />
+  return <Covers imageUrl={covers[0]?.coverUrl} />
 }
 
 export default Cover
