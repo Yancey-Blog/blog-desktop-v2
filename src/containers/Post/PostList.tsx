@@ -1,5 +1,6 @@
 import React from 'react'
 import { useQuery } from '@apollo/react-hooks'
+import Pagination from '@material-ui/lab/Pagination'
 import ImageHeader from 'src/components/ImageHeader/ImageHeader'
 import PostCard from './components/PostCard/PostCard'
 import Top7PVPosts from './components/Top7PVPosts/Top7PVPosts'
@@ -47,7 +48,9 @@ const PostList = () => {
             : posts.posts.items.map((post) => (
                 <PostCard post={post} key={post._id} />
               ))}
+          <Pagination count={10} color="primary" />
         </PostItemContainer>
+
         <div>
           <Top7PVPosts
             topPVPosts={topPVPosts ? topPVPosts.getTopPVPosts : []}
