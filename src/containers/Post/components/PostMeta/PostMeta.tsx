@@ -28,7 +28,7 @@ const Statistics = styled.span`
   margin-right: 1.2rem;
 `
 
-const Date = styled.time`
+const CreatedAt = styled.time`
   position: relative;
   margin-right: 1.2rem;
 
@@ -73,14 +73,14 @@ const PostMeta: FC<Props> = ({
   like,
 }) => (
   <MetaWrapper>
-    <Date
+    <CreatedAt
       data-last-modified-date={`last modified: ${formatDate(
         lastModifiedDate,
         'MMM D, YYYY',
       )}`}
     >
       {formatDate(createdAt, 'MMM D, YYYY')}
-    </Date>
+    </CreatedAt>
     <Statistics>{pv} PV</Statistics>
     <Statistics>
       {like} {like > 1 ? 'Likes' : 'Like'}

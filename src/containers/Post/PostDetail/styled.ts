@@ -4,7 +4,7 @@ import { PosterProps } from 'src/shared/types'
 
 export const PostDetailWrapper = styled.article`
   position: relative;
-  margin: 12rem auto 0;
+  margin: 10rem auto 0;
   font-family: 'Ubuntu', sans-serif;
   color: ${({ theme }) => theme.text.post};
 `
@@ -15,12 +15,14 @@ export const Poster = styled.figure<PosterProps>`
   border-radius: 1rem;
   background-image: url(${({ imageUrl }) => imageUrl});
   ${backgroundMixin()}
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, .1), 0 4px 6px -2px rgba(0 ,0, 0, .05);
+  box-shadow: 0 10px 15px -3px ${({ theme }) =>
+    theme.colors.oneOpcityBlack}, 0 4px 6px -2px ${({ theme }) =>
+  theme.colors.oneOpcityBlack};
 `
 
 export const Svg = styled.svg`
   position: absolute;
-  top: -4%;
+  top: -3%;
   z-index: -1;
 
   & path {
@@ -87,6 +89,30 @@ export const Content = styled.article`
   iframe {
     margin: 2rem 0;
     height: 35rem;
+  }
+
+  table {
+    display: block;
+    margin: 2rem 0;
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  tr {
+    &:nth-of-type(2n) {
+      background-color: ${({ theme }) => theme.background.secondary};
+    }
+  }
+
+  td,
+  th {
+    line-height: 1.4;
+    border: 1px solid ${({ theme }) => theme.border};
+    padding: 0.8rem;
+  }
+
+  th {
+    font-weight: 700;
   }
 
   a {
