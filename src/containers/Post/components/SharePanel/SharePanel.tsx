@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import React, { FC, useState } from 'react'
 import styled from 'styled-components'
 import { flexMixin } from 'src/styled/mixins'
 import { SVG_SPRITE } from 'src/shared/constants'
@@ -14,6 +14,7 @@ const SharePanelWrapper = styled.div`
 const Svg = styled.svg`
   width: 1.8rem;
   height: 1.8rem;
+  cursor: pointer;
 `
 
 const TwitterSvg = styled(Svg)`
@@ -30,23 +31,37 @@ const Like = styled.div`
 
 interface Props {
   like: number
+  updateLike: Function
 }
 
-const SharePanel: FC<Props> = ({ like }) => (
-  <SharePanelWrapper>
-    <TwitterSvg>
-      <use xlinkHref={`${svgIcons}${SVG_SPRITE.twitter1}`} />
-    </TwitterSvg>
+const SharePanel: FC<Props> = ({ like, updateLike }) => {
+  const [likeStatus, setLikeStatus] = useState(false)
+  const onSubmit = () => {
+    if (!likeStatus) {
+      updateLike()
+      setLikeStatus(true)
+    }
+  }
+  return (
+    <SharePanelWrapper>
+      <TwitterSvg>
+        <use xlinkHref={`${svgIcons}${SVG_SPRITE.twitter1}`} />
+      </TwitterSvg>
 
-    <Like>
-      <LikeSvg>
-        <use xlinkHref={`${svgIcons}${SVG_SPRITE.like}`} />
-      </LikeSvg>
-      <span>
-        {like} {like > 1 ? 'Likes' : 'Like'}
-      </span>
-    </Like>
-  </SharePanelWrapper>
-)
+      <Like>
+        <LikeSvg onClick={onSubmit}>
+          <use
+            xlinkHref={`${svgIcons}${
+              likeStatus ? SVG_SPRITE.heart : SVG_SPRITE.like
+            }`}
+          />
+        </LikeSvg>
+        <span>
+          {like} {like > 1 ? 'Likes' : 'Like'}
+        </span>
+      </Like>
+    </SharePanelWrapper>
+  )
+}
 
 export default SharePanel

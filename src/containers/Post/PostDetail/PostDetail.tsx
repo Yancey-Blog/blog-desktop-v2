@@ -6,7 +6,7 @@ import { WEBP_SUFFIX, LIVERE_KEY } from 'src/shared/constants'
 import PostMeta from '../components/PostMeta/PostMeta'
 import YellowSVG from '../components/YellowSVG/YellowSVG'
 import SharePanel from '../components/SharePanel/SharePanel'
-import { GET_POST_BY_ID, UPDATE_PV } from '../typeDefs'
+import { GET_POST_BY_ID, UPDATE_PV, UPDATE_LIKE } from '../typeDefs'
 import { GetPostByIdQuery, GetPostByIdVar } from '../types'
 import {
   setupHighlight,
@@ -48,6 +48,11 @@ const PostDetail: FC = () => {
     onError() {},
   })
 
+  const [updateLike] = useMutation(UPDATE_LIKE, {
+    variables: { id },
+    onError() {},
+  })
+
   useEffect(() => {
     setupHighlight(markdownWrapperEl)
     addLineNumbers()
@@ -79,7 +84,8 @@ const PostDetail: FC = () => {
     <PostDetailWrapper>
       <YellowSVG />
 
-      <SharePanel like={like} />
+      <SharePanel like={like} updateLike={updateLike} />
+      <Menu className="postMenu" />
 
       <Content>
         <Poster imageUrl={`${posterUrl}${WEBP_SUFFIX}`} />
@@ -103,8 +109,6 @@ const PostDetail: FC = () => {
 
         <div id="lv-container" data-id="city" data-uid={LIVERE_KEY} />
       </Content>
-
-      <Menu className="postMenu" />
     </PostDetailWrapper>
   )
 }
