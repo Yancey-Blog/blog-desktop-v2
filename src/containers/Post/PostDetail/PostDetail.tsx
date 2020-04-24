@@ -2,9 +2,10 @@ import React, { FC, useEffect, useRef } from 'react'
 import { useRouter } from 'next/router'
 import { useQuery, useMutation } from '@apollo/react-hooks'
 import MarkDown from 'markdown-to-jsx'
-import { WEBP_SUFFIX } from 'src/shared/constants'
+import { WEBP_SUFFIX, LIVERE_KEY } from 'src/shared/constants'
 import PostMeta from '../components/PostMeta/PostMeta'
 import YellowSVG from '../components/YellowSVG/YellowSVG'
+import SharePanel from '../components/SharePanel/SharePanel'
 import { GET_POST_BY_ID, UPDATE_PV } from '../typeDefs'
 import { GetPostByIdQuery, GetPostByIdVar } from '../types'
 import {
@@ -15,6 +16,7 @@ import {
   setupBaguetteBox,
   removeEmbededTag,
   setupTocbot,
+  initLivere,
 } from './tools'
 import {
   PostDetailWrapper,
@@ -53,6 +55,7 @@ const PostDetail: FC = () => {
     wrapImg()
     setupBaguetteBox()
     setupTocbot()
+    initLivere()
     updatePV()
   }, [])
 
@@ -76,6 +79,8 @@ const PostDetail: FC = () => {
     <PostDetailWrapper>
       <YellowSVG />
 
+      <SharePanel like={like} />
+
       <Content>
         <Poster imageUrl={`${posterUrl}${WEBP_SUFFIX}`} />
         <Title>{title}</Title>
@@ -95,6 +100,8 @@ const PostDetail: FC = () => {
             {removeEmbededTag(content)}
           </MarkDown>
         </div>
+
+        <div id="lv-container" data-id="city" data-uid={LIVERE_KEY} />
       </Content>
 
       <Menu className="postMenu" />

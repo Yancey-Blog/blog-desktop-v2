@@ -129,7 +129,7 @@ export const Content = styled.article`
 
 export const Menu = styled.aside`
   position: fixed;
-  top: 11rem;
+  top: 20rem;
   left: 0;
 
   .toc-link {

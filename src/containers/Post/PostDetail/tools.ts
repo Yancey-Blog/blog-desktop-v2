@@ -67,3 +67,24 @@ export const setupTocbot = () => {
     hasInnerContainers: true,
   })
 }
+
+export const initLivere = () => {
+  let LivereTower
+    // eslint-disable-next-line func-names
+  ;(function (d, s) {
+    let j = null
+    const e = d.getElementsByTagName(s)[0]
+
+    if (typeof LivereTower === 'function') {
+      return
+    }
+
+    j = d.createElement(s) as HTMLScriptElement
+    j.src = 'https://cdn-city.livere.com/js/embed.dist.js'
+    j.async = true
+    if (e?.parentNode) {
+      // eslint-disable-next-line @typescript-eslint/no-extra-semi
+      ;(e.parentNode as HTMLDivElement).insertBefore(j, e)
+    }
+  })(document, 'script')
+}
