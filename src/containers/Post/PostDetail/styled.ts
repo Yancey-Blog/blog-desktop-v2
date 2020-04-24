@@ -20,16 +20,6 @@ export const Poster = styled.figure<PosterProps>`
   theme.colors.oneOpcityBlack};
 `
 
-export const Svg = styled.svg`
-  position: absolute;
-  top: -3%;
-  z-index: -1;
-
-  & path {
-    fill: ${({ theme }) => theme.postSvg};
-  }
-`
-
 export const Title = styled.h1`
   margin: 2rem 0;
   font-size: 2.6rem;

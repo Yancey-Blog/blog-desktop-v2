@@ -39,7 +39,7 @@ const dark = {
     primary: '#f5f6f7',
     secondary: '#cbc8c0',
     header: '#f5f6f7',
-    post: '#cec2c3',
+    post: '#f5f6f7',
   },
   link: {
     primary: '#f5f6f7',
