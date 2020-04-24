@@ -22,3 +22,6 @@ export const noop = () => {}
 
 export const formatDate = (ISOString: string, format = 'YYYY-MM-DD HH:mm:ss') =>
   moment(ISOString).format(format)
+
+export const removeEmbededTag = (content: string) =>
+  content.replace(/```embeded\s(.*)\s```/gi, '$1')
