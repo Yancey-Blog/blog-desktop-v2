@@ -4,6 +4,7 @@ import { useQuery, useMutation } from '@apollo/react-hooks'
 import MarkDown from 'markdown-to-jsx'
 import hljs from 'highlight.js'
 import { WEBP_SUFFIX } from 'src/shared/constants'
+import PostMeta from '../components/PostMeta/PostMeta'
 import { GET_POST_BY_ID, UPDATE_PV } from '../typeDefs'
 import { GetPostByIdQuery, GetPostByIdVar } from '../types'
 import {
@@ -12,7 +13,6 @@ import {
   Svg,
   Title,
   Summary,
-  Tag,
   Content,
 } from './styled'
 
@@ -53,7 +53,17 @@ const PostDetail: FC = () => {
   if (!post) return <div>loading...</div>
 
   const {
-    getPostById: { title, posterUrl, summary, tags, content },
+    getPostById: {
+      title,
+      posterUrl,
+      summary,
+      tags,
+      content,
+      createdAt,
+      lastModifiedDate,
+      pv,
+      like,
+    },
   } = post
 
   return (
@@ -72,12 +82,19 @@ const PostDetail: FC = () => {
 
         <Title>{title}</Title>
 
-        {tags.map((tag) => (
-          <Tag key={tag}>{tag}</Tag>
-        ))}
-        <Summary>{summary}</Summary>
+        <PostMeta
+          tags={tags}
+          createdAt={createdAt}
+          lastModifiedDate={lastModifiedDate}
+          pv={pv}
+          like={like}
+        />
+
         <div ref={markdownWrapperEl}>
-          <MarkDown>{content}</MarkDown>
+          <Summary>{summary}</Summary>
+          <MarkDown>
+            {content.replace(/```embeded\s(.*)\s```/gi, '$1')}
+          </MarkDown>
         </div>
       </Content>
     </PostDetailWrapper>
