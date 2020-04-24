@@ -25,7 +25,7 @@ export const addLineNumbers = () => {
 }
 
 export const showImageAlt = () => {
-  const imgList: any[] = []
+  const imgList: string[] = []
   const imgTag = document.querySelectorAll('img')
   for (let i = 0, l = imgTag.length; i < l; i += 1) {
     imgList.push(imgTag[i].alt)
@@ -38,14 +38,14 @@ export const showImageAlt = () => {
 }
 
 export const wrapImg = () => {
-  const imgDom = document.querySelectorAll('.postDetailContent img')
+  const imgDom: NodeListOf<HTMLImageElement> = document.querySelectorAll(
+    '.postDetailContent img',
+  )
   const imgWrapper = document.querySelectorAll('.postImgGroup')
   for (let i = 0, len = imgDom.length; i < len; i += 1) {
-    imgWrapper[i].innerHTML = `<a href='${
-      (imgDom[i] as HTMLImageElement).src
-    }' data-caption='${(imgDom[i] as HTMLImageElement).alt}'>${
-      imgWrapper[i].innerHTML
-    }</a>`
+    imgWrapper[
+      i
+    ].innerHTML = `<a href='${imgDom[i].src}' data-caption='${imgDom[i].alt}'>${imgWrapper[i].innerHTML}</a>`
   }
 }
 
