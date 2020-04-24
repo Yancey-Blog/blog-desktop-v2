@@ -80,10 +80,8 @@ export const Content = styled.article`
 
   img {
     display: block;
-    margin: 3rem auto;
-    width: 100%;
-    max-height: 40rem;
-    object-fit: contain;
+    margin: 0 auto 1rem;
+    max-width: 100%;
   }
 
   iframe {
@@ -94,5 +92,17 @@ export const Content = styled.article`
   a {
     position: relative;
     color: ${({ theme }) => theme.colors.linkBlue};
+  }
+
+  .postImgGroup {
+    margin: 3.5rem 0;
+    text-align: center;
+  }
+
+  .postImgAlt {
+    padding-bottom: 0.4rem;
+    font-size: 0.9rem;
+    color: ${({ theme }) => theme.text.secondary};
+    border-bottom: 1px dashed ${({ theme }) => theme.text.secondary};
   }
 `

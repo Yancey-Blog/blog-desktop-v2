@@ -2,12 +2,18 @@ import React, { FC, useEffect, useRef } from 'react'
 import { useRouter } from 'next/router'
 import { useQuery, useMutation } from '@apollo/react-hooks'
 import MarkDown from 'markdown-to-jsx'
-import hljs from 'highlight.js'
 import { WEBP_SUFFIX } from 'src/shared/constants'
 import { removeEmbededTag } from 'src/shared/utils'
 import PostMeta from '../components/PostMeta/PostMeta'
 import { GET_POST_BY_ID, UPDATE_PV } from '../typeDefs'
 import { GetPostByIdQuery, GetPostByIdVar } from '../types'
+import {
+  setupHighlight,
+  addLineNumbers,
+  showImageAlt,
+  wrapImg,
+  setupBaguetteBox,
+} from './tools'
 import {
   PostDetailWrapper,
   Poster,
@@ -23,14 +29,6 @@ const PostDetail: FC = () => {
   } = useRouter()
 
   const markdownWrapperEl = useRef<HTMLDivElement>(null)
-  const setupHighlight = () => {
-    if (markdownWrapperEl?.current) {
-      const preNodes = markdownWrapperEl.current.querySelectorAll('pre')
-      preNodes.forEach((preNode) => {
-        hljs.highlightBlock(preNode)
-      })
-    }
-  }
 
   const { data: post } = useQuery<GetPostByIdQuery, GetPostByIdVar>(
     GET_POST_BY_ID,
@@ -47,7 +45,11 @@ const PostDetail: FC = () => {
   })
 
   useEffect(() => {
-    setupHighlight()
+    setupHighlight(markdownWrapperEl)
+    addLineNumbers()
+    showImageAlt()
+    wrapImg()
+    setupBaguetteBox()
     updatePV()
   }, [])
 
@@ -87,7 +89,9 @@ const PostDetail: FC = () => {
         />
         <div ref={markdownWrapperEl}>
           <Summary>{summary}</Summary>
-          <MarkDown>{removeEmbededTag(content)}</MarkDown>
+          <MarkDown className="postDetailContent">
+            {removeEmbededTag(content)}
+          </MarkDown>
         </div>
       </Content>
     </PostDetailWrapper>
