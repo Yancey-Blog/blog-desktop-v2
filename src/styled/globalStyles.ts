@@ -10,13 +10,21 @@ const GlobalStyle = createGlobalStyle`
   font-display: fallback;
 }
 
-@font-face {
-  font-family: 'Ubuntu';
-  src: url('${ALI_OSS_URL}/fonts/Ubuntu-Bold.ttf') format('truetype');
-  font-style: normal;
-  font-weight: bold;
-  font-display: fallback;
-}
+  @font-face {
+    font-family: 'Ubuntu';
+    src: url('${ALI_OSS_URL}/fonts/Ubuntu-Bold.ttf') format('truetype');
+    font-style: normal;
+    font-weight: bold;
+    font-display: fallback;
+  }
+
+  @font-face {
+    font-family: 'SFMono-Regular';
+    src: url('${ALI_OSS_URL}/fonts/SFMono-Regular.otf') format('opentype');
+    font-style: normal;
+    font-weight:400;
+    font-display: fallback;
+  }
 
   html {
     font-size: 15px;
@@ -47,6 +55,16 @@ const GlobalStyle = createGlobalStyle`
 
   button {
     outline: none;
+  }
+
+  pre {
+    padding: 1.2rem !important;
+    line-height: 1.6;
+    background-color: rgb(41, 45, 62) !important;
+  }
+
+  code {
+    font-family: SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
   }
 `
 

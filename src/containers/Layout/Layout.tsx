@@ -5,7 +5,7 @@ import { initialGlobalSetting } from 'src/shared/constants'
 import Head from 'src/components/Head/Head'
 import Header from 'src/components/Header/Header'
 import Footer from 'src/components/Footer/Footer'
-import BackToTop from 'src/components/BackToTop/BackToTop'
+// import BackToTop from 'src/components/BackToTop/BackToTop'
 import { GET_GLOBAL_SETTING } from 'src/containers/GlobalSetting/typeDefs'
 import { GlobalSettingQuery } from 'src/containers/GlobalSetting/types'
 
@@ -34,7 +34,7 @@ const Layout: FC = ({ children }) => {
       <Footer
         globalSetting={data ? data.getGlobalSetting : initialGlobalSetting}
       />
-      <BackToTop />
+      {/* <BackToTop /> */}
     </Layouts>
   )
 }
