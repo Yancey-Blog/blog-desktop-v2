@@ -69,7 +69,7 @@ export const Content = styled.article`
 
     code {
       background: ${({ theme }) => theme.codeEl};
-      color: #ef3b7d;
+      color: ${({ theme }) => theme.colors.pink};
       border-radius: 2px;
       padding: 1px 6px;
     }

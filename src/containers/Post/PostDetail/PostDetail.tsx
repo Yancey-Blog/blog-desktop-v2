@@ -3,7 +3,6 @@ import { useRouter } from 'next/router'
 import { useQuery, useMutation } from '@apollo/react-hooks'
 import MarkDown from 'markdown-to-jsx'
 import { WEBP_SUFFIX } from 'src/shared/constants'
-import { removeEmbededTag } from 'src/shared/utils'
 import PostMeta from '../components/PostMeta/PostMeta'
 import { GET_POST_BY_ID, UPDATE_PV } from '../typeDefs'
 import { GetPostByIdQuery, GetPostByIdVar } from '../types'
@@ -13,6 +12,7 @@ import {
   showImageAlt,
   wrapImg,
   setupBaguetteBox,
+  removeEmbededTag,
 } from './tools'
 import {
   PostDetailWrapper,

@@ -2,6 +2,7 @@ import React, { FC, useEffect } from 'react'
 import { useQuery } from '@apollo/react-hooks'
 import { initGA, logPageView } from 'src/shared/analytics'
 import { initialGlobalSetting } from 'src/shared/constants'
+import { devToolsWarning } from 'src/shared/utils'
 import Head from 'src/components/Head/Head'
 import Header from 'src/components/Header/Header'
 import Footer from 'src/components/Footer/Footer'
@@ -22,6 +23,10 @@ const Layout: FC = ({ children }) => {
       window.GA_INITIALIZED = true
     }
     logPageView()
+  }, [])
+
+  useEffect(() => {
+    devToolsWarning()
   }, [])
 
   return (

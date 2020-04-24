@@ -52,3 +52,6 @@ export const wrapImg = () => {
 export const setupBaguetteBox = () => {
   baguetteBox.run('.postDetailContent')
 }
+
+export const removeEmbededTag = (content: string) =>
+  content.replace(/```embeded\s(.*)\s```/gi, '$1')

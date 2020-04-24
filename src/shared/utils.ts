@@ -23,5 +23,15 @@ export const noop = () => {}
 export const formatDate = (ISOString: string, format = 'YYYY-MM-DD HH:mm:ss') =>
   moment(ISOString).format(format)
 
-export const removeEmbededTag = (content: string) =>
-  content.replace(/```embeded\s(.*)\s```/gi, '$1')
+export const devToolsWarning = () => {
+  if (window.console || 'console' in window) {
+    console.log(`
+    __     __      _   _  _____ ________     __  ____  _      ____   _____ 
+    \\ \\   / //\\   | \\ | |/ ____|  ____\\ \\   / / |  _ \\| |    / __ \\ / ____|
+     \\ \\_/ //  \\  |  \\| | |    | |__   \\ \\_/ /  | |_) | |   | |  | | |  __ 
+      \\   // /\\ \\ | . \` | |    |  __|   \\   /   |  _ <| |   | |  | | | |_ |
+       | |/ ____ \\| |\\  | |____| |____   | |    | |_) | |___| |__| | |__| |
+       |_/_/    \\_\\_| \\_|\\_____|______|  |_|    |____/|______\\____/ \\_____|
+      `)
+  }
+}
