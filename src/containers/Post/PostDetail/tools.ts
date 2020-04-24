@@ -2,6 +2,9 @@ import React from 'react'
 import hljs from 'highlight.js'
 // @ts-ignore
 import baguetteBox from 'baguettebox.js'
+import tocbot from 'tocbot'
+
+const POST_DETAIL_CONTENT = 'postDetailContent'
 
 export const setupHighlight = (
   markdownWrapperEl: React.RefObject<HTMLDivElement>,
@@ -39,7 +42,7 @@ export const showImageAlt = () => {
 
 export const wrapImg = () => {
   const imgDom: NodeListOf<HTMLImageElement> = document.querySelectorAll(
-    '.postDetailContent img',
+    `.${POST_DETAIL_CONTENT} img`,
   )
   const imgWrapper = document.querySelectorAll('.postImgGroup')
   for (let i = 0, len = imgDom.length; i < len; i += 1) {
@@ -50,8 +53,17 @@ export const wrapImg = () => {
 }
 
 export const setupBaguetteBox = () => {
-  baguetteBox.run('.postDetailContent')
+  baguetteBox.run(`.${POST_DETAIL_CONTENT}`)
 }
 
 export const removeEmbededTag = (content: string) =>
   content.replace(/```embeded\s(.*)\s```/gi, '$1')
+
+export const setupTocbot = () => {
+  tocbot.init({
+    tocSelector: '.postMenu',
+    contentSelector: `.${POST_DETAIL_CONTENT}`,
+    headingSelector: 'h1, h2, h3',
+    hasInnerContainers: true,
+  })
+}

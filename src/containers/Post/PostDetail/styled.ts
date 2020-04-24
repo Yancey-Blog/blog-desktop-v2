@@ -52,13 +52,17 @@ export const Content = styled.article`
   max-width: 60rem;
   margin: 0 auto;
 
+  h2,
+  h3 {
+    padding-top: 5rem;
+    margin-bottom: 2rem;
+  }
+
   h2 {
-    margin: 2rem 0;
     font-size: 2rem;
   }
 
   h3 {
-    margin: 2rem 0;
     font-size: 1.6rem;
   }
 
@@ -130,5 +134,30 @@ export const Content = styled.article`
     font-size: 0.9rem;
     color: ${({ theme }) => theme.text.secondary};
     border-bottom: 1px dashed ${({ theme }) => theme.text.secondary};
+  }
+`
+
+export const Menu = styled.aside`
+  position: fixed;
+  top: 11rem;
+  left: 0;
+
+  .toc-link {
+    font-size: 1.1rem;
+    color: ${({ theme }) => theme.text.primary};
+  }
+
+  .toc-list {
+    padding-left: 1rem;
+    line-height: 1.6;
+    list-style-type: none;
+  }
+
+  .is-active-link {
+    color: ${({ theme }) => theme.colors.orange};
+
+    &::before {
+      background: ${({ theme }) => theme.colors.orange};
+    }
   }
 `

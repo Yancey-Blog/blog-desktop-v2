@@ -44,6 +44,7 @@
     "react-dom": "16.13.1",
     "react-ga": "^2.7.0",
     "styled-components": "^5.0.1",
+    "tocbot": "^4.11.1",
     "yancey-js-util": "^2.0.1"
   },
   "devDependencies": {

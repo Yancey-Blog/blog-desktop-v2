@@ -11,6 +11,7 @@ import 'normalize.css'
 import 'aplayer/dist/APlayer.min.css'
 import 'highlight.js/styles/atom-one-dark.css'
 import 'baguettebox.js/dist/baguetteBox.min.css'
+import 'tocbot/dist/tocbot.css'
 
 import { ThemeProvider } from 'styled-components'
 import { lightTheme, darkTheme } from 'src/styled/theme'

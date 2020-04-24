@@ -13,6 +13,7 @@ import {
   wrapImg,
   setupBaguetteBox,
   removeEmbededTag,
+  setupTocbot,
 } from './tools'
 import {
   PostDetailWrapper,
@@ -21,6 +22,7 @@ import {
   Title,
   Summary,
   Content,
+  Menu,
 } from './styled'
 
 const PostDetail: FC = () => {
@@ -50,6 +52,7 @@ const PostDetail: FC = () => {
     showImageAlt()
     wrapImg()
     setupBaguetteBox()
+    setupTocbot()
     updatePV()
   }, [])
 
@@ -89,11 +92,16 @@ const PostDetail: FC = () => {
         />
         <div ref={markdownWrapperEl}>
           <Summary>{summary}</Summary>
-          <MarkDown className="postDetailContent">
+          <MarkDown
+            options={{ slugify: (str) => str }}
+            className="postDetailContent"
+          >
             {removeEmbededTag(content)}
           </MarkDown>
         </div>
       </Content>
+
+      <Menu className="postMenu" />
     </PostDetailWrapper>
   )
 }

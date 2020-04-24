@@ -8351,6 +8351,11 @@ to-regex@^3.0.1, to-regex@^3.0.2:
     regex-not "^1.0.2"
     safe-regex "^1.1.0"
 
+tocbot@^4.11.1:
+  version "4.11.1"
+  resolved "https://registry.npmjs.org/tocbot/-/tocbot-4.11.1.tgz#f4edabd7bbf1443cb980664c13d23fd85276e136"
+  integrity sha512-JU2l8p2fvbg1Eo+zcWEo/XeVWlAbwyuF/p4mGf5FLRdj5jRSCyj/BJfHC6AIZo8PjA4O5VPidWaVFAbqIdyfHw==
+
 traverse@0.6.6:
   version "0.6.6"
   resolved "https://registry.yarnpkg.com/traverse/-/traverse-0.6.6.tgz#cbdf560fd7b9af632502fed40f918c157ea97137"
