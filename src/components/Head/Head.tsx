@@ -1,19 +1,66 @@
-import React from 'react'
+import React, { FC } from 'react'
 import Head from 'next/head'
 
-export default () => {
+interface Props {
+  title?: string
+  useTwitterCard?: boolean
+  postTitle?: string
+  postSummary?: string
+  postPosterUrl?: string
+  postUrl?: string
+}
+
+const MetaHead: FC<Props> = ({
+  title = 'Yancey Official Blog',
+  useTwitterCard = false,
+  postTitle,
+  postSummary,
+  postPosterUrl,
+  postUrl,
+}) => {
   return (
-    <Head>
-      <title>Yancey Official Blog</title>
-      <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, shrink-to-fit=no, user-scalable=0"
-      />
-      <meta name="theme-color" content="#ffffff" />
-      <link
-        href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet"
-      />
-    </Head>
+    <>
+      <Head>
+        <title>{title}</title>
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, shrink-to-fit=no, user-scalable=0"
+        />
+      </Head>
+
+      <Head>
+        <meta name="theme-color" content="#ffffff" />
+      </Head>
+      {useTwitterCard && (
+        <>
+          <Head>
+            <meta name="twitter:card" content="summary_large_image" />
+          </Head>
+          <Head>
+            <meta name="twitter:site" content="@YanceyOfficial" />
+          </Head>
+          <Head>
+            <meta name="twitter:creator" content="@YanceyOfficial" />
+          </Head>
+          <Head>
+            <meta name="twitter:title" content={postTitle} />
+          </Head>
+          <Head>
+            <meta name="twitter:description" content={postSummary} />
+          </Head>
+          <Head>
+            <meta name="twitter:image" content={`https:${postPosterUrl}`} />
+          </Head>
+          <Head>
+            <meta name="twitter:image:alt" content={postTitle} />
+          </Head>
+          <Head>
+            <meta name="twitter:url" content={postUrl} />
+          </Head>
+        </>
+      )}
+    </>
   )
 }
+
+export default MetaHead

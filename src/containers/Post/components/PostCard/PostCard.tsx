@@ -26,7 +26,7 @@ const PostCard: FC<Props> = ({ post }) => {
   const { _id, createdAt, posterUrl, title, pv, like, tags, summary } = post
   return (
     <PostCardWrapper>
-      <Link href={`/post/${_id}`}>
+      <Link href="/post/[id]" as={`/post/${_id}`}>
         <PosterAnchor>
           <Poster src={posterUrl} alt={title} />
         </PosterAnchor>

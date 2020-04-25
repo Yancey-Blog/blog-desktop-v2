@@ -35,12 +35,12 @@ const CreatedAt = styled.time`
   &:hover::before {
     position: absolute;
     content: '';
+    top: 0.6rem;
+    left: 2.3rem;
     width: 0;
     height: 0;
     border: 0.6rem solid transparent;
     border-bottom-color: ${({ theme }) => theme.colors.sevenOpcityBlack};
-    top: 0.6rem;
-    left: 2.3rem;
   }
 
   &:hover::after {

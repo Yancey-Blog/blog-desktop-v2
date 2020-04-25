@@ -2,7 +2,9 @@ import React, { FC, useEffect, useRef } from 'react'
 import { useRouter } from 'next/router'
 import { useQuery, useMutation } from '@apollo/react-hooks'
 import MarkDown from 'markdown-to-jsx'
-import { WEBP_SUFFIX, LIVERE_KEY } from 'src/shared/constants'
+import { DiscussionEmbed } from 'disqus-react'
+import MetaHead from 'src/components/Head/Head'
+import { WEBP_SUFFIX } from 'src/shared/constants'
 import PostMeta from '../components/PostMeta/PostMeta'
 import YellowSVG from '../components/YellowSVG/YellowSVG'
 import SharePanel from '../components/SharePanel/SharePanel'
@@ -16,7 +18,6 @@ import {
   setupBaguetteBox,
   removeEmbededTag,
   setupTocbot,
-  initLivere,
 } from './tools'
 import {
   PostDetailWrapper,
@@ -60,7 +61,6 @@ const PostDetail: FC = () => {
     wrapImg()
     setupBaguetteBox()
     setupTocbot()
-    initLivere()
     updatePV()
   }, [])
 
@@ -82,6 +82,14 @@ const PostDetail: FC = () => {
 
   return (
     <PostDetailWrapper>
+      <MetaHead
+        useTwitterCard
+        postTitle={title}
+        postSummary={summary}
+        postPosterUrl={posterUrl}
+        postUrl={`https://www.yanceyleo.com/post/${id}`}
+      />
+
       <YellowSVG />
 
       <SharePanel like={like} updateLike={updateLike} />
@@ -107,7 +115,16 @@ const PostDetail: FC = () => {
           </MarkDown>
         </div>
 
-        <div id="lv-container" data-id="city" data-uid={LIVERE_KEY} />
+        {/* <div id="lv-container" data-id="city" data-uid={LIVERE_KEY} /> */}
+
+        <DiscussionEmbed
+          shortname="yancey-blog"
+          config={{
+            url: `https://www.yanceyleo.com/post/${id}`,
+            identifier: id as string,
+            title,
+          }}
+        />
       </Content>
     </PostDetailWrapper>
   )

@@ -23,6 +23,7 @@ const TwitterSvg = styled(Svg)`
 
 const LikeSvg = styled(Svg)`
   margin-right: 0.8rem;
+  fill: ${({ theme }) => theme.text.primary};
 `
 
 const Like = styled.div`

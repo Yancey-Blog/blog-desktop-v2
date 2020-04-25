@@ -22,8 +22,6 @@ export const GA = 'UA-114532340-1'
 export const POST_LICENSE_URL =
   'https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en'
 
-export const LIVERE_KEY = 'MTAyMC8zOTU5NC8xNjEyMQ=='
-
 export const SVG_SPRITE: Dict = {
   telegram: '#telegram',
   github: '#github',
