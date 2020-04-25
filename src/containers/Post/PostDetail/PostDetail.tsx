@@ -19,6 +19,7 @@ import {
   setupBaguetteBox,
   removeEmbededTag,
   setupTocbot,
+  generateShareUrl,
 } from './tools'
 import {
   PostDetailWrapper,
@@ -93,12 +94,17 @@ const PostDetail: FC = () => {
         postTitle={title}
         postSummary={summary}
         postPosterUrl={posterUrl}
-        postUrl={`https://www.yanceyleo.com/post/${id}`}
+        postUrl={generateShareUrl(id as string)}
       />
 
       <YellowSVG />
 
-      <SharePanel like={like} updateLike={updateLike} />
+      <SharePanel
+        title={title}
+        like={like}
+        updateLike={updateLike}
+        postUrl={generateShareUrl(id as string)}
+      />
       <Menu className="postMenu" />
 
       <Content>
@@ -126,7 +132,7 @@ const PostDetail: FC = () => {
         <DiscussionEmbed
           shortname="yancey-blog"
           config={{
-            url: `https://www.yanceyleo.com/post/${id}`,
+            url: generateShareUrl(id as string),
             identifier: id as string,
             title,
           }}

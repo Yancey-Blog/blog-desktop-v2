@@ -1,5 +1,6 @@
 import React, { FC, useState } from 'react'
 import styled from 'styled-components'
+import { TwitterShareButton } from 'react-share'
 import { flexMixin } from 'src/styled/mixins'
 import { SVG_SPRITE } from 'src/shared/constants'
 import svgIcons from 'src/static/svg-sprite.svg'
@@ -9,16 +10,19 @@ const SharePanelWrapper = styled.div`
   display: flex;
   flex-direction: column;
   left: 2rem;
+
+  .postTwitterShareBtn {
+    width: 1.8rem;
+    height: 1.8rem;
+    margin-bottom: 1rem;
+    cursor: pointer;
+  }
 `
 
 const Svg = styled.svg`
   width: 1.8rem;
   height: 1.8rem;
   cursor: pointer;
-`
-
-const TwitterSvg = styled(Svg)`
-  margin-bottom: 1rem;
 `
 
 const LikeSvg = styled(Svg)`
@@ -31,11 +35,13 @@ const Like = styled.div`
 `
 
 interface Props {
+  title: string
+  postUrl: string
   like: number
   updateLike: Function
 }
 
-const SharePanel: FC<Props> = ({ like, updateLike }) => {
+const SharePanel: FC<Props> = ({ title, like, postUrl, updateLike }) => {
   const [likeStatus, setLikeStatus] = useState(false)
   const onSubmit = () => {
     if (!likeStatus) {
@@ -45,9 +51,15 @@ const SharePanel: FC<Props> = ({ like, updateLike }) => {
   }
   return (
     <SharePanelWrapper>
-      <TwitterSvg>
-        <use xlinkHref={`${svgIcons}${SVG_SPRITE.twitter1}`} />
-      </TwitterSvg>
+      <TwitterShareButton
+        url={postUrl}
+        title={title}
+        className="postTwitterShareBtn"
+      >
+        <Svg>
+          <use xlinkHref={`${svgIcons}${SVG_SPRITE.twitter1}`} />
+        </Svg>
+      </TwitterShareButton>
 
       <Like>
         <LikeSvg onClick={onSubmit}>

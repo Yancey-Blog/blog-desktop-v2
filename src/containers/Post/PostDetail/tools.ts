@@ -3,6 +3,7 @@ import hljs from 'highlight.js'
 // @ts-ignore
 import baguetteBox from 'baguettebox.js'
 import tocbot from 'tocbot'
+import { DOMAIN } from 'src/shared/constants'
 
 const POST_DETAIL_CONTENT = 'postDetailContent'
 
@@ -67,3 +68,5 @@ export const setupTocbot = () => {
     hasInnerContainers: true,
   })
 }
+
+export const generateShareUrl = (id: string) => `${DOMAIN}/post/${id}`
