@@ -8,6 +8,7 @@ import { WEBP_SUFFIX } from 'src/shared/constants'
 import PostMeta from '../components/PostMeta/PostMeta'
 import YellowSVG from '../components/YellowSVG/YellowSVG'
 import SharePanel from '../components/SharePanel/SharePanel'
+import PrevAndNext from '../components/PrevAndNext/PrevAndNext'
 import { GET_POST_BY_ID, UPDATE_PV, UPDATE_LIKE } from '../typeDefs'
 import { GetPostByIdQuery, GetPostByIdVar } from '../types'
 import {
@@ -80,6 +81,8 @@ const PostDetail: FC = () => {
       lastModifiedDate,
       pv,
       like,
+      prev,
+      next,
     },
   } = post
 
@@ -118,7 +121,7 @@ const PostDetail: FC = () => {
           </MarkDown>
         </div>
 
-        {/* <div id="lv-container" data-id="city" data-uid={LIVERE_KEY} /> */}
+        <PrevAndNext prev={prev} next={next} />
 
         <DiscussionEmbed
           shortname="yancey-blog"
