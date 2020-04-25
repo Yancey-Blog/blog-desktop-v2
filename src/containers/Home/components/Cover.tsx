@@ -6,13 +6,12 @@ import { ICover } from '../types'
 
 const Covers = styled.figure<PosterProps>`
   position: relative;
+  margin-bottom: 3.2rem;
   width: 100vw;
   height: 100vh;
   background-image: url(${({ imageUrl }) => imageUrl});
-  background-attachment: fixed;
+  /* background-attachment: fixed; */
   ${backgroundMixin()};
-  /* margin-top: -${({ theme }) => theme.headerHeight}; */
-  margin-bottom: 3.2rem;
 
   /* &::after {
     position: absolute;

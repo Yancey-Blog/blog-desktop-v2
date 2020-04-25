@@ -1294,6 +1294,13 @@
   resolved "https://registry.yarnpkg.com/@types/q/-/q-1.5.2.tgz#690a1475b84f2a884fd07cd797c00f5f31356ea8"
   integrity sha512-ce5d3q03Ex0sy4R14722Rmt6MT07Ua+k4FwDfdcToYJcMKNtRVQvJ6JCAPdAmAnbRb6CsX6aYb9m96NGod9uTw==
 
+"@types/react-lazyload@^2.6.0":
+  version "2.6.0"
+  resolved "https://registry.npmjs.org/@types/react-lazyload/-/react-lazyload-2.6.0.tgz#41cd9cbb2c03dd810377518d4837794469a521d1"
+  integrity sha512-VAv6i5RA3O82Q8yuugTXsmGecFOf5GILeILeUdLUs+8PQW1Zg+bety3BfT6gXHdl/wb3PZujlM9rbRd3xab9Vw==
+  dependencies:
+    "@types/react" "*"
+
 "@types/react-native@*":
   version "0.62.2"
   resolved "https://registry.yarnpkg.com/@types/react-native/-/react-native-0.62.2.tgz#f3e150f308c27089cefbcbfa3eb6cc14db279b2f"
@@ -7092,6 +7099,11 @@ react-is@^16.7.0, react-is@^16.8.0, react-is@^16.8.1, react-is@^16.8.6:
   version "16.13.1"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
   integrity sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
+
+react-lazyload@^2.6.7:
+  version "2.6.7"
+  resolved "https://registry.npmjs.org/react-lazyload/-/react-lazyload-2.6.7.tgz#9f5df01858ca11780ecf6be39ed9b17d845e7349"
+  integrity sha512-IauJMTOuO73egkBQ/brm0uVMMyxo/2LWCnnzjh7FlvxRMy4P1D5ZjZX9UBMCKRJUqJD441uT+n0hEXlfcjcm8g==
 
 react-move@^6.1.0:
   version "6.1.0"

@@ -14,7 +14,7 @@ const SharePanelWrapper = styled.div`
   .postTwitterShareBtn {
     width: 1.8rem;
     height: 1.8rem;
-    margin-bottom: 1rem;
+    margin-bottom: 1.2rem;
     cursor: pointer;
   }
 `

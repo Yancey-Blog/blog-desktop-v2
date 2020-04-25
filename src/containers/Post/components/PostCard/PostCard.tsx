@@ -1,5 +1,6 @@
 import React, { FC } from 'react'
 import Link from 'next/link'
+import LazyLoad from 'react-lazyload'
 import { SVG_SPRITE } from 'src/shared/constants'
 import { formatDate } from 'src/shared/utils'
 import svgIcons from 'src/static/svg-sprite.svg'
@@ -28,7 +29,9 @@ const PostCard: FC<Props> = ({ post }) => {
     <PostCardWrapper>
       <Link href={`/post/${_id}`}>
         <PosterAnchor>
-          <Poster src={posterUrl} alt={title} />
+          <LazyLoad height={200}>
+            <Poster src={posterUrl} alt={title} />
+          </LazyLoad>
         </PosterAnchor>
       </Link>
       <SummaryWrapper>
