@@ -1,4 +1,4 @@
-import React, { FC, useEffect, useRef } from 'react'
+import React, { FC, useRef } from 'react'
 import { useRouter } from 'next/router'
 import { useQuery, useMutation } from '@apollo/react-hooks'
 import MarkDown from 'markdown-to-jsx'
@@ -13,7 +13,6 @@ import { GET_POST_BY_ID, UPDATE_PV, UPDATE_LIKE } from '../typeDefs'
 import { GetPostByIdQuery, GetPostByIdVar } from '../types'
 import {
   setupHighlight,
-  addLineNumbers,
   showImageAlt,
   wrapImg,
   setupBaguetteBox,
@@ -56,18 +55,14 @@ const PostDetail: FC = () => {
 
       onCompleted() {
         updatePV()
+        setupHighlight(markdownWrapperEl)
+        showImageAlt()
+        wrapImg()
+        setupBaguetteBox()
+        setupTocbot()
       },
     },
   )
-
-  useEffect(() => {
-    setupHighlight(markdownWrapperEl)
-    addLineNumbers()
-    showImageAlt()
-    wrapImg()
-    setupBaguetteBox()
-    setupTocbot()
-  }, [])
 
   if (!post) return <div>loading...</div>
 
@@ -120,7 +115,9 @@ const PostDetail: FC = () => {
         <div ref={markdownWrapperEl}>
           <Summary>{summary}</Summary>
           <MarkDown
-            options={{ slugify: (str) => str }}
+            options={{
+              slugify: (str) => str,
+            }}
             className="postDetailContent"
           >
             {removeEmbededTag(content)}

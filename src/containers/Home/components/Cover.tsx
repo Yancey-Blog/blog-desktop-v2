@@ -10,8 +10,7 @@ const Covers = styled.figure<PosterProps>`
   width: 100vw;
   height: 100vh;
   background-image: url(${({ imageUrl }) => imageUrl});
-  /* background-attachment: fixed; */
-  ${backgroundMixin()};
+  ${backgroundMixin()}/* background-attachment: fixed; */
 
   /* &::after {
     position: absolute;
