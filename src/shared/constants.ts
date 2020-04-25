@@ -121,8 +121,4 @@ export const SOCIAL_MEDIA: SocialMedia = {
   },
 }
 
-export const initialGlobalSetting = {
-  cvPostId: '',
-  releasePostId: '',
-  isGrayTheme: false,
-}
+export const DISCUSSION_KEY = 'yancey-blog'

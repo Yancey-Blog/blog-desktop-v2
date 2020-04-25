@@ -1,16 +1,19 @@
 import React, { FC, useEffect } from 'react'
 import { useQuery } from '@apollo/react-hooks'
 import { initGA, logPageView } from 'src/shared/analytics'
-import { initialGlobalSetting } from 'src/shared/constants'
-import { devToolsWarning } from 'src/shared/utils'
 import Head from 'src/components/Head/Head'
 import Header from 'src/components/Header/Header'
 import Footer from 'src/components/Footer/Footer'
 // import BackToTop from 'src/components/BackToTop/BackToTop'
 import { GET_GLOBAL_SETTING } from 'src/containers/GlobalSetting/typeDefs'
 import { GlobalSettingQuery } from 'src/containers/GlobalSetting/types'
-
 import { Layouts, Main } from './styled'
+
+const initialGlobalSetting = {
+  cvPostId: '',
+  releasePostId: '',
+  isGrayTheme: false,
+}
 
 const Layout: FC = ({ children }) => {
   const { data } = useQuery<GlobalSettingQuery>(GET_GLOBAL_SETTING)
@@ -23,10 +26,6 @@ const Layout: FC = ({ children }) => {
       window.GA_INITIALIZED = true
     }
     logPageView()
-  }, [])
-
-  useEffect(() => {
-    devToolsWarning()
   }, [])
 
   return (

@@ -4,7 +4,7 @@ import { useQuery, useMutation } from '@apollo/react-hooks'
 import MarkDown from 'markdown-to-jsx'
 import { DiscussionEmbed } from 'disqus-react'
 import MetaHead from 'src/components/Head/Head'
-import { WEBP_SUFFIX } from 'src/shared/constants'
+import { WEBP_SUFFIX, DISCUSSION_KEY } from 'src/shared/constants'
 import PostMeta from '../components/PostMeta/PostMeta'
 import YellowSVG from '../components/YellowSVG/YellowSVG'
 import SharePanel from '../components/SharePanel/SharePanel'
@@ -130,7 +130,7 @@ const PostDetail: FC = () => {
         <PrevAndNext prev={prev} next={next} />
 
         <DiscussionEmbed
-          shortname="yancey-blog"
+          shortname={DISCUSSION_KEY}
           config={{
             url: generateShareUrl(id as string),
             identifier: id as string,
