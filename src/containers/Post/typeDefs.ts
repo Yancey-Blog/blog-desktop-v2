@@ -34,10 +34,32 @@ export const POSTS = gql`
 export const GET_POST_BY_ID = gql`
   query GetPostById($id: ID!) {
     getPostById(id: $id) {
-      ...PostItemFragment
+      _id
+      posterUrl
+      title
+      summary
+      content
+      tags
+      lastModifiedDate
+      like
+      pv
+      isPublic
+      createdAt
+      updatedAt
+
+      prev {
+        _id
+        posterUrl
+        title
+      }
+
+      next {
+        _id
+        posterUrl
+        title
+      }
     }
   }
-  ${POST_ITEM_FRAGMENT}
 `
 
 export const GET_TOP_PV_POSTS = gql`

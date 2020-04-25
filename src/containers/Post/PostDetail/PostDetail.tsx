@@ -35,15 +35,6 @@ const PostDetail: FC = () => {
 
   const markdownWrapperEl = useRef<HTMLDivElement>(null)
 
-  const { data: post } = useQuery<GetPostByIdQuery, GetPostByIdVar>(
-    GET_POST_BY_ID,
-    {
-      fetchPolicy: 'cache-and-network',
-      notifyOnNetworkStatusChange: true,
-      variables: { id: id as string },
-    },
-  )
-
   const [updatePV] = useMutation(UPDATE_PV, {
     variables: { id },
     onError() {},
@@ -54,6 +45,19 @@ const PostDetail: FC = () => {
     onError() {},
   })
 
+  const { data: post } = useQuery<GetPostByIdQuery, GetPostByIdVar>(
+    GET_POST_BY_ID,
+    {
+      fetchPolicy: 'cache-and-network',
+      notifyOnNetworkStatusChange: true,
+      variables: { id: id as string },
+
+      onCompleted() {
+        updatePV()
+      },
+    },
+  )
+
   useEffect(() => {
     setupHighlight(markdownWrapperEl)
     addLineNumbers()
@@ -61,7 +65,6 @@ const PostDetail: FC = () => {
     wrapImg()
     setupBaguetteBox()
     setupTocbot()
-    updatePV()
   }, [])
 
   if (!post) return <div>loading...</div>
