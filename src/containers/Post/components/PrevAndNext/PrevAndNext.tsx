@@ -53,7 +53,7 @@ const PrevAndNext: FC<Props> = ({ prev, next }) => {
   return (
     <Wrapper>
       {prev && (
-        <Link href={`/post/${prev._id}`}>
+        <Link href="/post/[id]" as={`/post/${prev._id}`}>
           <a>
             <Container imageUrl={prev.posterUrl}>
               <Title>PREVIOUS POST</Title>
@@ -63,7 +63,7 @@ const PrevAndNext: FC<Props> = ({ prev, next }) => {
         </Link>
       )}
       {next && (
-        <Link href={`/post/${next._id}`}>
+        <Link href="/post/[id]" as={`/post/${next._id}`}>
           <a>
             <Container imageUrl={next.posterUrl}>
               <Title>NEXT POST</Title>

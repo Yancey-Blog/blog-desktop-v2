@@ -50,7 +50,7 @@ const Header: FC<Props> = ({ globalSetting }) => {
             Music
           </a>
         </Link>
-        <Link href={`/post/${cvPostId}`}>
+        <Link href="/post/[id]" as={`/post/${cvPostId}`}>
           <a>
             <svg>
               <use xlinkHref={`${svgIcons}${SVG_SPRITE.cv}`} />
