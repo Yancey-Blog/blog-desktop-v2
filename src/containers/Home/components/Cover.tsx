@@ -1,16 +1,16 @@
 import React, { FC } from 'react'
 import styled from 'styled-components'
 import { backgroundMixin } from 'src/styled/mixins'
+import { PosterProps } from 'src/shared/types'
 import { ICover } from '../types'
 
-const Covers = styled.figure`
+const Covers = styled.figure<PosterProps>`
   position: relative;
+  margin-bottom: 3.2rem;
   width: 100vw;
   height: 100vh;
-  background-attachment: fixed;
-  ${backgroundMixin()};
-  /* margin-top: -${({ theme }) => theme.headerHeight}; */
-  margin-bottom: 3.2rem;
+  background-image: url(${({ imageUrl }) => imageUrl});
+  ${backgroundMixin()}/* background-attachment: fixed; */
 
   /* &::after {
     position: absolute;
@@ -26,7 +26,7 @@ interface Props {
 }
 
 const Cover: FC<Props> = ({ covers }) => {
-  return <Covers style={{ backgroundImage: `url(${covers[0]?.coverUrl})` }} />
+  return <Covers imageUrl={covers[0]?.coverUrl} />
 }
 
 export default Cover

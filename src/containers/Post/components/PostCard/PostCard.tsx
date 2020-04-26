@@ -1,5 +1,6 @@
 import React, { FC } from 'react'
 import Link from 'next/link'
+import LazyLoad from 'react-lazyload'
 import { SVG_SPRITE } from 'src/shared/constants'
 import { formatDate } from 'src/shared/utils'
 import svgIcons from 'src/static/svg-sprite.svg'
@@ -26,9 +27,11 @@ const PostCard: FC<Props> = ({ post }) => {
   const { _id, createdAt, posterUrl, title, pv, like, tags, summary } = post
   return (
     <PostCardWrapper>
-      <Link href={`/post/${_id}`}>
+      <Link href="/post/[id]" as={`/post/${_id}`}>
         <PosterAnchor>
-          <Poster src={posterUrl} alt={title} />
+          <LazyLoad height={200}>
+            <Poster src={posterUrl} alt={title} />
+          </LazyLoad>
         </PosterAnchor>
       </Link>
       <SummaryWrapper>
@@ -39,7 +42,7 @@ const PostCard: FC<Props> = ({ post }) => {
           Released At {formatDate(createdAt)}
         </ReleasedAt>
 
-        <Link href={`/post/${_id}`}>
+        <Link href="/post/[id]" as={`/post/${_id}`}>
           <a>
             <Title>{title}</Title>
           </a>
@@ -62,7 +65,7 @@ const PostCard: FC<Props> = ({ post }) => {
             <SVG>
               <use xlinkHref={`${svgIcons}${SVG_SPRITE.closeFolder}`} />
             </SVG>
-            <Link href={`/tag/${tags[0]}`}>
+            <Link href={`/post?tag=${tags[0]}`}>
               <a>{tags[0]}</a>
             </Link>
           </MetaItem>

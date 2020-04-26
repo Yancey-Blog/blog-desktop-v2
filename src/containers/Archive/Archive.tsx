@@ -59,7 +59,7 @@ const Archive: FC = () => {
                           {moment(day.createdAt).date()}
                           {': '}
                         </Day>
-                        <Link href={`/post/${day.id}`}>
+                        <Link href="/post/[id]" as={`/post/${day.id}`}>
                           <a>
                             {day.title} ({day.pv} PV )
                           </a>

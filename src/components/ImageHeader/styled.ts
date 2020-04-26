@@ -1,10 +1,12 @@
 import styled from 'styled-components'
+import { PosterProps } from 'src/shared/types'
 
-export const Header = styled.figure`
+export const Header = styled.figure<PosterProps>`
   width: 100%;
   height: 32rem;
   margin-bottom: 4rem;
   text-align: center;
+  background-image: url(${({ imageUrl }) => imageUrl});
   background-repeat: no-repeat;
   background-position: center top;
   background-size: cover;

@@ -3,6 +3,7 @@ import Link from 'next/link'
 import styled from 'styled-components'
 import { flexMixin } from 'src/styled/mixins'
 import { SVG_SPRITE, DOMAIN } from 'src/shared/constants'
+import { PosterProps } from 'src/shared/types'
 import SubHeader from '../SubTitle/SubTitle'
 import { IPostItem } from '../../types'
 
@@ -13,12 +14,13 @@ const CardItem = styled.div`
   overflow: hidden;
 `
 
-const BlurBg = styled.span`
+const BlurBg = styled.span<PosterProps>`
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
+  background-image: url(${({ imageUrl }) => imageUrl});
   background-size: cover;
   background-position: 50%;
   background-repeat: no-repeat;
@@ -75,14 +77,10 @@ const Top7PVPosts: FC<Props> = ({ topPVPosts }) => {
       {topPVPosts.map((post) => {
         const { _id, title, posterUrl } = post
         return (
-          <Link href={`/post/${_id}`} key={_id}>
+          <Link href="/post/[id]" as={`/post/${_id}`} key={_id}>
             <a>
               <CardItem>
-                <BlurBg
-                  style={{
-                    backgroundImage: `url(${posterUrl})`,
-                  }}
-                />
+                <BlurBg imageUrl={posterUrl} />
 
                 <CardContent>
                   <span>

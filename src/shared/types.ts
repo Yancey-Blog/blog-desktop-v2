@@ -13,3 +13,7 @@ export interface SnackbarOrigin {
 export interface Dict {
   [x: string]: string
 }
+
+export interface PosterProps {
+  readonly imageUrl: string
+}

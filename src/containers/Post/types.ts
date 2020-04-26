@@ -4,12 +4,14 @@ export interface IPostItem {
   title: string
   summary: string
   content: string
-  tags: string
+  tags: string[]
   lastModifiedDate: string
   like: number
   pv: number
   createdAt: string
   updatedAt: string
+  prev: IPostItem | null
+  next: IPostItem | null
 }
 
 export interface IPost {
@@ -30,6 +32,14 @@ export interface PostVars {
     title?: string
     tag?: string
   }
+}
+
+export interface GetPostByIdQuery {
+  getPostById: IPostItem
+}
+
+export interface GetPostByIdVar {
+  id: string
 }
 
 export interface GetTopPVPostsQuery {

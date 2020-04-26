@@ -1,7 +1,7 @@
 import gql from 'graphql-tag'
 
 export const PLAYERS = gql`
-  query Plyaers {
+  query Players {
     players {
       title
       artist

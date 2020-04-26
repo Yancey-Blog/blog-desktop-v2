@@ -1,6 +1,6 @@
 import React from 'react'
 import Layout from 'src/containers/Layout/Layout'
-import PostDetailContainer from 'src/containers/Post/PostDetail'
+import PostDetailContainer from 'src/containers/Post/PostDetail/PostDetail'
 
 const PostDetail = () => {
   return (
