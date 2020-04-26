@@ -2,6 +2,46 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.7.0](https://github.com/Yancey-Blog/blog-fe-v2/compare/v0.6.0...v0.7.0) (2020-04-26)
+
+
+### Features
+
+* add NProgress route loader ([d340d86](https://github.com/Yancey-Blog/blog-fe-v2/commit/d340d8679641d52021736482595e1aa763a12100))
+* add PosterProps for BlurCard ([cbed8e1](https://github.com/Yancey-Blog/blog-fe-v2/commit/cbed8e15fec03c79696d3b1fa62ae282a473daba))
+* define PostDetail basic framework ([930447d](https://github.com/Yancey-Blog/blog-fe-v2/commit/930447df692ac916b427bc75c98aa9468ff62d9a))
+* disqus ([6ceeb9d](https://github.com/Yancey-Blog/blog-fe-v2/commit/6ceeb9dcf8d01dba9ee2ccdebbc4f68272c2632c))
+* finish Content ([bcc2445](https://github.com/Yancey-Blog/blog-fe-v2/commit/bcc24459258ffaa8bcf8d23f56a3e764a396d11d))
+* finish MetaWrapper ([70f9de0](https://github.com/Yancey-Blog/blog-fe-v2/commit/70f9de0d5ddef4407037a9a43656f96dce4e4880))
+* finish PostDetail ([139d842](https://github.com/Yancey-Blog/blog-fe-v2/commit/139d842bb61338abc514ebb2e914db5fb81cdab5))
+* finish SearchInput basic logic ([ae4c06b](https://github.com/Yancey-Blog/blog-fe-v2/commit/ae4c06bf0c08ebf4ebc44ba43086465091161725))
+* finish SearchInputWrapper component ([06f3dcf](https://github.com/Yancey-Blog/blog-fe-v2/commit/06f3dcf3484c4b611288a44d4a75b481d36b33f6))
+* finish TagCloudWrapper ([9c6a347](https://github.com/Yancey-Blog/blog-fe-v2/commit/9c6a347a314636d84c6029e3c79ddcf6f71ca2bf))
+* fix anchor for header ([e107c3e](https://github.com/Yancey-Blog/blog-fe-v2/commit/e107c3e77e4340de5056a66f9eeb68dab62d8322))
+* package PosterProps to globalType ([7c1eda2](https://github.com/Yancey-Blog/blog-fe-v2/commit/7c1eda22635a2efc264a227c0d7d6aa408300abc))
+* package Tag ([e987338](https://github.com/Yancey-Blog/blog-fe-v2/commit/e987338f8ec0e3f12d660e8db9cc07a12d8812f3))
+* package YellowSVG component ([e4d3c72](https://github.com/Yancey-Blog/blog-fe-v2/commit/e4d3c7201f6460c8652065594a8e8957f6e3bd7c))
+* query next and prev page for single post ([ef24e20](https://github.com/Yancey-Blog/blog-fe-v2/commit/ef24e206e9a96efd15f7728e1f97b837a8e69b96))
+* support baguetteBox ([ff3be94](https://github.com/Yancey-Blog/blog-fe-v2/commit/ff3be94da086db1c74050864e2c3d1e4f0e3137e))
+* support devToolsWarning ([3861b4d](https://github.com/Yancey-Blog/blog-fe-v2/commit/3861b4d9748289bbd5869c1d0260a9df5af752b7))
+* support iframe render ([2ada638](https://github.com/Yancey-Blog/blog-fe-v2/commit/2ada6388b2a863c967f236b62f4d4934b49e2e16))
+* support LazyLoad for PostCard image ([59bb02a](https://github.com/Yancey-Blog/blog-fe-v2/commit/59bb02a445f87ded4bc8e8c4aace886e96c260c2))
+* support Like ([37e8e6b](https://github.com/Yancey-Blog/blog-fe-v2/commit/37e8e6b04a352d92d581112c0c3506e7b3d8d91b))
+* support livere ([4ded46a](https://github.com/Yancey-Blog/blog-fe-v2/commit/4ded46af2c8d4f3db1b011d872907b555477a32a))
+* support pagination for PostList ([d6c802c](https://github.com/Yancey-Blog/blog-fe-v2/commit/d6c802c2b7fe157fcdda4afe1b4b05f3e0e666b9))
+* support prev and next page Indicator ([2c6fefc](https://github.com/Yancey-Blog/blog-fe-v2/commit/2c6fefc2c4e0111960a869e14668fa89d7717798))
+* support table render for single post ([049e2aa](https://github.com/Yancey-Blog/blog-fe-v2/commit/049e2aa88e4eb2fd5e752ff784ecf16576e8332a))
+* support tag filter for blog list ([9f7d9b0](https://github.com/Yancey-Blog/blog-fe-v2/commit/9f7d9b0eb0c56550f7830466cd8d22e666003b9a))
+* support Twitter share ([e5f6d92](https://github.com/Yancey-Blog/blog-fe-v2/commit/e5f6d9246ed695fb08e97a2be5ec039d1fff2544))
+* update BestAlbum styles of box-shadow color ([4af437b](https://github.com/Yancey-Blog/blog-fe-v2/commit/4af437bcd42879ec850bd5611032e2d1fff34193))
+* update constants of DISCUSSION_KEY ([d12e25b](https://github.com/Yancey-Blog/blog-fe-v2/commit/d12e25bdd9e6174367b010cb38661ca135566f83))
+* update Covers imageUrl ([6615027](https://github.com/Yancey-Blog/blog-fe-v2/commit/6615027bd617610e15580870320e211dc14a21c2))
+* update dynimic router of post/[id] ([5b04e55](https://github.com/Yancey-Blog/blog-fe-v2/commit/5b04e5589b86806bf30c51efbd23df50986928af))
+* update OpenSourceItem imageUrl ([82e2af3](https://github.com/Yancey-Blog/blog-fe-v2/commit/82e2af3b3f3d3b892981cbdbced5c96c4eee05ba))
+* update wrapImg of typed ([16ec499](https://github.com/Yancey-Blog/blog-fe-v2/commit/16ec499bd566bde72e48fadab024af7b67ed50b8))
+* use markdown-to-jsx render markdown txt ([53b9871](https://github.com/Yancey-Blog/blog-fe-v2/commit/53b9871f7c89abc7f6694be269b4c0348991e925))
+* use Pagination component ([850bc6e](https://github.com/Yancey-Blog/blog-fe-v2/commit/850bc6e823da00aaa9e406b3c3c726cdbdaa3179))
+
 ## [0.6.0](https://github.com/Yancey-Blog/blog-fe-v2/compare/v0.5.0...v0.6.0) (2020-04-22)
 
 
