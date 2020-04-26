@@ -65,7 +65,7 @@ const PostCard: FC<Props> = ({ post }) => {
             <SVG>
               <use xlinkHref={`${svgIcons}${SVG_SPRITE.closeFolder}`} />
             </SVG>
-            <Link href={`/tag/${tags[0]}`}>
+            <Link href={`/post?tag=${tags[0]}`}>
               <a>{tags[0]}</a>
             </Link>
           </MetaItem>

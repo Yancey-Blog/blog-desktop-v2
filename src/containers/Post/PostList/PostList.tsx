@@ -18,7 +18,7 @@ import { PostContent, PostItemContainer } from './styled'
 
 const PostList: FC = () => {
   const {
-    query: { title: searchTitle },
+    query: { title: searchTitle, tag: searchTag },
   } = useRouter()
 
   const [page, setPage] = useState(1)
@@ -61,12 +61,13 @@ const PostList: FC = () => {
   // @ts-ignore
   const handlePageChange = (e: ChangeEvent<unknown>, val: number) => {
     setPage(val)
-    fetchPosts(val)
+    fetchPosts(val, searchTitle as string, searchTag as string)
   }
 
   useEffect(() => {
-    fetchPosts(1, searchTitle as string)
-  }, [searchTitle])
+    setPage(1)
+    fetchPosts(1, searchTitle as string, searchTag as string)
+  }, [searchTitle, searchTag])
 
   // if (!posts) return <div>loading...</div>
 

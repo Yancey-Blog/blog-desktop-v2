@@ -23,7 +23,7 @@ interface Props {
 }
 
 const Tag: FC<Props> = ({ tag }) => (
-  <Link href={`/tag/${tag}`} key={tag}>
+  <Link href={`/post?tag=${tag}`} key={tag}>
     <a>
       <TagEl>{tag}</TagEl>
     </a>
