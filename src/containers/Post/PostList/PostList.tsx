@@ -5,12 +5,14 @@ import Pagination from '@material-ui/lab/Pagination'
 import ImageHeader from 'src/components/ImageHeader/ImageHeader'
 import PostCard from '../components/PostCard/PostCard'
 import Top7PVPosts from '../components/Top7PVPosts/Top7PVPosts'
-import { POSTS, GET_TOP_PV_POSTS } from '../typeDefs'
+import TagCloud from '../components/TagCloud/TagCloud'
+import { POSTS, GET_TOP_PV_POSTS, GET_ALL_TAGS } from '../typeDefs'
 import {
   PostQuery,
   PostVars,
   GetTopPVPostsQuery,
   GetTopPVPostsVars,
+  GetAllTagsQuery,
 } from '../types'
 import { PostContent, PostItemContainer } from './styled'
 
@@ -38,6 +40,10 @@ const PostList: FC = () => {
       },
     },
   )
+
+  const { data: tagCloud } = useQuery<GetAllTagsQuery>(GET_ALL_TAGS, {
+    notifyOnNetworkStatusChange: true,
+  })
 
   const fetchPosts = (currPage = 1, title?: string, tag?: string) => {
     getPosts({
@@ -96,6 +102,8 @@ const PostList: FC = () => {
           <Top7PVPosts
             topPVPosts={topPVPosts ? topPVPosts.getTopPVPosts : []}
           />
+
+          <TagCloud tagCloud={tagCloud ? tagCloud.getAllTags.tags : []} />
         </div>
       </PostContent>
     </>

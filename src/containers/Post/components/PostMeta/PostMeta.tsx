@@ -1,5 +1,4 @@
 import React, { FC } from 'react'
-import Link from 'next/link'
 import styled from 'styled-components'
 import { formatDate } from 'src/shared/utils'
 import Tag from '../Tag/Tag'
@@ -73,11 +72,7 @@ const PostMeta: FC<Props> = ({
       {like} {like > 1 ? 'Likes' : 'Like'}
     </Statistics>
     {tags.map((tag) => (
-      <Link href={`/tag/${tag}`} key={tag}>
-        <a>
-          <Tag>{tag}</Tag>
-        </a>
-      </Link>
+      <Tag key={tag} tag={tag} />
     ))}
   </MetaWrapper>
 )
