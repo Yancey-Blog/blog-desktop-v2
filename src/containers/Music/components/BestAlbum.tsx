@@ -6,7 +6,7 @@ import { IBestAlbum } from '../types'
 
 const BestAlbumWrapper = styled.div`
   width: 100%;
-  box-shadow: 1px 1px 10px 0 ${({ theme }) => theme.border};
+  box-shadow: 1px 1px 10px 0 ${({ theme }) => theme.background.bestAlbumCard};
 `
 
 const Img = styled.img`

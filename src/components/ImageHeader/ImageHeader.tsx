@@ -9,7 +9,7 @@ interface Props {
 
 const ImageHeader: FC<Props> = ({ title, imageUrl }) => {
   return (
-    <Header style={{ backgroundImage: `url(${ALI_OSS_URL}${imageUrl})` }}>
+    <Header imageUrl={`${ALI_OSS_URL}${imageUrl}`}>
       <Title>{title}</Title>
     </Header>
   )

@@ -1,6 +1,9 @@
 import React from 'react'
 import { AppProps } from 'next/app'
+import Router from 'next/router'
 import dynamic from 'next/dynamic'
+// @ts-ignore
+import NProgress from 'nprogress'
 
 import { ApolloProvider } from '@apollo/react-hooks'
 import { getDataFromTree } from '@apollo/react-ssr'
@@ -8,7 +11,11 @@ import { ApolloClient } from 'apollo-client'
 import withApollo from 'src/shared/withApollo'
 
 import 'normalize.css'
+import 'public/css/nprogress.css'
 import 'aplayer/dist/APlayer.min.css'
+import 'highlight.js/styles/atom-one-dark.css'
+import 'baguettebox.js/dist/baguetteBox.min.css'
+import 'tocbot/dist/tocbot.css'
 
 import { ThemeProvider } from 'styled-components'
 import { lightTheme, darkTheme } from 'src/styled/theme'
@@ -31,6 +38,12 @@ interface IProps {
 const Player = dynamic(import('src/containers/Music/components/Player'), {
   ssr: false,
 })
+
+Router.events.on('routeChangeStart', () => {
+  NProgress.start()
+})
+Router.events.on('routeChangeComplete', () => NProgress.done())
+Router.events.on('routeChangeError', () => NProgress.done())
 
 const YanceyBlog = ({ Component, pageProps, apollo }: AppProps & IProps) => {
   const { theme, toggleTheme } = useDarkMode()

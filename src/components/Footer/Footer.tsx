@@ -36,7 +36,7 @@ const Footer: FC<Props> = ({ globalSetting }) => {
           affiliates.
         </CopyRight>
         <nav>
-          <Link href={`/post/${releasePostId}`}>
+          <Link href="/post/[id]" as={`/post/${releasePostId}`}>
             <a>
               <InnerLink>Chronicle of Events</InnerLink>
             </a>
