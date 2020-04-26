@@ -1,4 +1,5 @@
 import React, { FC, useState, useEffect, ChangeEvent } from 'react'
+import { useRouter } from 'next/router'
 import { useQuery, useLazyQuery } from '@apollo/react-hooks'
 import Pagination from '@material-ui/lab/Pagination'
 import ImageHeader from 'src/components/ImageHeader/ImageHeader'
@@ -14,6 +15,10 @@ import {
 import { PostContent, PostItemContainer } from './styled'
 
 const PostList: FC = () => {
+  const {
+    query: { title: searchTitle },
+  } = useRouter()
+
   const [page, setPage] = useState(1)
 
   const [getPosts, { loading, data: posts }] = useLazyQuery<
@@ -54,8 +59,8 @@ const PostList: FC = () => {
   }
 
   useEffect(() => {
-    fetchPosts()
-  }, [])
+    fetchPosts(1, searchTitle as string)
+  }, [searchTitle])
 
   // if (!posts) return <div>loading...</div>
 
