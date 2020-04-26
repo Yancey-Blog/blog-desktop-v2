@@ -2,26 +2,13 @@ import React, { FC } from 'react'
 import Link from 'next/link'
 import styled from 'styled-components'
 import { formatDate } from 'src/shared/utils'
+import Tag from '../Tag/Tag'
 
 const MetaWrapper = styled.div`
   margin: 0 auto;
   text-align: center;
   line-height: 1.6;
   color: ${({ theme }) => theme.text.secondary};
-`
-
-const Tag = styled.span`
-  display: inline-block;
-  margin-right: 0.6rem;
-  padding: 0 0.375rem;
-  font-size: 0.875rem;
-  color: ${({ theme }) => theme.colors.postTagColor};
-  background-color: ${({ theme }) => theme.colors.postTagBg};
-  border-radius: 0.1875rem;
-
-  &:hover {
-    background-color: ${({ theme }) => theme.colors.postTagBgHover};
-  }
 `
 
 const Statistics = styled.span`

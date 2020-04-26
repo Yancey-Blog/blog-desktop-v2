@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 const Svg = styled.svg`
   position: absolute;
-  top: -3%;
+  top: -6%;
   z-index: -1;
 
   & path {
