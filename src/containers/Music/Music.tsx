@@ -8,6 +8,7 @@ import LiveTour from './components/LiveTour'
 import Card from './components/Card'
 import BestAlbum from './components/BestAlbum'
 import CardSkeleton from './components/CardSkeleton'
+import LiveTourSkeleton from './components/LiveTourSkeleton'
 import { LiveTourQuery, YanceyMusicQuery, BestAlbumQuery } from './types'
 import { LIVE_TOURS, YANCEY_MUSIC, BEST_ALBUMS } from './typeDefs'
 import {
@@ -44,7 +45,14 @@ const Music = () => {
         <LiveToursMusicNotes>
           <div>
             <SubTitle>LIVE TOURS</SubTitle>
-            <LiveTour liveTours={liveTours ? liveTours.getLiveTours : []} />
+            {!liveTours ? (
+              <SkeletonIterator
+                count={1}
+                skeletonComponent={LiveTourSkeleton}
+              />
+            ) : (
+              <LiveTour liveTours={liveTours.getLiveTours} />
+            )}
           </div>
           <div>
             <SubTitle>MUSIC NOTES</SubTitle>
