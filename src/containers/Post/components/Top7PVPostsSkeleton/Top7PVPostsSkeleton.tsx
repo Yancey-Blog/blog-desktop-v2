@@ -7,8 +7,12 @@ const Top7PVPostsSkeletonWrapper = styled.div`
   justify-content: space-between;
   margin-bottom: 1rem;
   padding: 0.9rem;
-  background-color: rgba(245, 245, 245, 0.8);
+  background-color: ${({ theme }) => theme.background.blurCard};
   border-radius: 0.6rem;
+
+  .MuiSkeleton-root {
+    background: ${({ theme }) => theme.background.skeleton};
+  }
 `
 
 const Top7PVPostsSkeleton: FC = () => {

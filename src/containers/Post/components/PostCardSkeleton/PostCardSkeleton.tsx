@@ -8,6 +8,10 @@ const PostCardSkeletonWrapper = styled.div`
   height: 22rem;
   box-shadow: 0 1px 20px -8px ${({ theme }) => theme.colors.fiveOpcityBlack};
 
+  .MuiSkeleton-root {
+    background: ${({ theme }) => theme.background.skeleton};
+  }
+
   &:nth-of-type(2n) {
     flex-direction: row-reverse;
     text-align: left;

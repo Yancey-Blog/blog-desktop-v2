@@ -1,11 +1,13 @@
 import React from 'react'
 import { useQuery } from '@apollo/react-hooks'
 import ImageHeader from 'src/components/ImageHeader/ImageHeader'
+import SkeletonIterator from 'src/components/SkeletonIterator/SkeletonIterator'
 import { POSTS } from 'src/containers/Post/typeDefs'
 import { PostQuery, PostVars } from 'src/containers/Post/types'
 import LiveTour from './components/LiveTour'
 import Card from './components/Card'
 import BestAlbum from './components/BestAlbum'
+import CardSkeleton from './components/CardSkeleton'
 import { LiveTourQuery, YanceyMusicQuery, BestAlbumQuery } from './types'
 import { LIVE_TOURS, YANCEY_MUSIC, BEST_ALBUMS } from './typeDefs'
 import {
@@ -46,19 +48,22 @@ const Music = () => {
           </div>
           <div>
             <SubTitle>MUSIC NOTES</SubTitle>
+
             <MusicNotes>
-              {!posts
-                ? null
-                : posts.posts.items.map((post) => (
-                    <Card
-                      key={post._id}
-                      type="note"
-                      url={post._id}
-                      title={post.summary}
-                      date={post.createdAt}
-                      cover={post.posterUrl}
-                    />
-                  ))}
+              {!posts ? (
+                <SkeletonIterator count={4} skeletonComponent={CardSkeleton} />
+              ) : (
+                posts.posts.items.map((post) => (
+                  <Card
+                    key={post._id}
+                    type="note"
+                    url={post._id}
+                    title={post.summary}
+                    date={post.createdAt}
+                    cover={post.posterUrl}
+                  />
+                ))
+              )}
             </MusicNotes>
           </div>
         </LiveToursMusicNotes>
@@ -79,17 +84,19 @@ const Music = () => {
         <div>
           <SubTitle>YANCEY MUSIC</SubTitle>
           <YanceyMusicWrapper>
-            {!yanceymusics
-              ? null
-              : yanceymusics.getYanceyMusic.map((yanceyMusic) => (
-                  <Card
-                    key={yanceyMusic._id}
-                    url={yanceyMusic.soundCloudUrl}
-                    title={yanceyMusic.title}
-                    date={yanceyMusic.releaseDate}
-                    cover={yanceyMusic.posterUrl}
-                  />
-                ))}
+            {!yanceymusics ? (
+              <SkeletonIterator count={4} skeletonComponent={CardSkeleton} />
+            ) : (
+              yanceymusics.getYanceyMusic.map((yanceyMusic) => (
+                <Card
+                  key={yanceyMusic._id}
+                  url={yanceyMusic.soundCloudUrl}
+                  title={yanceyMusic.title}
+                  date={yanceyMusic.releaseDate}
+                  cover={yanceyMusic.posterUrl}
+                />
+              ))
+            )}
           </YanceyMusicWrapper>
         </div>
       </MusicWrapper>
