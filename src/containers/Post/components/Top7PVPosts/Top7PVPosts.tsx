@@ -1,11 +1,13 @@
 import React, { FC } from 'react'
 import Link from 'next/link'
 import styled from 'styled-components'
+import SkeletonIterator from 'src/components/SkeletonIterator/SkeletonIterator'
 import { flexMixin } from 'src/styled/mixins'
 import { SVG_SPRITE, DOMAIN } from 'src/shared/constants'
 import { PosterProps } from 'src/shared/types'
+import Top7PVPostsSkeleton from '../Top7PVPostsSkeleton/Top7PVPostsSkeleton'
 import SubHeader from '../SubTitle/SubTitle'
-import { IPostItem } from '../../types'
+import { GetTopPVPostsQuery } from '../../types'
 
 const CardItem = styled.div`
   position: relative;
@@ -66,7 +68,7 @@ const Thumb = styled.img`
 `
 
 interface Props {
-  topPVPosts: IPostItem[]
+  topPVPosts: GetTopPVPostsQuery | undefined
 }
 
 const Top7PVPosts: FC<Props> = ({ topPVPosts }) => {
@@ -74,26 +76,30 @@ const Top7PVPosts: FC<Props> = ({ topPVPosts }) => {
     <>
       <SubHeader title="Top 7 Most Viewed" icon={SVG_SPRITE.crown} />
 
-      {topPVPosts.map((post) => {
-        const { _id, title, posterUrl } = post
-        return (
-          <Link href="/post/[id]" as={`/post/${_id}`} key={_id}>
-            <a>
-              <CardItem>
-                <BlurBg imageUrl={posterUrl} />
+      {!topPVPosts ? (
+        <SkeletonIterator count={7} skeletonComponent={Top7PVPostsSkeleton} />
+      ) : (
+        topPVPosts.getTopPVPosts.map((post) => {
+          const { _id, title, posterUrl } = post
+          return (
+            <Link href="/post/[id]" as={`/post/${_id}`} key={_id}>
+              <a>
+                <CardItem>
+                  <BlurBg imageUrl={posterUrl} />
 
-                <CardContent>
-                  <span>
-                    <Title>{title}</Title>
-                    <Url>{`${DOMAIN}/post/${_id}`}</Url>
-                  </span>
-                  <Thumb alt={title} src={posterUrl} />
-                </CardContent>
-              </CardItem>
-            </a>
-          </Link>
-        )
-      })}
+                  <CardContent>
+                    <span>
+                      <Title>{title}</Title>
+                      <Url>{`${DOMAIN}/post/${_id}`}</Url>
+                    </span>
+                    <Thumb alt={title} src={posterUrl} />
+                  </CardContent>
+                </CardItem>
+              </a>
+            </Link>
+          )
+        })
+      )}
     </>
   )
 }

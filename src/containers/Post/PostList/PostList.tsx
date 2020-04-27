@@ -97,9 +97,8 @@ const PostList: FC = () => {
         </PostItemContainer>
 
         <div>
-          <Top7PVPosts
-            topPVPosts={topPVPosts ? topPVPosts.getTopPVPosts : []}
-          />
+          {/* <SkeletonIterator count={7} skeletonComponent={Top7PVPostsSkeleton} /> */}
+          <Top7PVPosts topPVPosts={topPVPosts} />
 
           <TagCloud tagCloud={tagCloud ? tagCloud.getAllTags.tags : []} />
         </div>
