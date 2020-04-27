@@ -6112,10 +6112,10 @@ nth-check@^1.0.2:
   dependencies:
     boolbase "~1.0.0"
 
-nuka-carousel@^4.6.6:
-  version "4.6.6"
-  resolved "https://registry.npmjs.org/nuka-carousel/-/nuka-carousel-4.6.6.tgz#7db8c550154ecf19bfe0426e186a17cb57943a73"
-  integrity sha512-3QBhixW4tfnk8QzEWx+G/9B7yQiuOkv8dmw5mVgi1HDVmaIfYqDaBZ7BrHrJKI2ob+gLbj5jLEyHt7cH8YA3zg==
+nuka-carousel@^4.6.7:
+  version "4.6.7"
+  resolved "https://registry.yarnpkg.com/nuka-carousel/-/nuka-carousel-4.6.7.tgz#3f02ac1994ce1c20b76eec71368b7de1dfa55133"
+  integrity sha512-9dBj82VXKstlHo9m0zlHBrrLq/2Br3DQhlHq/398Er2JZ3+3mSPcvaZqwobvGCTHVRv800wKv+2EapHM4C7lkA==
   dependencies:
     csstype "^2.6.6"
     d3-ease "^1.0.3"
