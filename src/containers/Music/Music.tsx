@@ -9,6 +9,7 @@ import Card from './components/Card'
 import BestAlbum from './components/BestAlbum'
 import CardSkeleton from './components/CardSkeleton'
 import LiveTourSkeleton from './components/LiveTourSkeleton'
+import BestAlbumSkeleton from './components/BestAlbumSkeleton'
 import { LiveTourQuery, YanceyMusicQuery, BestAlbumQuery } from './types'
 import { LIVE_TOURS, YANCEY_MUSIC, BEST_ALBUMS } from './typeDefs'
 import {
@@ -79,13 +80,18 @@ const Music = () => {
         <div>
           <SubTitle>BEST ALBUM</SubTitle>
           <BestAlbumWrapper>
-            {!bestAlbums
-              ? null
-              : bestAlbums.getBestAlbums
-                  .slice(0, 4)
-                  .map((bestAlbum) => (
-                    <BestAlbum key={bestAlbum._id} bestAlbum={bestAlbum} />
-                  ))}
+            {!bestAlbums ? (
+              <SkeletonIterator
+                count={4}
+                skeletonComponent={BestAlbumSkeleton}
+              />
+            ) : (
+              bestAlbums.getBestAlbums
+                .slice(0, 4)
+                .map((bestAlbum) => (
+                  <BestAlbum key={bestAlbum._id} bestAlbum={bestAlbum} />
+                ))
+            )}
           </BestAlbumWrapper>
         </div>
 
