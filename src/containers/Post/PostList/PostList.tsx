@@ -1,11 +1,13 @@
 import React, { FC, useState, useEffect, ChangeEvent } from 'react'
 import { useRouter } from 'next/router'
 import { useQuery, useLazyQuery } from '@apollo/react-hooks'
-import Pagination from '@material-ui/lab/Pagination'
+import { Pagination } from '@material-ui/lab'
 import ImageHeader from 'src/components/ImageHeader/ImageHeader'
+import SkeletonIterator from 'src/components/SkeletonIterator/SkeletonIterator'
 import PostCard from '../components/PostCard/PostCard'
 import Top7PVPosts from '../components/Top7PVPosts/Top7PVPosts'
 import TagCloud from '../components/TagCloud/TagCloud'
+import PostCardSkeleton from '../components/PostCardSkeleton/PostCardSkeleton'
 import { POSTS, GET_TOP_PV_POSTS, GET_ALL_TAGS } from '../typeDefs'
 import {
   PostQuery,
@@ -23,10 +25,7 @@ const PostList: FC = () => {
 
   const [page, setPage] = useState(1)
 
-  const [getPosts, { loading, data: posts }] = useLazyQuery<
-    PostQuery,
-    PostVars
-  >(POSTS, {
+  const [getPosts, { data: posts }] = useLazyQuery<PostQuery, PostVars>(POSTS, {
     fetchPolicy: 'cache-and-network',
     notifyOnNetworkStatusChange: true,
   })
@@ -69,8 +68,6 @@ const PostList: FC = () => {
     fetchPosts(1, searchTitle as string, searchTag as string)
   }, [searchTitle, searchTag])
 
-  // if (!posts) return <div>loading...</div>
-
   return (
     <>
       <ImageHeader
@@ -80,23 +77,23 @@ const PostList: FC = () => {
 
       <PostContent>
         <PostItemContainer>
-          {!posts
-            ? null
-            : posts.posts.items.map((post) => (
-                <PostCard post={post} key={post._id} />
-              ))}
-
-          {loading || (
-            <Pagination
-              count={
-                !posts ? 0 : Math.ceil(posts.posts.total / posts.posts.pageSize)
-              }
-              color="primary"
-              variant="outlined"
-              page={page}
-              onChange={handlePageChange}
-            />
+          {!posts ? (
+            <SkeletonIterator count={5} skeletonComponent={PostCardSkeleton} />
+          ) : (
+            posts.posts.items.map((post) => (
+              <PostCard post={post} key={post._id} />
+            ))
           )}
+
+          <Pagination
+            count={
+              !posts ? 0 : Math.ceil(posts.posts.total / posts.posts.pageSize)
+            }
+            color="primary"
+            variant="outlined"
+            page={page}
+            onChange={handlePageChange}
+          />
         </PostItemContainer>
 
         <div>

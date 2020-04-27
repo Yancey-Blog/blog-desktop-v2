@@ -6,11 +6,11 @@
       "babel-plugin-transform-imports",
       {
         "@material-ui/core": {
-          "transform": "@material-ui/core/esm/${member}",
+          "transform": "@material-ui/core/${member}",
           "preventFullImport": true
         },
         "@material-ui/lab": {
-          "transform": "@material-ui/lab/esm/${member}",
+          "transform": "@material-ui/lab/${member}",
           "preventFullImport": true
         }
       }

@@ -30,7 +30,6 @@ export const Poster = styled.img`
   width: 100%;
   height: 100%;
   object-fit: cover;
-  background-color: hsla(0, 0%, 96%, 0.88);
   transition: transform 500ms ease;
 
   &:hover {
