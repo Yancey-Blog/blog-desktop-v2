@@ -1,7 +1,8 @@
 import { createContext } from 'react'
 import { checkWebp } from 'yancey-js-util'
 
-const enableWebp = checkWebp()
-const WebpContext = createContext(enableWebp)
+const WebpContext = createContext(
+  typeof document !== 'undefined' && checkWebp(),
+)
 
 export default WebpContext

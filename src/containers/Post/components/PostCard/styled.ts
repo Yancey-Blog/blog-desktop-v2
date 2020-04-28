@@ -27,12 +27,15 @@ export const PosterAnchor = styled.a`
 `
 
 export const Poster = styled.picture`
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 500ms ease;
+  source,
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 500ms ease;
+  }
 
-  &:hover {
+  &:hover img {
     transform: scale(1.1);
     transition: transform 500ms ease;
   }
