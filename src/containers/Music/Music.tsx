@@ -4,6 +4,8 @@ import ImageHeader from 'src/components/ImageHeader/ImageHeader'
 import SkeletonIterator from 'src/components/SkeletonIterator/SkeletonIterator'
 import { POSTS } from 'src/containers/Post/typeDefs'
 import { PostQuery, PostVars } from 'src/containers/Post/types'
+import { useEnableWebp } from 'src/hooks/useEnableWebp'
+import { WEBP_SUFFIX } from 'src/shared/constants'
 import LiveTour from './components/LiveTour'
 import Card from './components/Card'
 import BestAlbum from './components/BestAlbum'
@@ -22,6 +24,8 @@ import {
 } from './styled'
 
 const Music = () => {
+  const { enableWebp } = useEnableWebp()
+
   const { data: liveTours } = useQuery<LiveTourQuery>(LIVE_TOURS)
   const { data: bestAlbums } = useQuery<BestAlbumQuery>(BEST_ALBUMS)
   const { data: yanceymusics } = useQuery<YanceyMusicQuery>(YANCEY_MUSIC)
@@ -52,7 +56,10 @@ const Music = () => {
                 skeletonComponent={LiveTourSkeleton}
               />
             ) : (
-              <LiveTour liveTours={liveTours.getLiveTours} />
+              <LiveTour
+                liveTours={liveTours.getLiveTours}
+                enableWebp={enableWebp}
+              />
             )}
           </div>
           <div>
@@ -69,7 +76,11 @@ const Music = () => {
                     url={post._id}
                     title={post.summary}
                     date={post.createdAt}
-                    cover={post.posterUrl}
+                    cover={
+                      enableWebp
+                        ? `${post.posterUrl}${WEBP_SUFFIX}`
+                        : post.posterUrl
+                    }
                   />
                 ))
               )}
@@ -89,7 +100,11 @@ const Music = () => {
               bestAlbums.getBestAlbums
                 .slice(0, 4)
                 .map((bestAlbum) => (
-                  <BestAlbum key={bestAlbum._id} bestAlbum={bestAlbum} />
+                  <BestAlbum
+                    key={bestAlbum._id}
+                    bestAlbum={bestAlbum}
+                    enableWebp={enableWebp}
+                  />
                 ))
             )}
           </BestAlbumWrapper>
@@ -107,7 +122,11 @@ const Music = () => {
                   url={yanceyMusic.soundCloudUrl}
                   title={yanceyMusic.title}
                   date={yanceyMusic.releaseDate}
-                  cover={yanceyMusic.posterUrl}
+                  cover={
+                    enableWebp
+                      ? `${yanceyMusic.posterUrl}${WEBP_SUFFIX}`
+                      : yanceyMusic.posterUrl
+                  }
                 />
               ))
             )}
