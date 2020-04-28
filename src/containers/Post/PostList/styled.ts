@@ -6,6 +6,11 @@ export const PostContent = styled.section`
   grid-column-gap: 3.6rem;
   justify-content: center;
   margin: 0 auto;
+
+  .MuiPaginationItem-root {
+    color: ${({ theme }) => theme.text.secondary};
+    border-color: ${({ theme }) => theme.text.secondary};
+  }
 `
 
 export const PostItemContainer = styled.div``
