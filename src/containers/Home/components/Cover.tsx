@@ -1,7 +1,9 @@
 import React, { FC } from 'react'
 import styled from 'styled-components'
+import { useEnableWebp } from 'src/hooks/useEnableWebp'
 import { backgroundMixin } from 'src/styled/mixins'
 import { PosterProps } from 'src/shared/types'
+import { WEBP_SUFFIX } from 'src/shared/constants'
 import { ICover } from '../types'
 
 const Covers = styled.figure<PosterProps>`
@@ -10,7 +12,8 @@ const Covers = styled.figure<PosterProps>`
   width: 100vw;
   height: 100vh;
   background-image: url(${({ imageUrl }) => imageUrl});
-  ${backgroundMixin()}/* background-attachment: fixed; */
+  background-attachment: fixed;
+  ${backgroundMixin()};
 
   /* &::after {
     position: absolute;
@@ -26,7 +29,17 @@ interface Props {
 }
 
 const Cover: FC<Props> = ({ covers }) => {
-  return <Covers imageUrl={covers[0]?.coverUrl} />
+  const { enableWebp } = useEnableWebp()
+
+  return (
+    <Covers
+      imageUrl={
+        enableWebp
+          ? `${covers[0]?.coverUrl}${WEBP_SUFFIX}`
+          : covers[0]?.coverUrl
+      }
+    />
+  )
 }
 
 export default Cover
