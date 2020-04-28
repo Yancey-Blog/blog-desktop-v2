@@ -4,6 +4,7 @@ import { useQuery, useMutation } from '@apollo/react-hooks'
 import MarkDown from 'markdown-to-jsx'
 import { DiscussionEmbed } from 'disqus-react'
 import MetaHead from 'src/components/Head/Head'
+import { useEnableWebp } from 'src/hooks/useEnableWebp'
 import { WEBP_SUFFIX, DISCUSSION_KEY } from 'src/shared/constants'
 import PostMeta from '../components/PostMeta/PostMeta'
 import YellowSVG from '../components/YellowSVG/YellowSVG'
@@ -34,6 +35,8 @@ const PostDetail: FC = () => {
   const {
     query: { id },
   } = useRouter()
+
+  const { enableWebp } = useEnableWebp()
 
   const markdownWrapperEl = useRef<HTMLDivElement>(null)
 
@@ -104,7 +107,9 @@ const PostDetail: FC = () => {
       <Menu className="postMenu" />
 
       <Content>
-        <Poster imageUrl={`${posterUrl}${WEBP_SUFFIX}`} />
+        <Poster
+          imageUrl={enableWebp ? `${posterUrl}${WEBP_SUFFIX}` : posterUrl}
+        />
         <Title>{title}</Title>
         <PostMeta
           tags={tags}
