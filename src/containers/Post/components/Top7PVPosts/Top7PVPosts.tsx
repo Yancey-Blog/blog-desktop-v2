@@ -3,7 +3,13 @@ import Link from 'next/link'
 import styled from 'styled-components'
 import SkeletonIterator from 'src/components/SkeletonIterator/SkeletonIterator'
 import { flexMixin } from 'src/styled/mixins'
-import { SVG_SPRITE, DOMAIN } from 'src/shared/constants'
+import { useEnableWebp } from 'src/hooks/useEnableWebp'
+import {
+  SVG_SPRITE,
+  DOMAIN,
+  WEBP_SUFFIX,
+  THUMB_SUFFIX,
+} from 'src/shared/constants'
 import { PosterProps } from 'src/shared/types'
 import Top7PVPostsSkeleton from '../Top7PVPostsSkeleton/Top7PVPostsSkeleton'
 import SubHeader from '../SubTitle/SubTitle'
@@ -72,6 +78,8 @@ interface Props {
 }
 
 const Top7PVPosts: FC<Props> = ({ topPVPosts }) => {
+  const { enableWebp } = useEnableWebp()
+
   return (
     <>
       <SubHeader title="Top 7 Most Viewed" icon={SVG_SPRITE.crown} />
@@ -85,14 +93,19 @@ const Top7PVPosts: FC<Props> = ({ topPVPosts }) => {
             <Link href="/post/[id]" as={`/post/${_id}`} key={_id}>
               <a>
                 <CardItem>
-                  <BlurBg imageUrl={posterUrl} />
+                  <BlurBg imageUrl={`${posterUrl}${THUMB_SUFFIX}`} />
 
                   <CardContent>
                     <span>
                       <Title>{title}</Title>
                       <Url>{`${DOMAIN}/post/${_id}`}</Url>
                     </span>
-                    <Thumb alt={title} src={posterUrl} />
+                    <Thumb
+                      alt={title}
+                      src={
+                        enableWebp ? `${posterUrl}${WEBP_SUFFIX}` : posterUrl
+                      }
+                    />
                   </CardContent>
                 </CardItem>
               </a>
