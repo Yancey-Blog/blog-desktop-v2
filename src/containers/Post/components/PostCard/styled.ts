@@ -26,7 +26,7 @@ export const PosterAnchor = styled.a`
   cursor: pointer;
 `
 
-export const Poster = styled.img`
+export const Poster = styled.picture`
   width: 100%;
   height: 100%;
   object-fit: cover;
