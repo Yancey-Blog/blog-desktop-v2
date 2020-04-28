@@ -1,5 +1,6 @@
 import React, { FC } from 'react'
-import { ALI_OSS_URL } from 'src/shared/constants'
+import { useEnableWebp } from 'src/hooks/useEnableWebp'
+import { ALI_OSS_URL, WEBP_SUFFIX } from 'src/shared/constants'
 import { Header, Title } from './styled'
 
 interface Props {
@@ -8,8 +9,16 @@ interface Props {
 }
 
 const ImageHeader: FC<Props> = ({ title, imageUrl }) => {
+  const { enableWebp } = useEnableWebp()
+
   return (
-    <Header imageUrl={`${ALI_OSS_URL}${imageUrl}`}>
+    <Header
+      imageUrl={
+        enableWebp
+          ? `${ALI_OSS_URL}${imageUrl}${WEBP_SUFFIX}`
+          : `${ALI_OSS_URL}${imageUrl}`
+      }
+    >
       <Title>{title}</Title>
     </Header>
   )
