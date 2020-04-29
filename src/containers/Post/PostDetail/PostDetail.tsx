@@ -34,6 +34,7 @@ import {
 const PostDetail: FC = () => {
   const {
     query: { id },
+    replace,
   } = useRouter()
 
   const { enableWebp } = useEnableWebp()
@@ -78,6 +79,10 @@ const PostDetail: FC = () => {
         updatePV()
         setupHighlight(markdownWrapperEl)
         setupTocbot()
+      },
+
+      onError() {
+        replace('/404')
       },
     },
   )
