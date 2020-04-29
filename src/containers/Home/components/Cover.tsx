@@ -4,7 +4,7 @@ import { useEnableWebp } from 'src/hooks/useEnableWebp'
 import { backgroundMixin } from 'src/styled/mixins'
 import { PosterProps } from 'src/shared/types'
 import { WEBP_SUFFIX } from 'src/shared/constants'
-import dot from 'src/static/dot.gif'
+import dot from 'src/static/images/dot.gif'
 import { ICover } from '../types'
 
 const Covers = styled.figure<PosterProps>`

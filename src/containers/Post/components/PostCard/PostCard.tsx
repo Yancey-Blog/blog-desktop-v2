@@ -3,7 +3,7 @@ import Link from 'next/link'
 import LazyLoad from 'react-lazyload'
 import { SVG_SPRITE, WEBP_SUFFIX } from 'src/shared/constants'
 import { formatDate } from 'src/shared/utils'
-import svgIcons from 'src/static/svg-sprite.svg'
+import svgIcons from 'src/static/images/svg-sprite.svg'
 import {
   PostCardWrapper,
   PosterAnchor,

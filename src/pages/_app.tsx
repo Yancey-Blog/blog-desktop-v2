@@ -11,10 +11,10 @@ import { ApolloClient } from 'apollo-client'
 import withApollo from 'src/shared/withApollo'
 
 import 'normalize.css'
-import 'public/css/nprogress.css'
 import 'aplayer/dist/APlayer.min.css'
 import 'highlight.js/styles/atom-one-dark.css'
 import 'tocbot/dist/tocbot.css'
+import 'src/static/css/nprogress.css'
 
 import { ThemeProvider } from 'styled-components'
 import { lightTheme, darkTheme } from 'src/styled/theme'

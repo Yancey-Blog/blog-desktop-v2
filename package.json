@@ -14,8 +14,8 @@
     "release:major": "standard-version --release-as major && yarn push",
     "release:minor": "standard-version --release-as minor && yarn push",
     "release:patch": "standard-version --release-as patch && yarn push",
-    "format": "prettier --write \"pages/**/*.tsx\" \"src/**/*.ts\" \"src/**/*.tsx\"",
-    "lint": "eslint pages src --ext .ts,.tsx",
+    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.tsx\"",
+    "lint": "eslint src --ext .ts,.tsx",
     "stylelint": "stylelint \"./src/**/*.ts\" \"./src/**/*.tsx\""
   },
   "dependencies": {

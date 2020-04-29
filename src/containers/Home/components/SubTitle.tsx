@@ -1,7 +1,7 @@
 import React, { FC } from 'react'
 import styled from 'styled-components'
 import { flexMixin } from 'src/styled/mixins'
-import svgIcons from 'src/static/svg-sprite.svg'
+import svgIcons from 'src/static/images/svg-sprite.svg'
 
 const Header = styled.h2`
   ${flexMixin('flex-start')}
