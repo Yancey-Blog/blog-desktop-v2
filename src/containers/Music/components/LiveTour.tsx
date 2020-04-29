@@ -2,6 +2,7 @@ import React, { FC } from 'react'
 import styled from 'styled-components'
 import Carousel from 'nuka-carousel'
 import { formatDate } from 'src/shared/utils'
+import { WEBP_SUFFIX } from 'src/shared/constants'
 import { ILiveTour } from '../types'
 
 const LiveTourContent = styled.div`
@@ -37,10 +38,11 @@ const Title = styled.p`
 `
 
 interface Props {
+  enableWebp: boolean
   liveTours: ILiveTour[]
 }
 
-const LiveTour: FC<Props> = ({ liveTours }) => {
+const LiveTour: FC<Props> = ({ enableWebp, liveTours }) => {
   return (
     <Carousel
       autoplay
@@ -53,7 +55,11 @@ const LiveTour: FC<Props> = ({ liveTours }) => {
         <LiveTourContent key={liveTour._id}>
           <Img
             key={liveTour._id}
-            src={liveTour.posterUrl}
+            src={
+              enableWebp
+                ? `${liveTour.posterUrl}${WEBP_SUFFIX}`
+                : liveTour.posterUrl
+            }
             alt={liveTour.title}
           />
           <LiveTourMeta>

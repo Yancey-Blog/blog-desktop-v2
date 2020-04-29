@@ -1,11 +1,17 @@
 import React from 'react'
 import { useQuery } from '@apollo/react-hooks'
 import ImageHeader from 'src/components/ImageHeader/ImageHeader'
+import SkeletonIterator from 'src/components/SkeletonIterator/SkeletonIterator'
 import { POSTS } from 'src/containers/Post/typeDefs'
 import { PostQuery, PostVars } from 'src/containers/Post/types'
+import { useEnableWebp } from 'src/hooks/useEnableWebp'
+import { WEBP_SUFFIX } from 'src/shared/constants'
 import LiveTour from './components/LiveTour'
 import Card from './components/Card'
 import BestAlbum from './components/BestAlbum'
+import CardSkeleton from './components/CardSkeleton'
+import LiveTourSkeleton from './components/LiveTourSkeleton'
+import BestAlbumSkeleton from './components/BestAlbumSkeleton'
 import { LiveTourQuery, YanceyMusicQuery, BestAlbumQuery } from './types'
 import { LIVE_TOURS, YANCEY_MUSIC, BEST_ALBUMS } from './typeDefs'
 import {
@@ -18,6 +24,8 @@ import {
 } from './styled'
 
 const Music = () => {
+  const { enableWebp } = useEnableWebp()
+
   const { data: liveTours } = useQuery<LiveTourQuery>(LIVE_TOURS)
   const { data: bestAlbums } = useQuery<BestAlbumQuery>(BEST_ALBUMS)
   const { data: yanceymusics } = useQuery<YanceyMusicQuery>(YANCEY_MUSIC)
@@ -42,23 +50,40 @@ const Music = () => {
         <LiveToursMusicNotes>
           <div>
             <SubTitle>LIVE TOURS</SubTitle>
-            <LiveTour liveTours={liveTours ? liveTours.getLiveTours : []} />
+            {!liveTours ? (
+              <SkeletonIterator
+                count={1}
+                skeletonComponent={LiveTourSkeleton}
+              />
+            ) : (
+              <LiveTour
+                liveTours={liveTours.getLiveTours}
+                enableWebp={enableWebp}
+              />
+            )}
           </div>
           <div>
             <SubTitle>MUSIC NOTES</SubTitle>
+
             <MusicNotes>
-              {!posts
-                ? null
-                : posts.posts.items.map((post) => (
-                    <Card
-                      key={post._id}
-                      type="note"
-                      url={post._id}
-                      title={post.summary}
-                      date={post.createdAt}
-                      cover={post.posterUrl}
-                    />
-                  ))}
+              {!posts ? (
+                <SkeletonIterator count={4} skeletonComponent={CardSkeleton} />
+              ) : (
+                posts.posts.items.map((post) => (
+                  <Card
+                    key={post._id}
+                    type="note"
+                    url={post._id}
+                    title={post.summary}
+                    date={post.createdAt}
+                    cover={
+                      enableWebp
+                        ? `${post.posterUrl}${WEBP_SUFFIX}`
+                        : post.posterUrl
+                    }
+                  />
+                ))
+              )}
             </MusicNotes>
           </div>
         </LiveToursMusicNotes>
@@ -66,30 +91,45 @@ const Music = () => {
         <div>
           <SubTitle>BEST ALBUM</SubTitle>
           <BestAlbumWrapper>
-            {!bestAlbums
-              ? null
-              : bestAlbums.getBestAlbums
-                  .slice(0, 4)
-                  .map((bestAlbum) => (
-                    <BestAlbum key={bestAlbum._id} bestAlbum={bestAlbum} />
-                  ))}
+            {!bestAlbums ? (
+              <SkeletonIterator
+                count={4}
+                skeletonComponent={BestAlbumSkeleton}
+              />
+            ) : (
+              bestAlbums.getBestAlbums
+                .slice(0, 4)
+                .map((bestAlbum) => (
+                  <BestAlbum
+                    key={bestAlbum._id}
+                    bestAlbum={bestAlbum}
+                    enableWebp={enableWebp}
+                  />
+                ))
+            )}
           </BestAlbumWrapper>
         </div>
 
         <div>
           <SubTitle>YANCEY MUSIC</SubTitle>
           <YanceyMusicWrapper>
-            {!yanceymusics
-              ? null
-              : yanceymusics.getYanceyMusic.map((yanceyMusic) => (
-                  <Card
-                    key={yanceyMusic._id}
-                    url={yanceyMusic.soundCloudUrl}
-                    title={yanceyMusic.title}
-                    date={yanceyMusic.releaseDate}
-                    cover={yanceyMusic.posterUrl}
-                  />
-                ))}
+            {!yanceymusics ? (
+              <SkeletonIterator count={4} skeletonComponent={CardSkeleton} />
+            ) : (
+              yanceymusics.getYanceyMusic.map((yanceyMusic) => (
+                <Card
+                  key={yanceyMusic._id}
+                  url={yanceyMusic.soundCloudUrl}
+                  title={yanceyMusic.title}
+                  date={yanceyMusic.releaseDate}
+                  cover={
+                    enableWebp
+                      ? `${yanceyMusic.posterUrl}${WEBP_SUFFIX}`
+                      : yanceyMusic.posterUrl
+                  }
+                />
+              ))
+            )}
           </YanceyMusicWrapper>
         </div>
       </MusicWrapper>
