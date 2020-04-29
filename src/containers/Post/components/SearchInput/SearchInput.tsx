@@ -27,6 +27,7 @@ const SearchSvg = styled.svg`
   right: 0.73rem;
   width: 1.2rem !important;
   height: 1.2rem !important;
+  fill: ${({ theme }) => theme.text.header};
 `
 
 const SearchInput: FC = () => {
