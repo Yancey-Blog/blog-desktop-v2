@@ -2,6 +2,24 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.9.0](https://github.com/Yancey-Blog/blog-fe-v2/compare/v0.8.0...v0.9.0) (2020-04-29)
+
+
+### Features
+
+* delete useless css file ([94071a2](https://github.com/Yancey-Blog/blog-fe-v2/commit/94071a275f10496aea909b388f004cbe590fca24))
+* follow the advises of stylelint ([6307c9d](https://github.com/Yancey-Blog/blog-fe-v2/commit/6307c9d7075f0e1fe85b7c11a69ece87066eed05))
+* integrate stylelint ([41d7b2a](https://github.com/Yancey-Blog/blog-fe-v2/commit/41d7b2a0a24a10c8a722809e07d412bc50b75d5c))
+* package ImageGroup and ImageAlt component ([a2158f1](https://github.com/Yancey-Blog/blog-fe-v2/commit/a2158f1f7b0a6102785b16f5e264c4ac72329ce9))
+* package MarkdownImg component for Markdown render ([affc082](https://github.com/Yancey-Blog/blog-fe-v2/commit/affc082fad3127451cab49c26f0f5e937111b339))
+* package PrevAndNextItem component ([da79c07](https://github.com/Yancey-Blog/blog-fe-v2/commit/da79c07650c286711b82267170037e8b248e8d5c))
+* support dark theme for SearchSvg of SearchInput component ([ef8da4f](https://github.com/Yancey-Blog/blog-fe-v2/commit/ef8da4f8886cb30a3d63136642c08d6f57d55e21))
+* update BackToTop component ([d253705](https://github.com/Yancey-Blog/blog-fe-v2/commit/d25370576132d3bbb32a5a11ee32254e22a294c1))
+* update body globalStyle ([722bf32](https://github.com/Yancey-Blog/blog-fe-v2/commit/722bf32e6a7cdfc49639ab031ea75ad96bf935b3))
+* update document.title for every page ([21db92e](https://github.com/Yancey-Blog/blog-fe-v2/commit/21db92ee454d2b056961a748bc10aa2c79bbbb21))
+* update SearchInput Component ([6203226](https://github.com/Yancey-Blog/blog-fe-v2/commit/6203226130798436965dcf3c4a31c62681cc5c3a))
+* update YellowSVG ([460f148](https://github.com/Yancey-Blog/blog-fe-v2/commit/460f148a976ceb44e78cf3ba50e0990f0763c80e))
+
 ## [0.8.0](https://github.com/Yancey-Blog/blog-fe-v2/compare/v0.7.0...v0.8.0) (2020-04-29)
 
 
