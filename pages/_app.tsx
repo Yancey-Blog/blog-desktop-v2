@@ -14,7 +14,6 @@ import 'normalize.css'
 import 'public/css/nprogress.css'
 import 'aplayer/dist/APlayer.min.css'
 import 'highlight.js/styles/atom-one-dark.css'
-import 'baguettebox.js/dist/baguetteBox.min.css'
 import 'tocbot/dist/tocbot.css'
 
 import { ThemeProvider } from 'styled-components'
