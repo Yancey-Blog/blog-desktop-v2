@@ -1,27 +1,24 @@
 import React, { FC, useState, useEffect } from 'react'
-import throttle from 'lodash.throttle'
-import { scrollToTop, noop } from 'src/shared/utils'
+import { scrollToTop } from 'src/shared/utils'
 import { Cat } from './styled'
 
 const BackToTop: FC = () => {
   const [showCat, setShowCat] = useState('')
 
+  const scrollToTopHander = () => {
+    const top = document.documentElement.scrollTop || document.body.scrollTop
+    if (top > 800) {
+      setShowCat('showCat')
+    } else {
+      setShowCat('')
+    }
+  }
+
   useEffect(() => {
-    window.addEventListener(
-      'scroll',
-      throttle(() => {
-        const top =
-          document.documentElement.scrollTop || document.body.scrollTop
-        if (top > 800) {
-          setShowCat('showCat')
-        } else {
-          setShowCat('')
-        }
-      }, 150),
-    )
+    document.addEventListener('scroll', scrollToTopHander)
 
     return () => {
-      window.removeEventListener('scroll', noop)
+      document.removeEventListener('scroll', scrollToTopHander)
     }
   }, [])
   return <Cat onClick={scrollToTop} className={showCat} />
