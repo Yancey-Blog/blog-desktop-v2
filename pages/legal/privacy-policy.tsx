@@ -4,7 +4,7 @@ import PrivacyPolicyContainer from 'src/containers/Legal/PrivacyPolicy/PrivacyPo
 
 const PrivacyPolicy = () => {
   return (
-    <Layout>
+    <Layout title="Privacy Policy | Yancey Inc.">
       <PrivacyPolicyContainer />
     </Layout>
   )

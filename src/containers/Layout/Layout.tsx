@@ -7,7 +7,6 @@ import Footer from 'src/components/Footer/Footer'
 import BackToTop from 'src/components/BackToTop/BackToTop'
 import { GET_GLOBAL_SETTING } from 'src/containers/GlobalSetting/typeDefs'
 import { GlobalSettingQuery } from 'src/containers/GlobalSetting/types'
-// import { checkWebp } from 'yancey-js-util'
 import { Layouts, Main } from './styled'
 
 const initialGlobalSetting = {
@@ -16,7 +15,11 @@ const initialGlobalSetting = {
   isGrayTheme: false,
 }
 
-const Layout: FC = ({ children }) => {
+interface Props {
+  title?: string
+}
+
+const Layout: FC<Props> = ({ title, children }) => {
   const { data } = useQuery<GlobalSettingQuery>(GET_GLOBAL_SETTING)
 
   useEffect(() => {
@@ -29,15 +32,9 @@ const Layout: FC = ({ children }) => {
     logPageView()
   }, [])
 
-  // useEffect(() => {
-  //   if (checkWebp()) {
-  //     window.localStorage.setItem('webp', 'enable')
-  //   }
-  // }, [])
-
   return (
     <Layouts>
-      <Head />
+      <Head title={title} />
       <Header
         globalSetting={data ? data.getGlobalSetting : initialGlobalSetting}
       />

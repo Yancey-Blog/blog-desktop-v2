@@ -4,7 +4,7 @@ import PostListContainer from 'src/containers/Post/PostList/PostList'
 
 const Post = () => {
   return (
-    <Layout>
+    <Layout title="Blog | Yancey Inc.">
       <PostListContainer />
     </Layout>
   )

@@ -1,6 +1,7 @@
 import React, { FC, useRef } from 'react'
 import { useRouter } from 'next/router'
 import { useQuery, useMutation } from '@apollo/react-hooks'
+import LazyLoad from 'react-lazyload'
 import MarkDown from 'markdown-to-jsx'
 import { DiscussionEmbed } from 'disqus-react'
 import MetaHead from 'src/components/Head/Head'
@@ -15,9 +16,6 @@ import { GET_POST_BY_ID, UPDATE_PV, UPDATE_LIKE } from '../typeDefs'
 import { GetPostByIdQuery, GetPostByIdVar } from '../types'
 import {
   setupHighlight,
-  showImageAlt,
-  wrapImg,
-  setupBaguetteBox,
   removeEmbededTag,
   setupTocbot,
   generateShareUrl,
@@ -25,6 +23,8 @@ import {
 import {
   PostDetailWrapper,
   Poster,
+  ImageGroup,
+  ImageAlt,
   Title,
   Summary,
   Content,
@@ -50,6 +50,23 @@ const PostDetail: FC = () => {
     onError() {},
   })
 
+  const MarkdownImg = ({
+    src,
+    alt,
+    ...props
+  }: {
+    src: string
+    alt: string
+    props: any
+  }) => (
+    <ImageGroup className="postImgGroup" {...props}>
+      <LazyLoad height={200}>
+        <img src={enableWebp ? `${src}${WEBP_SUFFIX}` : src} alt={alt} />
+      </LazyLoad>
+      <ImageAlt className="postImgAlt">{alt}</ImageAlt>
+    </ImageGroup>
+  )
+
   const { data: post } = useQuery<GetPostByIdQuery, GetPostByIdVar>(
     GET_POST_BY_ID,
     {
@@ -60,9 +77,6 @@ const PostDetail: FC = () => {
       onCompleted() {
         updatePV()
         setupHighlight(markdownWrapperEl)
-        showImageAlt()
-        wrapImg()
-        setupBaguetteBox()
         setupTocbot()
       },
     },
@@ -89,6 +103,7 @@ const PostDetail: FC = () => {
   return (
     <PostDetailWrapper>
       <MetaHead
+        title={`${title} | Yancey Inc.`}
         useTwitterCard
         postTitle={title}
         postSummary={summary}
@@ -123,6 +138,11 @@ const PostDetail: FC = () => {
           <MarkDown
             options={{
               slugify: (str) => str,
+              overrides: {
+                img: {
+                  component: MarkdownImg,
+                },
+              },
             }}
             className="postDetailContent"
           >

@@ -2,6 +2,8 @@ import React, { FC } from 'react'
 import Link from 'next/link'
 import styled from 'styled-components'
 import { backgroundMixin, flexMixin } from 'src/styled/mixins'
+import { useEnableWebp } from 'src/hooks/useEnableWebp'
+import { WEBP_SUFFIX } from 'src/shared/constants'
 import { PosterProps } from 'src/shared/types'
 import { IPostItem } from '../../types'
 
@@ -44,34 +46,43 @@ const Title = styled.p`
   z-index: ${({ theme }) => theme.zIndex.overlay};
 `
 
+enum ItemType {
+  prev = 'PREVIOUS',
+  next = 'NEXT',
+}
+
 interface Props {
   prev: IPostItem | null
   next: IPostItem | null
 }
 
 const PrevAndNext: FC<Props> = ({ prev, next }) => {
+  const { enableWebp } = useEnableWebp()
+
+  const PrevAndNextItem = (
+    id: string,
+    posterUrl: string,
+    title: string,
+    type: ItemType,
+  ) => (
+    <Link href="/post/[id]" as={`/post/${id}`}>
+      <a>
+        <Container
+          imageUrl={enableWebp ? `${posterUrl}${WEBP_SUFFIX}` : posterUrl}
+        >
+          <Title>{type} POST</Title>
+          <Title>{title}</Title>
+        </Container>
+      </a>
+    </Link>
+  )
+
   return (
     <Wrapper>
-      {prev && (
-        <Link href="/post/[id]" as={`/post/${prev._id}`}>
-          <a>
-            <Container imageUrl={prev.posterUrl}>
-              <Title>PREVIOUS POST</Title>
-              <Title>{prev.title}</Title>
-            </Container>
-          </a>
-        </Link>
-      )}
-      {next && (
-        <Link href="/post/[id]" as={`/post/${next._id}`}>
-          <a>
-            <Container imageUrl={next.posterUrl}>
-              <Title>NEXT POST</Title>
-              <Title>{next.title}</Title>
-            </Container>
-          </a>
-        </Link>
-      )}
+      {prev &&
+        PrevAndNextItem(prev._id, prev.posterUrl, prev.title, ItemType.prev)}
+      {next &&
+        PrevAndNextItem(next._id, next.posterUrl, next.title, ItemType.next)}
     </Wrapper>
   )
 }

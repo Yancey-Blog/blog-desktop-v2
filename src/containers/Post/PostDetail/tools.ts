@@ -1,7 +1,5 @@
 import React from 'react'
 import hljs from 'highlight.js'
-// @ts-ignore
-import baguetteBox from 'baguettebox.js'
 import tocbot from 'tocbot'
 import { DOMAIN } from 'src/shared/constants'
 
@@ -26,35 +24,6 @@ export const addLineNumbers = () => {
       '\n</li><li>',
     )}\n</li></ol>`
   }
-}
-
-export const showImageAlt = () => {
-  const imgList: string[] = []
-  const imgTag = document.querySelectorAll('img')
-  for (let i = 0, l = imgTag.length; i < l; i += 1) {
-    imgList.push(imgTag[i].alt)
-    ;(imgTag[i].parentNode as HTMLDivElement).classList.add('postImgGroup')
-    ;(imgTag[i].parentNode as HTMLDivElement).insertAdjacentHTML(
-      'beforeend',
-      `<span class='postImgAlt'>${imgList[i]}</span>`,
-    )
-  }
-}
-
-export const wrapImg = () => {
-  const imgDom: NodeListOf<HTMLImageElement> = document.querySelectorAll(
-    `.${POST_DETAIL_CONTENT} img`,
-  )
-  const imgWrapper = document.querySelectorAll('.postImgGroup')
-  for (let i = 0, len = imgDom.length; i < len; i += 1) {
-    imgWrapper[
-      i
-    ].innerHTML = `<a href='${imgDom[i].src}' data-caption='${imgDom[i].alt}'>${imgWrapper[i].innerHTML}</a>`
-  }
-}
-
-export const setupBaguetteBox = () => {
-  baguetteBox.run(`.${POST_DETAIL_CONTENT}`)
 }
 
 export const removeEmbededTag = (content: string) =>

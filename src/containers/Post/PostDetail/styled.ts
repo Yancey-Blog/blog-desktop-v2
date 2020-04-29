@@ -113,18 +113,20 @@ export const Content = styled.article`
     position: relative;
     color: ${({ theme }) => theme.colors.linkBlue};
   }
+`
 
-  .postImgGroup {
-    margin: 3.5rem 0;
-    text-align: center;
-  }
+export const ImageGroup = styled.figure`
+  display: block;
+  margin: 3.5rem 0;
+  text-align: center;
+`
 
-  .postImgAlt {
-    padding-bottom: 0.4rem;
-    font-size: 0.9rem;
-    color: ${({ theme }) => theme.text.secondary};
-    border-bottom: 1px dashed ${({ theme }) => theme.text.secondary};
-  }
+export const ImageAlt = styled.figcaption`
+  display: inline-block;
+  padding-bottom: 0.4rem;
+  font-size: 0.9rem;
+  color: ${({ theme }) => theme.text.secondary};
+  border-bottom: 1px dashed ${({ theme }) => theme.text.secondary};
 `
 
 export const Menu = styled.aside`

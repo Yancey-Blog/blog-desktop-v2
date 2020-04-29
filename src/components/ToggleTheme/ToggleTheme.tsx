@@ -16,7 +16,7 @@ interface ButtonProps {
 const ToggleContainer = styled.button`
   position: fixed;
   top: 0.75rem;
-  right: 1.4rem;
+  right: 2.4rem;
   ${flexMixin('space-between')}
   width: 8rem;
   height: 3rem;

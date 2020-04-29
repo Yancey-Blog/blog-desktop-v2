@@ -27,6 +27,8 @@ const SearchSvg = styled.svg`
   right: 0.73rem;
   width: 1.2rem !important;
   height: 1.2rem !important;
+  fill: ${({ theme }) => theme.text.header};
+  cursor: pointer;
 `
 
 const SearchInput: FC = () => {
@@ -36,25 +38,30 @@ const SearchInput: FC = () => {
   const handleInputChange = (e: ChangeEvent<HTMLInputElement>) =>
     setVal(e.target.value)
 
-  const onSubmit = (e: KeyboardEvent<HTMLInputElement>) => {
+  const onClickSearch = () => {
+    router.push({
+      pathname: '/post',
+      search: val.trim() === '' ? undefined : `?title=${val}`,
+    })
+  }
+
+  const onKeyUpSearch = (e: KeyboardEvent<HTMLInputElement>) => {
     const event = e || window.event
     const key = event.which || event.keyCode || event.charCode
     if (key === 13) {
-      router.push({
-        pathname: '/post',
-        search: val.trim() === '' ? undefined : `?title=${val}`,
-      })
+      onClickSearch()
     }
   }
 
   return (
     <SearchInputWrapper>
       <Input
+        placeholder="Search..."
         type="text"
         onChange={handleInputChange}
-        onKeyUp={(e) => onSubmit(e)}
+        onKeyUp={(e) => onKeyUpSearch(e)}
       />
-      <SearchSvg>
+      <SearchSvg onClick={onClickSearch}>
         <use xlinkHref={`${svgIcons}${SVG_SPRITE.search1}`} />
       </SearchSvg>
     </SearchInputWrapper>
