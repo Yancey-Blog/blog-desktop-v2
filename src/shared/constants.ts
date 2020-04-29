@@ -13,13 +13,13 @@ export const DOMAIN = 'https://yanceyleo.com'
 
 export const ALI_OSS_URL = 'https://static.yanceyleo.com'
 
-export const ALI_OSS_SUFFIX = '?x-oss-process=image'
+export const ALI_OSS_SUFFIX_BASE = '?x-oss-process=image'
 
-export const WEBP_SUFFIX = '/format,webp'
-
-export const THUMB_SUFFIX = '/resize,w_120'
-
-export const LOW_QUALITY_SUFFIX = '/quality,Q_10'
+export enum ALI_OSS_SUFFIX {
+  WEBP_SUFFIX = '/format,webp',
+  THUMB_SUFFIX = '/resize,w_120',
+  LOW_QUALITY_SUFFIX = '/quality,Q_10',
+}
 
 export const GA = 'UA-114532340-1'
 

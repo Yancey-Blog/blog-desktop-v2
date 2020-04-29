@@ -6,7 +6,7 @@ import MarkDown from 'markdown-to-jsx'
 import { DiscussionEmbed } from 'disqus-react'
 import MetaHead from 'src/components/Head/Head'
 import { useEnableWebp } from 'src/hooks/useEnableWebp'
-import { WEBP_SUFFIX, DISCUSSION_KEY } from 'src/shared/constants'
+import { ALI_OSS_SUFFIX, DISCUSSION_KEY } from 'src/shared/constants'
 import { generateAliOSSSuffix } from 'src/shared/utils'
 import PostMeta from '../components/PostMeta/PostMeta'
 import YellowSVG from '../components/YellowSVG/YellowSVG'
@@ -64,7 +64,11 @@ const PostDetail: FC = () => {
     <ImageGroup className="postImgGroup" {...props}>
       <LazyLoad height={200}>
         <img
-          src={enableWebp ? `${src}${generateAliOSSSuffix(WEBP_SUFFIX)}` : src}
+          src={
+            enableWebp
+              ? `${src}${generateAliOSSSuffix(ALI_OSS_SUFFIX.WEBP_SUFFIX)}`
+              : src
+          }
           alt={alt}
         />
       </LazyLoad>
@@ -134,7 +138,9 @@ const PostDetail: FC = () => {
         <Poster
           imageUrl={
             enableWebp
-              ? `${posterUrl}${generateAliOSSSuffix(WEBP_SUFFIX)}`
+              ? `${posterUrl}${generateAliOSSSuffix(
+                  ALI_OSS_SUFFIX.WEBP_SUFFIX,
+                )}`
               : posterUrl
           }
         />

@@ -3,7 +3,7 @@ import Link from 'next/link'
 import styled from 'styled-components'
 import { backgroundMixin, flexMixin } from 'src/styled/mixins'
 import { useEnableWebp } from 'src/hooks/useEnableWebp'
-import { WEBP_SUFFIX } from 'src/shared/constants'
+import { ALI_OSS_SUFFIX } from 'src/shared/constants'
 import { generateAliOSSSuffix } from 'src/shared/utils'
 import { PosterProps } from 'src/shared/types'
 import { IPostItem } from '../../types'
@@ -71,7 +71,9 @@ const PrevAndNext: FC<Props> = ({ prev, next }) => {
         <Container
           imageUrl={
             enableWebp
-              ? `${posterUrl}${generateAliOSSSuffix(WEBP_SUFFIX)}`
+              ? `${posterUrl}${generateAliOSSSuffix(
+                  ALI_OSS_SUFFIX.WEBP_SUFFIX,
+                )}`
               : posterUrl
           }
         >

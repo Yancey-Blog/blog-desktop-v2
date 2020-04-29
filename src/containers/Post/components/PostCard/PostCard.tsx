@@ -1,7 +1,7 @@
 import React, { FC } from 'react'
 import Link from 'next/link'
 import LazyLoad from 'react-lazyload'
-import { SVG_SPRITE, WEBP_SUFFIX } from 'src/shared/constants'
+import { SVG_SPRITE, ALI_OSS_SUFFIX } from 'src/shared/constants'
 import { formatDate, generateAliOSSSuffix } from 'src/shared/utils'
 import svgIcons from 'src/static/images/svg-sprite.svg'
 import {
@@ -32,7 +32,9 @@ const PostCard: FC<Props> = ({ post }) => {
           <LazyLoad height={200}>
             <Poster>
               <source
-                srcSet={`${posterUrl}${generateAliOSSSuffix(WEBP_SUFFIX)}`}
+                srcSet={`${posterUrl}${generateAliOSSSuffix(
+                  ALI_OSS_SUFFIX.WEBP_SUFFIX,
+                )}`}
                 type="image/webp"
               />
               <img src={posterUrl} alt={title} />

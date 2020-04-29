@@ -4,13 +4,7 @@ import styled from 'styled-components'
 import SkeletonIterator from 'src/components/SkeletonIterator/SkeletonIterator'
 import { flexMixin } from 'src/styled/mixins'
 import { useEnableWebp } from 'src/hooks/useEnableWebp'
-import {
-  SVG_SPRITE,
-  DOMAIN,
-  WEBP_SUFFIX,
-  THUMB_SUFFIX,
-  LOW_QUALITY_SUFFIX,
-} from 'src/shared/constants'
+import { SVG_SPRITE, DOMAIN, ALI_OSS_SUFFIX } from 'src/shared/constants'
 import { generateAliOSSSuffix } from 'src/shared/utils'
 import { PosterProps } from 'src/shared/types'
 import Top7PVPostsSkeleton from '../Top7PVPostsSkeleton/Top7PVPostsSkeleton'
@@ -99,11 +93,11 @@ const Top7PVPosts: FC<Props> = ({ topPVPosts }) => {
                     imageUrl={
                       enableWebp
                         ? `${posterUrl}${generateAliOSSSuffix(
-                            WEBP_SUFFIX,
-                            LOW_QUALITY_SUFFIX,
+                            ALI_OSS_SUFFIX.WEBP_SUFFIX,
+                            ALI_OSS_SUFFIX.LOW_QUALITY_SUFFIX,
                           )}`
                         : `${posterUrl}${generateAliOSSSuffix(
-                            LOW_QUALITY_SUFFIX,
+                            ALI_OSS_SUFFIX.LOW_QUALITY_SUFFIX,
                           )}`
                     }
                   />
@@ -118,10 +112,12 @@ const Top7PVPosts: FC<Props> = ({ topPVPosts }) => {
                       src={
                         enableWebp
                           ? `${posterUrl}${generateAliOSSSuffix(
-                              WEBP_SUFFIX,
-                              THUMB_SUFFIX,
+                              ALI_OSS_SUFFIX.WEBP_SUFFIX,
+                              ALI_OSS_SUFFIX.THUMB_SUFFIX,
                             )}`
-                          : posterUrl
+                          : `${posterUrl}${generateAliOSSSuffix(
+                              ALI_OSS_SUFFIX.THUMB_SUFFIX,
+                            )}`
                       }
                     />
                   </CardContent>

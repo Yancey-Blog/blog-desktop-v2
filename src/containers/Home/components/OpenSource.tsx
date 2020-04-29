@@ -2,7 +2,7 @@ import React, { FC } from 'react'
 import styled from 'styled-components'
 import { flexMixin, backgroundMixin, transitionMixin } from 'src/styled/mixins'
 import { useEnableWebp } from 'src/hooks/useEnableWebp'
-import { SVG_SPRITE, WEBP_SUFFIX } from 'src/shared/constants'
+import { SVG_SPRITE, ALI_OSS_SUFFIX } from 'src/shared/constants'
 import { generateAliOSSSuffix } from 'src/shared/utils'
 import { PosterProps } from 'src/shared/types'
 import SubTitle from './SubTitle'
@@ -108,7 +108,7 @@ const OpenSource: FC<Props> = ({ openSources }) => {
               imageUrl={
                 enableWebp
                   ? `${openSource.posterUrl}${generateAliOSSSuffix(
-                      WEBP_SUFFIX,
+                      ALI_OSS_SUFFIX.WEBP_SUFFIX,
                     )}`
                   : openSource.posterUrl
               }
