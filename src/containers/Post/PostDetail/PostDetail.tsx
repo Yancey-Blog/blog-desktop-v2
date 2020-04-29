@@ -23,6 +23,8 @@ import {
 import {
   PostDetailWrapper,
   Poster,
+  ImageGroup,
+  ImageAlt,
   Title,
   Summary,
   Content,
@@ -57,15 +59,12 @@ const PostDetail: FC = () => {
     alt: string
     props: any
   }) => (
-    <span className="postImgGroup" {...props}>
+    <ImageGroup className="postImgGroup" {...props}>
       <LazyLoad height={200}>
-        <picture>
-          <source srcSet={`${src}${WEBP_SUFFIX}`} type="image/webp" />
-          <img src={src} alt={alt} />
-        </picture>
+        <img src={enableWebp ? `${src}${WEBP_SUFFIX}` : src} alt={alt} />
       </LazyLoad>
-      <span className="postImgAlt">{alt}</span>
-    </span>
+      <ImageAlt className="postImgAlt">{alt}</ImageAlt>
+    </ImageGroup>
   )
 
   const { data: post } = useQuery<GetPostByIdQuery, GetPostByIdVar>(
