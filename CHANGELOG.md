@@ -2,6 +2,29 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.8.0](https://github.com/Yancey-Blog/blog-fe-v2/compare/v0.7.0...v0.8.0) (2020-04-29)
+
+
+### Features
+
+* add SkeletonIterator to render more Skeleton ([231d848](https://github.com/Yancey-Blog/blog-fe-v2/commit/231d84891e2382383d790a752ff7973a0a6e2145))
+* coverUrl to webp ([4f6b0c8](https://github.com/Yancey-Blog/blog-fe-v2/commit/4f6b0c85ffe719f4890426d7bdae40189d0353eb))
+* finish BlogDetailSkeleton ([0bdb807](https://github.com/Yancey-Blog/blog-fe-v2/commit/0bdb80716ed470c897863eeb218be7ccf62286a7))
+* finish Skeleton of Top7PVPostsSkeleton ([269d403](https://github.com/Yancey-Blog/blog-fe-v2/commit/269d40302843f6f56c133a12de4ce1f5fce67ad9))
+* make pagination component to support dark theme ([0235928](https://github.com/Yancey-Blog/blog-fe-v2/commit/02359289455d47d57b15428a03b77a6fc5479cd0))
+* package webp ([6733574](https://github.com/Yancey-Blog/blog-fe-v2/commit/6733574a166c1575c02eb5a99d8a7ad964c84736))
+* support BestAlbumSkeleton ([76c22e2](https://github.com/Yancey-Blog/blog-fe-v2/commit/76c22e2b60e68dee424e42128197293b2ded4e80))
+* support LiveTourSkeleton ([5818fad](https://github.com/Yancey-Blog/blog-fe-v2/commit/5818fad194376063fa4fb1b1a4978f74268421e2))
+* support Skeleton for Music CardSkeleton ([8978596](https://github.com/Yancey-Blog/blog-fe-v2/commit/8978596681bcda1aa9d91842753b2099e931331f))
+* support webp for PostDetail component ([1e9d0fb](https://github.com/Yancey-Blog/blog-fe-v2/commit/1e9d0fb624f8c3710a44e34bff0db950bea420da))
+* support WEBP_SUFFIX and THUMB_SUFFIX for Top7PVPosts component ([dfa964a](https://github.com/Yancey-Blog/blog-fe-v2/commit/dfa964a40765a46cda852ecb351024316f386bcb))
+* support WEBP_SUFFIX for Music component ([8bd6017](https://github.com/Yancey-Blog/blog-fe-v2/commit/8bd60177f98316e06b0772714e87831491b5fde4))
+* support WEBP_SUFFIX for Player component ([0956663](https://github.com/Yancey-Blog/blog-fe-v2/commit/09566635fe5d7e6416d3926203f854077e6fcec7))
+* update Archive ([3e43c28](https://github.com/Yancey-Blog/blog-fe-v2/commit/3e43c284d95522913fc2dc562e10760955a808d4))
+* update ImageHeader to support webp ([63dff2f](https://github.com/Yancey-Blog/blog-fe-v2/commit/63dff2f2033ac4b5c166849ccbf713ac0330057e))
+* update PostCard ([e1de7ed](https://github.com/Yancey-Blog/blog-fe-v2/commit/e1de7edd3d85893c9e8b2ed04e38c02c12375fa1))
+* update style of Footer to rem ([b944391](https://github.com/Yancey-Blog/blog-fe-v2/commit/b94439118e498cb0e4cec018b9cb5ac3cdb24235))
+
 ## [0.7.0](https://github.com/Yancey-Blog/blog-fe-v2/compare/v0.6.0...v0.7.0) (2020-04-26)
 
 
