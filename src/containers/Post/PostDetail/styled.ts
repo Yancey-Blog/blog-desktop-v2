@@ -115,6 +115,7 @@ export const Content = styled.article`
   }
 
   .postImgGroup {
+    display: block;
     margin: 3.5rem 0;
     text-align: center;
   }

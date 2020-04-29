@@ -28,7 +28,6 @@
     "apollo-client": "^2.6.8",
     "apollo-link-batch-http": "^1.2.13",
     "apollo-link-error": "^1.1.12",
-    "baguettebox.js": "^1.11.1",
     "disqus-react": "^1.0.8",
     "graphql": "^15.0.0",
     "graphql-tag": "^2.10.3",
