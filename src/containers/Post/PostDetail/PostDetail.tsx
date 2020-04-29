@@ -104,6 +104,7 @@ const PostDetail: FC = () => {
   return (
     <PostDetailWrapper>
       <MetaHead
+        title={`${title} | Yancey Inc.`}
         useTwitterCard
         postTitle={title}
         postSummary={summary}

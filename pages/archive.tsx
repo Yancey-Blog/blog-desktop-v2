@@ -4,7 +4,7 @@ import ArchiveContainer from 'src/containers/Archive/Archive'
 
 const Music = () => {
   return (
-    <Layout>
+    <Layout title="Archive | Yancey Inc.">
       <ArchiveContainer />
     </Layout>
   )

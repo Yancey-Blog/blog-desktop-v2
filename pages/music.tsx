@@ -1,13 +1,10 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import Layout from 'src/containers/Layout/Layout'
 import MusicContainer from 'src/containers/Music/Music'
 
 const Music = () => {
-  useEffect(() => {
-    document.title = 'ミュージック | Yancey Inc.'
-  }, [])
   return (
-    <Layout>
+    <Layout title="ミュージック | Yancey Inc.">
       <MusicContainer />
     </Layout>
   )
