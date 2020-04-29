@@ -21,8 +21,6 @@ const Archive: FC = () => {
     notifyOnNetworkStatusChange: true,
   })
 
-  if (!data) return <div>loading...</div>
-
   return (
     <>
       <ImageHeader
@@ -31,47 +29,49 @@ const Archive: FC = () => {
       />
 
       <ArchiveWrapper>
-        {data.archive.map((year) => (
-          <Fragment key={year._id}>
-            <Year>{year._id}</Year>
-            <YearList>
-              {year.months.map((month) => (
-                <li key={month.month}>
-                  <input
-                    id={`archive_${year._id}_${month.month}`}
-                    type="checkbox"
-                    name="tabs"
-                    defaultChecked
-                  />
-                  <label htmlFor={`archive_${year._id}_${month.month}`}>
-                    <Month>
-                      <MonthTxt>
-                        {moment().month(month.month).format('MMM')}
-                        {'. '}({month.days.length}{' '}
-                        {month.days.length > 1 ? 'posts' : 'post'})
-                      </MonthTxt>
-                    </Month>
-                  </label>
-                  <DayList className="dayListContainer">
-                    {month.days.map((day) => (
-                      <DayItem key={day.id}>
-                        <Day>
-                          {moment(day.createdAt).date()}
-                          {': '}
-                        </Day>
-                        <Link href="/post/[id]" as={`/post/${day.id}`}>
-                          <a>
-                            {day.title} ({day.pv} PV )
-                          </a>
-                        </Link>
-                      </DayItem>
-                    ))}
-                  </DayList>
-                </li>
-              ))}
-            </YearList>
-          </Fragment>
-        ))}
+        {!data
+          ? null
+          : data.archive.map((year) => (
+              <Fragment key={year._id}>
+                <Year>{year._id}</Year>
+                <YearList>
+                  {year.months.map((month) => (
+                    <li key={month.month}>
+                      <input
+                        id={`archive_${year._id}_${month.month}`}
+                        type="checkbox"
+                        name="tabs"
+                        defaultChecked
+                      />
+                      <label htmlFor={`archive_${year._id}_${month.month}`}>
+                        <Month>
+                          <MonthTxt>
+                            {moment().month(month.month).format('MMM')}
+                            {'. '}({month.days.length}{' '}
+                            {month.days.length > 1 ? 'posts' : 'post'})
+                          </MonthTxt>
+                        </Month>
+                      </label>
+                      <DayList className="dayListContainer">
+                        {month.days.map((day) => (
+                          <DayItem key={day.id}>
+                            <Day>
+                              {moment(day.createdAt).date()}
+                              {': '}
+                            </Day>
+                            <Link href="/post/[id]" as={`/post/${day.id}`}>
+                              <a>
+                                {day.title} ({day.pv} PV )
+                              </a>
+                            </Link>
+                          </DayItem>
+                        ))}
+                      </DayList>
+                    </li>
+                  ))}
+                </YearList>
+              </Fragment>
+            ))}
       </ArchiveWrapper>
     </>
   )

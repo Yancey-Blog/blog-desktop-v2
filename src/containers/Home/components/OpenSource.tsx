@@ -1,7 +1,8 @@
 import React, { FC } from 'react'
 import styled from 'styled-components'
 import { flexMixin, backgroundMixin, transitionMixin } from 'src/styled/mixins'
-import { SVG_SPRITE } from 'src/shared/constants'
+import { useEnableWebp } from 'src/hooks/useEnableWebp'
+import { SVG_SPRITE, WEBP_SUFFIX } from 'src/shared/constants'
 import { PosterProps } from 'src/shared/types'
 import SubTitle from './SubTitle'
 import { IOpenSource } from '../types'
@@ -88,6 +89,8 @@ interface Props {
 }
 
 const OpenSource: FC<Props> = ({ openSources }) => {
+  const { enableWebp } = useEnableWebp()
+
   return (
     <>
       <SubTitle icon={SVG_SPRITE.fire} title="New Release!" />
@@ -101,7 +104,11 @@ const OpenSource: FC<Props> = ({ openSources }) => {
             key={openSource._id}
           >
             <OpenSourceItem
-              imageUrl={openSource.posterUrl}
+              imageUrl={
+                enableWebp
+                  ? `${openSource.posterUrl}${WEBP_SUFFIX}`
+                  : openSource.posterUrl
+              }
               data-title={openSource.title}
               data-intro={openSource.description}
             >

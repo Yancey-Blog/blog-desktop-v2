@@ -1,7 +1,8 @@
 import React, { FC } from 'react'
 import styled from 'styled-components'
-import { formatDate } from 'src/shared/utils'
 import { transitionMixin } from 'src/styled/mixins'
+import { formatDate } from 'src/shared/utils'
+import { WEBP_SUFFIX } from 'src/shared/constants'
 import { IBestAlbum } from '../types'
 
 const BestAlbumWrapper = styled.div`
@@ -52,15 +53,19 @@ const Btn = styled.button`
 `
 
 interface Props {
+  enableWebp: boolean
   bestAlbum: IBestAlbum
 }
 
-const BestAlbum: FC<Props> = ({ bestAlbum }) => {
+const BestAlbum: FC<Props> = ({ enableWebp, bestAlbum }) => {
   const { title, artist, coverUrl, mvUrl, releaseDate } = bestAlbum
 
   return (
     <BestAlbumWrapper>
-      <Img src={coverUrl} alt={title} />
+      <Img
+        src={enableWebp ? `${coverUrl}${WEBP_SUFFIX}` : coverUrl}
+        alt={title}
+      />
 
       <Meta>
         <Date>{formatDate(releaseDate, 'YYYY-MM-DD')}</Date>
