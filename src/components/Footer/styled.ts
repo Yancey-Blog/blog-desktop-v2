@@ -2,30 +2,31 @@ import styled from 'styled-components'
 import { flexMixin } from '../../styled/mixins'
 
 export const FooterWrapper = styled.footer`
-  margin: 72px auto 36px;
-  width: 800px;
+  margin: 4.8rem auto 2.4rem;
+  width: 60rem;
+  font-family: 'Ubuntu', sans-serif;
 `
 
 export const CopyRight = styled.p`
-  font-size: 13px;
+  font-size: 0.87rem;
 `
 
 export const TechStacks = styled.p`
   ${flexMixin('flex-start')}
-  font-size: 15px;
+  font-size: 1rem;
   font-weight: 600;
 
   svg {
-    margin: 0 4px;
-    width: 20px;
-    height: 20px;
+    margin: 0 0.27rem;
+    width: 1.33rem;
+    height: 1.33rem;
     fill: ${({ theme }) => theme.colors.heartRed};
   }
 `
 
 export const Divider = styled.hr`
   box-sizing: content-box;
-  margin: 7px 0 14px;
+  margin: 0.47rem 0 0.94rem;
   padding: 0;
   width: 100%;
   height: 1px;
@@ -36,12 +37,12 @@ export const Divider = styled.hr`
 `
 
 export const InnerLink = styled.span`
-  font-size: 13px;
-  margin-right: 16px;
+  font-size: 0.87rem;
+  margin-right: 1.1rem;
 `
 
 export const Email = styled.a`
-  font-size: 13px;
+  font-size: 0.87rem;
 `
 
 export const FooterBottom = styled.div`

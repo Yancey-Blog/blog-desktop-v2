@@ -2,10 +2,14 @@ import React, { FC, useRef, useEffect } from 'react'
 import { useQuery } from '@apollo/react-hooks'
 // @ts-ignore
 import APlayer from 'aplayer'
+import { useEnableWebp } from 'src/hooks/useEnableWebp'
+import { WEBP_SUFFIX } from 'src/shared/constants'
 import { PLAYERS } from '../typeDefs'
 import { PlayerQuery } from '../types'
 
 const Player: FC = () => {
+  const { enableWebp } = useEnableWebp()
+
   const { data } = useQuery<PlayerQuery>(PLAYERS)
   const plyaerRef = useRef<HTMLDivElement>(null)
 
@@ -21,7 +25,7 @@ const Player: FC = () => {
             name: title,
             artist,
             url: musicFileUrl,
-            cover: coverUrl,
+            cover: enableWebp ? `${coverUrl}${WEBP_SUFFIX}` : coverUrl,
             lrc,
           }
         }),
