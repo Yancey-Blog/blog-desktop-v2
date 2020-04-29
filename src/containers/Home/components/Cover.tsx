@@ -4,6 +4,7 @@ import { useEnableWebp } from 'src/hooks/useEnableWebp'
 import { backgroundMixin } from 'src/styled/mixins'
 import { PosterProps } from 'src/shared/types'
 import { WEBP_SUFFIX } from 'src/shared/constants'
+import { generateAliOSSSuffix } from 'src/shared/utils'
 import dot from 'src/static/images/dot.gif'
 import { ICover } from '../types'
 
@@ -36,7 +37,7 @@ const Cover: FC<Props> = ({ covers }) => {
     <Covers
       imageUrl={
         enableWebp
-          ? `${covers[0]?.coverUrl}${WEBP_SUFFIX}`
+          ? `${covers[0]?.coverUrl}${generateAliOSSSuffix(WEBP_SUFFIX)}`
           : covers[0]?.coverUrl
       }
     />

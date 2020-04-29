@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import { flexMixin, backgroundMixin, transitionMixin } from 'src/styled/mixins'
 import { useEnableWebp } from 'src/hooks/useEnableWebp'
 import { SVG_SPRITE, WEBP_SUFFIX } from 'src/shared/constants'
+import { generateAliOSSSuffix } from 'src/shared/utils'
 import { PosterProps } from 'src/shared/types'
 import SubTitle from './SubTitle'
 import { IOpenSource } from '../types'
@@ -106,7 +107,9 @@ const OpenSource: FC<Props> = ({ openSources }) => {
             <OpenSourceItem
               imageUrl={
                 enableWebp
-                  ? `${openSource.posterUrl}${WEBP_SUFFIX}`
+                  ? `${openSource.posterUrl}${generateAliOSSSuffix(
+                      WEBP_SUFFIX,
+                    )}`
                   : openSource.posterUrl
               }
               data-title={openSource.title}

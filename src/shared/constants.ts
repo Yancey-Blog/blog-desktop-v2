@@ -13,9 +13,13 @@ export const DOMAIN = 'https://yanceyleo.com'
 
 export const ALI_OSS_URL = 'https://static.yanceyleo.com'
 
-export const WEBP_SUFFIX = '?x-oss-process=image/format,webp'
+export const ALI_OSS_SUFFIX = '?x-oss-process=image'
 
-export const THUMB_SUFFIX = '?x-oss-process=image/resize,w_120/quality,Q_10'
+export const WEBP_SUFFIX = '/format,webp'
+
+export const THUMB_SUFFIX = '/resize,w_120'
+
+export const LOW_QUALITY_SUFFIX = '/quality,Q_10'
 
 export const GA = 'UA-114532340-1'
 

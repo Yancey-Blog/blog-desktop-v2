@@ -1,7 +1,7 @@
 import React, { FC } from 'react'
 import styled from 'styled-components'
 import { transitionMixin } from 'src/styled/mixins'
-import { formatDate } from 'src/shared/utils'
+import { formatDate, generateAliOSSSuffix } from 'src/shared/utils'
 import { WEBP_SUFFIX } from 'src/shared/constants'
 import { IBestAlbum } from '../types'
 
@@ -63,7 +63,11 @@ const BestAlbum: FC<Props> = ({ enableWebp, bestAlbum }) => {
   return (
     <BestAlbumWrapper>
       <Img
-        src={enableWebp ? `${coverUrl}${WEBP_SUFFIX}` : coverUrl}
+        src={
+          enableWebp
+            ? `${coverUrl}${generateAliOSSSuffix(WEBP_SUFFIX)}`
+            : coverUrl
+        }
         alt={title}
       />
 

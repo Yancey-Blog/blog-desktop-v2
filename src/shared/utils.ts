@@ -1,4 +1,5 @@
 import moment from 'moment'
+import { ALI_OSS_SUFFIX } from './constants'
 
 export const scrollToTop = () => {
   let timer: number = 0
@@ -34,4 +35,12 @@ export const devToolsWarning = () => {
        |_/_/    \\_\\_| \\_|\\_____|______|  |_|    |____/|______\\____/ \\_____|
       `)
   }
+}
+
+export const generateAliOSSSuffix = (...props: string[]) => {
+  let suffix = ALI_OSS_SUFFIX
+  props.forEach((val) => {
+    suffix += val
+  })
+  return suffix
 }

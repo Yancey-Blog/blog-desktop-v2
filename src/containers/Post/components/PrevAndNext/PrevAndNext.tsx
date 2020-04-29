@@ -4,6 +4,7 @@ import styled from 'styled-components'
 import { backgroundMixin, flexMixin } from 'src/styled/mixins'
 import { useEnableWebp } from 'src/hooks/useEnableWebp'
 import { WEBP_SUFFIX } from 'src/shared/constants'
+import { generateAliOSSSuffix } from 'src/shared/utils'
 import { PosterProps } from 'src/shared/types'
 import { IPostItem } from '../../types'
 
@@ -68,7 +69,11 @@ const PrevAndNext: FC<Props> = ({ prev, next }) => {
     <Link href="/post/[id]" as={`/post/${id}`}>
       <a>
         <Container
-          imageUrl={enableWebp ? `${posterUrl}${WEBP_SUFFIX}` : posterUrl}
+          imageUrl={
+            enableWebp
+              ? `${posterUrl}${generateAliOSSSuffix(WEBP_SUFFIX)}`
+              : posterUrl
+          }
         >
           <Title>{type} POST</Title>
           <Title>{title}</Title>

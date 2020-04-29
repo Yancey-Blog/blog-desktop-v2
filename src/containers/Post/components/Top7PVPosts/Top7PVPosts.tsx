@@ -9,7 +9,9 @@ import {
   DOMAIN,
   WEBP_SUFFIX,
   THUMB_SUFFIX,
+  LOW_QUALITY_SUFFIX,
 } from 'src/shared/constants'
+import { generateAliOSSSuffix } from 'src/shared/utils'
 import { PosterProps } from 'src/shared/types'
 import Top7PVPostsSkeleton from '../Top7PVPostsSkeleton/Top7PVPostsSkeleton'
 import SubHeader from '../SubTitle/SubTitle'
@@ -93,7 +95,18 @@ const Top7PVPosts: FC<Props> = ({ topPVPosts }) => {
             <Link href="/post/[id]" as={`/post/${_id}`} key={_id}>
               <a>
                 <CardItem>
-                  <BlurBg imageUrl={`${posterUrl}${THUMB_SUFFIX}`} />
+                  <BlurBg
+                    imageUrl={
+                      enableWebp
+                        ? `${posterUrl}${generateAliOSSSuffix(
+                            WEBP_SUFFIX,
+                            LOW_QUALITY_SUFFIX,
+                          )}`
+                        : `${posterUrl}${generateAliOSSSuffix(
+                            LOW_QUALITY_SUFFIX,
+                          )}`
+                    }
+                  />
 
                   <CardContent>
                     <span>
@@ -103,7 +116,12 @@ const Top7PVPosts: FC<Props> = ({ topPVPosts }) => {
                     <Thumb
                       alt={title}
                       src={
-                        enableWebp ? `${posterUrl}${WEBP_SUFFIX}` : posterUrl
+                        enableWebp
+                          ? `${posterUrl}${generateAliOSSSuffix(
+                              WEBP_SUFFIX,
+                              THUMB_SUFFIX,
+                            )}`
+                          : posterUrl
                       }
                     />
                   </CardContent>

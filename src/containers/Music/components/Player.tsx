@@ -3,7 +3,8 @@ import { useQuery } from '@apollo/react-hooks'
 // @ts-ignore
 import APlayer from 'aplayer'
 import { useEnableWebp } from 'src/hooks/useEnableWebp'
-import { WEBP_SUFFIX } from 'src/shared/constants'
+import { WEBP_SUFFIX, THUMB_SUFFIX } from 'src/shared/constants'
+import { generateAliOSSSuffix } from 'src/shared/utils'
 import { PLAYERS } from '../typeDefs'
 import { PlayerQuery } from '../types'
 
@@ -25,7 +26,9 @@ const Player: FC = () => {
             name: title,
             artist,
             url: musicFileUrl,
-            cover: enableWebp ? `${coverUrl}${WEBP_SUFFIX}` : coverUrl,
+            cover: enableWebp
+              ? `${coverUrl}${generateAliOSSSuffix(WEBP_SUFFIX, THUMB_SUFFIX)}`
+              : coverUrl,
             lrc,
           }
         }),

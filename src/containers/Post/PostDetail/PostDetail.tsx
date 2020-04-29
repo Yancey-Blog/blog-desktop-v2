@@ -7,6 +7,7 @@ import { DiscussionEmbed } from 'disqus-react'
 import MetaHead from 'src/components/Head/Head'
 import { useEnableWebp } from 'src/hooks/useEnableWebp'
 import { WEBP_SUFFIX, DISCUSSION_KEY } from 'src/shared/constants'
+import { generateAliOSSSuffix } from 'src/shared/utils'
 import PostMeta from '../components/PostMeta/PostMeta'
 import YellowSVG from '../components/YellowSVG/YellowSVG'
 import SharePanel from '../components/SharePanel/SharePanel'
@@ -62,7 +63,10 @@ const PostDetail: FC = () => {
   }) => (
     <ImageGroup className="postImgGroup" {...props}>
       <LazyLoad height={200}>
-        <img src={enableWebp ? `${src}${WEBP_SUFFIX}` : src} alt={alt} />
+        <img
+          src={enableWebp ? `${src}${generateAliOSSSuffix(WEBP_SUFFIX)}` : src}
+          alt={alt}
+        />
       </LazyLoad>
       <ImageAlt className="postImgAlt">{alt}</ImageAlt>
     </ImageGroup>
@@ -128,7 +132,11 @@ const PostDetail: FC = () => {
 
       <Content>
         <Poster
-          imageUrl={enableWebp ? `${posterUrl}${WEBP_SUFFIX}` : posterUrl}
+          imageUrl={
+            enableWebp
+              ? `${posterUrl}${generateAliOSSSuffix(WEBP_SUFFIX)}`
+              : posterUrl
+          }
         />
         <Title>{title}</Title>
         <PostMeta
