@@ -1,18 +1,18 @@
-module.exports = (phase, { defaultConfig }) => {
-  const isEnvDevelopment = process.env.NODE_ENV === 'developemnt'
-  const isEnvProduction = process.env.NODE_ENV === 'production'
+const { PHASE_DEVELOPMENT_SERVER } = require('next/constants')
 
+module.exports = (phase, { defaultConfig }) => {
   return {
     env: {
-      BASE_URL: isEnvProduction
-        ? 'https://api.yanceyleo.com/graphql'
-        : 'http://localhost:3002/graphql',
+      BASE_URL:
+        phase === PHASE_DEVELOPMENT_SERVER
+          ? 'http://localhost:3002/graphql'
+          : 'https://api.yanceyleo.com/graphql',
     },
-    assetPrefix: isEnvProduction ? 'https://cdn.yanceyleo.com' : '',
     compress: false,
+    pageExtensions: ['mdx', 'jsx', 'js', 'ts', 'tsx'],
     webpack: (config, options) => {
       config.module.rules.push({
-        test: /\.svg/,
+        test: [/\.svg/, /\.bmp$/, /\.gif$/, /\.jpe?g$/, /\.png$/, /\.webp$/],
         use: [
           {
             loader: 'url-loader',
