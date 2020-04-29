@@ -85,7 +85,6 @@ export const Summary = styled.p`
   font-size: 1.1rem;
   line-height: 1.5;
   color: ${({ theme }) => theme.text.header};
-  overflow: hidden;
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 5;
