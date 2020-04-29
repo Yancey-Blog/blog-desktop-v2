@@ -18,7 +18,7 @@ export const NavBar = styled.nav`
   position: fixed;
   ${flexMixin('space-between')}
   width:100%;
-  padding: 0 1.2rem;
+  padding: 0 2.4rem;
   font-family: 'Ubuntu', sans-serif;
   background: ${({ theme }) => theme.background.primary};
   opacity: 0.95;
@@ -41,6 +41,25 @@ export const NavBarItem = styled.div`
     color: ${({ theme }) => theme.text.primary};
     ${transitionMixin('color')}
 
+    &::after {
+      position: absolute;
+      content: '';
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 0.4rem;
+      background: ${({ theme }) => theme.colors.orange};
+      ${transitionMixin('width')}
+    }
+
+    svg {
+      margin-right: 0.5rem;
+      width: 1rem;
+      height: 1rem;
+      fill: ${({ theme }) => theme.text.primary};
+      ${transitionMixin('fill')}
+    }
+
     &:hover {
       color: ${({ theme }) => theme.colors.orange};
       ${transitionMixin('color')}
@@ -55,25 +74,6 @@ export const NavBarItem = styled.div`
         ${animationMixin(wrench, 2000, 'ease', 'infinite')}
       }
     }
-
-    &::after {
-      position: absolute;
-      content: '';
-      bottom: 0;
-      left: 0;
-      width: 0;
-      height: 0.4rem;
-      background: ${({ theme }) => theme.colors.orange};
-      ${transitionMixin('width')}
-    }
-  }
-
-  svg {
-    margin-right: 0.5rem;
-    width: 1rem;
-    height: 1rem;
-    fill: ${({ theme }) => theme.text.primary};
-    ${transitionMixin('fill')}
   }
 `
 
