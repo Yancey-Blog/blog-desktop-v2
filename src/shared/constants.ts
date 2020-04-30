@@ -23,6 +23,9 @@ export enum ALI_OSS_SUFFIX {
 
 export const GA = 'UA-114532340-1'
 
+export const SENTRY =
+  'https://2998f0f7a05044969a7859a2596e6977@o265404.ingest.sentry.io/1468725'
+
 export const POST_LICENSE_URL =
   'https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en'
 
