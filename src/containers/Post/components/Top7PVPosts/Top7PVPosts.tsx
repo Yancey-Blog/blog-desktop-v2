@@ -4,12 +4,8 @@ import styled from 'styled-components'
 import SkeletonIterator from 'src/components/SkeletonIterator/SkeletonIterator'
 import { flexMixin } from 'src/styled/mixins'
 import { useEnableWebp } from 'src/hooks/useEnableWebp'
-import {
-  SVG_SPRITE,
-  DOMAIN,
-  WEBP_SUFFIX,
-  THUMB_SUFFIX,
-} from 'src/shared/constants'
+import { SVG_SPRITE, DOMAIN, ALI_OSS_SUFFIX } from 'src/shared/constants'
+import { generateAliOSSSuffix } from 'src/shared/utils'
 import { PosterProps } from 'src/shared/types'
 import Top7PVPostsSkeleton from '../Top7PVPostsSkeleton/Top7PVPostsSkeleton'
 import SubHeader from '../SubTitle/SubTitle'
@@ -93,7 +89,18 @@ const Top7PVPosts: FC<Props> = ({ topPVPosts }) => {
             <Link href="/post/[id]" as={`/post/${_id}`} key={_id}>
               <a>
                 <CardItem>
-                  <BlurBg imageUrl={`${posterUrl}${THUMB_SUFFIX}`} />
+                  <BlurBg
+                    imageUrl={
+                      enableWebp
+                        ? `${posterUrl}${generateAliOSSSuffix(
+                            ALI_OSS_SUFFIX.WEBP_SUFFIX,
+                            ALI_OSS_SUFFIX.LOW_QUALITY_SUFFIX,
+                          )}`
+                        : `${posterUrl}${generateAliOSSSuffix(
+                            ALI_OSS_SUFFIX.LOW_QUALITY_SUFFIX,
+                          )}`
+                    }
+                  />
 
                   <CardContent>
                     <span>
@@ -103,7 +110,14 @@ const Top7PVPosts: FC<Props> = ({ topPVPosts }) => {
                     <Thumb
                       alt={title}
                       src={
-                        enableWebp ? `${posterUrl}${WEBP_SUFFIX}` : posterUrl
+                        enableWebp
+                          ? `${posterUrl}${generateAliOSSSuffix(
+                              ALI_OSS_SUFFIX.WEBP_SUFFIX,
+                              ALI_OSS_SUFFIX.THUMB_SUFFIX,
+                            )}`
+                          : `${posterUrl}${generateAliOSSSuffix(
+                              ALI_OSS_SUFFIX.THUMB_SUFFIX,
+                            )}`
                       }
                     />
                   </CardContent>

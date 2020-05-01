@@ -1,14 +1,15 @@
 const { PHASE_DEVELOPMENT_SERVER } = require('next/constants')
+const withSourceMaps = require('@zeit/next-source-maps')
 
-module.exports = (phase, { defaultConfig }) => {
-  return {
+module.exports = (phase, { defaultConfig }) =>
+  withSourceMaps({
     env: {
       BASE_URL:
         phase === PHASE_DEVELOPMENT_SERVER
           ? 'http://localhost:3002/graphql'
           : 'https://api.yanceyleo.com/graphql',
     },
-    compress: false,
+    compress: true,
     pageExtensions: ['mdx', 'jsx', 'js', 'ts', 'tsx'],
     webpack: (config, options) => {
       config.module.rules.push({
@@ -25,5 +26,4 @@ module.exports = (phase, { defaultConfig }) => {
     experimental: {
       jsconfigPaths: true,
     },
-  }
-}
+  })

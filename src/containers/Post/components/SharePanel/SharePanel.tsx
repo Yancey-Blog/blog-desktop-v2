@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { TwitterShareButton } from 'react-share'
 import { flexMixin } from 'src/styled/mixins'
 import { SVG_SPRITE } from 'src/shared/constants'
-import svgIcons from 'src/static/svg-sprite.svg'
+import svgIcons from 'src/static/images/svg-sprite.svg'
 
 const SharePanelWrapper = styled.div`
   position: fixed;

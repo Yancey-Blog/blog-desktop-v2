@@ -1,6 +1,8 @@
 import React, { FC, useEffect } from 'react'
 import { useQuery } from '@apollo/react-hooks'
+import { hotjar } from 'react-hotjar'
 import { initGA, logPageView } from 'src/shared/analytics'
+import { HOTJAR_ID, HOTJAR_SV } from 'src/shared/constants'
 import Head from 'src/components/Head/Head'
 import Header from 'src/components/Header/Header'
 import Footer from 'src/components/Footer/Footer'
@@ -29,7 +31,10 @@ const Layout: FC<Props> = ({ title, children }) => {
       // @ts-ignore
       window.GA_INITIALIZED = true
     }
+
     logPageView()
+
+    hotjar.initialize(HOTJAR_ID, HOTJAR_SV)
   }, [])
 
   return (

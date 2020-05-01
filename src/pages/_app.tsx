@@ -2,6 +2,7 @@ import React from 'react'
 import { AppProps } from 'next/app'
 import Router from 'next/router'
 import dynamic from 'next/dynamic'
+import * as Sentry from '@sentry/browser'
 // @ts-ignore
 import NProgress from 'nprogress'
 
@@ -11,10 +12,10 @@ import { ApolloClient } from 'apollo-client'
 import withApollo from 'src/shared/withApollo'
 
 import 'normalize.css'
-import 'public/css/nprogress.css'
 import 'aplayer/dist/APlayer.min.css'
 import 'highlight.js/styles/atom-one-dark.css'
 import 'tocbot/dist/tocbot.css'
+import 'src/static/css/nprogress.css'
 
 import { ThemeProvider } from 'styled-components'
 import { lightTheme, darkTheme } from 'src/styled/theme'
@@ -28,6 +29,7 @@ import {
   SNACKBAR_ANCHOR_ORIGIN,
   SNACKBAR_MAX_NUM,
   SNACKBAR_AUTO_HIDE_DURATION,
+  SENTRY,
 } from 'src/shared/constants'
 
 interface IProps {
@@ -43,6 +45,8 @@ Router.events.on('routeChangeStart', () => {
 })
 Router.events.on('routeChangeComplete', () => NProgress.done())
 Router.events.on('routeChangeError', () => NProgress.done())
+
+Sentry.init({ dsn: SENTRY })
 
 const YanceyBlog = ({ Component, pageProps, apollo }: AppProps & IProps) => {
   const { theme, toggleTheme } = useDarkMode()

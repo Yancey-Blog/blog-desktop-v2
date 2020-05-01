@@ -3,8 +3,9 @@ import styled from 'styled-components'
 import { useEnableWebp } from 'src/hooks/useEnableWebp'
 import { backgroundMixin } from 'src/styled/mixins'
 import { PosterProps } from 'src/shared/types'
-import { WEBP_SUFFIX } from 'src/shared/constants'
-import dot from 'src/static/dot.gif'
+import { ALI_OSS_SUFFIX } from 'src/shared/constants'
+import { generateAliOSSSuffix } from 'src/shared/utils'
+import dot from 'src/static/images/dot.gif'
 import { ICover } from '../types'
 
 const Covers = styled.figure<PosterProps>`
@@ -36,7 +37,9 @@ const Cover: FC<Props> = ({ covers }) => {
     <Covers
       imageUrl={
         enableWebp
-          ? `${covers[0]?.coverUrl}${WEBP_SUFFIX}`
+          ? `${covers[0]?.coverUrl}${generateAliOSSSuffix(
+              ALI_OSS_SUFFIX.WEBP_SUFFIX,
+            )}`
           : covers[0]?.coverUrl
       }
     />
