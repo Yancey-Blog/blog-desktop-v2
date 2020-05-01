@@ -5,7 +5,8 @@ import SkeletonIterator from 'src/components/SkeletonIterator/SkeletonIterator'
 import { POSTS } from 'src/containers/Post/typeDefs'
 import { PostQuery, PostVars } from 'src/containers/Post/types'
 import { useEnableWebp } from 'src/hooks/useEnableWebp'
-import { WEBP_SUFFIX } from 'src/shared/constants'
+import { ALI_OSS_SUFFIX } from 'src/shared/constants'
+import { generateAliOSSSuffix } from 'src/shared/utils'
 import LiveTour from './components/LiveTour'
 import Card from './components/Card'
 import BestAlbum from './components/BestAlbum'
@@ -78,7 +79,9 @@ const Music = () => {
                     date={post.createdAt}
                     cover={
                       enableWebp
-                        ? `${post.posterUrl}${WEBP_SUFFIX}`
+                        ? `${post.posterUrl}${generateAliOSSSuffix(
+                            ALI_OSS_SUFFIX.WEBP_SUFFIX,
+                          )}`
                         : post.posterUrl
                     }
                   />
@@ -124,7 +127,9 @@ const Music = () => {
                   date={yanceyMusic.releaseDate}
                   cover={
                     enableWebp
-                      ? `${yanceyMusic.posterUrl}${WEBP_SUFFIX}`
+                      ? `${yanceyMusic.posterUrl}${generateAliOSSSuffix(
+                          ALI_OSS_SUFFIX.WEBP_SUFFIX,
+                        )}`
                       : yanceyMusic.posterUrl
                   }
                 />

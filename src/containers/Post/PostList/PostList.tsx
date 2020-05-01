@@ -4,6 +4,7 @@ import { useQuery, useLazyQuery } from '@apollo/react-hooks'
 import { Pagination } from '@material-ui/lab'
 import ImageHeader from 'src/components/ImageHeader/ImageHeader'
 import SkeletonIterator from 'src/components/SkeletonIterator/SkeletonIterator'
+import PostListStatus from '../components/PostListStatus/PostLIstStatus'
 import PostCard from '../components/PostCard/PostCard'
 import Top7PVPosts from '../components/Top7PVPosts/Top7PVPosts'
 import TagCloud from '../components/TagCloud/TagCloud'
@@ -77,6 +78,13 @@ const PostList: FC = () => {
 
       <PostContent>
         <PostItemContainer>
+          <PostListStatus
+            searchTitle={searchTitle as string | undefined}
+            searchTag={searchTag as string | undefined}
+            postsLength={posts && posts.posts.items.length}
+            fetchPosts={fetchPosts}
+          />
+
           {!posts ? (
             <SkeletonIterator count={5} skeletonComponent={PostCardSkeleton} />
           ) : (
@@ -85,15 +93,17 @@ const PostList: FC = () => {
             ))
           )}
 
-          <Pagination
-            count={
-              !posts ? 0 : Math.ceil(posts.posts.total / posts.posts.pageSize)
-            }
-            color="primary"
-            variant="outlined"
-            page={page}
-            onChange={handlePageChange}
-          />
+          {posts && posts.posts.items.length !== 0 && (
+            <Pagination
+              count={
+                !posts ? 0 : Math.ceil(posts.posts.total / posts.posts.pageSize)
+              }
+              color="primary"
+              variant="outlined"
+              page={page}
+              onChange={handlePageChange}
+            />
+          )}
         </PostItemContainer>
 
         <div>

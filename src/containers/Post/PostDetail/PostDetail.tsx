@@ -6,7 +6,8 @@ import MarkDown from 'markdown-to-jsx'
 import { DiscussionEmbed } from 'disqus-react'
 import MetaHead from 'src/components/Head/Head'
 import { useEnableWebp } from 'src/hooks/useEnableWebp'
-import { WEBP_SUFFIX, DISCUSSION_KEY } from 'src/shared/constants'
+import { ALI_OSS_SUFFIX, DISCUSSION_KEY } from 'src/shared/constants'
+import { generateAliOSSSuffix } from 'src/shared/utils'
 import PostMeta from '../components/PostMeta/PostMeta'
 import YellowSVG from '../components/YellowSVG/YellowSVG'
 import SharePanel from '../components/SharePanel/SharePanel'
@@ -34,6 +35,7 @@ import {
 const PostDetail: FC = () => {
   const {
     query: { id },
+    replace,
   } = useRouter()
 
   const { enableWebp } = useEnableWebp()
@@ -61,7 +63,14 @@ const PostDetail: FC = () => {
   }) => (
     <ImageGroup className="postImgGroup" {...props}>
       <LazyLoad height={200}>
-        <img src={enableWebp ? `${src}${WEBP_SUFFIX}` : src} alt={alt} />
+        <img
+          src={
+            enableWebp
+              ? `${src}${generateAliOSSSuffix(ALI_OSS_SUFFIX.WEBP_SUFFIX)}`
+              : src
+          }
+          alt={alt}
+        />
       </LazyLoad>
       <ImageAlt className="postImgAlt">{alt}</ImageAlt>
     </ImageGroup>
@@ -78,6 +87,10 @@ const PostDetail: FC = () => {
         updatePV()
         setupHighlight(markdownWrapperEl)
         setupTocbot()
+      },
+
+      onError() {
+        replace('/404')
       },
     },
   )
@@ -123,7 +136,13 @@ const PostDetail: FC = () => {
 
       <Content>
         <Poster
-          imageUrl={enableWebp ? `${posterUrl}${WEBP_SUFFIX}` : posterUrl}
+          imageUrl={
+            enableWebp
+              ? `${posterUrl}${generateAliOSSSuffix(
+                  ALI_OSS_SUFFIX.WEBP_SUFFIX,
+                )}`
+              : posterUrl
+          }
         />
         <Title>{title}</Title>
         <PostMeta

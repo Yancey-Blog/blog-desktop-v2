@@ -2,7 +2,7 @@ import React, { FC } from 'react'
 import Link from 'next/link'
 import { SVG_SPRITE, SOCIAL_MEDIA } from 'src/shared/constants'
 import { IGlobalSetting } from 'src/containers/GlobalSetting/types'
-import svgIcons from 'src/static/svg-sprite.svg'
+import svgIcons from 'src/static/images/svg-sprite.svg'
 import {
   FooterWrapper,
   Divider,

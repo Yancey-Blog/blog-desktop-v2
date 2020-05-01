@@ -1,8 +1,8 @@
 import React, { FC } from 'react'
 import styled from 'styled-components'
 import Carousel from 'nuka-carousel'
-import { formatDate } from 'src/shared/utils'
-import { WEBP_SUFFIX } from 'src/shared/constants'
+import { formatDate, generateAliOSSSuffix } from 'src/shared/utils'
+import { ALI_OSS_SUFFIX } from 'src/shared/constants'
 import { ILiveTour } from '../types'
 
 const LiveTourContent = styled.div`
@@ -57,7 +57,9 @@ const LiveTour: FC<Props> = ({ enableWebp, liveTours }) => {
             key={liveTour._id}
             src={
               enableWebp
-                ? `${liveTour.posterUrl}${WEBP_SUFFIX}`
+                ? `${liveTour.posterUrl}${generateAliOSSSuffix(
+                    ALI_OSS_SUFFIX.WEBP_SUFFIX,
+                  )}`
                 : liveTour.posterUrl
             }
             alt={liveTour.title}

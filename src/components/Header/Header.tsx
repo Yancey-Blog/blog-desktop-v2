@@ -2,7 +2,7 @@ import React, { FC } from 'react'
 import Link from 'next/link'
 import SearchInput from 'src/containers/Post/components/SearchInput/SearchInput'
 import { SVG_SPRITE } from 'src/shared/constants'
-import svgIcons from 'src/static/svg-sprite.svg'
+import svgIcons from 'src/static/images/svg-sprite.svg'
 import { IGlobalSetting } from 'src/containers/GlobalSetting/types'
 import { Logo, NavBar, NavBarItem, HomeSVG } from './styled'
 

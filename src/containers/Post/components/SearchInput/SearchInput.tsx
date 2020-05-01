@@ -2,7 +2,7 @@ import React, { FC, useState, ChangeEvent, KeyboardEvent } from 'react'
 import styled from 'styled-components'
 import { useRouter } from 'next/router'
 import { SVG_SPRITE } from 'src/shared/constants'
-import svgIcons from 'src/static/svg-sprite.svg'
+import svgIcons from 'src/static/images/svg-sprite.svg'
 
 const SearchInputWrapper = styled.div`
   position: relative;

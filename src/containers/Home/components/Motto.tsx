@@ -2,7 +2,7 @@ import React, { FC } from 'react'
 import styled, { css } from 'styled-components'
 import { SOCIAL_MEDIA, ALI_OSS_URL } from 'src/shared/constants'
 import { flexMixin, transitionMixin, backgroundMixin } from 'src/styled/mixins'
-import svgIcons from 'src/static/svg-sprite.svg'
+import svgIcons from 'src/static/images/svg-sprite.svg'
 import { IMotto } from '../types'
 
 const MottoBar = styled.section`
