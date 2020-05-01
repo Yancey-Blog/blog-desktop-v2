@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.0.0](https://github.com/Yancey-Blog/blog-fe-v2/compare/v0.9.0...v1.0.0) (2020-05-01)
+
+
+### Features
+
+* add 404 and 5xx basic page ([ca3f232](https://github.com/Yancey-Blog/blog-fe-v2/commit/ca3f2321f3ea5cd7f60a676e45f50fc0721b813e))
+* add PostListStatus ([bb9943d](https://github.com/Yancey-Blog/blog-fe-v2/commit/bb9943d22587c903900bd93cfe68b7f120543442))
+* finish Error page ([445d372](https://github.com/Yancey-Blog/blog-fe-v2/commit/445d372604d895aae5761f182aa7c95c4b1ff35b))
+* package generateAliOSSSuffix ([c8c72a3](https://github.com/Yancey-Blog/blog-fe-v2/commit/c8c72a3fbe2fe14f5624508425aa905c58810395))
+* replace to 404 page when visit a non-existent post ([0d02d3e](https://github.com/Yancey-Blog/blog-fe-v2/commit/0d02d3ec1feb40491687b897cd1cdfe5a4fb23b3))
+* support hotjar traking ([c9aeb8c](https://github.com/Yancey-Blog/blog-fe-v2/commit/c9aeb8c256028f048895c4eca9b55931eca0b739))
+* support Sentry ([6bbe00f](https://github.com/Yancey-Blog/blog-fe-v2/commit/6bbe00fb5a049739b27bafd04aabd12ea6acced6))
+* use ALI_OSS_SUFFIX enum ([6c7730d](https://github.com/Yancey-Blog/blog-fe-v2/commit/6c7730d0c15c0d9066e616c7269e77186d5895af))
+
 ## [0.9.0](https://github.com/Yancey-Blog/blog-fe-v2/compare/v0.8.0...v0.9.0) (2020-04-29)
 
 
