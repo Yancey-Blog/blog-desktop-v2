@@ -2,13 +2,12 @@ module.exports = {
   apps: [
     {
       name: 'blog-fe',
-      script: 'yarn',
-      args: 'start',
-      interpreter: 'bash',
+      script: 'node_modules/.bin/next start',
+      instances: 'max',
       watch: true,
       autorestart: true,
       max_memory_restart: '1G',
-      exec_mode: 'fork',
+      exec_mode: 'cluster',
       env: {
         NODE_ENV: 'production',
       },
