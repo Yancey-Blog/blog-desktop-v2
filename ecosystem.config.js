@@ -4,7 +4,7 @@ module.exports = {
       name: 'blog-fe',
       script: 'yarn',
       args: 'start',
-      interpreter: '/bin/bash',
+      interpreter: 'bash',
       watch: true,
       autorestart: true,
       max_memory_restart: '1G',
