@@ -2,7 +2,9 @@ module.exports = {
   apps: [
     {
       name: 'blog-fe',
-      script: 'yarn start',
+      cwd: './',
+      script: 'yarn',
+      args: 'start',
       watch: true,
       autorestart: true,
       max_memory_restart: '1G',
