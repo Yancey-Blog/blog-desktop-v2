@@ -6,7 +6,6 @@ module.exports = {
       watch: true,
       autorestart: true,
       max_memory_restart: '1G',
-      instances: 1,
       exec_mode: 'fork',
       env: {
         NODE_ENV: 'production',
