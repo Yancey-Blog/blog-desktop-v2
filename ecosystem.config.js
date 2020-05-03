@@ -3,10 +3,12 @@ module.exports = {
     {
       name: 'blog-fe',
       script: 'node_modules/.bin/next start',
-      watch: true,
+      watch: ['./.next'],
+      ignore_watch: ['node_modules'],
       autorestart: true,
       max_memory_restart: '1G',
-      exec_mode: 'fork',
+      instances: 1,
+      exec_mode: 'cluster',
       env: {
         NODE_ENV: 'production',
       },
