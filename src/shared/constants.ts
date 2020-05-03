@@ -11,7 +11,7 @@ export const SNACKBAR_AUTO_HIDE_DURATION = 3000
 
 export const DOMAIN = 'https://yanceyleo.com'
 
-export const ALI_OSS_URL = 'https://static.yanceyleo.com'
+export const ALI_OSS_URL = 'https://static.yancey.app'
 
 export const ALI_OSS_SUFFIX_BASE = '?x-oss-process=image'
 
