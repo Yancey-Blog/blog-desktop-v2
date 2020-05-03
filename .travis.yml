@@ -1,17 +1,24 @@
 language: node_js
 sudo: true
+node_js:
+  - 12
 branchs:
   only:
-  - master
-node_js:
-- '12'
+    - master
+addons:
+  ssh_known_hosts:
+    - 74.120.172.16
 cache:
   directories:
-  - node_modules
-install:
-- yarn install
-script:
-- yarn build
+    - node_modules
 before_install:
-- openssl aes-256-cbc -K $encrypted_ab1a82dd775b_key -iv $encrypted_ab1a82dd775b_iv
-  -in id_rsa.enc -out ~\/.ssh/id_rsa -d
+  - openssl aes-256-cbc -K $encrypted_ab1a82dd775b_key -iv $encrypted_ab1a82dd775b_iv -in .travis/id_rsa.enc -out ~/.ssh/id_rsa -d
+  - eval "$(ssh-agent -s)"
+  - chmod 600 ~/.ssh/id_rsa
+  - ssh-add ~/.ssh/id_rsa
+install:
+  - yarn install
+scripts:
+  - yarn build
+after_success:
+  - ssh caddy@74.120.172.16 -o StrictHostKeyChecking=no 'cd /var/www/blog && ./blog-fe-v2-deploy.sh'
