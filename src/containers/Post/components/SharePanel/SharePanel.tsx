@@ -1,4 +1,5 @@
 import React, { FC, useState } from 'react'
+import Router from 'next/router'
 import styled from 'styled-components'
 import { TwitterShareButton } from 'react-share'
 import { flexMixin } from 'src/styled/mixins'
@@ -49,6 +50,10 @@ const SharePanel: FC<Props> = ({ title, like, postUrl, updateLike }) => {
       setLikeStatus(true)
     }
   }
+
+  Router.events.on('routeChangeStart', () => {
+    setLikeStatus(false)
+  })
   return (
     <SharePanelWrapper>
       <TwitterShareButton
