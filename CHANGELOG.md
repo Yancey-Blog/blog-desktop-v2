@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.0](https://github.com/Yancey-Blog/blog-fe-v2/compare/v1.1.0...v1.2.0) (2020-05-06)
+
+
+### Features
+
+* define  a new set svg sprite ([b10c115](https://github.com/Yancey-Blog/blog-fe-v2/commit/b10c11513e9abd1e647a0d963586a519b64e9795))
+* delete useless svg sprite file ([1de9feb](https://github.com/Yancey-Blog/blog-fe-v2/commit/1de9febac1e67be6f167e983ed2beaab6283c10b))
+* support normal.cur ([4567192](https://github.com/Yancey-Blog/blog-fe-v2/commit/4567192d024df4e7cc74ca304bbc9a9341b8f8c0))
+* update Cat Scroll right to 4 rem ([6542bf2](https://github.com/Yancey-Blog/blog-fe-v2/commit/6542bf2ea6c29ab1108d5f447354427f77a7b5c9))
+* update style of wechat svg ([d5e01d5](https://github.com/Yancey-Blog/blog-fe-v2/commit/d5e01d55a3af712829542101bc06a4caf0635d39))
+* update SVG sprite ([0509806](https://github.com/Yancey-Blog/blog-fe-v2/commit/05098061d1ce1521cc014c3f27c81fc5309cd3d3))
+* use a new set svg sprite ([1b26aad](https://github.com/Yancey-Blog/blog-fe-v2/commit/1b26aadeff6b360d6e3ffb0e0c65511ca26f45a4))
+* use new set svg sprite ([fecd46f](https://github.com/Yancey-Blog/blog-fe-v2/commit/fecd46f5aaf7eb9c89fe86a31910e19e7aa6f7e7))
+
 ## [1.1.0](https://github.com/Yancey-Blog/blog-fe-v2/compare/v1.0.0...v1.1.0) (2020-05-04)
 
 
