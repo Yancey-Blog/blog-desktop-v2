@@ -8,11 +8,6 @@ import {
 import { wrench } from 'src/styled/animations'
 import { ALI_OSS_URL } from 'src/shared/constants'
 
-export const HomeSVG = styled.svg`
-  width: 1.2rem !important;
-  height: 1.2rem !important;
-`
-
 export const NavBar = styled.nav`
   box-sizing: border-box;
   position: fixed;
@@ -54,8 +49,8 @@ export const NavBarItem = styled.div`
 
     svg {
       margin-right: 0.5rem;
-      width: 1rem;
-      height: 1rem;
+      width: 1.1rem;
+      height: 1.1rem;
       fill: ${({ theme }) => theme.text.primary};
       ${transitionMixin('fill')}
     }

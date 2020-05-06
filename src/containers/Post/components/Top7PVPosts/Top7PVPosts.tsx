@@ -78,7 +78,7 @@ const Top7PVPosts: FC<Props> = ({ topPVPosts }) => {
 
   return (
     <>
-      <SubHeader title="Top 7 Most Viewed" icon={SVG_SPRITE.crown} />
+      <SubHeader title="Top 7 Most Viewed" icon={SVG_SPRITE.topRank} />
 
       {!topPVPosts ? (
         <SkeletonIterator count={7} skeletonComponent={Top7PVPostsSkeleton} />

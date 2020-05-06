@@ -2,7 +2,6 @@ import React, { FC, useState, ChangeEvent, KeyboardEvent } from 'react'
 import styled from 'styled-components'
 import { useRouter } from 'next/router'
 import { SVG_SPRITE } from 'src/shared/constants'
-import svgIcons from 'src/static/images/svg-sprite.svg'
 
 const SearchInputWrapper = styled.div`
   position: relative;
@@ -62,7 +61,7 @@ const SearchInput: FC = () => {
         onKeyUp={(e) => onKeyUpSearch(e)}
       />
       <SearchSvg onClick={onClickSearch}>
-        <use xlinkHref={`${svgIcons}${SVG_SPRITE.search1}`} />
+        <use xlinkHref={SVG_SPRITE.search} />
       </SearchSvg>
     </SearchInputWrapper>
   )

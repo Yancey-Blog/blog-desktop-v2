@@ -2,7 +2,6 @@ import React, { FC } from 'react'
 import styled, { css } from 'styled-components'
 import { SOCIAL_MEDIA, ALI_OSS_URL } from 'src/shared/constants'
 import { flexMixin, transitionMixin, backgroundMixin } from 'src/styled/mixins'
-import svgIcons from 'src/static/images/svg-sprite.svg'
 import { IMotto } from '../types'
 
 const MottoBar = styled.section`
@@ -125,7 +124,7 @@ const Motto: FC<Props> = ({ mottos }) => {
                 rel="noopener noreferrer"
               >
                 <Svg>
-                  <use xlinkHref={`${svgIcons}${SOCIAL_MEDIA[key].icon}`} />
+                  <use xlinkHref={SOCIAL_MEDIA[key].icon} />
                 </Svg>
               </TwitterQRCodeLink>
             )
@@ -140,7 +139,7 @@ const Motto: FC<Props> = ({ mottos }) => {
                 rel="noopener noreferrer"
               >
                 <Svg>
-                  <use xlinkHref={`${svgIcons}${SOCIAL_MEDIA[key].icon}`} />
+                  <use xlinkHref={SOCIAL_MEDIA[key].icon} />
                 </Svg>
               </WeChatQRCodeLink>
             )
@@ -154,7 +153,7 @@ const Motto: FC<Props> = ({ mottos }) => {
               rel="noopener noreferrer"
             >
               <Svg>
-                <use xlinkHref={`${svgIcons}${SOCIAL_MEDIA[key].icon}`} />
+                <use xlinkHref={SOCIAL_MEDIA[key].icon} />
               </Svg>
             </a>
           )
