@@ -4,7 +4,6 @@ import styled from 'styled-components'
 import { TwitterShareButton } from 'react-share'
 import { flexMixin } from 'src/styled/mixins'
 import { SVG_SPRITE } from 'src/shared/constants'
-import svgIcons from 'src/static/images/svg-sprite.svg'
 
 const SharePanelWrapper = styled.div`
   position: fixed;
@@ -62,16 +61,14 @@ const SharePanel: FC<Props> = ({ title, like, postUrl, updateLike }) => {
         className="postTwitterShareBtn"
       >
         <Svg>
-          <use xlinkHref={`${svgIcons}${SVG_SPRITE.twitter1}`} />
+          <use xlinkHref={SVG_SPRITE.twitter} />
         </Svg>
       </TwitterShareButton>
 
       <Like>
         <LikeSvg onClick={onSubmit}>
           <use
-            xlinkHref={`${svgIcons}${
-              likeStatus ? SVG_SPRITE.heart : SVG_SPRITE.like
-            }`}
+            xlinkHref={likeStatus ? SVG_SPRITE.heart : SVG_SPRITE.emptyHeart}
           />
         </LikeSvg>
         <span>

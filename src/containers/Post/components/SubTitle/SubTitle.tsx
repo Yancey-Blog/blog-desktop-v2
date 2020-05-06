@@ -1,7 +1,6 @@
 import React, { FC } from 'react'
 import styled from 'styled-components'
 import { flexMixin } from 'src/styled/mixins'
-import svgIcons from 'src/static/images/svg-sprite.svg'
 
 const SubTitleWrapper = styled.h3`
   ${flexMixin('flex-start')}
@@ -28,7 +27,7 @@ const SubTitle: FC<Props> = ({ icon, title }) => {
   return (
     <SubTitleWrapper>
       <SVG>
-        <use xlinkHref={`${svgIcons}${icon}`} />
+        <use xlinkHref={icon} />
       </SVG>
       {title}
     </SubTitleWrapper>

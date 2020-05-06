@@ -2,7 +2,6 @@ import React, { FC } from 'react'
 import styled from 'styled-components'
 import { flexMixin, transitionMixin } from 'src/styled/mixins'
 import { SVG_SPRITE } from 'src/shared/constants'
-import svgIcons from 'src/static/images/svg-sprite.svg'
 
 interface Props {
   theme: string
@@ -47,10 +46,10 @@ const ToggleTheme: FC<Props> = ({ theme, onToggle }) => {
   return (
     <ToggleContainer onClick={() => onToggle()}>
       <SVG lightTheme={theme === 'light'}>
-        <use xlinkHref={`${svgIcons}${SVG_SPRITE.sun}`} />
+        <use xlinkHref={SVG_SPRITE.sun} />
       </SVG>
       <SVG lightTheme={theme === 'light'}>
-        <use xlinkHref={`${svgIcons}${SVG_SPRITE.moon}`} />
+        <use xlinkHref={SVG_SPRITE.moon} />
       </SVG>
     </ToggleContainer>
   )

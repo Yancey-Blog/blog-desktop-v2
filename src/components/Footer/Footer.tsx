@@ -1,8 +1,7 @@
 import React, { FC } from 'react'
 import Link from 'next/link'
-import { SVG_SPRITE, SOCIAL_MEDIA } from 'src/shared/constants'
+import { SOCIAL_MEDIA } from 'src/shared/constants'
 import { IGlobalSetting } from 'src/containers/GlobalSetting/types'
-import svgIcons from 'src/static/images/svg-sprite.svg'
 import {
   FooterWrapper,
   Divider,
@@ -25,7 +24,7 @@ const Footer: FC<Props> = ({ globalSetting }) => {
       <TechStacks>
         Crafted with{' '}
         <svg>
-          <use xlinkHref={`${svgIcons}${SVG_SPRITE.heart}`} />
+          <use xlinkHref="#heart" />
         </svg>{' '}
         by Yancey
       </TechStacks>

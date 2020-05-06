@@ -7,6 +7,7 @@ import Head from 'src/components/Head/Head'
 import Header from 'src/components/Header/Header'
 import Footer from 'src/components/Footer/Footer'
 import BackToTop from 'src/components/BackToTop/BackToTop'
+import SVGSprite from 'src/components/SVGSprite/SVGSprite'
 import { GET_GLOBAL_SETTING } from 'src/containers/GlobalSetting/typeDefs'
 import { GlobalSettingQuery } from 'src/containers/GlobalSetting/types'
 import { Layouts, Main } from './styled'
@@ -47,6 +48,7 @@ const Layout: FC<Props> = ({ title, children }) => {
       <Footer
         globalSetting={data ? data.getGlobalSetting : initialGlobalSetting}
       />
+      <SVGSprite />
       <BackToTop />
     </Layouts>
   )

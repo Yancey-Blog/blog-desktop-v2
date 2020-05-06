@@ -2,9 +2,8 @@ import React, { FC } from 'react'
 import Link from 'next/link'
 import SearchInput from 'src/containers/Post/components/SearchInput/SearchInput'
 import { SVG_SPRITE } from 'src/shared/constants'
-import svgIcons from 'src/static/images/svg-sprite.svg'
 import { IGlobalSetting } from 'src/containers/GlobalSetting/types'
-import { Logo, NavBar, NavBarItem, HomeSVG } from './styled'
+import { Logo, NavBar, NavBarItem } from './styled'
 
 interface Props {
   globalSetting: IGlobalSetting
@@ -21,16 +20,16 @@ const Header: FC<Props> = ({ globalSetting }) => {
       <NavBarItem>
         <Link href="/">
           <a>
-            <HomeSVG>
-              <use xlinkHref={`${svgIcons}${SVG_SPRITE.home}`} />
-            </HomeSVG>
+            <svg>
+              <use xlinkHref={SVG_SPRITE.home} />
+            </svg>
             Home
           </a>
         </Link>
         <Link href="/post">
           <a>
             <svg>
-              <use xlinkHref={`${svgIcons}${SVG_SPRITE.blog}`} />
+              <use xlinkHref={SVG_SPRITE.blog} />
             </svg>
             Blog
           </a>
@@ -38,7 +37,7 @@ const Header: FC<Props> = ({ globalSetting }) => {
         <Link href="/archive">
           <a>
             <svg>
-              <use xlinkHref={`${svgIcons}${SVG_SPRITE.archive}`} />
+              <use xlinkHref={SVG_SPRITE.archive} />
             </svg>
             Archive
           </a>
@@ -46,7 +45,7 @@ const Header: FC<Props> = ({ globalSetting }) => {
         <Link href="/music">
           <a>
             <svg>
-              <use xlinkHref={`${svgIcons}${SVG_SPRITE.music}`} />
+              <use xlinkHref={SVG_SPRITE.music} />
             </svg>
             Music
           </a>
@@ -54,12 +53,11 @@ const Header: FC<Props> = ({ globalSetting }) => {
         <Link href="/post/[id]" as={`/post/${cvPostId}`}>
           <a>
             <svg>
-              <use xlinkHref={`${svgIcons}${SVG_SPRITE.cv}`} />
+              <use xlinkHref={SVG_SPRITE.cv} />
             </svg>
             About
           </a>
         </Link>
-
         <SearchInput />
       </NavBarItem>
     </NavBar>
