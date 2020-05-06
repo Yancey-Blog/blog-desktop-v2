@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.2.1](https://github.com/Yancey-Blog/blog-fe-v2/compare/v1.2.0...v1.2.1) (2020-05-06)
+
+
+### Bug Fixes
+
+* make dymanic router's prefetch to false ([e55c3fe](https://github.com/Yancey-Blog/blog-fe-v2/commit/e55c3fe4cf8d3c5308cdfa32e4504371b1c9061d))
+
 ## [1.2.0](https://github.com/Yancey-Blog/blog-fe-v2/compare/v1.1.0...v1.2.0) (2020-05-06)
 
 
