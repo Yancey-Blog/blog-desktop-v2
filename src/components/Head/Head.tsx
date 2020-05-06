@@ -49,7 +49,7 @@ const MetaHead: FC<Props> = ({
             <meta name="twitter:description" content={postSummary} />
           </Head>
           <Head>
-            <meta name="twitter:image" content={`https:${postPosterUrl}`} />
+            <meta name="twitter:image" content={postPosterUrl} />
           </Head>
           <Head>
             <meta name="twitter:image:alt" content={postTitle} />

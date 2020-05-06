@@ -68,6 +68,9 @@ export const Title = styled.h2`
   font-size: 1.3rem;
   font-weight: 700;
   color: ${({ theme }) => theme.text.header};
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 `
 
 export const Meta = styled.div`

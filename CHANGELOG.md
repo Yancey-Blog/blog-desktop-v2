@@ -2,6 +2,33 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.0](https://github.com/Yancey-Blog/blog-fe-v2/compare/v1.0.0...v1.1.0) (2020-05-04)
+
+
+### Features
+
+* burn off like heart when routeChangeStart ([df58bab](https://github.com/Yancey-Blog/blog-fe-v2/commit/df58bab5235f09c1efeaf79fa901d06bcadb5f5e))
+* follow the advises of eslint ([3f5225b](https://github.com/Yancey-Blog/blog-fe-v2/commit/3f5225b54b8603f71dbe1552a2884a75bcb07f76))
+* support ... for PostCard Title ([fc24e8c](https://github.com/Yancey-Blog/blog-fe-v2/commit/fc24e8c65a14f5f882b537261585090564db7957))
+* update ALI_OSS_URL ([7d582ad](https://github.com/Yancey-Blog/blog-fe-v2/commit/7d582adba4a4fcfdf7839ae12ae13eb71e2dbdf7))
+* update StatusWrapper's display or not ([6433891](https://github.com/Yancey-Blog/blog-fe-v2/commit/643389128f22b19439e4cb74807e84ac497a88ab))
+* update travis ci ([7333da1](https://github.com/Yancey-Blog/blog-fe-v2/commit/7333da1702ff9220c3ecad261f939f86a963756d))
+* update twitter:image ([06bb013](https://github.com/Yancey-Blog/blog-fe-v2/commit/06bb013813401e23fbd2b0ca3bb18c020936cf9a))
+
+## [1.0.0](https://github.com/Yancey-Blog/blog-fe-v2/compare/v0.9.0...v1.0.0) (2020-05-01)
+
+
+### Features
+
+* add 404 and 5xx basic page ([ca3f232](https://github.com/Yancey-Blog/blog-fe-v2/commit/ca3f2321f3ea5cd7f60a676e45f50fc0721b813e))
+* add PostListStatus ([bb9943d](https://github.com/Yancey-Blog/blog-fe-v2/commit/bb9943d22587c903900bd93cfe68b7f120543442))
+* finish Error page ([445d372](https://github.com/Yancey-Blog/blog-fe-v2/commit/445d372604d895aae5761f182aa7c95c4b1ff35b))
+* package generateAliOSSSuffix ([c8c72a3](https://github.com/Yancey-Blog/blog-fe-v2/commit/c8c72a3fbe2fe14f5624508425aa905c58810395))
+* replace to 404 page when visit a non-existent post ([0d02d3e](https://github.com/Yancey-Blog/blog-fe-v2/commit/0d02d3ec1feb40491687b897cd1cdfe5a4fb23b3))
+* support hotjar traking ([c9aeb8c](https://github.com/Yancey-Blog/blog-fe-v2/commit/c9aeb8c256028f048895c4eca9b55931eca0b739))
+* support Sentry ([6bbe00f](https://github.com/Yancey-Blog/blog-fe-v2/commit/6bbe00fb5a049739b27bafd04aabd12ea6acced6))
+* use ALI_OSS_SUFFIX enum ([6c7730d](https://github.com/Yancey-Blog/blog-fe-v2/commit/6c7730d0c15c0d9066e616c7269e77186d5895af))
+
 ## [0.9.0](https://github.com/Yancey-Blog/blog-fe-v2/compare/v0.8.0...v0.9.0) (2020-04-29)
 
 

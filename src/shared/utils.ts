@@ -26,6 +26,7 @@ export const formatDate = (ISOString: string, format = 'YYYY-MM-DD HH:mm:ss') =>
 
 export const devToolsWarning = () => {
   if (window.console || 'console' in window) {
+    // eslint-disable-next-line
     console.log(`
     __     __      _   _  _____ ________     __  ____  _      ____   _____ 
     \\ \\   / //\\   | \\ | |/ ____|  ____\\ \\   / / |  _ \\| |    / __ \\ / ____|

@@ -78,12 +78,14 @@ const PostList: FC = () => {
 
       <PostContent>
         <PostItemContainer>
-          <PostListStatus
-            searchTitle={searchTitle as string | undefined}
-            searchTag={searchTag as string | undefined}
-            postsLength={posts && posts.posts.items.length}
-            fetchPosts={fetchPosts}
-          />
+          {(searchTitle || searchTag) && (
+            <PostListStatus
+              searchTitle={searchTitle as string}
+              searchTag={searchTag as string}
+              postsLength={posts && posts.posts.items.length}
+              fetchPosts={fetchPosts}
+            />
+          )}
 
           {!posts ? (
             <SkeletonIterator count={5} skeletonComponent={PostCardSkeleton} />

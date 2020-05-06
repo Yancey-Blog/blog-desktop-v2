@@ -33,8 +33,8 @@ const ResetBtn = styled.button`
 `
 
 interface Props {
-  searchTitle: string | undefined
-  searchTag: string | undefined
+  searchTitle: string
+  searchTag: string
   postsLength: number | undefined
   fetchPosts: Function
 }
