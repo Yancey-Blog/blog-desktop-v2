@@ -14,7 +14,7 @@ const Header: FC<Props> = ({ globalSetting }) => {
 
   return (
     <NavBar>
-      <Link href="/">
+      <Link href="/" passHref>
         <Logo />
       </Link>
       <NavBarItem>
