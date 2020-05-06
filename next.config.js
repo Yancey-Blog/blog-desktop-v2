@@ -17,7 +17,15 @@ module.exports = (phase, { defaultConfig }) =>
       pageExtensions: ['mdx', 'jsx', 'js', 'ts', 'tsx'],
       webpack: (config, options) => {
         config.module.rules.push({
-          test: [/\.svg/, /\.bmp$/, /\.gif$/, /\.jpe?g$/, /\.png$/, /\.webp$/],
+          test: [
+            /\.svg/,
+            /\.bmp$/,
+            /\.gif$/,
+            /\.jpe?g$/,
+            /\.png$/,
+            /\.webp$/,
+            /\.cur$/,
+          ],
           use: [
             {
               loader: 'url-loader',

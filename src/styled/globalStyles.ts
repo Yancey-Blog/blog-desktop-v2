@@ -1,5 +1,6 @@
 import { createGlobalStyle } from 'styled-components'
 import { ALI_OSS_URL } from 'src/shared/constants'
+import cur from 'src/static/images/normal.cur'
 
 const GlobalStyle = createGlobalStyle`
   @font-face {
@@ -35,7 +36,8 @@ const GlobalStyle = createGlobalStyle`
     font-family: -apple-system, BlinkMacSystemFont, Ubuntu, Helvetica Neue, PingFang SC, Microsoft YaHei, Source Han Sans SC, Noto Sans CJK SC, WenQuanYi Micro Hei, sans-serif;
     -webkit-font-smoothing: antialiased;  
     background: ${({ theme }: { theme: any }) => theme.background.primary};
-    color: ${({ theme }: { theme: any }) => theme.text.primary};    
+    color: ${({ theme }: { theme: any }) => theme.text.primary};  
+    cursor: url(${cur}), auto;  
   }
 
   a {
