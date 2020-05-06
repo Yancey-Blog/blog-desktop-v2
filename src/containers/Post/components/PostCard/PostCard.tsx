@@ -3,7 +3,6 @@ import Link from 'next/link'
 import LazyLoad from 'react-lazyload'
 import { SVG_SPRITE, ALI_OSS_SUFFIX } from 'src/shared/constants'
 import { formatDate, generateAliOSSSuffix } from 'src/shared/utils'
-import svgIcons from 'src/static/images/svg-sprite.svg'
 import {
   PostCardWrapper,
   PosterAnchor,
@@ -45,7 +44,7 @@ const PostCard: FC<Props> = ({ post }) => {
       <SummaryWrapper>
         <ReleasedAt>
           <SVG className="timesvg">
-            <use xlinkHref={`${svgIcons}${SVG_SPRITE.time}`} />
+            <use xlinkHref={SVG_SPRITE.clock} />
           </SVG>
           Released At {formatDate(createdAt)}
         </ReleasedAt>
@@ -59,19 +58,19 @@ const PostCard: FC<Props> = ({ post }) => {
         <Meta>
           <MetaItem>
             <SVG>
-              <use xlinkHref={`${svgIcons}${SVG_SPRITE.eye}`} />
+              <use xlinkHref={SVG_SPRITE.eye} />
             </SVG>
             {pv} PV
           </MetaItem>
           <MetaItem>
             <SVG>
-              <use xlinkHref={`${svgIcons}${SVG_SPRITE.comments1}`} />
+              <use xlinkHref={SVG_SPRITE.like} />
             </SVG>
             {like} Likes
           </MetaItem>
           <MetaItem>
             <SVG>
-              <use xlinkHref={`${svgIcons}${SVG_SPRITE.closeFolder}`} />
+              <use xlinkHref={SVG_SPRITE.folder} />
             </SVG>
             <Link href={`/post?tag=${tags[0]}`}>
               <a>{tags[0]}</a>
@@ -84,7 +83,7 @@ const PostCard: FC<Props> = ({ post }) => {
         <Link href={`/post/${_id}`}>
           <a>
             <ReadMoreSVG>
-              <use xlinkHref={`${svgIcons}${SVG_SPRITE.more}`} />
+              <use xlinkHref={SVG_SPRITE.more} />
             </ReadMoreSVG>
           </a>
         </Link>

@@ -6,7 +6,7 @@ import { ALI_OSS_URL } from 'src/shared/constants'
 export const Cat = styled.div`
   position: fixed;
   top: -60rem;
-  right: 2rem;
+  right: 4rem;
   width: 4.67rem;
   height: 60rem;
   background: url(${ALI_OSS_URL}/blog-fe-static/cat-scroll.png) no-repeat 0 0;

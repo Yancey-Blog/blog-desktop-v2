@@ -1,4 +1,4 @@
-import { SnackbarOrigin, SocialMedia, Dict } from './types'
+import { SnackbarOrigin, SocialMedia } from './types'
 
 export const SNACKBAR_ANCHOR_ORIGIN: SnackbarOrigin = {
   vertical: 'top',
@@ -30,71 +30,39 @@ export const HOTJAR_ID = 1514017
 
 export const HOTJAR_SV = 6
 
-export const POST_LICENSE_URL =
-  'https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en'
+export const DISCUSSION_KEY = 'yancey-blog'
 
-export const SVG_SPRITE: Dict = {
-  telegram: '#telegram',
-  github: '#github',
+export const SVG_SPRITE = {
   soundcloud: '#soundcloud',
+  twitter: '#twitter',
   paypal: '#paypal',
-  rocket1: '#rocket',
-  megaphone: '#megaphone',
-  more: '#more',
-  sandClock: '#sand-clock',
-  heart: '#heart',
-  rocket2: '#startup',
+  github: '#github',
+  email: '#email',
+  telegram: '#telegram',
+  wechat: '#wechat',
+  linkedin: '#linkedin',
+  facebook: '#facebook',
   instagram: '#instagram',
   fire: '#flame',
-  wechat: '#wechat',
-  twitter1: '#twitter',
-  barcelona: '#barcelona',
-  fireworks: '#fireworks',
-  eye: '#eye',
-  apple: '#apple',
-  ubuntu: '#ubuntu',
   new: '#new',
-  cv: '#curriculum-vitae',
-  tools: '#gear',
-  mail: '#mail',
-  comments1: '#multimedia',
-  code1: '#html-coding',
-  openFolder: '#open-folder',
-  archive: '#archive-black-box',
-  home: '#home',
-  share1: '#share-symbol',
-  rss: '#rss-symbol',
-  apps: '#app-store-apple-symbol',
-  blog: '#blogger-letter-logotype',
-  comments2: '#blog-comment-speech-bubble-symbol',
-  search1: '#musica-searcher',
-  photo: '#frame-landscape',
-  settings: '#settings',
-  camera: '#photo-camera',
-  rightArrow: '#right-arrow',
-  leftArrow: '#left-arrow',
-  link: '#unlink',
-  user: '#user',
-  share2: '#share',
-  like: '#like',
-  time: '#time',
-  closeFolder: '#folder',
-  music: '#music-player',
-  leftQuote: '#left-quote',
-  rightQuote: '#right-quote',
-  search2: '#magnifying-glass',
-  history: '#history',
-  mortarBoard: '#mortarboard',
-  code2: '#code',
-  crown: '#placeholder',
+  heart: '#heart',
+  emptyHeart: '#passion',
   tag: '#price-tag',
-  balloons: '#balloons',
-  twitter2: '#twitter-1',
-  planet: '#twitter-1',
-  astronaut: '#astronaut',
-  close: '#close',
-  sun: '#sun',
+  topRank: '#popularity',
   moon: '#moon',
+  sun: '#sun',
+  announcement: '#megaphone',
+  home: '#home',
+  blog: '#pencil',
+  music: '#music',
+  cv: '#resume-and-cv',
+  search: '#magnifying-glass',
+  clock: '#clock',
+  eye: '#eye',
+  like: '#like',
+  folder: '#closed-container',
+  archive: '#archive',
+  more: '#menu',
 }
 
 export const SOCIAL_MEDIA: SocialMedia = {
@@ -104,7 +72,7 @@ export const SOCIAL_MEDIA: SocialMedia = {
   },
   twitter: {
     url: 'https://twitter.com/YanceyOfficial/',
-    icon: SVG_SPRITE.twitter1,
+    icon: SVG_SPRITE.twitter,
   },
   instagram: {
     url: 'https://www.instagram.com/yancey_leo/',
@@ -128,8 +96,6 @@ export const SOCIAL_MEDIA: SocialMedia = {
   },
   email: {
     url: 'mailto:yanceyofficial@gmail.com',
-    icon: SVG_SPRITE.mail,
+    icon: SVG_SPRITE.email,
   },
 }
-
-export const DISCUSSION_KEY = 'yancey-blog'
