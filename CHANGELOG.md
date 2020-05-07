@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.3.0](https://github.com/Yancey-Blog/blog-fe-v2/compare/v1.2.1...v1.3.0) (2020-05-07)
+
+
+### Features
+
+* small image convert to base64 ([216b47d](https://github.com/Yancey-Blog/blog-fe-v2/commit/216b47dba46c1637efdc0e4a1c11033218f7c769))
+* update ALI_OSS_SUFFIX strategy ([641e406](https://github.com/Yancey-Blog/blog-fe-v2/commit/641e406e8b0ac0eb509a39b6c987cd52f38d97c3))
+* use webp for OpenSource ([07c8a06](https://github.com/Yancey-Blog/blog-fe-v2/commit/07c8a06dc3ff84c5b374706e9269b00412c35a1b))
+
 ### [1.2.1](https://github.com/Yancey-Blog/blog-fe-v2/compare/v1.2.0...v1.2.1) (2020-05-06)
 
 
