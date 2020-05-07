@@ -62,6 +62,7 @@ const PostList: FC = () => {
   const handlePageChange = (e: ChangeEvent<unknown>, val: number) => {
     setPage(val)
     fetchPosts(val, searchTitle as string, searchTag as string)
+    window.scrollTo(0, 0)
   }
 
   useEffect(() => {
