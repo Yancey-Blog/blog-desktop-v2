@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.3.1](https://github.com/Yancey-Blog/blog-fe-v2/compare/v1.3.0...v1.3.1) (2020-05-07)
+
+
+### Bug Fixes
+
+* scroll to top when changePagination or search ([9418bce](https://github.com/Yancey-Blog/blog-fe-v2/commit/9418bce0a4ae7df8d65b5f7c967a1fccb559c871))
+
 ## [1.3.0](https://github.com/Yancey-Blog/blog-fe-v2/compare/v1.2.1...v1.3.0) (2020-05-07)
 
 
