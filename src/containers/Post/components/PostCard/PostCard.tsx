@@ -24,6 +24,7 @@ interface Props {
 
 const PostCard: FC<Props> = ({ post }) => {
   const { _id, createdAt, posterUrl, title, pv, like, tags, summary } = post
+
   return (
     <PostCardWrapper>
       <Link href={`/post/${_id}`} passHref prefetch={false}>
