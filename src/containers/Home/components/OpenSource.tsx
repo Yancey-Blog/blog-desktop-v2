@@ -1,10 +1,8 @@
 import React, { FC } from 'react'
 import styled from 'styled-components'
-import { flexMixin, backgroundMixin, transitionMixin } from 'src/styled/mixins'
-import { useEnableWebp } from 'src/hooks/useEnableWebp'
+import { flexMixin, transitionMixin } from 'src/styled/mixins'
 import { SVG_SPRITE, ALI_OSS_SUFFIX } from 'src/shared/constants'
 import { generateAliOSSSuffix } from 'src/shared/utils'
-import { PosterProps } from 'src/shared/types'
 import SubTitle from './SubTitle'
 import { IOpenSource } from '../types'
 
@@ -12,16 +10,22 @@ const OpenSourceWrapper = styled.section`
   ${flexMixin('space-between')}
 `
 
-const OpenSourceItem = styled.figure<PosterProps>`
+const OpenSourceItem = styled.picture`
+  display: block;
   position: relative;
   width: 19.2rem;
   height: 11rem;
-  background-image: url(${({ imageUrl }) => imageUrl});
-  ${backgroundMixin()}
   border-radius: 0.8rem;
   box-shadow: 1px 1px 3px ${({ theme }) => theme.colors.threeOpcityBlack};
   overflow: hidden;
-  ${transitionMixin('all', 400, 'linear')}
+  ${transitionMixin('all', 400, 'linear')};
+
+  source,
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 
   &::after {
     position: absolute;
@@ -90,35 +94,29 @@ interface Props {
 }
 
 const OpenSource: FC<Props> = ({ openSources }) => {
-  const { enableWebp } = useEnableWebp()
-
   return (
     <>
       <SubTitle icon={SVG_SPRITE.fire} title="New Release!" />
 
       <OpenSourceWrapper>
-        {openSources.slice(0, 3).map((openSource) => (
-          <a
-            href={openSource.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            key={openSource._id}
-          >
-            <OpenSourceItem
-              imageUrl={
-                enableWebp
-                  ? `${openSource.posterUrl}${generateAliOSSSuffix(
-                      ALI_OSS_SUFFIX.WEBP_SUFFIX,
-                    )}`
-                  : openSource.posterUrl
-              }
-              data-title={openSource.title}
-              data-intro={openSource.description}
-            >
-              <Overlay className="openSourceOverlay" />
-            </OpenSourceItem>
-          </a>
-        ))}
+        {openSources.slice(0, 3).map((openSource) => {
+          const { _id, url, title, description, posterUrl } = openSource
+
+          return (
+            <a href={url} target="_blank" rel="noopener noreferrer" key={_id}>
+              <OpenSourceItem data-title={title} data-intro={description}>
+                <source
+                  srcSet={`${posterUrl}${generateAliOSSSuffix(
+                    ALI_OSS_SUFFIX.WEBP_SUFFIX,
+                  )}`}
+                  type="image/webp"
+                />
+                <img src={posterUrl} alt={title} />
+                <Overlay className="openSourceOverlay" />
+              </OpenSourceItem>
+            </a>
+          )
+        })}
       </OpenSourceWrapper>
     </>
   )
