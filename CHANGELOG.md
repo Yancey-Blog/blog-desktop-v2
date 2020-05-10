@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.4.0](https://github.com/Yancey-Blog/blog-fe-v2/compare/v1.3.1...v1.4.0) (2020-05-10)
+
+
+### Features
+
+* make ImageHeaderWrapper to picture ([5f2fe02](https://github.com/Yancey-Blog/blog-fe-v2/commit/5f2fe02465e6fe91da53a97d6eac5b2546ec8a35))
+* make table el to center horizontally on SinglePost component ([d27fb70](https://github.com/Yancey-Blog/blog-fe-v2/commit/d27fb702b37f45f663fc0fa816bbe8f8fc9141f1))
+
 ### [1.3.1](https://github.com/Yancey-Blog/blog-fe-v2/compare/v1.3.0...v1.3.1) (2020-05-07)
 
 
