@@ -10,7 +10,7 @@ module.exports = (phase, { defaultConfig }) =>
       env: {
         BASE_URL:
           phase === PHASE_DEVELOPMENT_SERVER
-            ? 'http://localhost:3002/graphql'
+            ? 'https://api.yanceyleo.com/graphql'
             : 'https://api.yanceyleo.com/graphql',
       },
       compress: true,
