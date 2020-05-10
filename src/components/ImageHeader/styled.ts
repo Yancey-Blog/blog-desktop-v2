@@ -1,20 +1,26 @@
 import styled from 'styled-components'
-import { PosterProps } from 'src/shared/types'
 
-export const Header = styled.figure<PosterProps>`
+export const ImageHeaderWrapper = styled.picture`
+  display: block;
+  position: relative;
   width: 100%;
   height: 32rem;
   margin-bottom: 4rem;
   text-align: center;
-  background-image: url(${({ imageUrl }) => imageUrl});
-  background-repeat: no-repeat;
-  background-position: center top;
-  background-size: cover;
+
+  source,
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 `
 
 export const Title = styled.span`
-  display: block;
-  padding-top: 22rem;
+  position: absolute;
+  right: 0;
+  bottom: 3rem;
+  left: 0;
   font-family: 'Ubuntu', sans-serif;
   font-size: 4rem;
   background: -webkit-gradient(
