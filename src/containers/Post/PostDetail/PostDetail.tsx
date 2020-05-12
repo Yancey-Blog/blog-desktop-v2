@@ -30,6 +30,7 @@ import {
   Summary,
   Content,
   Menu,
+  TableWrapper,
 } from './styled'
 
 const PostDetail: FC = () => {
@@ -74,6 +75,12 @@ const PostDetail: FC = () => {
       </LazyLoad>
       <ImageAlt className="postImgAlt">{alt}</ImageAlt>
     </ImageGroup>
+  )
+
+  const MarkdownTable = ({ ...props }) => (
+    <TableWrapper>
+      <table {...props} />
+    </TableWrapper>
   )
 
   const { data: post } = useQuery<GetPostByIdQuery, GetPostByIdVar>(
@@ -160,6 +167,9 @@ const PostDetail: FC = () => {
               overrides: {
                 img: {
                   component: MarkdownImg,
+                },
+                table: {
+                  component: MarkdownTable,
                 },
               },
             }}
