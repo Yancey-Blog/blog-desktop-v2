@@ -25,9 +25,8 @@ export const formatDate = (ISOString: string, format = 'YYYY-MM-DD HH:mm:ss') =>
   moment(ISOString).format(format)
 
 export const devToolsWarning = () => {
-  if (window.console || 'console' in window) {
-    // eslint-disable-next-line
-    console.log(`
+  // eslint-disable-next-line
+  console.log(`
     __     __      _   _  _____ ________     __  ____  _      ____   _____ 
     \\ \\   / //\\   | \\ | |/ ____|  ____\\ \\   / / |  _ \\| |    / __ \\ / ____|
      \\ \\_/ //  \\  |  \\| | |    | |__   \\ \\_/ /  | |_) | |   | |  | | |  __ 
@@ -35,7 +34,6 @@ export const devToolsWarning = () => {
        | |/ ____ \\| |\\  | |____| |____   | |    | |_) | |___| |__| | |__| |
        |_/_/    \\_\\_| \\_|\\_____|______|  |_|    |____/|______\\____/ \\_____|
       `)
-  }
 }
 
 export const generateAliOSSSuffix = (...props: ALI_OSS_SUFFIX[]) => {
