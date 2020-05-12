@@ -35,8 +35,5 @@ module.exports = (phase, { defaultConfig }) =>
 
         return config
       },
-      experimental: {
-        jsconfigPaths: true,
-      },
     }),
   )
