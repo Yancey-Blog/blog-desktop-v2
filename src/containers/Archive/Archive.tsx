@@ -2,6 +2,7 @@ import React, { FC, Fragment } from 'react'
 import moment from 'moment'
 import Link from 'next/link'
 import { useQuery } from '@apollo/react-hooks'
+import { sortBy } from 'yancey-js-util'
 import { ARCHIVE } from 'src/containers/Post/typeDefs'
 import { ArchiveQuery } from 'src/containers/Post/types'
 import ImageHeader from 'src/components/ImageHeader/ImageHeader'
@@ -46,26 +47,35 @@ const Archive: FC = () => {
                       <label htmlFor={`archive_${year._id}_${month.month}`}>
                         <Month>
                           <MonthTxt>
-                            {moment().month(month.month).format('MMM')}
+                            {moment()
+                              .month(month.month - 1)
+                              .format('MMM')}
                             {'. '}({month.days.length}{' '}
                             {month.days.length > 1 ? 'posts' : 'post'})
                           </MonthTxt>
                         </Month>
                       </label>
                       <DayList className="dayListContainer">
-                        {month.days.map((day) => (
-                          <DayItem key={day.id}>
-                            <Day>
-                              {moment(day.createdAt).date()}
-                              {': '}
-                            </Day>
-                            <Link href="/post/[id]" as={`/post/${day.id}`}>
-                              <a>
-                                {day.title} ({day.pv} PV )
-                              </a>
-                            </Link>
-                          </DayItem>
-                        ))}
+                        {
+                          // TODO:
+                          // The problem of descend ordering by `createdAt`
+                          // need to be solved by the backend.
+                          month.days
+                            .sort(sortBy('createdAt', 'descend'))
+                            .map((day) => (
+                              <DayItem key={day.id}>
+                                <Day>
+                                  {moment(day.createdAt).date()}
+                                  {': '}
+                                </Day>
+                                <Link href="/post/[id]" as={`/post/${day.id}`}>
+                                  <a>
+                                    {day.title} ({day.pv} PV )
+                                  </a>
+                                </Link>
+                              </DayItem>
+                            ))
+                        }
                       </DayList>
                     </li>
                   ))}
