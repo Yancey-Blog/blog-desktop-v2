@@ -94,11 +94,8 @@ const Top7PVPosts: FC<Props> = ({ topPVPosts }) => {
                       enableWebp
                         ? `${posterUrl}${generateAliOSSSuffix(
                             ALI_OSS_SUFFIX.WEBP_SUFFIX,
-                            ALI_OSS_SUFFIX.LOW_QUALITY_SUFFIX,
                           )}`
-                        : `${posterUrl}${generateAliOSSSuffix(
-                            ALI_OSS_SUFFIX.LOW_QUALITY_SUFFIX,
-                          )}`
+                        : posterUrl
                     }
                   />
 
@@ -113,11 +110,8 @@ const Top7PVPosts: FC<Props> = ({ topPVPosts }) => {
                         enableWebp
                           ? `${posterUrl}${generateAliOSSSuffix(
                               ALI_OSS_SUFFIX.WEBP_SUFFIX,
-                              ALI_OSS_SUFFIX.THUMB_SUFFIX,
                             )}`
-                          : `${posterUrl}${generateAliOSSSuffix(
-                              ALI_OSS_SUFFIX.THUMB_SUFFIX,
-                            )}`
+                          : posterUrl
                       }
                     />
                   </CardContent>

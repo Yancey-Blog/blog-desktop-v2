@@ -31,6 +31,7 @@ import {
   SNACKBAR_AUTO_HIDE_DURATION,
   SENTRY,
 } from 'src/shared/constants'
+import { devToolsWarning } from 'src/shared/utils'
 
 interface IProps {
   apollo: ApolloClient<{}>
@@ -47,6 +48,8 @@ Router.events.on('routeChangeComplete', () => NProgress.done())
 Router.events.on('routeChangeError', () => NProgress.done())
 
 Sentry.init({ dsn: SENTRY })
+
+devToolsWarning()
 
 const YanceyBlog = ({ Component, pageProps, apollo }: AppProps & IProps) => {
   const { theme, toggleTheme } = useDarkMode()

@@ -42,6 +42,7 @@ const SearchInput: FC = () => {
       pathname: '/post',
       search: val.trim() === '' ? undefined : `?title=${val}`,
     })
+    window.scrollTo(0, 0)
   }
 
   const onKeyUpSearch = (e: KeyboardEvent<HTMLInputElement>) => {

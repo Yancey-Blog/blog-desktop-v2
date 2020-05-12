@@ -44,16 +44,15 @@ export const Content = styled.article`
 
   h2,
   h3 {
-    padding-top: 5rem;
-    margin-bottom: 2rem;
+    margin: 2rem 0;
   }
 
   h2 {
-    font-size: 2rem;
+    font-size: 2.2rem;
   }
 
   h3 {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
   }
 
   p {
@@ -86,9 +85,6 @@ export const Content = styled.article`
   }
 
   table {
-    display: block;
-    margin: 2rem 0;
-    width: 100%;
     border-collapse: collapse;
   }
 
@@ -152,4 +148,10 @@ export const Menu = styled.aside`
       background: ${({ theme }) => theme.colors.orange};
     }
   }
+`
+
+export const TableWrapper = styled.p`
+  display: flex;
+  justify-content: center;
+  margin: 2rem auto;
 `
