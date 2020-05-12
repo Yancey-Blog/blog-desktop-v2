@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.5.0](https://github.com/Yancey-Blog/blog-fe-v2/compare/v1.4.0...v1.5.0) (2020-05-12)
+
+
+### Features
+
+* support devToolsWarning ([26ee44d](https://github.com/Yancey-Blog/blog-fe-v2/commit/26ee44d2d51ebfce2190c0c3a063b9a7c415babf))
+* update dev server domain ([03a6ed8](https://github.com/Yancey-Blog/blog-fe-v2/commit/03a6ed8c91f2684087dce61d17164a70b4b17133))
+
 ## [1.4.0](https://github.com/Yancey-Blog/blog-fe-v2/compare/v1.3.1...v1.4.0) (2020-05-10)
 
 
