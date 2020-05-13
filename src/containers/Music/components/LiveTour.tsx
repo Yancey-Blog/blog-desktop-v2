@@ -59,11 +59,7 @@ const LiveTour: FC<Props> = ({ liveTours }) => {
               )}`}
               type="image/webp"
             />
-            <Img
-              key={liveTour._id}
-              src={liveTour.posterUrl}
-              alt={liveTour.title}
-            />
+            <Img src={liveTour.posterUrl} alt={liveTour.title} />
           </picture>
 
           <LiveTourMeta>

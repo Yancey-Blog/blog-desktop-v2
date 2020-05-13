@@ -100,11 +100,7 @@ const Music = () => {
               bestAlbums.getBestAlbums
                 .slice(0, 4)
                 .map((bestAlbum) => (
-                  <BestAlbum
-                    key={bestAlbum._id}
-                    bestAlbum={bestAlbum}
-                    enableWebp={enableWebp}
-                  />
+                  <BestAlbum key={bestAlbum._id} bestAlbum={bestAlbum} />
                 ))
             )}
           </BestAlbumWrapper>
