@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.6.0](https://github.com/Yancey-Blog/blog-fe-v2/compare/v1.5.1...v1.6.0) (2020-05-13)
+
+
+### Features
+
+* delete jsconfigPaths of experimental ([fcfc236](https://github.com/Yancey-Blog/blog-fe-v2/commit/fcfc2366bb03d8d148557e7ff02928fabd5e2c3a))
+* support .env file feature ([c4a7603](https://github.com/Yancey-Blog/blog-fe-v2/commit/c4a7603069bd09dfbd59b745a8e73f7fc57e59a2))
+* support web-vitals ([64d16ea](https://github.com/Yancey-Blog/blog-fe-v2/commit/64d16eae26592af6f9e31b74530102b724ab248a))
+
 ### [1.5.1](https://github.com/Yancey-Blog/blog-fe-v2/compare/v1.5.0...v1.5.1) (2020-05-13)
 
 
