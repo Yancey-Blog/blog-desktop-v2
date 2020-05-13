@@ -1,8 +1,9 @@
 import React, { FC } from 'react'
 import Link from 'next/link'
 import styled from 'styled-components'
-import { formatDate } from 'src/shared/utils'
 import { transitionMixin } from 'src/styled/mixins'
+import { formatDate, generateAliOSSSuffix } from 'src/shared/utils'
+import { ALI_OSS_SUFFIX } from 'src/shared/constants'
 
 const CardContaiener = styled.div`
   position: relative;
@@ -86,7 +87,13 @@ interface Props {
 const Card: FC<Props> = ({ type, url, title, date, cover }) => {
   return (
     <CardContaiener>
-      <Img src={cover} alt={title} />
+      <picture>
+        <source
+          srcSet={`${cover}${generateAliOSSSuffix(ALI_OSS_SUFFIX.WEBP_SUFFIX)}`}
+          type="image/webp"
+        />
+        <Img src={cover} alt={title} />
+      </picture>
 
       <Meta>
         <Date>{formatDate(date, 'YYYY-MM-DD')}</Date>
