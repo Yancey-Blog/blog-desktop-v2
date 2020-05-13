@@ -57,10 +57,7 @@ const Music = () => {
                 skeletonComponent={LiveTourSkeleton}
               />
             ) : (
-              <LiveTour
-                liveTours={liveTours.getLiveTours}
-                enableWebp={enableWebp}
-              />
+              <LiveTour liveTours={liveTours.getLiveTours} />
             )}
           </div>
           <div>
