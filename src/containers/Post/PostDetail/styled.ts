@@ -1,6 +1,5 @@
 import styled from 'styled-components'
-import { backgroundMixin, flexMixin } from 'src/styled/mixins'
-import { PosterProps } from 'src/shared/types'
+import { flexMixin } from 'src/styled/mixins'
 
 export const PostDetailWrapper = styled.article`
   position: relative;
@@ -9,15 +8,12 @@ export const PostDetailWrapper = styled.article`
   color: ${({ theme }) => theme.text.post};
 `
 
-export const Poster = styled.figure<PosterProps>`
+export const Poster = styled.img`
   ${flexMixin()}
   height: 32rem;
   border-radius: 1rem;
-  background-image: url(${({ imageUrl }) => imageUrl});
-  ${backgroundMixin()}
-  box-shadow: 0 10px 15px -3px ${({ theme }) =>
-    theme.colors.oneOpcityBlack}, 0 4px 6px -2px ${({ theme }) =>
-  theme.colors.oneOpcityBlack};
+  box-shadow: 0 10px 15px -3px ${({ theme }) => theme.colors.oneOpcityBlack},
+    0 4px 6px -2px ${({ theme }) => theme.colors.oneOpcityBlack};
 `
 
 export const Title = styled.h1`
