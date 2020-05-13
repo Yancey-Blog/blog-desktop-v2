@@ -1,8 +1,11 @@
 import React, { FC } from 'react'
 import styled from 'styled-components'
-import { backgroundMixin } from 'src/styled/mixins'
-import { PosterProps } from 'src/shared/types'
 import dot from 'src/static/images/dot.gif'
+import { backgroundMixin } from 'src/styled/mixins'
+import { ALI_OSS_SUFFIX } from 'src/shared/constants'
+import { generateAliOSSSuffix } from 'src/shared/utils'
+import { PosterProps } from 'src/shared/types'
+
 import { ICover } from '../types'
 
 const Covers = styled.figure<PosterProps>`
@@ -24,11 +27,22 @@ const Covers = styled.figure<PosterProps>`
 `
 
 interface Props {
+  isSupportWebp: boolean
   covers: ICover[]
 }
 
-const Cover: FC<Props> = ({ covers }) => {
-  return <Covers imageUrl={covers[0]?.coverUrl} />
+const Cover: FC<Props> = ({ isSupportWebp, covers }) => {
+  return (
+    <Covers
+      imageUrl={
+        isSupportWebp
+          ? `${covers[0]?.coverUrl}${generateAliOSSSuffix(
+              ALI_OSS_SUFFIX.WEBP_SUFFIX,
+            )}`
+          : covers[0]?.coverUrl
+      }
+    />
+  )
 }
 
 export default Cover

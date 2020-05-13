@@ -2,7 +2,6 @@ import React, { FC } from 'react'
 import Link from 'next/link'
 import styled from 'styled-components'
 import { flexMixin } from 'src/styled/mixins'
-import { useEnableWebp } from 'src/hooks/useEnableWebp'
 import { ALI_OSS_URL, ALI_OSS_SUFFIX } from 'src/shared/constants'
 import { generateAliOSSSuffix } from 'src/shared/utils'
 
@@ -63,7 +62,6 @@ interface Props {
 }
 
 const ErrorPage: FC<Props> = ({ statusCode, imageUrl }) => {
-  const { enableWebp } = useEnableWebp()
   const imgUrl = `${ALI_OSS_URL}/blog-fe-static/${imageUrl}`
   const is404Page = statusCode === 404
 
@@ -85,16 +83,15 @@ const ErrorPage: FC<Props> = ({ statusCode, imageUrl }) => {
           </Link>
         </div>
       </Header>
-      <figure>
-        <ErrorImg
-          src={
-            enableWebp
-              ? `${imgUrl}${generateAliOSSSuffix(ALI_OSS_SUFFIX.WEBP_SUFFIX)}`
-              : imgUrl
-          }
-          alt={statusCode.toString()}
+      <picture>
+        <source
+          srcSet={`${imgUrl}${generateAliOSSSuffix(
+            ALI_OSS_SUFFIX.WEBP_SUFFIX,
+          )}`}
+          type="image/webp"
         />
-      </figure>
+        <ErrorImg src={imgUrl} alt={statusCode.toString()} />
+      </picture>
     </ErrorPageWrapper>
   )
 }
