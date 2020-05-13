@@ -1,9 +1,13 @@
-import React from 'react'
+import React, { FC } from 'react'
 import { GetServerSidePropsContext } from 'next'
 import Layout from 'src/containers/Layout/Layout'
 import HomeContainer from 'src/containers/Home/Home'
 
-const Index = ({ isSupportWebp }: { isSupportWebp: boolean }) => {
+interface Props {
+  isSupportWebp: boolean
+}
+
+const Index: FC<Props> = ({ isSupportWebp }) => {
   return (
     <Layout>
       <HomeContainer isSupportWebp={isSupportWebp} />
