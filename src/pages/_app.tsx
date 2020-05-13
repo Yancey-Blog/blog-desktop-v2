@@ -51,6 +51,30 @@ Sentry.init({ dsn: SENTRY })
 
 devToolsWarning()
 
+export function reportWebVitals({
+  id,
+  name,
+  label,
+  value,
+}: {
+  id: string
+  name: string
+  label: string
+  value: number
+}) {
+  // @ts-ignore
+  if (window.ga) {
+    // @ts-ignore
+    ga('send', 'event', {
+      eventCategory: `Next.js ${label} metric`,
+      eventAction: name,
+      eventValue: Math.round(name === 'CLS' ? value * 1000 : value), // values must be integers
+      eventLabel: id, // id unique to current page load
+      nonInteraction: true, // avoids affecting bounce rate.
+    })
+  }
+}
+
 const YanceyBlog = ({ Component, pageProps, apollo }: AppProps & IProps) => {
   const { theme, toggleTheme } = useDarkMode()
   const themeMode = theme === ThemeMode.LIGHT ? lightTheme : darkTheme
