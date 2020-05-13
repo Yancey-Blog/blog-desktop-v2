@@ -21,7 +21,11 @@ import PostList from './components/PostList'
 import Slogan from './components/Slogan'
 import ShowMore from './components/ShowMore'
 
-const Home: FC = () => {
+interface Props {
+  isSupportWebp: boolean
+}
+
+const Home: FC<Props> = ({ isSupportWebp }) => {
   const { data: covers } = useQuery<CoverQuery>(COVERS)
   const { data: announcements } = useQuery<AnnouncementQuery>(ANNOUNCEMENTS)
   const { data: openSources } = useQuery<OpenSourceQuery>(OPEN_SOURCES)
@@ -30,7 +34,10 @@ const Home: FC = () => {
   return (
     <HomeContainer>
       <CoverWrapper>
-        <Cover covers={covers ? covers.getAllPublicCovers : []} />
+        <Cover
+          isSupportWebp={isSupportWebp}
+          covers={covers ? covers.getAllPublicCovers : []}
+        />
 
         <MottoSocialMediaBar>
           <Slogan />

@@ -4,10 +4,9 @@ import Layout from 'src/containers/Layout/Layout'
 import HomeContainer from 'src/containers/Home/Home'
 
 const Index = ({ isSupportWebp }: { isSupportWebp: boolean }) => {
-  console.log(isSupportWebp)
   return (
     <Layout>
-      <HomeContainer />
+      <HomeContainer isSupportWebp={isSupportWebp} />
     </Layout>
   )
 }
