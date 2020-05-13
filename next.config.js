@@ -7,12 +7,6 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
 module.exports = (phase, { defaultConfig }) =>
   withBundleAnalyzer(
     withSourceMaps({
-      env: {
-        BASE_URL:
-          phase === PHASE_DEVELOPMENT_SERVER
-            ? 'http://localhost:3002/graphql'
-            : 'https://api.yanceyleo.com/graphql',
-      },
       compress: true,
       pageExtensions: ['mdx', 'jsx', 'js', 'ts', 'tsx'],
       webpack: (config, options) => {
@@ -34,9 +28,6 @@ module.exports = (phase, { defaultConfig }) =>
         })
 
         return config
-      },
-      experimental: {
-        jsconfigPaths: true,
       },
     }),
   )
