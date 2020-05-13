@@ -11,7 +11,7 @@ import PostMeta from '../components/PostMeta/PostMeta'
 import YellowSVG from '../components/YellowSVG/YellowSVG'
 import SharePanel from '../components/SharePanel/SharePanel'
 import PrevAndNext from '../components/PrevAndNext/PrevAndNext'
-import BlogDetailSkeleton from '../components/PostDetailSkeleton/PostDetailSkeleton'
+import PostDetailSkeleton from '../components/PostDetailSkeleton/PostDetailSkeleton'
 import { GET_POST_BY_ID, UPDATE_PV, UPDATE_LIKE } from '../typeDefs'
 import { GetPostByIdQuery, GetPostByIdVar } from '../types'
 import {
@@ -98,7 +98,7 @@ const PostDetail: FC = () => {
     },
   )
 
-  if (!post) return <BlogDetailSkeleton />
+  if (!post) return <PostDetailSkeleton />
 
   const {
     getPostById: {
