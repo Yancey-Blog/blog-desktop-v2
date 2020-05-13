@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.5.1](https://github.com/Yancey-Blog/blog-fe-v2/compare/v1.5.0...v1.5.1) (2020-05-13)
+
+
+### Bug Fixes
+
+* **archive.tsx:** fix month display error and day list's order ([13bddd5](https://github.com/Yancey-Blog/blog-fe-v2/commit/13bddd5f375c82051faeb87ff0647cdf1dccb2e6))
+
 ## [1.5.0](https://github.com/Yancey-Blog/blog-fe-v2/compare/v1.4.0...v1.5.0) (2020-05-12)
 
 

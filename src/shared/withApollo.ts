@@ -8,7 +8,7 @@ import SnackbarUtils from 'src/components/Toast/Toast'
 
 const httpLink = new BatchHttpLink({
   fetch,
-  uri: process.env.BASE_URL,
+  uri: process.env.NEXT_PUBLIC_BASE_URL,
 })
 
 const errorLink = onError(({ graphQLErrors, networkError }) => {
