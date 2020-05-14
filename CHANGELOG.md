@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.8.2](https://github.com/Yancey-Blog/blog-fe-v2/compare/v1.8.1...v1.8.2) (2020-05-14)
+
+
+### Bug Fixes
+
+* **card.tsx:** fix Card component fake scroll ([273e924](https://github.com/Yancey-Blog/blog-fe-v2/commit/273e92465195a91e3d9f08510ea3805ead3f0a9e))
+
 ### [1.8.1](https://github.com/Yancey-Blog/blog-fe-v2/compare/v1.8.0...v1.8.1) (2020-05-14)
 
 
