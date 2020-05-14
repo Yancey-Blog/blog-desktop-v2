@@ -1,7 +1,7 @@
 import React from 'react'
 import { AppProps } from 'next/app'
 import Router from 'next/router'
-// import dynamic from 'next/dynamic'
+import dynamic from 'next/dynamic'
 import * as Sentry from '@sentry/browser'
 // @ts-ignore
 import NProgress from 'nprogress'
@@ -37,9 +37,15 @@ interface IProps {
   apollo: ApolloClient<{}>
 }
 
-// const Player = dynamic(import('src/containers/Music/components/Player'), {
-//   ssr: false,
-// })
+// TODO:
+// Remove the `Player component` temporarily for
+// performance testing, and data from lighthouse
+// indicates that the performance index has increased
+// from 76 to 90. Next optimize the component.
+
+const Player = dynamic(import('src/containers/Music/components/Player'), {
+  ssr: false,
+})
 
 Router.events.on('routeChangeStart', () => {
   NProgress.start()
@@ -91,7 +97,7 @@ const YanceyBlog = ({ Component, pageProps, apollo }: AppProps & IProps) => {
           <>
             <SnackbarUtilsConfigurator />
             <Component {...pageProps} />
-            {/* <Player /> */}
+            <Player />
             <ToggleTheme theme={theme} onToggle={toggleTheme} />
           </>
         </SnackbarProvider>
