@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.7.0](https://github.com/Yancey-Blog/blog-fe-v2/compare/v1.6.0...v1.7.0) (2020-05-14)
+
+
+### Features
+
+* get headers['accept'] at request stage ([0210e0b](https://github.com/Yancey-Blog/blog-fe-v2/commit/0210e0be4cd2341ffb081f0cd76c031edc371662))
+* remove depending of `useEnableWebp` ([250ff75](https://github.com/Yancey-Blog/blog-fe-v2/commit/250ff750ee35dcb1d4e8373446dd1b6ff3e9cc8b))
+* update component name for PostDetailSkeleton ([476267c](https://github.com/Yancey-Blog/blog-fe-v2/commit/476267c899185e0280ab9ce190c6268961129421))
+* update image of Player component ([ffabe14](https://github.com/Yancey-Blog/blog-fe-v2/commit/ffabe146885c32cb25c467fc129d56a254a8a2e3))
+* update Top7PVPosts to webp ([e8f65f0](https://github.com/Yancey-Blog/blog-fe-v2/commit/e8f65f01275da796ad94bb5af6b7de43cd6f5d09))
+* use accpet `image/webp` at home page's Cover component ([d87a0f2](https://github.com/Yancey-Blog/blog-fe-v2/commit/d87a0f2093eca5e4e4a4591dfca31147c03d19f4))
+* use picture for LiveTour component ([cee6db2](https://github.com/Yancey-Blog/blog-fe-v2/commit/cee6db269b8486a452b6fddc33a4b0ccb556a6b7))
+* use picture for PrevAndNext component ([aa9d0e6](https://github.com/Yancey-Blog/blog-fe-v2/commit/aa9d0e60a36ed4f873548dd23cc874867272be88))
+* use picture tag for BestAlbum component ([728b7b4](https://github.com/Yancey-Blog/blog-fe-v2/commit/728b7b4417ef7254fe1bcd5c6684effdb2d87ab7))
+* use picture tag for PostDetail component ([bbd11fd](https://github.com/Yancey-Blog/blog-fe-v2/commit/bbd11fd513aeb52a6d8796e8fd59c959cd8e7e1f))
+
 ## [1.6.0](https://github.com/Yancey-Blog/blog-fe-v2/compare/v1.5.1...v1.6.0) (2020-05-13)
 
 
