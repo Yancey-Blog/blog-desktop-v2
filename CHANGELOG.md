@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.8.1](https://github.com/Yancey-Blog/blog-fe-v2/compare/v1.8.0...v1.8.1) (2020-05-14)
+
+
+### Bug Fixes
+
+* fix `folder` svg's to inherit ([a9dee09](https://github.com/Yancey-Blog/blog-fe-v2/commit/a9dee09c6e77aee8a9e7496e0849413b49f89d4a))
+
 ## [1.8.0](https://github.com/Yancey-Blog/blog-fe-v2/compare/v1.7.0...v1.8.0) (2020-05-14)
 
 
