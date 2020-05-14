@@ -1,7 +1,7 @@
 import React from 'react'
 import { AppProps } from 'next/app'
 import Router from 'next/router'
-import dynamic from 'next/dynamic'
+// import dynamic from 'next/dynamic'
 import * as Sentry from '@sentry/browser'
 // @ts-ignore
 import NProgress from 'nprogress'
@@ -37,9 +37,9 @@ interface IProps {
   apollo: ApolloClient<{}>
 }
 
-const Player = dynamic(import('src/containers/Music/components/Player'), {
-  ssr: false,
-})
+// const Player = dynamic(import('src/containers/Music/components/Player'), {
+//   ssr: false,
+// })
 
 Router.events.on('routeChangeStart', () => {
   NProgress.start()
@@ -91,7 +91,7 @@ const YanceyBlog = ({ Component, pageProps, apollo }: AppProps & IProps) => {
           <>
             <SnackbarUtilsConfigurator />
             <Component {...pageProps} />
-            <Player />
+            {/* <Player /> */}
             <ToggleTheme theme={theme} onToggle={toggleTheme} />
           </>
         </SnackbarProvider>
