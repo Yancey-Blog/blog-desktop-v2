@@ -8,6 +8,7 @@ import { ALI_OSS_SUFFIX } from 'src/shared/constants'
 const CardContaiener = styled.div`
   position: relative;
   height: 18.2rem;
+  overflow-y: hidden;
 `
 
 const Img = styled.img`
@@ -18,19 +19,16 @@ const Img = styled.img`
 
 const Meta = styled.div`
   box-sizing: border-box;
-  position: absolute;
-  top: 50%;
   padding: 1.5rem 2rem;
-  width: 100%;
-  height: 50%;
+  height: 100%;
   background: ${({ theme }) => theme.background.blurCard};
-  overflow: hidden;
+  transform: translateY(-9.2rem);
+  will-change: transform;
   cursor: pointer;
   ${transitionMixin('all', 300, 'ease')}
 
   &:hover {
-    top: 0;
-    height: 100%;
+    transform: translateY(-18.4rem);
     ${transitionMixin('all', 300, 'ease')}
   }
 `
