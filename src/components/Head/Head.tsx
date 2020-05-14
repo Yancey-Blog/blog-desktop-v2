@@ -31,6 +31,14 @@ const MetaHead: FC<Props> = ({
       <Head>
         <meta name="theme-color" content="#ffffff" />
       </Head>
+
+      <Head>
+        <meta
+          name="description"
+          content="Technology, Music and Poems. | Yancey Official Blog | Yancey Inc."
+        />
+      </Head>
+
       {useTwitterCard && (
         <>
           <Head>
