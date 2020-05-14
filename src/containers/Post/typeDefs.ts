@@ -6,7 +6,6 @@ const POST_ITEM_FRAGMENT = gql`
     posterUrl
     title
     summary
-    content
     tags
     lastModifiedDate
     like
@@ -34,6 +33,7 @@ export const POSTS = gql`
 export const GET_POST_BY_ID = gql`
   query GetPostById($id: ID!) {
     getPostById(id: $id) {
+      content
       ...PostItemFragment
       prev {
         _id
