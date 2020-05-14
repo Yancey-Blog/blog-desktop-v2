@@ -38,11 +38,10 @@ const Title = styled.p`
 `
 
 interface Props {
-  enableWebp: boolean
   liveTours: ILiveTour[]
 }
 
-const LiveTour: FC<Props> = ({ enableWebp, liveTours }) => {
+const LiveTour: FC<Props> = ({ liveTours }) => {
   return (
     <Carousel
       autoplay
@@ -53,17 +52,16 @@ const LiveTour: FC<Props> = ({ enableWebp, liveTours }) => {
     >
       {liveTours.map((liveTour) => (
         <LiveTourContent key={liveTour._id}>
-          <Img
-            key={liveTour._id}
-            src={
-              enableWebp
-                ? `${liveTour.posterUrl}${generateAliOSSSuffix(
-                    ALI_OSS_SUFFIX.WEBP_SUFFIX,
-                  )}`
-                : liveTour.posterUrl
-            }
-            alt={liveTour.title}
-          />
+          <picture>
+            <source
+              srcSet={`${liveTour.posterUrl}${generateAliOSSSuffix(
+                ALI_OSS_SUFFIX.WEBP_SUFFIX,
+              )}`}
+              type="image/webp"
+            />
+            <Img src={liveTour.posterUrl} alt={liveTour.title} />
+          </picture>
+
           <LiveTourMeta>
             <Date>{formatDate(liveTour.showTime, 'YYYY-MM-DD')}</Date>
             <Title>{liveTour.title}</Title>

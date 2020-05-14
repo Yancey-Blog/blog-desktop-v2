@@ -1,13 +1,26 @@
-import React from 'react'
+import React, { FC } from 'react'
+import { GetServerSidePropsContext } from 'next'
 import Layout from 'src/containers/Layout/Layout'
 import HomeContainer from 'src/containers/Home/Home'
 
-const Index = () => {
+interface Props {
+  isSupportWebp: boolean
+}
+
+const Index: FC<Props> = ({ isSupportWebp }) => {
   return (
     <Layout>
-      <HomeContainer />
+      <HomeContainer isSupportWebp={isSupportWebp} />
     </Layout>
   )
+}
+
+export const getServerSideProps = async (ctx: GetServerSidePropsContext) => {
+  return {
+    props: {
+      isSupportWebp: ctx.req.headers.accept?.includes('image/webp'),
+    },
+  }
 }
 
 export default Index

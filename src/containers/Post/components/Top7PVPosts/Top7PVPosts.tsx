@@ -3,7 +3,6 @@ import Link from 'next/link'
 import styled from 'styled-components'
 import SkeletonIterator from 'src/components/SkeletonIterator/SkeletonIterator'
 import { flexMixin } from 'src/styled/mixins'
-import { useEnableWebp } from 'src/hooks/useEnableWebp'
 import { SVG_SPRITE, DOMAIN, ALI_OSS_SUFFIX } from 'src/shared/constants'
 import { generateAliOSSSuffix } from 'src/shared/utils'
 import { PosterProps } from 'src/shared/types'
@@ -70,12 +69,11 @@ const Thumb = styled.img`
 `
 
 interface Props {
+  isSupportWebp: boolean
   topPVPosts: GetTopPVPostsQuery | undefined
 }
 
-const Top7PVPosts: FC<Props> = ({ topPVPosts }) => {
-  const { enableWebp } = useEnableWebp()
-
+const Top7PVPosts: FC<Props> = ({ topPVPosts, isSupportWebp }) => {
   return (
     <>
       <SubHeader title="Top 7 Most Viewed" icon={SVG_SPRITE.topRank} />
@@ -91,11 +89,13 @@ const Top7PVPosts: FC<Props> = ({ topPVPosts }) => {
                 <CardItem>
                   <BlurBg
                     imageUrl={
-                      enableWebp
+                      isSupportWebp
                         ? `${posterUrl}${generateAliOSSSuffix(
                             ALI_OSS_SUFFIX.WEBP_SUFFIX,
                           )}`
-                        : posterUrl
+                        : `${posterUrl}${generateAliOSSSuffix(
+                            ALI_OSS_SUFFIX.THUMB_SUFFIX,
+                          )}`
                     }
                   />
 
@@ -104,16 +104,20 @@ const Top7PVPosts: FC<Props> = ({ topPVPosts }) => {
                       <Title>{title}</Title>
                       <Url>{`${DOMAIN}/post/${_id}`}</Url>
                     </span>
-                    <Thumb
-                      alt={title}
-                      src={
-                        enableWebp
-                          ? `${posterUrl}${generateAliOSSSuffix(
-                              ALI_OSS_SUFFIX.WEBP_SUFFIX,
-                            )}`
-                          : posterUrl
-                      }
-                    />
+                    <picture>
+                      <source
+                        srcSet={`${posterUrl}${generateAliOSSSuffix(
+                          ALI_OSS_SUFFIX.WEBP_SUFFIX,
+                        )}`}
+                        type="image/webp"
+                      />
+                      <Thumb
+                        alt={title}
+                        src={`${posterUrl}${generateAliOSSSuffix(
+                          ALI_OSS_SUFFIX.THUMB_SUFFIX,
+                        )}`}
+                      />
+                    </picture>
                   </CardContent>
                 </CardItem>
               </a>

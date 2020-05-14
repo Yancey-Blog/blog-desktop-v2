@@ -5,14 +5,13 @@ import LazyLoad from 'react-lazyload'
 import MarkDown from 'markdown-to-jsx'
 import { DiscussionEmbed } from 'disqus-react'
 import MetaHead from 'src/components/Head/Head'
-import { useEnableWebp } from 'src/hooks/useEnableWebp'
 import { ALI_OSS_SUFFIX, DISCUSSION_KEY } from 'src/shared/constants'
 import { generateAliOSSSuffix } from 'src/shared/utils'
 import PostMeta from '../components/PostMeta/PostMeta'
 import YellowSVG from '../components/YellowSVG/YellowSVG'
 import SharePanel from '../components/SharePanel/SharePanel'
 import PrevAndNext from '../components/PrevAndNext/PrevAndNext'
-import BlogDetailSkeleton from '../components/PostDetailSkeleton/PostDetailSkeleton'
+import PostDetailSkeleton from '../components/PostDetailSkeleton/PostDetailSkeleton'
 import { GET_POST_BY_ID, UPDATE_PV, UPDATE_LIKE } from '../typeDefs'
 import { GetPostByIdQuery, GetPostByIdVar } from '../types'
 import {
@@ -39,8 +38,6 @@ const PostDetail: FC = () => {
     replace,
   } = useRouter()
 
-  const { enableWebp } = useEnableWebp()
-
   const markdownWrapperEl = useRef<HTMLDivElement>(null)
 
   const [updatePV] = useMutation(UPDATE_PV, {
@@ -64,14 +61,13 @@ const PostDetail: FC = () => {
   }) => (
     <ImageGroup className="postImgGroup" {...props}>
       <LazyLoad height={200}>
-        <img
-          src={
-            enableWebp
-              ? `${src}${generateAliOSSSuffix(ALI_OSS_SUFFIX.WEBP_SUFFIX)}`
-              : src
-          }
-          alt={alt}
-        />
+        <picture>
+          <source
+            srcSet={`${src}${generateAliOSSSuffix(ALI_OSS_SUFFIX.WEBP_SUFFIX)}`}
+            type="image/webp"
+          />
+          <img src={src} alt={alt} />
+        </picture>
       </LazyLoad>
       <ImageAlt className="postImgAlt">{alt}</ImageAlt>
     </ImageGroup>
@@ -102,7 +98,7 @@ const PostDetail: FC = () => {
     },
   )
 
-  if (!post) return <BlogDetailSkeleton />
+  if (!post) return <PostDetailSkeleton />
 
   const {
     getPostById: {
@@ -142,15 +138,16 @@ const PostDetail: FC = () => {
       <Menu className="postMenu" />
 
       <Content>
-        <Poster
-          imageUrl={
-            enableWebp
-              ? `${posterUrl}${generateAliOSSSuffix(
-                  ALI_OSS_SUFFIX.WEBP_SUFFIX,
-                )}`
-              : posterUrl
-          }
-        />
+        <picture>
+          <source
+            srcSet={`${posterUrl}${generateAliOSSSuffix(
+              ALI_OSS_SUFFIX.WEBP_SUFFIX,
+            )}`}
+            type="image/webp"
+          />
+          <Poster src={posterUrl} alt={title} />
+        </picture>
+
         <Title>{title}</Title>
         <PostMeta
           tags={tags}

@@ -19,7 +19,11 @@ import {
 } from '../types'
 import { PostContent, PostItemContainer } from './styled'
 
-const PostList: FC = () => {
+interface Props {
+  isSupportWebp: boolean
+}
+
+const PostList: FC<Props> = ({ isSupportWebp }) => {
   const {
     query: { title: searchTitle, tag: searchTag },
   } = useRouter()
@@ -110,8 +114,7 @@ const PostList: FC = () => {
         </PostItemContainer>
 
         <div>
-          <Top7PVPosts topPVPosts={topPVPosts} />
-
+          <Top7PVPosts topPVPosts={topPVPosts} isSupportWebp={isSupportWebp} />
           <TagCloud tagCloud={tagCloud ? tagCloud.getAllTags.tags : []} />
         </div>
       </PostContent>

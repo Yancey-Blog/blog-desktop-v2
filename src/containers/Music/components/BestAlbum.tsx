@@ -53,23 +53,23 @@ const Btn = styled.button`
 `
 
 interface Props {
-  enableWebp: boolean
   bestAlbum: IBestAlbum
 }
 
-const BestAlbum: FC<Props> = ({ enableWebp, bestAlbum }) => {
+const BestAlbum: FC<Props> = ({ bestAlbum }) => {
   const { title, artist, coverUrl, mvUrl, releaseDate } = bestAlbum
 
   return (
     <BestAlbumWrapper>
-      <Img
-        src={
-          enableWebp
-            ? `${coverUrl}${generateAliOSSSuffix(ALI_OSS_SUFFIX.WEBP_SUFFIX)}`
-            : coverUrl
-        }
-        alt={title}
-      />
+      <picture>
+        <source
+          srcSet={`${coverUrl}${generateAliOSSSuffix(
+            ALI_OSS_SUFFIX.WEBP_SUFFIX,
+          )}`}
+          type="image/webp"
+        />
+        <Img src={coverUrl} alt={title} />
+      </picture>
 
       <Meta>
         <Date>{formatDate(releaseDate, 'YYYY-MM-DD')}</Date>

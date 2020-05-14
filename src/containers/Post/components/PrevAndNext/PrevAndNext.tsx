@@ -1,11 +1,9 @@
 import React, { FC } from 'react'
 import Link from 'next/link'
 import styled from 'styled-components'
-import { backgroundMixin, flexMixin } from 'src/styled/mixins'
-import { useEnableWebp } from 'src/hooks/useEnableWebp'
+import { flexMixin } from 'src/styled/mixins'
 import { ALI_OSS_SUFFIX } from 'src/shared/constants'
 import { generateAliOSSSuffix } from 'src/shared/utils'
-import { PosterProps } from 'src/shared/types'
 import { IPostItem } from '../../types'
 
 const Wrapper = styled.section`
@@ -17,15 +15,29 @@ const Wrapper = styled.section`
   }
 `
 
-const Container = styled.div<PosterProps>`
+const PictureContainer = styled.div`
   box-sizing: border-box;
   position: relative;
   margin: 2rem auto;
   padding: 2rem;
   height: 10rem;
   color: ${({ theme }) => theme.colors.white};
-  background-image: url(${({ imageUrl }) => imageUrl});
-  ${backgroundMixin()}
+
+  picture {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+
+  source,
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 
   &::before {
     position: absolute;
@@ -58,8 +70,6 @@ interface Props {
 }
 
 const PrevAndNext: FC<Props> = ({ prev, next }) => {
-  const { enableWebp } = useEnableWebp()
-
   const PrevAndNextItem = (
     id: string,
     posterUrl: string,
@@ -68,18 +78,20 @@ const PrevAndNext: FC<Props> = ({ prev, next }) => {
   ) => (
     <Link href="/post/[id]" as={`/post/${id}`}>
       <a>
-        <Container
-          imageUrl={
-            enableWebp
-              ? `${posterUrl}${generateAliOSSSuffix(
-                  ALI_OSS_SUFFIX.WEBP_SUFFIX,
-                )}`
-              : posterUrl
-          }
-        >
+        <PictureContainer>
+          <picture>
+            <source
+              srcSet={`${posterUrl}${generateAliOSSSuffix(
+                ALI_OSS_SUFFIX.WEBP_SUFFIX,
+              )}`}
+              type="image/webp"
+            />
+            <img src={posterUrl} alt={title} />
+          </picture>
+
           <Title>{type} POST</Title>
           <Title>{title}</Title>
-        </Container>
+        </PictureContainer>
       </a>
     </Link>
   )
