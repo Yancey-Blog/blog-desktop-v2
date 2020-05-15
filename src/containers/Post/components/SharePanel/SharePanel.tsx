@@ -35,17 +35,28 @@ const Like = styled.div`
 `
 
 interface Props {
+  id: string
   title: string
   postUrl: string
   like: number
   updateLike: Function
 }
 
-const SharePanel: FC<Props> = ({ title, like, postUrl, updateLike }) => {
+const SharePanel: FC<Props> = ({ id, title, like, postUrl, updateLike }) => {
   const [likeStatus, setLikeStatus] = useState(false)
   const onSubmit = () => {
     if (!likeStatus) {
-      updateLike()
+      updateLike({
+        variables: { id },
+        optimisticResponse: {
+          __typename: 'Mutation',
+          updateLike: {
+            id,
+            __typename: 'PostItemModel',
+            like: like + 1,
+          },
+        },
+      })
       setLikeStatus(true)
     }
   }

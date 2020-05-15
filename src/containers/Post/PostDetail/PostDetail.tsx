@@ -46,7 +46,6 @@ const PostDetail: FC = () => {
   })
 
   const [updateLike] = useMutation(UPDATE_LIKE, {
-    variables: { id },
     onError() {},
   })
 
@@ -130,6 +129,7 @@ const PostDetail: FC = () => {
       <YellowSVG />
 
       <SharePanel
+        id={id as string}
         title={title}
         like={like}
         updateLike={updateLike}
