@@ -10,7 +10,7 @@ _This library is part of the [BPG (Blog Project Group)](https://github.com/Yance
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/8301052718f145cb9be68a6a28717f41)](https://www.codacy.com/app/YanceyOfficial/blog-fe-v2?utm_source=github.com&utm_medium=referral&utm_content=Yancey-Blog/blog-fe-v2&utm_campaign=Badge_Grade)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 ![Code Style](https://camo.githubusercontent.com/c83b8df34339bd302b7fd3fbb631f99ba25f87f8/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f636f64655f7374796c652d70726574746965722d6666363962342e737667)
-[![Version](https://img.shields.io/badge/version-1.8.2-blue.svg)](https://github.com/Yancey-Blog/blog-fe-v2)
+[![Version](https://img.shields.io/badge/version-1.9.0-blue.svg)](https://github.com/Yancey-Blog/blog-fe-v2)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-green.svg)](https://github.com/Yancey-Blog/BLOG_FE/pulls)
 
 [![Average time to resolve an issue](https://isitmaintained.com/badge/resolution/Yancey-Blog/blog-fe-v2.svg)](https://isitmaintained.com/project/Yancey-Blog/blog-fe-v2)
