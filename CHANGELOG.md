@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.9.0](https://github.com/Yancey-Blog/blog-fe-v2/compare/v1.8.2...v1.9.0) (2020-05-15)
+
+
+### Features
+
+* use optimistic UI strategy when clicking the like button ([4f79a8b](https://github.com/Yancey-Blog/blog-fe-v2/commit/4f79a8bb006a0e26c7c7fc1a4427e84adcfa7013))
+
 ### [1.8.2](https://github.com/Yancey-Blog/blog-fe-v2/compare/v1.8.1...v1.8.2) (2020-05-14)
 
 
