@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.9.1](https://github.com/Yancey-Blog/blog-fe-v2/compare/v1.9.0...v1.9.1) (2020-05-16)
+
+
+### Bug Fixes
+
+* like icon should be burned off when graphql or network error ([fdc88ef](https://github.com/Yancey-Blog/blog-fe-v2/commit/fdc88efcf54f99af8991eb31955d1f230993ce3a))
+
 ## [1.9.0](https://github.com/Yancey-Blog/blog-fe-v2/compare/v1.8.2...v1.9.0) (2020-05-15)
 
 
