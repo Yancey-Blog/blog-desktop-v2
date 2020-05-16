@@ -1,9 +1,11 @@
 import React, { FC, useState } from 'react'
+import { useMutation } from '@apollo/react-hooks'
 import Router from 'next/router'
 import styled from 'styled-components'
 import { TwitterShareButton } from 'react-share'
 import { flexMixin } from 'src/styled/mixins'
 import { SVG_SPRITE } from 'src/shared/constants'
+import { UPDATE_LIKE } from '../../typeDefs'
 
 const SharePanelWrapper = styled.div`
   position: fixed;
@@ -39,11 +41,16 @@ interface Props {
   title: string
   postUrl: string
   like: number
-  updateLike: Function
 }
 
-const SharePanel: FC<Props> = ({ id, title, like, postUrl, updateLike }) => {
+const SharePanel: FC<Props> = ({ id, title, like, postUrl }) => {
   const [likeStatus, setLikeStatus] = useState(false)
+
+  const [updateLike] = useMutation(UPDATE_LIKE, {
+    onError() {
+      setLikeStatus(false)
+    },
+  })
   const onSubmit = () => {
     if (!likeStatus) {
       updateLike({

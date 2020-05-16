@@ -12,7 +12,7 @@ import YellowSVG from '../components/YellowSVG/YellowSVG'
 import SharePanel from '../components/SharePanel/SharePanel'
 import PrevAndNext from '../components/PrevAndNext/PrevAndNext'
 import PostDetailSkeleton from '../components/PostDetailSkeleton/PostDetailSkeleton'
-import { GET_POST_BY_ID, UPDATE_PV, UPDATE_LIKE } from '../typeDefs'
+import { GET_POST_BY_ID, UPDATE_PV } from '../typeDefs'
 import { GetPostByIdQuery, GetPostByIdVar } from '../types'
 import {
   setupHighlight,
@@ -42,10 +42,6 @@ const PostDetail: FC = () => {
 
   const [updatePV] = useMutation(UPDATE_PV, {
     variables: { id },
-    onError() {},
-  })
-
-  const [updateLike] = useMutation(UPDATE_LIKE, {
     onError() {},
   })
 
@@ -132,7 +128,6 @@ const PostDetail: FC = () => {
         id={id as string}
         title={title}
         like={like}
-        updateLike={updateLike}
         postUrl={generateShareUrl(id as string)}
       />
       <Menu className="postMenu" />
