@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.9.2](https://github.com/Yancey-Blog/blog-fe-v2/compare/v1.9.1...v1.9.2) (2020-05-17)
+
+
+### Bug Fixes
+
+* updatePV should request in useEffect ([e8932db](https://github.com/Yancey-Blog/blog-fe-v2/commit/e8932db25b3b42e64e63b55ff5b08ce4b5cfa2f5))
+
 ### [1.9.1](https://github.com/Yancey-Blog/blog-fe-v2/compare/v1.9.0...v1.9.1) (2020-05-16)
 
 
