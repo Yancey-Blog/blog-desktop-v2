@@ -1,4 +1,4 @@
-import React, { FC, useRef } from 'react'
+import React, { FC, useEffect, useRef } from 'react'
 import { useRouter } from 'next/router'
 import { useQuery, useMutation } from '@apollo/react-hooks'
 import LazyLoad from 'react-lazyload'
@@ -82,7 +82,6 @@ const PostDetail: FC = () => {
       variables: { id: id as string },
 
       onCompleted() {
-        updatePV()
         setupHighlight(markdownWrapperEl)
         setupTocbot()
       },
@@ -92,6 +91,10 @@ const PostDetail: FC = () => {
       },
     },
   )
+
+  useEffect(() => {
+    updatePV()
+  }, [])
 
   if (!post) return <PostDetailSkeleton />
 
