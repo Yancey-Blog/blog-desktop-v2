@@ -32,7 +32,7 @@
     "apollo-link-batch-http": "^1.2.13",
     "apollo-link-error": "^1.1.12",
     "disqus-react": "^1.0.8",
-    "graphql": "^15.0.0",
+    "graphql": "^15.1.0",
     "graphql-tag": "^2.10.3",
     "highlight.js": "^10.0.3",
     "isomorphic-unfetch": "^3.0.0",
