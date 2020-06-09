@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.9.3](https://github.com/Yancey-Blog/blog-fe-v2/compare/v1.9.2...v1.9.3) (2020-06-09)
+
+
+### Bug Fixes
+
+* fix theme handler's svg ([0ec3447](https://github.com/Yancey-Blog/blog-fe-v2/commit/0ec3447411f2daf9c648048930fceed05075ce0c))
+
 ### [1.9.2](https://github.com/Yancey-Blog/blog-fe-v2/compare/v1.9.1...v1.9.2) (2020-05-17)
 
 
