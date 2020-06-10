@@ -38,9 +38,9 @@ interface IProps {
 
 // TODO:
 // Remove the `Player component` temporarily for
-// performance testing, data from lighthouse
-// indicates that the performance index has increased
-// from 76 to 90. Next optimize the component.
+// performance testing, the performance
+// index(from lighthouse) has increased from
+// 76 to 90. Next optimize the component.
 const Player = dynamic(import('src/containers/Music/components/Player'), {
   ssr: false,
 })
@@ -70,9 +70,9 @@ export function reportWebVitals({
     window.ga('send', 'event', {
       eventCategory: `Next.js ${label} metric`,
       eventAction: name,
-      eventValue: Math.round(name === 'CLS' ? value * 1000 : value), // values must be integers
-      eventLabel: id, // id unique to current page load
-      nonInteraction: true, // avoids affecting bounce rate.
+      eventValue: Math.round(name === 'CLS' ? value * 1000 : value),
+      eventLabel: id,
+      nonInteraction: true,
     })
   }
 }
