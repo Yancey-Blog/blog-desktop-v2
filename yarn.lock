@@ -10353,10 +10353,10 @@ yaml@^1.7.2:
   resolved "https://registry.yarnpkg.com/yaml/-/yaml-1.10.0.tgz#3b593add944876077d4d683fee01081bd9fff31e"
   integrity sha512-yr2icI4glYaNG+KWONODapy2/jDdMSDnrONSjblABjD9B4Z5LgiircSt8m8sRZFNi08kG9Sm0uSHtEmP3zaEGg==
 
-yancey-js-util@^2.0.1:
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/yancey-js-util/-/yancey-js-util-2.0.1.tgz#59c3f6656001555c3f56990dfe442224b1d7d19b"
-  integrity sha512-ugAKwxAOqOujEarOHcHapQHOfYbmqN3cJoWTxJ+cBzwFLZ8RuTj4K9KKfAzv2wC1ZoxBi8S72lcufg1ghMai7Q==
+yancey-js-util@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/yancey-js-util/-/yancey-js-util-3.0.0.tgz#0cc39f948c1451b43b9da878b459a231efb50d14"
+  integrity sha512-M+66hnYBnnGsA6Fhs+F7nC/LrQR99Ug5i/9iLcRo8jeX7ml1DihZFG4xnZnEUVF5flsPysA580A9yyrJdJtMzw==
 
 yargs-parser@^10.0.0:
   version "10.1.0"
