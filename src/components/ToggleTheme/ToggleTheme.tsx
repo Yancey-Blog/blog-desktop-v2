@@ -33,12 +33,12 @@ const SVG = styled.svg<ButtonProps>`
 
   &:first-child {
     transform: ${({ lightTheme }) =>
-      lightTheme ? 'translateY(-55px)' : 'translateY(0)'};
+      !lightTheme ? 'translateY(-55px)' : 'translateY(0)'};
   }
 
   &:nth-child(2) {
     transform: ${({ lightTheme }) =>
-      lightTheme ? 'translateY(0)' : 'translateY(-55px)'};
+      !lightTheme ? 'translateY(0)' : 'translateY(-55px)'};
   }
 `
 
