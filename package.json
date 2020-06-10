@@ -52,7 +52,7 @@
     "react-share": "^4.2.0",
     "styled-components": "^5.0.1",
     "tocbot": "^4.11.2",
-    "yancey-js-util": "^2.0.1"
+    "yancey-js-util": "^3.0.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^8.3.5",
