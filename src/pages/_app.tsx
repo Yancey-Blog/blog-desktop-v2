@@ -4,6 +4,7 @@ import Router from 'next/router'
 import dynamic from 'next/dynamic'
 import * as Sentry from '@sentry/browser'
 import NProgress from 'nprogress'
+import { getCLS, getFID, getLCP, getFCP, getTTFB, Metric } from 'web-vitals'
 
 import { ApolloProvider } from '@apollo/react-hooks'
 import { getDataFromTree } from '@apollo/react-ssr'
@@ -58,24 +59,33 @@ devToolsWarning()
 export function reportWebVitals({
   id,
   name,
-  label,
+  delta,
   value,
-}: {
-  id: string
-  name: string
-  label: string
-  value: number
-}) {
-  if (window.ga && process.env.NODE_ENV === 'production') {
-    window.ga('send', 'event', {
-      eventCategory: `Next.js ${label} metric`,
-      eventAction: name,
-      eventValue: Math.round(name === 'CLS' ? value * 1000 : value),
-      eventLabel: id,
-      nonInteraction: true,
-    })
-  }
+  isFinal,
+  entries,
+}: Metric) {
+  console.log(id, name, delta, value, isFinal, entries)
+  window.ga('send', 'event', {
+    // eventCategory: `Next.js ${label} metric`,
+    eventCategory: 'Web Vitals',
+    eventAction: name,
+    eventValue: Math.round(name === 'CLS' ? value * 1000 : value),
+    eventLabel: id,
+    nonInteraction: true,
+  })
+
+  // console.log('label: ' + label)
+  // console.log('label: ' + label)
+  // console.log('label: ' + label)
+  // console.log('label: ' + label)
+  // console.log('label: ' + label)
 }
+
+getCLS(reportWebVitals)
+getFID(reportWebVitals)
+getLCP(reportWebVitals)
+getFCP(reportWebVitals)
+getTTFB(reportWebVitals)
 
 const YanceyBlog = ({ Component, pageProps, apollo }: AppProps & IProps) => {
   const { theme, toggleTheme } = useDarkMode()

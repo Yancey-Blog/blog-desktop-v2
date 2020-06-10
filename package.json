@@ -52,6 +52,7 @@
     "react-share": "^4.2.0",
     "styled-components": "^5.0.1",
     "tocbot": "^4.11.2",
+    "web-vitals": "^0.2.2",
     "yancey-js-util": "^3.0.0"
   },
   "devDependencies": {

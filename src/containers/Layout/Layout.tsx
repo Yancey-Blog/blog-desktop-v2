@@ -26,14 +26,16 @@ const Layout: FC<Props> = ({ title, children }) => {
   const { data } = useQuery<GlobalSettingQuery>(GET_GLOBAL_SETTING)
 
   useEffect(() => {
-    if (!window.GA_INITIALIZED) {
-      initGA()
-      window.GA_INITIALIZED = true
+    if (process.env.NODE_ENV === 'production') {
+      if (!window.GA_INITIALIZED) {
+        initGA()
+        window.GA_INITIALIZED = true
+      }
+
+      logPageView()
+
+      hotjar.initialize(HOTJAR_ID, HOTJAR_SV)
     }
-
-    logPageView()
-
-    hotjar.initialize(HOTJAR_ID, HOTJAR_SV)
   }, [])
 
   return (
