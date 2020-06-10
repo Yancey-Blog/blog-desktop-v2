@@ -1,6 +1,5 @@
 import React, { FC, useRef, useEffect } from 'react'
 import { useQuery } from '@apollo/react-hooks'
-// @ts-ignore
 import APlayer from 'aplayer'
 import { ALI_OSS_SUFFIX } from 'src/shared/constants'
 import { generateAliOSSSuffix } from 'src/shared/utils'
@@ -12,7 +11,7 @@ const Player: FC = () => {
   const plyaerRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
-    if (data && plyaerRef) {
+    if (data && plyaerRef && plyaerRef.current) {
       const ap = new APlayer({
         container: plyaerRef.current,
         fixed: true,

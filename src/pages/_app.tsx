@@ -3,7 +3,6 @@ import { AppProps } from 'next/app'
 import Router from 'next/router'
 import dynamic from 'next/dynamic'
 import * as Sentry from '@sentry/browser'
-// @ts-ignore
 import NProgress from 'nprogress'
 
 import { ApolloProvider } from '@apollo/react-hooks'
@@ -39,10 +38,9 @@ interface IProps {
 
 // TODO:
 // Remove the `Player component` temporarily for
-// performance testing, and data from lighthouse
+// performance testing, data from lighthouse
 // indicates that the performance index has increased
 // from 76 to 90. Next optimize the component.
-
 const Player = dynamic(import('src/containers/Music/components/Player'), {
   ssr: false,
 })
@@ -68,10 +66,8 @@ export function reportWebVitals({
   label: string
   value: number
 }) {
-  // @ts-ignore
-  if (window.ga) {
-    // @ts-ignore
-    ga('send', 'event', {
+  if (window.ga && process.env.NODE_ENV === 'production') {
+    window.ga('send', 'event', {
       eventCategory: `Next.js ${label} metric`,
       eventAction: name,
       eventValue: Math.round(name === 'CLS' ? value * 1000 : value), // values must be integers

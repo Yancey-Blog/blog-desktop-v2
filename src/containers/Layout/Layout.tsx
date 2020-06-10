@@ -26,10 +26,8 @@ const Layout: FC<Props> = ({ title, children }) => {
   const { data } = useQuery<GlobalSettingQuery>(GET_GLOBAL_SETTING)
 
   useEffect(() => {
-    // @ts-ignore
     if (!window.GA_INITIALIZED) {
       initGA()
-      // @ts-ignore
       window.GA_INITIALIZED = true
     }
 
