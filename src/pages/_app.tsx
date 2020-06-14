@@ -71,6 +71,20 @@ const YanceyBlog = ({ Component, pageProps, apollo }: AppProps & Props) => {
   const { theme, toggleTheme } = useDarkMode()
   const themeMode = theme === ThemeMode.LIGHT ? lightTheme : darkTheme
 
+  // TODO: Uploading errors by Sentry when the React supports
+  // hooks of `componentDidCatch`
+  // componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
+  //   Sentry.withScope((scope) => {
+  //     Object.keys(errorInfo).forEach((key) => {
+  //       scope.setExtra(key, errorInfo[key])
+  //     })
+
+  //     Sentry.captureException(error)
+  //   })
+
+  //   super.componentDidCatch(error, errorInfo)
+  // }
+
   return (
     <ThemeProvider theme={themeMode}>
       <GlobalStyle />
