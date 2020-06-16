@@ -48,7 +48,7 @@
     "react-dom": "16.13.1",
     "react-ga": "^3.0.0",
     "react-hotjar": "^2.2.0",
-    "react-lazyload": "^2.6.7",
+    "react-lazyload": "^2.6.8",
     "react-share": "^4.2.0",
     "styled-components": "^5.0.1",
     "tocbot": "^4.11.2",
