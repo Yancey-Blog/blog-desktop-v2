@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.10.0](https://github.com/Yancey-Blog/blog-fe-v2/compare/v1.9.3...v1.10.0) (2020-06-16)
+
+
+### Features
+
+* add TODO for supporting componentDidCatch ([56dd250](https://github.com/Yancey-Blog/blog-fe-v2/commit/56dd2503ca00afad3aa33ef2ee654076c6cd6b98))
+* support declare file for aplayer ([2a3dbdd](https://github.com/Yancey-Blog/blog-fe-v2/commit/2a3dbdd4174b005b200050d512fe556107086b68))
+* support new version of highlight.js ([f0a38fd](https://github.com/Yancey-Blog/blog-fe-v2/commit/f0a38fdb84089ee27a78fc21fa35ab2fee39632c))
+* support reportWebVitals ([a58e984](https://github.com/Yancey-Blog/blog-fe-v2/commit/a58e984cb20148270bab3faef492c60f088200ba))
+* update font-size of menu ([f299640](https://github.com/Yancey-Blog/blog-fe-v2/commit/f299640fd731f9cd166b095a814a8bb2526bfe15))
+* update reportWebVitals ([f36943e](https://github.com/Yancey-Blog/blog-fe-v2/commit/f36943e61b31112c849b08c1202883eb8657445f))
+
 ### [1.9.3](https://github.com/Yancey-Blog/blog-fe-v2/compare/v1.9.2...v1.9.3) (2020-06-09)
 
 
