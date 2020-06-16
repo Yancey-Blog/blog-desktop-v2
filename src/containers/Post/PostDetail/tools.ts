@@ -1,4 +1,7 @@
 import React from 'react'
+// @ts-ignore
+// FIXME: A new version of highlight.js's declaration file
+// has not been released.
 import hljs from 'highlight.js'
 import tocbot from 'tocbot'
 import { DOMAIN } from 'src/shared/constants'
