@@ -127,7 +127,7 @@ export const Menu = styled.aside`
   left: 0;
 
   .toc-link {
-    font-size: 1.1rem;
+    font-size: 1rem;
     color: ${({ theme }) => theme.text.primary};
   }
 
