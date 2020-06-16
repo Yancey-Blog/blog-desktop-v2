@@ -3,27 +3,16 @@ import { AppProps } from 'next/app'
 import Router from 'next/router'
 import dynamic from 'next/dynamic'
 import * as Sentry from '@sentry/browser'
-// @ts-ignore
 import NProgress from 'nprogress'
-
+import { SnackbarProvider } from 'notistack'
 import { ApolloProvider } from '@apollo/react-hooks'
 import { getDataFromTree } from '@apollo/react-ssr'
 import { ApolloClient } from 'apollo-client'
-import withApollo from 'src/shared/withApollo'
-
-import 'normalize.css'
-import 'aplayer/dist/APlayer.min.css'
-import 'highlight.js/styles/atom-one-dark.css'
-import 'tocbot/dist/tocbot.css'
-import 'src/static/css/nprogress.css'
-
 import { ThemeProvider } from 'styled-components'
 import { lightTheme, darkTheme } from 'src/styled/theme'
 import GlobalStyle from 'src/styled/globalStyles'
 import { useDarkMode, ThemeMode } from 'src/hooks/useDarkMode'
 import ToggleTheme from 'src/components/ToggleTheme/ToggleTheme'
-
-import { SnackbarProvider } from 'notistack'
 import { SnackbarUtilsConfigurator } from 'src/components/Toast/Toast'
 import {
   SNACKBAR_ANCHOR_ORIGIN,
@@ -31,18 +20,22 @@ import {
   SNACKBAR_AUTO_HIDE_DURATION,
   SENTRY,
 } from 'src/shared/constants'
+import withApollo from 'src/shared/withApollo'
 import { devToolsWarning } from 'src/shared/utils'
+import { NextWebVitalsMetrics } from 'src/shared/types'
+import 'normalize.css'
+import 'aplayer/dist/APlayer.min.css'
+import 'highlight.js/styles/atom-one-dark.css'
+import 'tocbot/dist/tocbot.css'
+import 'src/static/css/nprogress.css'
 
-interface IProps {
+interface Props {
   apollo: ApolloClient<{}>
 }
 
-// TODO:
-// Remove the `Player component` temporarily for
-// performance testing, and data from lighthouse
-// indicates that the performance index has increased
-// from 76 to 90. Next optimize the component.
-
+// TODO: Remove the `Player component` temporarily for performance
+// testing, the performance index(from lighthouse) has
+// increased from 76 to 90. Next optimize the component.
 const Player = dynamic(import('src/containers/Music/components/Player'), {
   ssr: false,
 })
@@ -62,28 +55,35 @@ export function reportWebVitals({
   name,
   label,
   value,
-}: {
-  id: string
-  name: string
-  label: string
-  value: number
-}) {
-  // @ts-ignore
+}: NextWebVitalsMetrics) {
   if (window.ga) {
-    // @ts-ignore
-    ga('send', 'event', {
+    window.ga('send', 'event', {
       eventCategory: `Next.js ${label} metric`,
       eventAction: name,
-      eventValue: Math.round(name === 'CLS' ? value * 1000 : value), // values must be integers
-      eventLabel: id, // id unique to current page load
-      nonInteraction: true, // avoids affecting bounce rate.
+      eventValue: Math.round(name === 'CLS' ? value * 1000 : value),
+      eventLabel: id,
+      nonInteraction: true,
     })
   }
 }
 
-const YanceyBlog = ({ Component, pageProps, apollo }: AppProps & IProps) => {
+const YanceyBlog = ({ Component, pageProps, apollo }: AppProps & Props) => {
   const { theme, toggleTheme } = useDarkMode()
   const themeMode = theme === ThemeMode.LIGHT ? lightTheme : darkTheme
+
+  // TODO: Uploading errors by Sentry when the React supports
+  // hooks of `componentDidCatch`
+  // componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
+  //   Sentry.withScope((scope) => {
+  //     Object.keys(errorInfo).forEach((key) => {
+  //       scope.setExtra(key, errorInfo[key])
+  //     })
+
+  //     Sentry.captureException(error)
+  //   })
+
+  //   super.componentDidCatch(error, errorInfo)
+  // }
 
   return (
     <ThemeProvider theme={themeMode}>

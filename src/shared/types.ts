@@ -17,3 +17,11 @@ export interface Dict {
 export interface PosterProps {
   readonly imageUrl: string
 }
+
+export type NextWebVitalsMetrics = {
+  id: string
+  label: string
+  name: string
+  startTime: number
+  value: number
+}

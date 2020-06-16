@@ -25,7 +25,7 @@ export const formatDate = (ISOString: string, format = 'YYYY-MM-DD HH:mm:ss') =>
   moment(ISOString).format(format)
 
 export const devToolsWarning = () => {
-  // eslint-disable-next-line
+  // eslint-disable-next-line no-console
   console.log(`
     __     __      _   _  _____ ________     __  ____  _      ____   _____ 
     \\ \\   / //\\   | \\ | |/ ____|  ____\\ \\   / / |  _ \\| |    / __ \\ / ____|
