@@ -46,7 +46,7 @@
     "nuka-carousel": "^4.6.7",
     "react": "16.13.1",
     "react-dom": "16.13.1",
-    "react-ga": "^2.7.0",
+    "react-ga": "^3.0.0",
     "react-hotjar": "^2.2.0",
     "react-lazyload": "^2.6.7",
     "react-share": "^4.2.0",
