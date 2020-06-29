@@ -4,7 +4,7 @@
 
 The **FE frontend** for Yancey blog with React, Next.js, styled-components, Apollo Client and GraphQL.
 
-_This library is part of the [BPG (Blog Project Group)](https://github.com/Yancey-Blog)_ ecosystem 📖
+_This library is part of the [BEG (Blog Environment Group)](https://github.com/Yancey-Blog)_ ecosystem 📖
 
 [![Build Status](https://travis-ci.com/Yancey-Blog/blog-fe-v2.svg?branch=master)](https://travis-ci.com/Yancey-Blog/blog-fe-v2)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/8301052718f145cb9be68a6a28717f41)](https://www.codacy.com/app/YanceyOfficial/blog-fe-v2?utm_source=github.com&utm_medium=referral&utm_content=Yancey-Blog/blog-fe-v2&utm_campaign=Badge_Grade)
@@ -86,11 +86,11 @@ The performances of lighthouse as follows, we will optimize the a11y next time.
 
 ## Contributing
 
-The main purpose of this repository is to continue to evolve BPG (Blog Project Group), making it faster and easier to use. Development of Blog FE v2 happens in the open on GitHub, and we are grateful to the community for contributing bugfixes and improvements. Read below to learn how you can take part in improving Blog FE v2.
+The main purpose of this repository is to continue to evolve BEG (Blog Environment Group), making it faster and easier to use. Development of Blog FE v2 happens in the open on GitHub, and we are grateful to the community for contributing bugfixes and improvements. Read below to learn how you can take part in improving Blog FE v2.
 
 ### [Code of Conduct](./CODE_OF_CONDUCT.md)
 
-[BPG](https://github.com/Yancey-Blog) has adopted a Code of Conduct that we expect project participants to adhere to. Please read [the full text](./CODE_OF_CONDUCT.md) so that you can understand what actions will and will not be tolerated.
+[BEG](https://github.com/Yancey-Blog) has adopted a Code of Conduct that we expect project participants to adhere to. Please read [the full text](./CODE_OF_CONDUCT.md) so that you can understand what actions will and will not be tolerated.
 
 ### [Contributing Guide](./CONTRIBUTING.md)
 
