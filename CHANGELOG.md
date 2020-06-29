@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.10.1](https://github.com/Yancey-Blog/blog-fe-v2/compare/v1.10.0...v1.10.1) (2020-06-29)
+
+
+### Features
+
+* add passive: true for ScrollToTop component ([b1584e5](https://github.com/Yancey-Blog/blog-fe-v2/commit/b1584e51d9eafdd394fe5847927b07829dbe7755))
+* support throttle for BackToTop component ([a1618d6](https://github.com/Yancey-Blog/blog-fe-v2/commit/a1618d6973aeea5662724b68203d700cecda318f))
+* update name of scrollToTopHandler ([a12416a](https://github.com/Yancey-Blog/blog-fe-v2/commit/a12416a536cc82146a34b739153bca237210d5a8))
+
 ## [1.10.0](https://github.com/Yancey-Blog/blog-fe-v2/compare/v1.9.3...v1.10.0) (2020-06-16)
 
 
