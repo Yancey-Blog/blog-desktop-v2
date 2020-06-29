@@ -15,7 +15,7 @@ const BackToTop: FC = () => {
   }
 
   useEffect(() => {
-    document.addEventListener('scroll', scrollToTopHander)
+    document.addEventListener('scroll', scrollToTopHander, { passive: true })
 
     return () => {
       document.removeEventListener('scroll', scrollToTopHander)
