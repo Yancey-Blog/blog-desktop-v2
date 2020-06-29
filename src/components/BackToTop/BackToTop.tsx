@@ -6,7 +6,7 @@ import { Cat } from './styled'
 const BackToTop: FC = () => {
   const [showCat, setShowCat] = useState('')
 
-  const scrollToTopHander = throttle(() => {
+  const scrollToTopHandler = throttle(() => {
     const top = document.documentElement.scrollTop || document.body.scrollTop
     if (top > 800) {
       setShowCat('showCat')
@@ -16,12 +16,12 @@ const BackToTop: FC = () => {
   }, 100)
 
   useEffect(() => {
-    document.addEventListener('scroll', scrollToTopHander, {
+    document.addEventListener('scroll', scrollToTopHandler, {
       passive: true,
     })
 
     return () => {
-      document.removeEventListener('scroll', scrollToTopHander)
+      document.removeEventListener('scroll', scrollToTopHandler)
     }
   }, [])
   return <Cat onClick={scrollToTop} className={showCat} />
