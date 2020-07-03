@@ -2,7 +2,7 @@
 
 # Blog Desktop v2
 
-The **Desktop frontend** for Yancey blog with React, Next.js, styled-components, Apollo Client and GraphQL.
+The **desktop website** for Yancey blog with React, Next.js, styled-components, Apollo Client and GraphQL.
 
 _This library is part of the [BEG (Blog Environment Group)](https://github.com/Yancey-Blog)_ ecosystem 📖
 
