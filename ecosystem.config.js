@@ -1,7 +1,7 @@
 module.exports = {
   apps: [
     {
-      name: 'blog-fe',
+      name: 'blog-desktop-v2',
       script: 'node_modules/.bin/next start',
       watch: true,
       autorestart: true,
