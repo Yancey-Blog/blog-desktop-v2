@@ -1,7 +1,7 @@
 import React, { FC, useRef, useEffect } from 'react'
 import { useQuery } from '@apollo/react-hooks'
 import APlayer from 'aplayer'
-import { ALI_OSS_SUFFIX } from 'src/shared/constants'
+import { AliOSSSuffix } from 'src/shared/constants'
 import { generateAliOSSSuffix } from 'src/shared/utils'
 import { PLAYERS } from '../typeDefs'
 import { PlayerQuery } from '../types'
@@ -23,7 +23,7 @@ const Player: FC = () => {
             artist,
             url: musicFileUrl,
             cover: `${coverUrl}${generateAliOSSSuffix(
-              ALI_OSS_SUFFIX.THUMB_SUFFIX,
+              AliOSSSuffix.THUMB_SUFFIX,
             )}`,
             lrc,
           }

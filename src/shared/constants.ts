@@ -15,7 +15,7 @@ export const ALI_OSS_URL = 'https://static.yancey.app'
 
 export const ALI_OSS_SUFFIX_BASE = '?x-oss-process=image'
 
-export enum ALI_OSS_SUFFIX {
+export enum AliOSSSuffix {
   WEBP_SUFFIX = '/format,webp',
   THUMB_SUFFIX = '/resize,w_120',
   LOW_QUALITY_SUFFIX = '/quality,Q_10',

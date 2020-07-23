@@ -2,7 +2,7 @@ import React, { FC } from 'react'
 import Link from 'next/link'
 import styled from 'styled-components'
 import { flexMixin } from 'src/styled/mixins'
-import { ALI_OSS_URL, ALI_OSS_SUFFIX } from 'src/shared/constants'
+import { ALI_OSS_URL, AliOSSSuffix } from 'src/shared/constants'
 import { generateAliOSSSuffix } from 'src/shared/utils'
 
 interface ColorProps {
@@ -85,9 +85,7 @@ const Error: FC<Props> = ({ statusCode, imageUrl }) => {
       </Header>
       <picture>
         <source
-          srcSet={`${imgUrl}${generateAliOSSSuffix(
-            ALI_OSS_SUFFIX.WEBP_SUFFIX,
-          )}`}
+          srcSet={`${imgUrl}${generateAliOSSSuffix(AliOSSSuffix.WEBP_SUFFIX)}`}
           type="image/webp"
         />
         <ErrorImg src={imgUrl} alt={statusCode.toString()} />

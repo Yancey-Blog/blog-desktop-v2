@@ -2,7 +2,7 @@ import React, { FC } from 'react'
 import styled from 'styled-components'
 import dot from 'src/static/images/dot.gif'
 import { backgroundMixin } from 'src/styled/mixins'
-import { ALI_OSS_SUFFIX } from 'src/shared/constants'
+import { AliOSSSuffix } from 'src/shared/constants'
 import { generateAliOSSSuffix } from 'src/shared/utils'
 import { PosterProps } from 'src/shared/types'
 
@@ -37,7 +37,7 @@ const Cover: FC<Props> = ({ isSupportWebp, covers }) => {
       imageUrl={
         isSupportWebp
           ? `${covers[0]?.coverUrl}${generateAliOSSSuffix(
-              ALI_OSS_SUFFIX.WEBP_SUFFIX,
+              AliOSSSuffix.WEBP_SUFFIX,
             )}`
           : covers[0]?.coverUrl
       }

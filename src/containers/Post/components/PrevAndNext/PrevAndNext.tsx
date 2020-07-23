@@ -2,7 +2,7 @@ import React, { FC } from 'react'
 import Link from 'next/link'
 import styled from 'styled-components'
 import { flexMixin } from 'src/styled/mixins'
-import { ALI_OSS_SUFFIX } from 'src/shared/constants'
+import { AliOSSSuffix } from 'src/shared/constants'
 import { generateAliOSSSuffix } from 'src/shared/utils'
 import { IPostItem } from '../../types'
 
@@ -82,7 +82,7 @@ const PrevAndNext: FC<Props> = ({ prev, next }) => {
           <picture>
             <source
               srcSet={`${posterUrl}${generateAliOSSSuffix(
-                ALI_OSS_SUFFIX.WEBP_SUFFIX,
+                AliOSSSuffix.WEBP_SUFFIX,
               )}`}
               type="image/webp"
             />
