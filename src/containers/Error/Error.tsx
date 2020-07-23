@@ -9,7 +9,7 @@ interface ColorProps {
   is404Page: boolean
 }
 
-const ErrorPageWrapper = styled.section`
+const ErrorWrapper = styled.section`
   display: flex;
   flex-direction: column;
   padding-top: ${({ theme }) => theme.headerHeight};
@@ -61,12 +61,12 @@ interface Props {
   imageUrl: string
 }
 
-const ErrorPage: FC<Props> = ({ statusCode, imageUrl }) => {
+const Error: FC<Props> = ({ statusCode, imageUrl }) => {
   const imgUrl = `${ALI_OSS_URL}/blog-fe-static/${imageUrl}`
   const is404Page = statusCode === 404
 
   return (
-    <ErrorPageWrapper>
+    <ErrorWrapper>
       <Header>
         <Title is404Page={is404Page}>{statusCode}</Title>
         <div>
@@ -92,8 +92,8 @@ const ErrorPage: FC<Props> = ({ statusCode, imageUrl }) => {
         />
         <ErrorImg src={imgUrl} alt={statusCode.toString()} />
       </picture>
-    </ErrorPageWrapper>
+    </ErrorWrapper>
   )
 }
 
-export default ErrorPage
+export default Error
