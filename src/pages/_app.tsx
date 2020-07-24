@@ -12,6 +12,7 @@ import { ThemeProvider } from 'styled-components'
 import { lightTheme, darkTheme } from 'src/styled/theme'
 import GlobalStyle from 'src/styled/globalStyles'
 import { useDarkMode, ThemeMode } from 'src/hooks/useDarkMode'
+import ErrorBoundary from 'src/components/ErrorBoundary/ErrorBoundary'
 import ToggleTheme from 'src/components/ToggleTheme/ToggleTheme'
 import { SnackbarUtilsConfigurator } from 'src/components/Toast/Toast'
 import withApollo from 'src/graphql/withApollo'
@@ -71,38 +72,26 @@ const YanceyBlog = ({ Component, pageProps, apollo }: AppProps & Props) => {
   const { theme, toggleTheme } = useDarkMode()
   const themeMode = theme === ThemeMode.LIGHT ? lightTheme : darkTheme
 
-  // TODO: Uploading errors by Sentry when the React supports
-  // hooks of `componentDidCatch`
-  // componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
-  //   Sentry.withScope((scope) => {
-  //     Object.keys(errorInfo).forEach((key) => {
-  //       scope.setExtra(key, errorInfo[key])
-  //     })
-
-  //     Sentry.captureException(error)
-  //   })
-
-  //   super.componentDidCatch(error, errorInfo)
-  // }
-
   return (
-    <ThemeProvider theme={themeMode}>
-      <GlobalStyle />
-      <ApolloProvider client={apollo}>
-        <SnackbarProvider
-          maxSnack={SNACKBAR_MAX_NUM}
-          anchorOrigin={SNACKBAR_ANCHOR_ORIGIN}
-          autoHideDuration={SNACKBAR_AUTO_HIDE_DURATION}
-        >
-          <>
-            <SnackbarUtilsConfigurator />
-            <Component {...pageProps} />
-            <Player />
-            <ToggleTheme theme={theme} onToggle={toggleTheme} />
-          </>
-        </SnackbarProvider>
-      </ApolloProvider>
-    </ThemeProvider>
+    <ErrorBoundary>
+      <ThemeProvider theme={themeMode}>
+        <GlobalStyle />
+        <ApolloProvider client={apollo}>
+          <SnackbarProvider
+            maxSnack={SNACKBAR_MAX_NUM}
+            anchorOrigin={SNACKBAR_ANCHOR_ORIGIN}
+            autoHideDuration={SNACKBAR_AUTO_HIDE_DURATION}
+          >
+            <>
+              <SnackbarUtilsConfigurator />
+              <Component {...pageProps} />
+              <Player />
+              <ToggleTheme theme={theme} onToggle={toggleTheme} />
+            </>
+          </SnackbarProvider>
+        </ApolloProvider>
+      </ThemeProvider>
+    </ErrorBoundary>
   )
 }
 
