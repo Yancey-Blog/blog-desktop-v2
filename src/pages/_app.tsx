@@ -14,13 +14,13 @@ import GlobalStyle from 'src/styled/globalStyles'
 import { useDarkMode, ThemeMode } from 'src/hooks/useDarkMode'
 import ToggleTheme from 'src/components/ToggleTheme/ToggleTheme'
 import { SnackbarUtilsConfigurator } from 'src/components/Toast/Toast'
+import withApollo from 'src/graphql/withApollo'
 import {
   SNACKBAR_ANCHOR_ORIGIN,
   SNACKBAR_MAX_NUM,
   SNACKBAR_AUTO_HIDE_DURATION,
   SENTRY,
 } from 'src/shared/constants'
-import withApollo from 'src/shared/withApollo'
 import { devToolsWarning } from 'src/shared/utils'
 import { NextWebVitalsMetrics } from 'src/shared/types'
 import 'normalize.css'
