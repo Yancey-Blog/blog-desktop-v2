@@ -3,7 +3,7 @@ import Link from 'next/link'
 import styled from 'styled-components'
 import SkeletonIterator from 'src/components/SkeletonIterator/SkeletonIterator'
 import { flexMixin } from 'src/styled/mixins'
-import { SVG_SPRITE, DOMAIN, ALI_OSS_SUFFIX } from 'src/shared/constants'
+import { SVG_SPRITE, DOMAIN, AliOSSSuffix } from 'src/shared/constants'
 import { generateAliOSSSuffix } from 'src/shared/utils'
 import { PosterProps } from 'src/shared/types'
 import Top7PVPostsSkeleton from '../Top7PVPostsSkeleton/Top7PVPostsSkeleton'
@@ -91,10 +91,10 @@ const Top7PVPosts: FC<Props> = ({ topPVPosts, isSupportWebp }) => {
                     imageUrl={
                       isSupportWebp
                         ? `${posterUrl}${generateAliOSSSuffix(
-                            ALI_OSS_SUFFIX.WEBP_SUFFIX,
+                            AliOSSSuffix.WEBP_SUFFIX,
                           )}`
                         : `${posterUrl}${generateAliOSSSuffix(
-                            ALI_OSS_SUFFIX.THUMB_SUFFIX,
+                            AliOSSSuffix.THUMB_SUFFIX,
                           )}`
                     }
                   />
@@ -107,14 +107,14 @@ const Top7PVPosts: FC<Props> = ({ topPVPosts, isSupportWebp }) => {
                     <picture>
                       <source
                         srcSet={`${posterUrl}${generateAliOSSSuffix(
-                          ALI_OSS_SUFFIX.WEBP_SUFFIX,
+                          AliOSSSuffix.WEBP_SUFFIX,
                         )}`}
                         type="image/webp"
                       />
                       <Thumb
                         alt={title}
                         src={`${posterUrl}${generateAliOSSSuffix(
-                          ALI_OSS_SUFFIX.THUMB_SUFFIX,
+                          AliOSSSuffix.THUMB_SUFFIX,
                         )}`}
                       />
                     </picture>

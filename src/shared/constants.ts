@@ -9,13 +9,15 @@ export const SNACKBAR_MAX_NUM = 1
 
 export const SNACKBAR_AUTO_HIDE_DURATION = 3000
 
+export const BACK_TO_TOP_THRESHOLD = 800
+
 export const DOMAIN = 'https://yanceyleo.com'
 
 export const ALI_OSS_URL = 'https://static.yancey.app'
 
 export const ALI_OSS_SUFFIX_BASE = '?x-oss-process=image'
 
-export enum ALI_OSS_SUFFIX {
+export enum AliOSSSuffix {
   WEBP_SUFFIX = '/format,webp',
   THUMB_SUFFIX = '/resize,w_120',
   LOW_QUALITY_SUFFIX = '/quality,Q_10',

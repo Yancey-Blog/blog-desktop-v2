@@ -1,7 +1,7 @@
 import React, { FC } from 'react'
 import styled from 'styled-components'
 import { flexMixin, transitionMixin } from 'src/styled/mixins'
-import { SVG_SPRITE, ALI_OSS_SUFFIX } from 'src/shared/constants'
+import { SVG_SPRITE, AliOSSSuffix } from 'src/shared/constants'
 import { generateAliOSSSuffix } from 'src/shared/utils'
 import SubTitle from './SubTitle'
 import { IOpenSource } from '../types'
@@ -107,7 +107,7 @@ const OpenSource: FC<Props> = ({ openSources }) => {
               <OpenSourceItem data-title={title} data-intro={description}>
                 <source
                   srcSet={`${posterUrl}${generateAliOSSSuffix(
-                    ALI_OSS_SUFFIX.WEBP_SUFFIX,
+                    AliOSSSuffix.WEBP_SUFFIX,
                   )}`}
                   type="image/webp"
                 />

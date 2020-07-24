@@ -12,6 +12,7 @@
     "import/prefer-default-export": "off",
     "@typescript-eslint/semi": "off",
     "@typescript-eslint/indent": "off",
+    "@typescript-eslint/naming-convention": "off",
     "jsx-a11y/anchor-is-valid": "off",
     "react/jsx-indent": "off",
     "react/prop-types": "off",

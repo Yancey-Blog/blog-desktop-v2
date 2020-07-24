@@ -1,8 +1,13 @@
-import React, { FC, useEffect } from 'react'
+import React, { FC, useState, useEffect } from 'react'
 import { useQuery } from '@apollo/react-hooks'
 import { hotjar } from 'react-hotjar'
+import throttle from 'lodash.throttle'
 import { initGA, logPageView } from 'src/shared/analytics'
-import { HOTJAR_ID, HOTJAR_SV } from 'src/shared/constants'
+import {
+  HOTJAR_ID,
+  HOTJAR_SV,
+  BACK_TO_TOP_THRESHOLD,
+} from 'src/shared/constants'
 import Head from 'src/components/Head/Head'
 import Header from 'src/components/Header/Header'
 import Footer from 'src/components/Footer/Footer'
@@ -25,6 +30,23 @@ interface Props {
 const Layout: FC<Props> = ({ title, children }) => {
   const { data } = useQuery<GlobalSettingQuery>(GET_GLOBAL_SETTING)
 
+  const [scrollTopCount, setScrollTopCount] = useState(0)
+
+  const scrollTopCountHandler = throttle(() => {
+    const top = document.documentElement.scrollTop || document.body.scrollTop
+    setScrollTopCount(top)
+  }, 100)
+
+  useEffect(() => {
+    document.addEventListener('scroll', scrollTopCountHandler, {
+      passive: true,
+    })
+
+    return () => {
+      document.removeEventListener('scroll', scrollTopCountHandler)
+    }
+  }, [])
+
   useEffect(() => {
     if (process.env.NODE_ENV === 'production') {
       if (!window.GA_INITIALIZED) {
@@ -42,6 +64,7 @@ const Layout: FC<Props> = ({ title, children }) => {
     <Layouts>
       <Head title={title} />
       <Header
+        isTop={!scrollTopCount}
         globalSetting={data ? data.getGlobalSetting : initialGlobalSetting}
       />
       <Main>{children}</Main>
@@ -49,7 +72,7 @@ const Layout: FC<Props> = ({ title, children }) => {
         globalSetting={data ? data.getGlobalSetting : initialGlobalSetting}
       />
       <SVGSprite />
-      <BackToTop />
+      <BackToTop isShowCat={scrollTopCount >= BACK_TO_TOP_THRESHOLD} />
     </Layouts>
   )
 }

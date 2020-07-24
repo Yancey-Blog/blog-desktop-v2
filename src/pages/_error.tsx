@@ -1,11 +1,11 @@
 import React, { FC } from 'react'
 import Layout from 'src/containers/Layout/Layout'
-import ErrorPage from 'src/components/ErrorPage/ErrorPage'
+import ErrorContainer from 'src/containers/Error/Error'
 
 const ServerError: FC = () => {
   return (
     <Layout>
-      <ErrorPage statusCode={500} imageUrl="5xx.png" />
+      <ErrorContainer statusCode={500} imageUrl="5xx.png" />
     </Layout>
   )
 }
