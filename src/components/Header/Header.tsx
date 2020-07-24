@@ -1,5 +1,6 @@
-import React, { FC } from 'react'
+import React, { FC, useState, useEffect } from 'react'
 import Link from 'next/link'
+import throttle from 'lodash.throttle'
 import SearchInput from 'src/containers/Post/components/SearchInput/SearchInput'
 import { SVG_SPRITE } from 'src/shared/constants'
 import { IGlobalSetting } from 'src/containers/GlobalSetting/types'
@@ -12,8 +13,32 @@ interface Props {
 const Header: FC<Props> = ({ globalSetting }) => {
   const { cvPostId } = globalSetting
 
+  const [isTop, setIsTop] = useState(true)
+
+  const isTopHandler = throttle(() => {
+    const top = document.documentElement.scrollTop || document.body.scrollTop
+    if (top === 0) {
+      setIsTop(true)
+    } else {
+      setIsTop(false)
+    }
+  }, 100)
+
+  useEffect(() => {
+    document.addEventListener('scroll', isTopHandler, {
+      passive: true,
+    })
+
+    return () => {
+      document.removeEventListener('scroll', isTopHandler)
+    }
+  }, [])
+
   return (
-    <NavBar>
+    <NavBar
+      // TODO: use className!
+      style={isTop ? { background: 'transparent', boxShadow: 'none' } : {}}
+    >
       <Link href="/" passHref>
         <Logo />
       </Link>
