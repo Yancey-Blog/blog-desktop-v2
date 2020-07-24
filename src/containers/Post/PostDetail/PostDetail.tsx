@@ -5,7 +5,7 @@ import LazyLoad from 'react-lazyload'
 import MarkDown from 'markdown-to-jsx'
 import { DiscussionEmbed } from 'disqus-react'
 import MetaHead from 'src/components/Head/Head'
-import { ALI_OSS_SUFFIX, DISCUSSION_KEY } from 'src/shared/constants'
+import { AliOSSSuffix, DISCUSSION_KEY } from 'src/shared/constants'
 import { generateAliOSSSuffix } from 'src/shared/utils'
 import PostMeta from '../components/PostMeta/PostMeta'
 import YellowSVG from '../components/YellowSVG/YellowSVG'
@@ -58,7 +58,7 @@ const PostDetail: FC = () => {
       <LazyLoad height={200}>
         <picture>
           <source
-            srcSet={`${src}${generateAliOSSSuffix(ALI_OSS_SUFFIX.WEBP_SUFFIX)}`}
+            srcSet={`${src}${generateAliOSSSuffix(AliOSSSuffix.WEBP_SUFFIX)}`}
             type="image/webp"
           />
           <img src={src} alt={alt} />
@@ -139,7 +139,7 @@ const PostDetail: FC = () => {
         <picture>
           <source
             srcSet={`${posterUrl}${generateAliOSSSuffix(
-              ALI_OSS_SUFFIX.WEBP_SUFFIX,
+              AliOSSSuffix.WEBP_SUFFIX,
             )}`}
             type="image/webp"
           />

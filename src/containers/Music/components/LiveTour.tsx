@@ -2,7 +2,7 @@ import React, { FC } from 'react'
 import styled from 'styled-components'
 import Carousel from 'nuka-carousel'
 import { formatDate, generateAliOSSSuffix } from 'src/shared/utils'
-import { ALI_OSS_SUFFIX } from 'src/shared/constants'
+import { AliOSSSuffix } from 'src/shared/constants'
 import { ILiveTour } from '../types'
 
 const LiveTourContent = styled.div`
@@ -55,7 +55,7 @@ const LiveTour: FC<Props> = ({ liveTours }) => {
           <picture>
             <source
               srcSet={`${liveTour.posterUrl}${generateAliOSSSuffix(
-                ALI_OSS_SUFFIX.WEBP_SUFFIX,
+                AliOSSSuffix.WEBP_SUFFIX,
               )}`}
               type="image/webp"
             />

@@ -67,6 +67,10 @@ const GlobalStyle = createGlobalStyle`
   code {
     font-family: SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
   }
+
+  .lazyload-wrapper {
+    height: 100%;
+  }
 `
 
 export default GlobalStyle

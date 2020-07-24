@@ -12,9 +12,9 @@ const Input = styled.input`
   padding: 0.8rem;
   width: 13rem;
   font-size: 0.9rem;
-  color: ${({ theme }) => theme.text.header};
-  background: ${({ theme }) => theme.background.bestAlbumCard};
-  border: none;
+  color: ${({ theme }) => theme.text.primary};
+  background: transparent;
+  border: 1px solid ${({ theme }) => theme.text.primary};
   border-radius: 0.3rem;
   outline: none;
 `

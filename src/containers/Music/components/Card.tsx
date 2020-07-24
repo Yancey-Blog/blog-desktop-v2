@@ -3,7 +3,7 @@ import Link from 'next/link'
 import styled from 'styled-components'
 import { transitionMixin } from 'src/styled/mixins'
 import { formatDate, generateAliOSSSuffix } from 'src/shared/utils'
-import { ALI_OSS_SUFFIX } from 'src/shared/constants'
+import { AliOSSSuffix } from 'src/shared/constants'
 
 const CardContaiener = styled.div`
   position: relative;
@@ -87,7 +87,7 @@ const Card: FC<Props> = ({ type, url, title, date, cover }) => {
     <CardContaiener>
       <picture>
         <source
-          srcSet={`${cover}${generateAliOSSSuffix(ALI_OSS_SUFFIX.WEBP_SUFFIX)}`}
+          srcSet={`${cover}${generateAliOSSSuffix(AliOSSSuffix.WEBP_SUFFIX)}`}
           type="image/webp"
         />
         <Img src={cover} alt={title} />

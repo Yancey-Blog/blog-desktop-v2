@@ -1,5 +1,5 @@
 import React, { FC } from 'react'
-import { ALI_OSS_URL, ALI_OSS_SUFFIX } from 'src/shared/constants'
+import { ALI_OSS_URL, AliOSSSuffix } from 'src/shared/constants'
 import { generateAliOSSSuffix } from 'src/shared/utils'
 import { ImageHeaderWrapper, Title } from './styled'
 
@@ -13,7 +13,7 @@ const ImageHeader: FC<Props> = ({ title, imageUrl }) => {
     <ImageHeaderWrapper>
       <source
         srcSet={`${ALI_OSS_URL}${imageUrl}${generateAliOSSSuffix(
-          ALI_OSS_SUFFIX.WEBP_SUFFIX,
+          AliOSSSuffix.WEBP_SUFFIX,
         )}`}
         type="image/webp"
       />
