@@ -17,6 +17,10 @@ const Input = styled.input`
   border: 1px solid ${({ theme }) => theme.text.primary};
   border-radius: 0.3rem;
   outline: none;
+
+  &::placeholder {
+    color: ${({ theme }) => theme.text.primary};
+  }
 `
 
 const SearchSvg = styled.svg`
