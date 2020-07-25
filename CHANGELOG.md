@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.2.0](https://github.com/Yancey-Blog/blog-desktop-v2/compare/v2.1.0...v2.2.0) (2020-07-25)
+
+
+### Features
+
+* add `lazyload-wrapper` class to adapt new version of react-lazyload ([4dd4118](https://github.com/Yancey-Blog/blog-desktop-v2/commit/4dd41188bf6ac87eabc3cb9775aff75fdf4badef))
+* make the header background transparent when at the top of the page ([0ece22d](https://github.com/Yancey-Blog/blog-desktop-v2/commit/0ece22d8a82b329cee09901bde8487b6d2f1a82d))
+* package scrollTop listener to Layout component ([a91b29a](https://github.com/Yancey-Blog/blog-desktop-v2/commit/a91b29aa71481c391ff114fd05c68646a6a25d43))
+* support ErrorBoundary ([d66c978](https://github.com/Yancey-Blog/blog-desktop-v2/commit/d66c978c3ae42c7584903b813c957ce71666ac84))
+* update .huskey ([bf0b85b](https://github.com/Yancey-Blog/blog-desktop-v2/commit/bf0b85ba175e119765a7716b9005a25f3e327544))
+
 ## [2.1.0](https://github.com/Yancey-Blog/blog-desktop-v2/compare/v2.0.0...v2.1.0) (2020-07-06)
 
 ## [2.0.0](https://github.com/Yancey-Blog/blog-desktop-v2/compare/v1.10.1...v2.0.0) (2020-07-03)
