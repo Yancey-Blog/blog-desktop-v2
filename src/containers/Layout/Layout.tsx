@@ -1,5 +1,5 @@
 import React, { FC, useState, useEffect } from 'react'
-import { useQuery } from '@apollo/react-hooks'
+import { useQuery } from '@apollo/client'
 import { hotjar } from 'react-hotjar'
 import throttle from 'lodash.throttle'
 import { initGA, logPageView } from 'src/shared/analytics'
