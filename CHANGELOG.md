@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.4.0](https://github.com/Yancey-Blog/blog-desktop-v2/compare/v2.3.0...v2.4.0) (2020-07-26)
+
+
+### Features
+
+* use new version of @apollo/client ([47398ab](https://github.com/Yancey-Blog/blog-desktop-v2/commit/47398ab93f9410429b1bf47696b575c12363fd45))
+* use new version of @apollo/client ([f37cc55](https://github.com/Yancey-Blog/blog-desktop-v2/commit/f37cc55eb94ba1c4d799d7bc7aa5f057b03fd7a4))
+
 ## [2.3.0](https://github.com/Yancey-Blog/blog-desktop-v2/compare/v2.2.0...v2.3.0) (2020-07-25)
 
 
