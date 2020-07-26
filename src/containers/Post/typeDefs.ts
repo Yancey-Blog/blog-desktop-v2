@@ -1,4 +1,4 @@
-import gql from 'graphql-tag'
+import { gql } from '@apollo/client'
 
 const POST_ITEM_FRAGMENT = gql`
   fragment PostItemFragment on PostItemModel {

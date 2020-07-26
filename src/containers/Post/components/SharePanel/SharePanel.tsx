@@ -1,5 +1,5 @@
 import React, { FC, useState } from 'react'
-import { useMutation } from '@apollo/react-hooks'
+import { useMutation } from '@apollo/client'
 import Router from 'next/router'
 import styled from 'styled-components'
 import { TwitterShareButton } from 'react-share'

@@ -1,6 +1,6 @@
 import React, { FC, useEffect, useRef } from 'react'
 import { useRouter } from 'next/router'
-import { useQuery, useMutation } from '@apollo/react-hooks'
+import { useQuery, useMutation } from '@apollo/client'
 import LazyLoad from 'react-lazyload'
 import MarkDown from 'markdown-to-jsx'
 import { DiscussionEmbed } from 'disqus-react'
