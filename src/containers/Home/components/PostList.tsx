@@ -1,5 +1,5 @@
 import React, { FC } from 'react'
-import { useQuery } from '@apollo/react-hooks'
+import { useQuery } from '@apollo/client'
 import { SVG_SPRITE } from 'src/shared/constants'
 import PostCard from 'src/containers/Post/components/PostCard/PostCard'
 import { POSTS } from 'src/containers/Post/typeDefs'

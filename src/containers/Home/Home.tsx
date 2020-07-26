@@ -1,5 +1,5 @@
 import React, { FC } from 'react'
-import { useQuery } from '@apollo/react-hooks'
+import { useQuery } from '@apollo/client'
 import {
   HomeContainer,
   MottoSocialMediaBar,

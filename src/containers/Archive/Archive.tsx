@@ -1,7 +1,7 @@
 import React, { FC, Fragment } from 'react'
 import moment from 'moment'
 import Link from 'next/link'
-import { useQuery } from '@apollo/react-hooks'
+import { useQuery } from '@apollo/client'
 import { sortBy } from 'yancey-js-util'
 import { ARCHIVE } from 'src/containers/Post/typeDefs'
 import { ArchiveQuery } from 'src/containers/Post/types'
