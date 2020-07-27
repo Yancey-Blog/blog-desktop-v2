@@ -1,2 +1,4 @@
-# https://www.robotstxt.org/robotstxt.html
-User-agent: *
+# If you would like to crawl Yancey Blog contact us at supports@yanceyleo.com.
+
+User-agent: baidu
+crawl-delay: 1
