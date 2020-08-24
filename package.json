@@ -42,7 +42,7 @@
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-ga": "^3.1.2",
-    "react-hotjar": "^2.2.0",
+    "react-hotjar": "^2.2.1",
     "react-lazyload": "^3.0.0",
     "react-share": "^4.2.0",
     "styled-components": "^5.0.1",
