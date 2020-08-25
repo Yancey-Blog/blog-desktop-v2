@@ -4,7 +4,6 @@ import { generateAliOSSSuffix } from 'src/shared/utils'
 
 interface IPicture {
   src: string
-  children: HTMLImageElement
 }
 
 const Picture: FC<IPicture> = ({ src, children }) => (
