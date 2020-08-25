@@ -44,7 +44,7 @@
     "react-ga": "^3.1.2",
     "react-hotjar": "^2.2.1",
     "react-lazyload": "^3.0.0",
-    "react-share": "^4.2.0",
+    "react-share": "^4.2.1",
     "styled-components": "^5.0.1",
     "tocbot": "^4.12.0",
     "yancey-js-util": "^3.0.0"
