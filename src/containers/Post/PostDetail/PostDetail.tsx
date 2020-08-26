@@ -77,7 +77,6 @@ const PostDetail: FC = () => {
   const { data: post } = useQuery<GetPostByIdQuery, GetPostByIdVar>(
     GET_POST_BY_ID,
     {
-      fetchPolicy: 'cache-and-network',
       notifyOnNetworkStatusChange: true,
       variables: { id: id as string },
 

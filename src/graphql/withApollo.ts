@@ -29,6 +29,9 @@ export default withApollo(
       link: errorLink.concat(httpLink),
       cache: new InMemoryCache().restore(initialState || {}),
       defaultOptions: {
+        watchQuery: {
+          fetchPolicy: 'cache-and-network',
+        },
         query: {
           fetchPolicy: 'network-only',
           errorPolicy: 'all',

@@ -31,7 +31,6 @@ const PostList: FC<Props> = ({ isSupportWebp }) => {
   const [page, setPage] = useState(1)
 
   const [getPosts, { data: posts }] = useLazyQuery<PostQuery, PostVars>(POSTS, {
-    fetchPolicy: 'cache-and-network',
     notifyOnNetworkStatusChange: true,
   })
 
