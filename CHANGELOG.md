@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.6.0](https://github.com/Yancey-Blog/blog-desktop-v2/compare/v2.5.0...v2.6.0) (2020-08-27)
+
+
+### Features
+
+* create Picture component ([e3d1c1a](https://github.com/Yancey-Blog/blog-desktop-v2/commit/e3d1c1ae427e9b8a2ba16a5bbea22b8e59b3025f))
+* migrate to Picture component ([4671f1a](https://github.com/Yancey-Blog/blog-desktop-v2/commit/4671f1a37dd70ee757229c3da01baf7c1209e4cc))
+* use lodash.orderby ([14a152a](https://github.com/Yancey-Blog/blog-desktop-v2/commit/14a152a27a66f44b5120c0a8011a4487f7ad5d0f))
+* use Picture component for BestAlbum component ([8697135](https://github.com/Yancey-Blog/blog-desktop-v2/commit/869713573caa79c52525df1e50efd65eee81e0d8))
+* use Picture component for Card component ([822541f](https://github.com/Yancey-Blog/blog-desktop-v2/commit/822541f000fb9fbaf721f5ea93ea8842611fd617))
+* use Picture component for Error component ([b7495ea](https://github.com/Yancey-Blog/blog-desktop-v2/commit/b7495ea0cebc01743068ce7a7f074c8c1d766af9))
+* use Picture component for LiveTour component ([6470a27](https://github.com/Yancey-Blog/blog-desktop-v2/commit/6470a27e5c2204968496bca56765eab1bbd863dc))
+* use Picture component for PostDetail component ([5822a32](https://github.com/Yancey-Blog/blog-desktop-v2/commit/5822a329270121268427f3298fb11a979c875a42))
+* use Picture component for PrevAndNext component ([30fc68f](https://github.com/Yancey-Blog/blog-desktop-v2/commit/30fc68f47f0b93921606161eb361c75eb99bc043))
+* use Picture component for Top7PBPosts component ([586c219](https://github.com/Yancey-Blog/blog-desktop-v2/commit/586c219a4e230682e9b05abf3ea558e58373d898))
+
 ## [2.5.0](https://github.com/Yancey-Blog/blog-desktop-v2/compare/v2.4.1...v2.5.0) (2020-08-02)
 
 
