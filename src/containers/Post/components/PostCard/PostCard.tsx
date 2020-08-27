@@ -1,8 +1,9 @@
 import React, { FC } from 'react'
 import Link from 'next/link'
 import LazyLoad from 'react-lazyload'
-import { SVG_SPRITE, AliOSSSuffix } from 'src/shared/constants'
-import { formatDate, generateAliOSSSuffix } from 'src/shared/utils'
+import Picture from 'src/components/Picture/Picture'
+import { SVG_SPRITE } from 'src/shared/constants'
+import { formatDate } from 'src/shared/utils'
 import {
   PostCardWrapper,
   PosterAnchor,
@@ -30,15 +31,9 @@ const PostCard: FC<Props> = ({ post }) => {
       <Link href={`/post/${_id}`} passHref prefetch={false}>
         <PosterAnchor>
           <LazyLoad height={200}>
-            <Poster>
-              <source
-                srcSet={`${posterUrl}${generateAliOSSSuffix(
-                  AliOSSSuffix.WEBP_SUFFIX,
-                )}`}
-                type="image/webp"
-              />
-              <img src={posterUrl} alt={title} />
-            </Poster>
+            <Picture src={posterUrl}>
+              <Poster src={posterUrl} alt={title} />
+            </Picture>
           </LazyLoad>
         </PosterAnchor>
       </Link>

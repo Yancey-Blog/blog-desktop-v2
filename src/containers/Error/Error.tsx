@@ -1,9 +1,9 @@
 import React, { FC } from 'react'
 import Link from 'next/link'
 import styled from 'styled-components'
+import Picture from 'src/components/Picture/Picture'
 import { flexMixin } from 'src/styled/mixins'
-import { ALI_OSS_URL, AliOSSSuffix } from 'src/shared/constants'
-import { generateAliOSSSuffix } from 'src/shared/utils'
+import { ALI_OSS_URL } from 'src/shared/constants'
 
 interface ColorProps {
   is404Page: boolean
@@ -83,13 +83,9 @@ const Error: FC<Props> = ({ statusCode, imageUrl }) => {
           </Link>
         </div>
       </Header>
-      <picture>
-        <source
-          srcSet={`${imgUrl}${generateAliOSSSuffix(AliOSSSuffix.WEBP_SUFFIX)}`}
-          type="image/webp"
-        />
+      <Picture src={imgUrl}>
         <ErrorImg src={imgUrl} alt={statusCode.toString()} />
-      </picture>
+      </Picture>
     </ErrorWrapper>
   )
 }

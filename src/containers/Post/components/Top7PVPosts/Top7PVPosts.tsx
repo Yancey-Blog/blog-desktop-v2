@@ -2,6 +2,7 @@ import React, { FC } from 'react'
 import Link from 'next/link'
 import styled from 'styled-components'
 import SkeletonIterator from 'src/components/SkeletonIterator/SkeletonIterator'
+import Picture from 'src/components/Picture/Picture'
 import { flexMixin } from 'src/styled/mixins'
 import { SVG_SPRITE, DOMAIN, AliOSSSuffix } from 'src/shared/constants'
 import { generateAliOSSSuffix } from 'src/shared/utils'
@@ -104,20 +105,14 @@ const Top7PVPosts: FC<Props> = ({ topPVPosts, isSupportWebp }) => {
                       <Title>{title}</Title>
                       <Url>{`${DOMAIN}/post/${_id}`}</Url>
                     </span>
-                    <picture>
-                      <source
-                        srcSet={`${posterUrl}${generateAliOSSSuffix(
-                          AliOSSSuffix.WEBP_SUFFIX,
-                        )}`}
-                        type="image/webp"
-                      />
+                    <Picture src={posterUrl}>
                       <Thumb
                         alt={title}
                         src={`${posterUrl}${generateAliOSSSuffix(
                           AliOSSSuffix.THUMB_SUFFIX,
                         )}`}
                       />
-                    </picture>
+                    </Picture>
                   </CardContent>
                 </CardItem>
               </a>
