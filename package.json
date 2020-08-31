@@ -63,7 +63,7 @@
     "@types/react-lazyload": "^2.6.0",
     "@types/styled-components": "^5.1.2",
     "@typescript-eslint/eslint-plugin": "^3.10.0",
-    "babel-plugin-styled-components": "^1.10.7",
+    "babel-plugin-styled-components": "^1.11.1",
     "babel-plugin-transform-imports": "^2.0.0",
     "cz-conventional-changelog": "^3.2.1",
     "eslint": "^7.7.0",
