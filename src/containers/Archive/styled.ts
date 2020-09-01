@@ -85,13 +85,13 @@ export const DayList = styled.ul`
   padding-left: 8.2rem;
   max-height: 0;
   will-change: transform;
-  overflow: hidden;
   transition: all 1s linear;
 `
 
 export const DayItem = styled.li`
   position: relative;
   line-height: 2.4;
+  white-space: nowrap;
 
   &::after {
     position: absolute;
