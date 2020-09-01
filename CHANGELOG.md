@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.6.1](https://github.com/Yancey-Blog/blog-desktop-v2/compare/v2.6.0...v2.6.1) (2020-09-01)
+
+
+### Bug Fixes
+
+* **css:** fix css styles of Archive and BlogDetail ([e19d66d](https://github.com/Yancey-Blog/blog-desktop-v2/commit/e19d66df0e4d4703a665b257ed8a92b09fa6a8b9))
+
 ## [2.6.0](https://github.com/Yancey-Blog/blog-desktop-v2/compare/v2.5.0...v2.6.0) (2020-08-27)
 
 
