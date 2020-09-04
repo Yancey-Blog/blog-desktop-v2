@@ -44,13 +44,7 @@ const Layout: FC<Props> = ({ title, children }) => {
   }, [])
 
   useEffect(() => {
-    const {
-      NODE_ENV,
-      NEXT_PUBLIC_HOTJAR_ID,
-      NEXT_PUBLIC_HOTJAR_SV,
-    } = process.env
-
-    if (NODE_ENV === 'production') {
+    if (process.env.NODE_ENV === 'production') {
       if (!window.GA_INITIALIZED) {
         initGA()
         window.GA_INITIALIZED = true
@@ -58,10 +52,13 @@ const Layout: FC<Props> = ({ title, children }) => {
 
       logPageView()
 
-      if (NEXT_PUBLIC_HOTJAR_ID && NEXT_PUBLIC_HOTJAR_SV) {
+      if (
+        process.env.NEXT_PUBLIC_HOTJAR_ID &&
+        process.env.NEXT_PUBLIC_HOTJAR_SV
+      ) {
         hotjar.initialize(
-          parseInt(NEXT_PUBLIC_HOTJAR_ID, 10),
-          parseInt(NEXT_PUBLIC_HOTJAR_SV, 10),
+          parseInt(process.env.NEXT_PUBLIC_HOTJAR_ID, 10),
+          parseInt(process.env.NEXT_PUBLIC_HOTJAR_SV, 10),
         )
       }
     }
