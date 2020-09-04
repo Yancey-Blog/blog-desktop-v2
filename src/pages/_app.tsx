@@ -3,6 +3,7 @@ import { AppProps } from 'next/app'
 import Router from 'next/router'
 import dynamic from 'next/dynamic'
 import * as Sentry from '@sentry/browser'
+import { Integrations } from '@sentry/tracing'
 import NProgress from 'nprogress'
 import { SnackbarProvider } from 'notistack'
 import { ApolloProvider, ApolloClient } from '@apollo/client'
@@ -46,7 +47,12 @@ Router.events.on('routeChangeStart', () => {
 Router.events.on('routeChangeComplete', () => NProgress.done())
 Router.events.on('routeChangeError', () => NProgress.done())
 
-Sentry.init({ dsn: SENTRY })
+Sentry.init({
+  dsn: SENTRY,
+  integrations: [new Integrations.BrowserTracing()],
+  tracesSampleRate: 1.0,
+  release: `${process.env.npm_package_name}@${process.env.npm_package_version}`,
+})
 
 devToolsWarning()
 

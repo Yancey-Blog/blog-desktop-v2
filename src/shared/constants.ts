@@ -26,7 +26,7 @@ export enum AliOSSSuffix {
 export const GA = 'UA-114532340-1'
 
 export const SENTRY =
-  'https://2998f0f7a05044969a7859a2596e6977@o265404.ingest.sentry.io/1468725'
+  'https://5f39329950504b4bbc8cd6e9fe3f8c79@o265404.ingest.sentry.io/5417352'
 
 export const HOTJAR_ID = 1514017
 
