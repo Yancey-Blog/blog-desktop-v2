@@ -3,11 +3,7 @@ import { useQuery } from '@apollo/client'
 import { hotjar } from 'react-hotjar'
 import throttle from 'lodash.throttle'
 import { initGA, logPageView } from 'src/shared/analytics'
-import {
-  HOTJAR_ID,
-  HOTJAR_SV,
-  BACK_TO_TOP_THRESHOLD,
-} from 'src/shared/constants'
+import { BACK_TO_TOP_THRESHOLD } from 'src/shared/constants'
 import Head from 'src/components/Head/Head'
 import Header from 'src/components/Header/Header'
 import Footer from 'src/components/Footer/Footer'
@@ -48,7 +44,13 @@ const Layout: FC<Props> = ({ title, children }) => {
   }, [])
 
   useEffect(() => {
-    if (process.env.NODE_ENV === 'production') {
+    const {
+      NODE_ENV,
+      NEXT_PUBLIC_HOTJAR_ID,
+      NEXT_PUBLIC_HOTJAR_SV,
+    } = process.env
+
+    if (NODE_ENV === 'production') {
       if (!window.GA_INITIALIZED) {
         initGA()
         window.GA_INITIALIZED = true
@@ -56,7 +58,12 @@ const Layout: FC<Props> = ({ title, children }) => {
 
       logPageView()
 
-      hotjar.initialize(HOTJAR_ID, HOTJAR_SV)
+      if (NEXT_PUBLIC_HOTJAR_ID && NEXT_PUBLIC_HOTJAR_SV) {
+        hotjar.initialize(
+          parseInt(NEXT_PUBLIC_HOTJAR_ID, 10),
+          parseInt(NEXT_PUBLIC_HOTJAR_SV, 10),
+        )
+      }
     }
   }, [])
 

@@ -1,6 +1,6 @@
 import React, { FC } from 'react'
 import styled, { css } from 'styled-components'
-import { SOCIAL_MEDIA, ALI_OSS_URL } from 'src/shared/constants'
+import { SOCIAL_MEDIA } from 'src/shared/constants'
 import { flexMixin, transitionMixin, backgroundMixin } from 'src/styled/mixins'
 import { IMotto } from '../types'
 
@@ -87,7 +87,8 @@ const TwitterQRCodeLink = styled.a`
   ${QRCode}
   &::after {
     background: ${({ theme }) => theme.colors.fiveOpcityBlack}
-      url(${ALI_OSS_URL}/blog-fe-static/twitter-qr-code.jpg);
+      url(${process.env
+        .NEXT_PUBLIC_STATIC_FILE_URL}/blog-fe-static/twitter-qr-code.jpg);
     background-origin: content-box;
     ${backgroundMixin()}
   }
@@ -97,7 +98,8 @@ const WeChatQRCodeLink = styled.a`
   ${QRCode}
   &::after {
     background: ${({ theme }) => theme.colors.fiveOpcityBlack}
-      url(${ALI_OSS_URL}/blog-fe-static/official-account-qr-code.jpg);
+      url(${process.env
+        .NEXT_PUBLIC_STATIC_FILE_URL}/blog-fe-static/official-account-qr-code.jpg);
     background-origin: content-box;
     ${backgroundMixin()}
   }

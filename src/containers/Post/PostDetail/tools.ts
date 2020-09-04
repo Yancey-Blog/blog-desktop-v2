@@ -4,7 +4,6 @@ import React from 'react'
 // has not been released.
 import hljs from 'highlight.js'
 import tocbot from 'tocbot'
-import { DOMAIN } from 'src/shared/constants'
 
 const POST_DETAIL_CONTENT = 'postDetailContent'
 
@@ -41,4 +40,5 @@ export const setupTocbot = () => {
   })
 }
 
-export const generateShareUrl = (id: string) => `${DOMAIN}/post/${id}`
+export const generateShareUrl = (id: string) =>
+  `${process.env.NEXT_PUBLIC_DOMAIN_URL}/post/${id}`

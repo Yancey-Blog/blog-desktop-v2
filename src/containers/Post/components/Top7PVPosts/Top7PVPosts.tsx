@@ -4,11 +4,12 @@ import styled from 'styled-components'
 import SkeletonIterator from 'src/components/SkeletonIterator/SkeletonIterator'
 import Picture from 'src/components/Picture/Picture'
 import { flexMixin } from 'src/styled/mixins'
-import { SVG_SPRITE, DOMAIN, AliOSSSuffix } from 'src/shared/constants'
+import { SVG_SPRITE, AliOSSSuffix } from 'src/shared/constants'
 import { generateAliOSSSuffix } from 'src/shared/utils'
 import { PosterProps } from 'src/shared/types'
 import Top7PVPostsSkeleton from '../Top7PVPostsSkeleton/Top7PVPostsSkeleton'
 import SubHeader from '../SubTitle/SubTitle'
+import { generateShareUrl } from '../../PostDetail/tools'
 import { GetTopPVPostsQuery } from '../../types'
 
 const CardItem = styled.div`
@@ -103,7 +104,7 @@ const Top7PVPosts: FC<Props> = ({ topPVPosts, isSupportWebp }) => {
                   <CardContent>
                     <span>
                       <Title>{title}</Title>
-                      <Url>{`${DOMAIN}/post/${_id}`}</Url>
+                      <Url>{generateShareUrl(_id)}</Url>
                     </span>
                     <Picture src={posterUrl}>
                       <Thumb

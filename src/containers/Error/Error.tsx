@@ -3,7 +3,6 @@ import Link from 'next/link'
 import styled from 'styled-components'
 import Picture from 'src/components/Picture/Picture'
 import { flexMixin } from 'src/styled/mixins'
-import { ALI_OSS_URL } from 'src/shared/constants'
 
 interface ColorProps {
   is404Page: boolean
@@ -62,7 +61,7 @@ interface Props {
 }
 
 const Error: FC<Props> = ({ statusCode, imageUrl }) => {
-  const imgUrl = `${ALI_OSS_URL}/blog-fe-static/${imageUrl}`
+  const imgUrl = `${process.env.NEXT_PUBLIC_STATIC_FILE_URL}/blog-fe-static/${imageUrl}`
   const is404Page = statusCode === 404
 
   return (

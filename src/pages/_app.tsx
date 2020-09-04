@@ -20,7 +20,6 @@ import {
   SNACKBAR_ANCHOR_ORIGIN,
   SNACKBAR_MAX_NUM,
   SNACKBAR_AUTO_HIDE_DURATION,
-  SENTRY,
 } from 'src/shared/constants'
 import { devToolsWarning } from 'src/shared/utils'
 import { NextWebVitalsMetrics } from 'src/shared/types'
@@ -48,7 +47,7 @@ Router.events.on('routeChangeComplete', () => NProgress.done())
 Router.events.on('routeChangeError', () => NProgress.done())
 
 Sentry.init({
-  dsn: SENTRY,
+  dsn: process.env.NEXT_PUBLIC_SENTRY_DSN,
   integrations: [new Integrations.BrowserTracing()],
   tracesSampleRate: 1.0,
   release: `${process.env.npm_package_name}@${process.env.npm_package_version}`,
