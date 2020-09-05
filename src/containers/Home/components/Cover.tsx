@@ -1,6 +1,6 @@
 import React, { FC } from 'react'
 import styled from 'styled-components'
-import dot from 'src/static/images/dot.gif'
+import dot from 'src/static/images/dot.png'
 import { backgroundMixin } from 'src/styled/mixins'
 import { AliOSSSuffix } from 'src/shared/constants'
 import { generateAliOSSSuffix } from 'src/shared/utils'
@@ -22,7 +22,12 @@ const Covers = styled.figure<PosterProps>`
     content: '';
     width: 100%;
     height: 100%;
-    background: url(${dot});
+    top: 0;
+    left: 0;
+    background-image: url(${dot});
+    background-repeat: repeat;
+    background-attachment: scroll;
+    opacity: 0.5;
   }
 `
 
