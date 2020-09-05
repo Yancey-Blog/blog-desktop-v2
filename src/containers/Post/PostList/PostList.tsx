@@ -2,6 +2,7 @@ import React, { FC, useState, useEffect, ChangeEvent } from 'react'
 import { useRouter } from 'next/router'
 import { useQuery, useLazyQuery } from '@apollo/client'
 import { Pagination } from '@material-ui/lab'
+import { ALI_OSS_FE_STATIC_PATH } from 'src/shared/constants'
 import ImageHeader from 'src/components/ImageHeader/ImageHeader'
 import SkeletonIterator from 'src/components/SkeletonIterator/SkeletonIterator'
 import PostListStatus from '../components/PostListStatus/PostLIstStatus'
@@ -77,7 +78,7 @@ const PostList: FC<Props> = ({ isSupportWebp }) => {
     <>
       <ImageHeader
         title="Tech and Poems."
-        imageUrl="/blog-fe-static/blog_page_header.jpg"
+        imageUrl={`/${ALI_OSS_FE_STATIC_PATH}/blog_page_header.jpg`}
       />
 
       <PostContent>

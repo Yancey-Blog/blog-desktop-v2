@@ -3,6 +3,7 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
   enabled: process.env.ANALYZE === 'true',
 })
 const webpack = require('webpack')
+const GitRevisionPlugin = require('git-revision-webpack-plugin')
 
 module.exports = (phase, { defaultConfig }) =>
   withBundleAnalyzer(
@@ -19,7 +20,14 @@ module.exports = (phase, { defaultConfig }) =>
           ],
         })
 
-        config.plugins.push(new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/))
+        config.plugins.push(
+          new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
+          new webpack.DefinePlugin({
+            versionCommand: 'describe --always --tags --dirty',
+            YANCEY_BLOG_VERSION: `"${require('./package.json').version}"`,
+            GIT_HASH: JSON.stringify(new GitRevisionPlugin().commithash()),
+          }),
+        )
 
         return config
       },

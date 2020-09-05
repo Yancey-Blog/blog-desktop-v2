@@ -3,6 +3,7 @@ import moment from 'moment'
 import Link from 'next/link'
 import { useQuery } from '@apollo/client'
 import orderBy from 'lodash.orderby'
+import { ALI_OSS_FE_STATIC_PATH } from 'src/shared/constants'
 import { ARCHIVE } from 'src/containers/Post/typeDefs'
 import { ArchiveQuery } from 'src/containers/Post/types'
 import ImageHeader from 'src/components/ImageHeader/ImageHeader'
@@ -26,7 +27,7 @@ const Archive: FC = () => {
     <>
       <ImageHeader
         title="Archive"
-        imageUrl="/blog-fe-static/archive_page_header.jpg"
+        imageUrl={`/${ALI_OSS_FE_STATIC_PATH}/archive_page_header.jpg`}
       />
 
       <ArchiveWrapper>
