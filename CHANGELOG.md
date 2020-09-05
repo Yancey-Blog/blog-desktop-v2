@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.7.0](https://github.com/Yancey-Blog/blog-desktop-v2/compare/v2.6.1...v2.7.0) (2020-09-05)
+
+
+### Features
+
+* use dot.png for Home bachground mask ([64caea5](https://github.com/Yancey-Blog/blog-desktop-v2/commit/64caea5b1ac71c0379a62496881b7ae408b637b3))
+
 ### [2.6.1](https://github.com/Yancey-Blog/blog-desktop-v2/compare/v2.6.0...v2.6.1) (2020-09-01)
 
 
