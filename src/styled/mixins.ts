@@ -53,3 +53,9 @@ export const noUserSelectMixin = () =>
   css`
     user-select: none;
   `
+
+export const singleLineEllipsisMixins = () => css`
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+`

@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const ImageHeaderWrapper = styled.picture`
+export const ImageHeaderWrapper = styled.div`
   display: block;
   position: relative;
   width: 100%;

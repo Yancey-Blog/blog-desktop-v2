@@ -1,8 +1,8 @@
 import React, { FC } from 'react'
 import styled from 'styled-components'
 import Carousel from 'nuka-carousel'
-import { formatDate, generateAliOSSSuffix } from 'src/shared/utils'
-import { AliOSSSuffix } from 'src/shared/constants'
+import Picture from 'src/components/Picture/Picture'
+import { formatDate } from 'src/shared/utils'
 import { ILiveTour } from '../types'
 
 const LiveTourContent = styled.div`
@@ -50,24 +50,21 @@ const LiveTour: FC<Props> = ({ liveTours }) => {
       wrapAround
       withoutControls
     >
-      {liveTours.map((liveTour) => (
-        <LiveTourContent key={liveTour._id}>
-          <picture>
-            <source
-              srcSet={`${liveTour.posterUrl}${generateAliOSSSuffix(
-                AliOSSSuffix.WEBP_SUFFIX,
-              )}`}
-              type="image/webp"
-            />
-            <Img src={liveTour.posterUrl} alt={liveTour.title} />
-          </picture>
+      {liveTours.map((liveTour) => {
+        const { _id, posterUrl, title, showTime } = liveTour
+        return (
+          <LiveTourContent key={_id}>
+            <Picture src={posterUrl}>
+              <Img src={posterUrl} alt={title} />
+            </Picture>
 
-          <LiveTourMeta>
-            <Date>{formatDate(liveTour.showTime, 'YYYY-MM-DD')}</Date>
-            <Title>{liveTour.title}</Title>
-          </LiveTourMeta>
-        </LiveTourContent>
-      ))}
+            <LiveTourMeta>
+              <Date>{formatDate(showTime, 'YYYY-MM-DD')}</Date>
+              <Title>{title}</Title>
+            </LiveTourMeta>
+          </LiveTourContent>
+        )
+      })}
     </Carousel>
   )
 }

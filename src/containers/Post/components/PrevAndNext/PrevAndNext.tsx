@@ -1,9 +1,8 @@
 import React, { FC } from 'react'
 import Link from 'next/link'
 import styled from 'styled-components'
+import Picture from 'src/components/Picture/Picture'
 import { flexMixin } from 'src/styled/mixins'
-import { AliOSSSuffix } from 'src/shared/constants'
-import { generateAliOSSSuffix } from 'src/shared/utils'
 import { IPostItem } from '../../types'
 
 const Wrapper = styled.section`
@@ -79,16 +78,9 @@ const PrevAndNext: FC<Props> = ({ prev, next }) => {
     <Link href="/post/[id]" as={`/post/${id}`}>
       <a>
         <PictureContainer>
-          <picture>
-            <source
-              srcSet={`${posterUrl}${generateAliOSSSuffix(
-                AliOSSSuffix.WEBP_SUFFIX,
-              )}`}
-              type="image/webp"
-            />
+          <Picture src={posterUrl}>
             <img src={posterUrl} alt={title} />
-          </picture>
-
+          </Picture>
           <Title>{type} POST</Title>
           <Title>{title}</Title>
         </PictureContainer>

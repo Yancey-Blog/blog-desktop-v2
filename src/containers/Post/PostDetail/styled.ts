@@ -10,6 +10,7 @@ export const PostDetailWrapper = styled.article`
 
 export const Poster = styled.img`
   ${flexMixin()}
+  width: 100%;
   height: 32rem;
   border-radius: 1rem;
   box-shadow: 0 10px 15px -3px ${({ theme }) => theme.colors.oneOpcityBlack},

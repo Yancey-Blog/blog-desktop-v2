@@ -2,7 +2,7 @@ import React, { FC, Fragment } from 'react'
 import moment from 'moment'
 import Link from 'next/link'
 import { useQuery } from '@apollo/client'
-import { sortBy } from 'yancey-js-util'
+import orderBy from 'lodash.orderby'
 import { ARCHIVE } from 'src/containers/Post/typeDefs'
 import { ArchiveQuery } from 'src/containers/Post/types'
 import ImageHeader from 'src/components/ImageHeader/ImageHeader'
@@ -60,9 +60,8 @@ const Archive: FC = () => {
                           // TODO:
                           // The problem of descend ordering by `createdAt`
                           // need to be solved by the backend.
-                          month.days
-                            .sort(sortBy('createdAt', 'descend'))
-                            .map((day) => (
+                          orderBy(month.days, ['createdAt'], ['desc']).map(
+                            (day) => (
                               <DayItem key={day.id}>
                                 <Day>
                                   {moment(day.createdAt).date()}
@@ -74,7 +73,8 @@ const Archive: FC = () => {
                                   </a>
                                 </Link>
                               </DayItem>
-                            ))
+                            ),
+                          )
                         }
                       </DayList>
                     </li>

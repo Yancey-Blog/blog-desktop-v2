@@ -1,8 +1,8 @@
 import React, { FC } from 'react'
 import styled from 'styled-components'
+import Picture from 'src/components/Picture/Picture'
 import { transitionMixin } from 'src/styled/mixins'
-import { formatDate, generateAliOSSSuffix } from 'src/shared/utils'
-import { AliOSSSuffix } from 'src/shared/constants'
+import { formatDate } from 'src/shared/utils'
 import { IBestAlbum } from '../types'
 
 const BestAlbumWrapper = styled.div`
@@ -61,15 +61,9 @@ const BestAlbum: FC<Props> = ({ bestAlbum }) => {
 
   return (
     <BestAlbumWrapper>
-      <picture>
-        <source
-          srcSet={`${coverUrl}${generateAliOSSSuffix(
-            AliOSSSuffix.WEBP_SUFFIX,
-          )}`}
-          type="image/webp"
-        />
+      <Picture src={coverUrl}>
         <Img src={coverUrl} alt={title} />
-      </picture>
+      </Picture>
 
       <Meta>
         <Date>{formatDate(releaseDate, 'YYYY-MM-DD')}</Date>

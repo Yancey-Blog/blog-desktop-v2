@@ -5,8 +5,8 @@ import LazyLoad from 'react-lazyload'
 import MarkDown from 'markdown-to-jsx'
 import { DiscussionEmbed } from 'disqus-react'
 import MetaHead from 'src/components/Head/Head'
-import { AliOSSSuffix, DISCUSSION_KEY } from 'src/shared/constants'
-import { generateAliOSSSuffix } from 'src/shared/utils'
+import Picture from 'src/components/Picture/Picture'
+import { DISCUSSION_KEY } from 'src/shared/constants'
 import PostMeta from '../components/PostMeta/PostMeta'
 import YellowSVG from '../components/YellowSVG/YellowSVG'
 import SharePanel from '../components/SharePanel/SharePanel'
@@ -56,13 +56,9 @@ const PostDetail: FC = () => {
   }) => (
     <ImageGroup className="postImgGroup" {...props}>
       <LazyLoad height={200}>
-        <picture>
-          <source
-            srcSet={`${src}${generateAliOSSSuffix(AliOSSSuffix.WEBP_SUFFIX)}`}
-            type="image/webp"
-          />
+        <Picture src={src}>
           <img src={src} alt={alt} />
-        </picture>
+        </Picture>
       </LazyLoad>
       <ImageAlt className="postImgAlt">{alt}</ImageAlt>
     </ImageGroup>
@@ -135,16 +131,9 @@ const PostDetail: FC = () => {
       <Menu className="postMenu" />
 
       <Content>
-        <picture>
-          <source
-            srcSet={`${posterUrl}${generateAliOSSSuffix(
-              AliOSSSuffix.WEBP_SUFFIX,
-            )}`}
-            type="image/webp"
-          />
+        <Picture src={posterUrl}>
           <Poster src={posterUrl} alt={title} />
-        </picture>
-
+        </Picture>
         <Title>{title}</Title>
         <PostMeta
           tags={tags}

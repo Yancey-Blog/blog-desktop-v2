@@ -1,8 +1,8 @@
 import React, { FC } from 'react'
 import styled from 'styled-components'
+import Picture from 'src/components/Picture/Picture'
 import { flexMixin, transitionMixin } from 'src/styled/mixins'
-import { SVG_SPRITE, AliOSSSuffix } from 'src/shared/constants'
-import { generateAliOSSSuffix } from 'src/shared/utils'
+import { SVG_SPRITE } from 'src/shared/constants'
 import SubTitle from './SubTitle'
 import { IOpenSource } from '../types'
 
@@ -10,7 +10,7 @@ const OpenSourceWrapper = styled.section`
   ${flexMixin('space-between')}
 `
 
-const OpenSourceItem = styled.picture`
+const OpenSourceItem = styled.div`
   display: block;
   position: relative;
   width: 19.2rem;
@@ -105,13 +105,9 @@ const OpenSource: FC<Props> = ({ openSources }) => {
           return (
             <a href={url} target="_blank" rel="noopener noreferrer" key={_id}>
               <OpenSourceItem data-title={title} data-intro={description}>
-                <source
-                  srcSet={`${posterUrl}${generateAliOSSSuffix(
-                    AliOSSSuffix.WEBP_SUFFIX,
-                  )}`}
-                  type="image/webp"
-                />
-                <img src={posterUrl} alt={title} />
+                <Picture src={posterUrl}>
+                  <img src={posterUrl} alt={title} />
+                </Picture>
                 <Overlay className="openSourceOverlay" />
               </OpenSourceItem>
             </a>
