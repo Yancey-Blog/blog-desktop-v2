@@ -13,6 +13,8 @@ export const BACK_TO_TOP_THRESHOLD = 800
 
 export const ALI_OSS_SUFFIX_BASE = '?x-oss-process=image'
 
+export const ALI_OSS_FE_STATIC_PATH = 'blog-fe-static'
+
 export enum AliOSSSuffix {
   WEBP_SUFFIX = '/format,webp',
   THUMB_SUFFIX = '/resize,w_120',

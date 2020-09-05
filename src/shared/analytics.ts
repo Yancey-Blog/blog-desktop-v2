@@ -1,11 +1,7 @@
 import ReactGA from 'react-ga'
 
 export const initGA = () => {
-  const { NEXT_PUBLIC_GA_KEY } = process.env
-
-  if (NEXT_PUBLIC_GA_KEY) {
-    ReactGA.initialize(NEXT_PUBLIC_GA_KEY)
-  }
+  ReactGA.initialize(process.env.NEXT_PUBLIC_GA_KEY)
 }
 
 export const logPageView = () => {

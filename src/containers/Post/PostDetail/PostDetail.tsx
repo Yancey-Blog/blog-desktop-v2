@@ -17,7 +17,7 @@ import {
   setupHighlight,
   removeEmbededTag,
   setupTocbot,
-  generateShareUrl,
+  generatePostUrl,
 } from './tools'
 import {
   PostDetailWrapper,
@@ -116,7 +116,7 @@ const PostDetail: FC = () => {
         postTitle={title}
         postSummary={summary}
         postPosterUrl={posterUrl}
-        postUrl={generateShareUrl(id as string)}
+        postUrl={generatePostUrl(id as string)}
       />
 
       <YellowSVG />
@@ -125,7 +125,7 @@ const PostDetail: FC = () => {
         id={id as string}
         title={title}
         like={like}
-        postUrl={generateShareUrl(id as string)}
+        postUrl={generatePostUrl(id as string)}
       />
       <Menu className="postMenu" />
 
@@ -164,9 +164,9 @@ const PostDetail: FC = () => {
         <PrevAndNext prev={prev} next={next} />
 
         <DiscussionEmbed
-          shortname={process.env.DISCUSSION_KEY}
+          shortname={process.env.NEXT_PUBLIC_DISCUSSION_KEY}
           config={{
-            url: generateShareUrl(id as string),
+            url: generatePostUrl(id as string),
             identifier: id as string,
             title,
           }}

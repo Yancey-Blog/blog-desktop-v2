@@ -65,3 +65,16 @@ interface Window {
   ga: Function
   GA_INITIALIZED: boolean
 }
+
+declare namespace NodeJS {
+  export interface ProcessEnv {
+    NEXT_PUBLIC_API_URL: string
+    NEXT_PUBLIC_DOMAIN_URL: string
+    NEXT_PUBLIC_STATIC_FILE_URL: string
+    NEXT_PUBLIC_GA_KEY: string
+    NEXT_PUBLIC_SENTRY_DSN: string
+    NEXT_PUBLIC_HOTJAR_ID: string
+    NEXT_PUBLIC_HOTJAR_SV: string
+    NEXT_PUBLIC_DISCUSSION_KEY: string
+  }
+}

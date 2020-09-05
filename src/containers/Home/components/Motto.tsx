@@ -1,8 +1,11 @@
 import React, { FC } from 'react'
 import styled, { css } from 'styled-components'
-import { SOCIAL_MEDIA } from 'src/shared/constants'
+import { SOCIAL_MEDIA, ALI_OSS_FE_STATIC_PATH } from 'src/shared/constants'
 import { flexMixin, transitionMixin, backgroundMixin } from 'src/styled/mixins'
 import { IMotto } from '../types'
+
+const TWITTER_QRCODE = `${process.env.NEXT_PUBLIC_STATIC_FILE_URL}/${ALI_OSS_FE_STATIC_PATH}/twitter-qr-code.jpg`
+const WECHAT_QRCODE = `${process.env.NEXT_PUBLIC_STATIC_FILE_URL}/${ALI_OSS_FE_STATIC_PATH}/official-account-qr-code.jpg`
 
 const MottoBar = styled.section`
   position: relative;
@@ -86,9 +89,8 @@ const QRCode = css`
 const TwitterQRCodeLink = styled.a`
   ${QRCode}
   &::after {
-    background: ${({ theme }) => theme.colors.fiveOpcityBlack}
-      url(${process.env
-        .NEXT_PUBLIC_STATIC_FILE_URL}/blog-fe-static/twitter-qr-code.jpg);
+    background-color: ${({ theme }) => theme.colors.fiveOpcityBlack};
+    background-image: url(${TWITTER_QRCODE});
     background-origin: content-box;
     ${backgroundMixin()}
   }
@@ -97,9 +99,8 @@ const TwitterQRCodeLink = styled.a`
 const WeChatQRCodeLink = styled.a`
   ${QRCode}
   &::after {
-    background: ${({ theme }) => theme.colors.fiveOpcityBlack}
-      url(${process.env
-        .NEXT_PUBLIC_STATIC_FILE_URL}/blog-fe-static/official-account-qr-code.jpg);
+    background-color: ${({ theme }) => theme.colors.fiveOpcityBlack};
+    background-image: url(${WECHAT_QRCODE});
     background-origin: content-box;
     ${backgroundMixin()}
   }

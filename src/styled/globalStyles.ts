@@ -1,12 +1,14 @@
 import { createGlobalStyle } from 'styled-components'
 import cur from 'src/static/images/normal.cur'
 
+const UBUNTU_REGULAR = `${process.env.NEXT_PUBLIC_STATIC_FILE_URL}/fonts/Ubuntu-Regular.woff2`
+const UBUNTU_BOLD = `${process.env.NEXT_PUBLIC_STATIC_FILE_URL}/fonts/Ubuntu-Bold.ttf`
+const SFMONO_REGULAR = `${process.env.NEXT_PUBLIC_STATIC_FILE_URL}/fonts/SFMono-Regular.otf`
+
 const GlobalStyle = createGlobalStyle`
   @font-face {
   font-family: 'Ubuntu';
-  src: url('${
-    process.env.NEXT_PUBLIC_STATIC_FILE_URL
-  }/fonts/Ubuntu-Regular.woff2') format('woff');
+  src: url('${UBUNTU_REGULAR}') format('woff');
   font-style: normal;
   font-weight: 400;
   font-display: fallback;
@@ -14,9 +16,7 @@ const GlobalStyle = createGlobalStyle`
 
   @font-face {
     font-family: 'Ubuntu';
-    src: url('${
-      process.env.NEXT_PUBLIC_STATIC_FILE_URL
-    }/fonts/Ubuntu-Bold.ttf') format('truetype');
+    src: url('${UBUNTU_BOLD}') format('truetype');
     font-style: normal;
     font-weight: bold;
     font-display: fallback;
@@ -24,9 +24,7 @@ const GlobalStyle = createGlobalStyle`
 
   @font-face {
     font-family: 'SFMono-Regular';
-    src: url('${
-      process.env.NEXT_PUBLIC_STATIC_FILE_URL
-    }/fonts/SFMono-Regular.otf') format('opentype');
+    src: url('${SFMONO_REGULAR}') format('opentype');
     font-style: normal;
     font-weight:400;
     font-display: fallback;
