@@ -1,5 +1,6 @@
 import React from 'react'
 import { useQuery } from '@apollo/client'
+import { ALI_OSS_FE_STATIC_PATH } from 'src/shared/constants'
 import ImageHeader from 'src/components/ImageHeader/ImageHeader'
 import SkeletonIterator from 'src/components/SkeletonIterator/SkeletonIterator'
 import { POSTS } from 'src/containers/Post/typeDefs'
@@ -39,7 +40,7 @@ const Music = () => {
     <>
       <ImageHeader
         title="Music"
-        imageUrl="/blog-fe-static/music_page_header.jpg"
+        imageUrl={`/${ALI_OSS_FE_STATIC_PATH}/music_page_header.jpg`}
       />
 
       <MusicWrapper>

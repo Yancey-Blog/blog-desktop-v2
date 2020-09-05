@@ -11,28 +11,15 @@ export const SNACKBAR_AUTO_HIDE_DURATION = 3000
 
 export const BACK_TO_TOP_THRESHOLD = 800
 
-export const DOMAIN = 'https://yanceyleo.com'
-
-export const ALI_OSS_URL = 'https://static.yancey.app'
-
 export const ALI_OSS_SUFFIX_BASE = '?x-oss-process=image'
+
+export const ALI_OSS_FE_STATIC_PATH = 'blog-fe-static'
 
 export enum AliOSSSuffix {
   WEBP_SUFFIX = '/format,webp',
   THUMB_SUFFIX = '/resize,w_120',
   LOW_QUALITY_SUFFIX = '/quality,Q_10',
 }
-
-export const GA = 'UA-114532340-1'
-
-export const SENTRY =
-  'https://2998f0f7a05044969a7859a2596e6977@o265404.ingest.sentry.io/1468725'
-
-export const HOTJAR_ID = 1514017
-
-export const HOTJAR_SV = 6
-
-export const DISCUSSION_KEY = 'yancey-blog'
 
 export const SVG_SPRITE = {
   soundcloud: '#soundcloud',
