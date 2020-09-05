@@ -27,7 +27,6 @@ export const formatDate = (ISOString: string, format = 'YYYY-MM-DD HH:mm:ss') =>
 export const devToolsWarning = () => {
   // eslint-disable-next-line no-console
   console.log(
-    // @ts-ignore
     `${'\n'} %c Yancey Blog v${YANCEY_BLOG_VERSION} ${GIT_HASH.slice(
       0,
       7,

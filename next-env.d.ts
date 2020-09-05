@@ -64,7 +64,6 @@ declare module 'aplayer' {
 interface Window {
   ga: Function
   GA_INITIALIZED: boolean
-  YANCEY_BLOG_VERSION: string
 }
 
 declare namespace NodeJS {
@@ -79,3 +78,6 @@ declare namespace NodeJS {
     NEXT_PUBLIC_DISCUSSION_KEY: string
   }
 }
+
+declare const YANCEY_BLOG_VERSION: string
+declare const GIT_HASH: string
