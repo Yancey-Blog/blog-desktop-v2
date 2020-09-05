@@ -64,6 +64,7 @@ declare module 'aplayer' {
 interface Window {
   ga: Function
   GA_INITIALIZED: boolean
+  YANCEY_BLOG_VERSION: string
 }
 
 declare namespace NodeJS {

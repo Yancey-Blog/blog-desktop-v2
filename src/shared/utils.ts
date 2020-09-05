@@ -26,14 +26,15 @@ export const formatDate = (ISOString: string, format = 'YYYY-MM-DD HH:mm:ss') =>
 
 export const devToolsWarning = () => {
   // eslint-disable-next-line no-console
-  console.log(`
-    __     __      _   _  _____ ________     __  ____  _      ____   _____ 
-    \\ \\   / //\\   | \\ | |/ ____|  ____\\ \\   / / |  _ \\| |    / __ \\ / ____|
-     \\ \\_/ //  \\  |  \\| | |    | |__   \\ \\_/ /  | |_) | |   | |  | | |  __ 
-      \\   // /\\ \\ | . \` | |    |  __|   \\   /   |  _ <| |   | |  | | | |_ |
-       | |/ ____ \\| |\\  | |____| |____   | |    | |_) | |___| |__| | |__| |
-       |_/_/    \\_\\_| \\_|\\_____|______|  |_|    |____/|______\\____/ \\_____|
-      `)
+  console.log(
+    // @ts-ignore
+    `${'\n'} %c Yancey Blog v${YANCEY_BLOG_VERSION} ${GIT_HASH.slice(
+      0,
+      7,
+    )} %c https://yanceyleo.com ${'\n'}`,
+    'color: #fadfa3; background: #030307; padding:5px 0;',
+    'background: #fadfa3; padding:5px 0;',
+  )
 }
 
 export const generateAliOSSSuffix = (...props: AliOSSSuffix[]) => {
