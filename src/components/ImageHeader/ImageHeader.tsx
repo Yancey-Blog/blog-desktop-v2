@@ -8,13 +8,12 @@ interface Props {
 }
 
 const ImageHeader: FC<Props> = ({ title, imageUrl }) => {
+  const imgUrl = `${process.env.NEXT_PUBLIC_STATIC_FILE_URL}${imageUrl}`
+
   return (
     <ImageHeaderWrapper>
-      <Picture src={`${process.env.NEXT_PUBLIC_STATIC_FILE_URL}${imageUrl}`}>
-        <img
-          src={`${process.env.NEXT_PUBLIC_STATIC_FILE_URL}${imageUrl}`}
-          alt={title}
-        />
+      <Picture src={imgUrl}>
+        <img src={imgUrl} alt={title} />
         <Title>{title}</Title>
       </Picture>
     </ImageHeaderWrapper>
