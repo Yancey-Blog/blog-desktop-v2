@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.8.0](https://github.com/Yancey-Blog/blog-desktop-v2/compare/v2.7.0...v2.8.0) (2020-09-05)
+
+
+### Features
+
+* add types for YANCEY_BLOG_VERSION and GIT_HASH ([0ee5633](https://github.com/Yancey-Blog/blog-desktop-v2/commit/0ee5633c8f090f58e6310922579ab9a7ba27d0c0))
+* delete useless ts-ignore ([6795b59](https://github.com/Yancey-Blog/blog-desktop-v2/commit/6795b59f3610840835cb364da303af45afcc9275))
+* update env files ([efcfeaa](https://github.com/Yancey-Blog/blog-desktop-v2/commit/efcfeaa08563260db5c671ca59307daf13d8b407))
+* update ImageHeader ([7e71397](https://github.com/Yancey-Blog/blog-desktop-v2/commit/7e713978bc5713ae60950fb649240776a63cf8d4))
+* use env file ([0810e95](https://github.com/Yancey-Blog/blog-desktop-v2/commit/0810e95e807550e8866ed3e17c7988138fbae597))
+* use env file instead of constants file ([9a363cd](https://github.com/Yancey-Blog/blog-desktop-v2/commit/9a363cd00df9ffbadc480b3445770effa84b8a60))
+* use GitRevisionPlugin to generate git hash and project version ([7315fe4](https://github.com/Yancey-Blog/blog-desktop-v2/commit/7315fe4f055af8196d3c3deac3f76001cc573239))
+* use new version of Sentry ([0c0ee87](https://github.com/Yancey-Blog/blog-desktop-v2/commit/0c0ee87b91f740c55b85299218b68a11bd7385ff))
+* use process.env ([c8ea686](https://github.com/Yancey-Blog/blog-desktop-v2/commit/c8ea686ce45d766695d6ceb323a296363fe98b5b))
+
 ## [2.7.0](https://github.com/Yancey-Blog/blog-desktop-v2/compare/v2.6.1...v2.7.0) (2020-09-05)
 
 
