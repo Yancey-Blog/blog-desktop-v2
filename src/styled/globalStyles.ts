@@ -74,6 +74,10 @@ const GlobalStyle = createGlobalStyle`
   .lazyload-wrapper {
     height: 100%;
   }
+
+  .aplayer-list-title, .aplayer-title {
+    color:#666 !important;
+  }
 `
 
 export default GlobalStyle
