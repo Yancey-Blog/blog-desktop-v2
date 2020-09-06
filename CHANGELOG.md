@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.8.1](https://github.com/Yancey-Blog/blog-desktop-v2/compare/v2.8.0...v2.8.1) (2020-09-06)
+
+
+### Bug Fixes
+
+* **aplayer-style:** fix aplayer's color when switch to dark theme ([97ad441](https://github.com/Yancey-Blog/blog-desktop-v2/commit/97ad4416469da28756cacd90a101e0d814d2503e))
+
 ## [2.8.0](https://github.com/Yancey-Blog/blog-desktop-v2/compare/v2.7.0...v2.8.0) (2020-09-05)
 
 
