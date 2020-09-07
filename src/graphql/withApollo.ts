@@ -22,23 +22,23 @@ const errorLink = onError(({ graphQLErrors, networkError }) => {
   }
 })
 
-export default withApollo(
-  ({ initialState }) =>
-    new ApolloClient({
-      resolvers: {},
-      link: errorLink.concat(httpLink),
-      cache: new InMemoryCache().restore(initialState || {}),
-      defaultOptions: {
-        watchQuery: {
-          fetchPolicy: 'cache-and-network',
-        },
-        query: {
-          fetchPolicy: 'network-only',
-          errorPolicy: 'all',
-        },
-        mutate: {
-          errorPolicy: 'all',
-        },
+export const client = (initialState = {}) =>
+  new ApolloClient({
+    resolvers: {},
+    link: errorLink.concat(httpLink),
+    cache: new InMemoryCache().restore(initialState),
+    defaultOptions: {
+      watchQuery: {
+        fetchPolicy: 'cache-and-network',
       },
-    }),
-)
+      query: {
+        fetchPolicy: 'network-only',
+        errorPolicy: 'all',
+      },
+      mutate: {
+        errorPolicy: 'all',
+      },
+    },
+  })
+
+export default withApollo(({ initialState }) => client(initialState))
