@@ -17,7 +17,8 @@
     "release:patch": "standard-version --release-as patch && yarn push",
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.tsx\"",
     "lint": "eslint src --ext .ts,.tsx",
-    "stylelint": "stylelint \"./src/**/*.ts\" \"./src/**/*.tsx\""
+    "stylelint": "stylelint \"./src/**/*.ts\" \"./src/**/*.tsx\"",
+    "sitemap": "node scripts/createSiteMap"
   },
   "dependencies": {
     "@apollo/client": "^3.1.3",
