@@ -1,4 +1,4 @@
-# If you would like to crawl Yancey Blog contact us at supports@yanceyleo.com.
+# If you would like to crawl Yancey Blog, please contact us at supports@yanceyleo.com.
 
 User-agent: Baiduspider
 Disallow: /
@@ -14,6 +14,9 @@ Disallow: /
 
 User-agent: Bytespider
 Disallow: /
+
+Sitemap: https://yanceyleo.com/sitemap-index.xml
+Sitemap: https://yanceyleo.com/sitemap-article-index.xml
 
 
 # Y88b   d88P     d8888 888b    888  .d8888b.  8888888888 Y88b   d88P       8888888 888b    888  .d8888b.      
