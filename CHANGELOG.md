@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.9.0](https://github.com/Yancey-Blog/blog-desktop-v2/compare/v2.8.1...v2.9.0) (2020-09-07)
+
+
+### Features
+
+* supports sitemap for SEO ([9a8e1e0](https://github.com/Yancey-Blog/blog-desktop-v2/commit/9a8e1e0a5ea7a84c0f31813fd184a5d53c8f3fb1))
+* supports sitemap for SEO ([6bd93f7](https://github.com/Yancey-Blog/blog-desktop-v2/commit/6bd93f71f154d80681f5335b234e926e78552690))
+* supports sitemap for SEO ([d5d8b4b](https://github.com/Yancey-Blog/blog-desktop-v2/commit/d5d8b4b52571935a0d4fa38c983f4609b86fcd7d))
+* update withApollo ([6584f30](https://github.com/Yancey-Blog/blog-desktop-v2/commit/6584f30c5514c9815dc74e40843b51dd40adabaa))
+* update withApollo ([87c4d9b](https://github.com/Yancey-Blog/blog-desktop-v2/commit/87c4d9b2fd44a8374a573781fd702915adcf6fb0))
+
 ### [2.8.1](https://github.com/Yancey-Blog/blog-desktop-v2/compare/v2.8.0...v2.8.1) (2020-09-06)
 
 
