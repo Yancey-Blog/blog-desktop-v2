@@ -27,7 +27,7 @@ export default withApollo(
     new ApolloClient({
       resolvers: {},
       link: errorLink.concat(httpLink),
-      cache: new InMemoryCache().restore(initialState),
+      cache: new InMemoryCache().restore(initialState || {}),
       defaultOptions: {
         watchQuery: {
           fetchPolicy: 'cache-and-network',
