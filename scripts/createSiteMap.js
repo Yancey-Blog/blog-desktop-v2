@@ -1,9 +1,9 @@
 const fs = require('fs')
-const SiteMap = require('sitemap')
-const fetch = require('node-fetch')
+const { SitemapStream, streamToPromise } = require('sitemap')
+const fetch = require('isomorphic-unfetch')
 
 const createSiteMapFile = async () => {
-  const smStream = new SiteMap.SitemapStream({
+  const smStream = new SitemapStream({
     hostname: 'https://yanceyleo.com',
   })
 
@@ -41,7 +41,7 @@ const createSiteMapFile = async () => {
 
   smStream.end()
 
-  const sitemapBuffer = await SiteMap.streamToPromise(smStream)
+  const sitemapBuffer = await streamToPromise(smStream)
   const sitemap = sitemapBuffer.toString()
 
   fs.writeFileSync('public/sitemap-article-index.xml', sitemap)
