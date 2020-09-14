@@ -1,6 +1,6 @@
 import React, { FC } from 'react'
 import Link from 'next/link'
-import SearchInput from 'src/containers/Post/components/SearchInput/SearchInput'
+import SearchBox from 'src/containers/Post/components/SearchBox/SearchBox'
 import { SVG_SPRITE } from 'src/shared/constants'
 import { IGlobalSetting } from 'src/containers/GlobalSetting/types'
 import { Logo, NavBar, NavBarItem } from './styled'
@@ -59,7 +59,7 @@ const Header: FC<Props> = ({ globalSetting, isTop }) => {
             About
           </a>
         </Link>
-        <SearchInput />
+        <SearchBox />
       </NavBarItem>
     </NavBar>
   )
