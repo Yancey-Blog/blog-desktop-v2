@@ -29,7 +29,6 @@ import 'highlight.js/styles/atom-one-dark.css'
 import 'tocbot/dist/tocbot.css'
 import 'src/static/css/nprogress.css'
 
-import AlgoliaSearchBox from 'src/containers/Post/components/AlgoliaSearchBox/AlgoliaSearchBox'
 /* TODO: delete me! */
 import './style.css'
 
@@ -94,7 +93,6 @@ const YanceyBlog = ({ Component, pageProps, apollo }: AppProps & Props) => {
               <SnackbarUtilsConfigurator />
               <Component {...pageProps} />
               <Player />
-              <AlgoliaSearchBox />
               <ToggleTheme theme={theme} onToggle={toggleTheme} />
             </>
           </SnackbarProvider>

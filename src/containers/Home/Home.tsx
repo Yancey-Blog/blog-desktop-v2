@@ -1,5 +1,6 @@
 import React, { FC } from 'react'
 import { useQuery } from '@apollo/client'
+import AlgoliaSearchBox from 'src/containers/Post/components/AlgoliaSearchBox/AlgoliaSearchBox'
 import {
   HomeContainer,
   MottoSocialMediaBar,
@@ -44,6 +45,8 @@ const Home: FC<Props> = ({ isSupportWebp }) => {
           <Motto mottos={mottos ? mottos.getMottos : []} />
         </MottoSocialMediaBar>
       </CoverWrapper>
+
+      <AlgoliaSearchBox />
 
       <HomeMain>
         <Announcement
