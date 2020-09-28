@@ -11,43 +11,29 @@ import Hit from './Hit'
 import { SearchBoxContainer, Result } from './styled'
 
 const searchClient = algoliasearch(
-  process.env.NEXT_PUBLIC_ALGOLIA_SEARCH_APP_ID as string,
-  process.env.NEXT_PUBLIC_ALGOLIA_SEARCH_API_KEY as string,
+  process.env.NEXT_PUBLIC_ALGOLIA_SEARCH_APP_ID,
+  process.env.NEXT_PUBLIC_ALGOLIA_SEARCH_API_KEY,
   {},
 )
 
 const AlgoliaSearchBox: FC = () => {
   return (
     <SearchBoxContainer>
-      <div className="ais-InstantSearch">
-        <InstantSearch
-          indexName={
-            process.env.NEXT_PUBLIC_ALGOLIA_SEARCH_INDEX_NAME as string
-          }
-          searchClient={searchClient}
-        >
-          <Configure
-            attributesToSnippet={['content:120', 'description:50']}
-            snippetEllipsisText="..."
-          />
+      <InstantSearch
+        indexName={process.env.NEXT_PUBLIC_ALGOLIA_SEARCH_INDEX_NAME}
+        searchClient={searchClient}
+      >
+        <Configure
+          attributesToSnippet={['content:120', 'description:50']}
+          snippetEllipsisText="..."
+        />
+        <SearchBox />
+        <Result>
+          <Hits hitComponent={Hit} />
+        </Result>
 
-          {/* <ExperimentalConfigureRelatedItems
-            hit={{}}
-            matchingPatterns={{
-              optionalFilters: [['content:code<score=1>']],
-            }}
-          /> */}
-
-          <div className="right-panel">
-            <SearchBox />
-            <Result>
-              <Hits hitComponent={Hit} />
-            </Result>
-          </div>
-
-          <PoweredBy />
-        </InstantSearch>
-      </div>
+        <PoweredBy />
+      </InstantSearch>
     </SearchBoxContainer>
   )
 }

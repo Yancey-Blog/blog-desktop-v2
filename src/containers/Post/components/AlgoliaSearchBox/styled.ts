@@ -14,6 +14,6 @@ export const SearchBoxContainer = styled.section`
 
 export const Result = styled.div`
   position: absolute;
-  height: 100%;
-  overflow-y: scroll;
+  /* height: 100%;
+  overflow-y: scroll; */
 `
