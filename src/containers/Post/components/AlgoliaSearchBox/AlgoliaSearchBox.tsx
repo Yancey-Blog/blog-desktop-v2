@@ -9,13 +9,9 @@ import {
 import Hit from './Hit'
 import { SearchBoxContainer, Result } from './styled'
 
-const ALGOLIA_SEARCH_APP_ID = '5Y6Y04WE04'
-const ALGOLIA_SEARCH_API_KEY = '46f32897c2a83b6495111a68bd1cd8c7'
-const ALGOLIA_SEARCH_INDEX_NAME = 'prod_YANCEY_BLOG'
-
 const searchClient = algoliasearch(
-  ALGOLIA_SEARCH_APP_ID,
-  ALGOLIA_SEARCH_API_KEY,
+  process.env.NEXT_PUBLIC_ALGOLIA_SEARCH_APP_ID as string,
+  process.env.NEXT_PUBLIC_ALGOLIA_SEARCH_API_KEY as string,
   {},
 )
 
@@ -24,14 +20,14 @@ const AlgoliaSearchBox: FC = () => {
     <SearchBoxContainer>
       <div className="ais-InstantSearch">
         <InstantSearch
-          indexName={ALGOLIA_SEARCH_INDEX_NAME}
+          indexName={
+            process.env.NEXT_PUBLIC_ALGOLIA_SEARCH_INDEX_NAME as string
+          }
           searchClient={searchClient}
         >
           <Configure
             attributesToSnippet={['content:80']}
             snippetEllipsisText="..."
-            // highlightPreTag='<em class="search-highlight">'
-            // highlightPostTag="</em>"
           />
           <div className="right-panel">
             <SearchBox />
