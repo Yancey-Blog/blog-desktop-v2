@@ -5,6 +5,7 @@ import {
   Hits,
   SearchBox,
   Configure,
+  PoweredBy,
 } from 'react-instantsearch-dom'
 import Hit from './Hit'
 import { SearchBoxContainer, Result } from './styled'
@@ -26,9 +27,17 @@ const AlgoliaSearchBox: FC = () => {
           searchClient={searchClient}
         >
           <Configure
-            attributesToSnippet={['content:80']}
+            attributesToSnippet={['content:120', 'description:50']}
             snippetEllipsisText="..."
           />
+
+          {/* <ExperimentalConfigureRelatedItems
+            hit={{}}
+            matchingPatterns={{
+              optionalFilters: [['content:code<score=1>']],
+            }}
+          /> */}
+
           <div className="right-panel">
             <SearchBox />
             <Result>
@@ -37,6 +46,8 @@ const AlgoliaSearchBox: FC = () => {
           </div>
         </InstantSearch>
       </div>
+
+      <PoweredBy />
     </SearchBoxContainer>
   )
 }

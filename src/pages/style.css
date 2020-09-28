@@ -456,6 +456,7 @@ a[class^='ais-'] {
   line-height: 1.8;
   font-style: normal;
   padding-bottom: 2px;
+
 }
 .ais-Hits-list,
 .ais-InfiniteHits-list,
@@ -808,6 +809,7 @@ a[class^='ais-'] {
 }
 
 .ais-Highlight {
+  margin-right: 4px;
   line-height: 1.8;
 }
 
@@ -816,9 +818,25 @@ a[class^='ais-'] {
 }
 
 .hit-name {
+  margin-right: 4px;
   color: #5468ff;
 }
 
 .hit-description {
   color: #23263b;
+}
+
+.hit-tag {
+  font-size: 10px;
+  background: rgba(119, 122, 175, 0.2);
+  border-radius: 4px;
+  color: rgb(90, 94, 154);
+  line-height: 14px;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  font-weight: 600;
+  display: inline-block;
+  margin-right: 4px;
 }
