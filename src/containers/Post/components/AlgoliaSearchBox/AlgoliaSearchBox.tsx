@@ -4,10 +4,9 @@ import {
   InstantSearch,
   Hits,
   SearchBox,
-  Snippet,
-  Highlight,
   Configure,
 } from 'react-instantsearch-dom'
+import Hit from './Hit'
 import { SearchBoxContainer, Result } from './styled'
 
 const ALGOLIA_SEARCH_APP_ID = '5Y6Y04WE04'
@@ -18,23 +17,6 @@ const searchClient = algoliasearch(
   ALGOLIA_SEARCH_APP_ID,
   ALGOLIA_SEARCH_API_KEY,
   {},
-)
-
-const Hit = ({ hit }: any) => (
-  <>
-    <div className="hit-name">
-      <Highlight attribute="name" hit={hit} />
-    </div>
-    <br />
-    <div className="hit-description">
-      <Highlight attribute="description" hit={hit} />
-    </div>
-    <br />
-    <div className="hit-content">
-      <Snippet hit={hit} attribute="content" />
-    </div>
-    <hr />
-  </>
 )
 
 const AlgoliaSearchBox: FC = () => {
