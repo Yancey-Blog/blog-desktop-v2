@@ -44,10 +44,10 @@ const AlgoliaSearchBox: FC = () => {
               <Hits hitComponent={Hit} />
             </Result>
           </div>
+
+          <PoweredBy />
         </InstantSearch>
       </div>
-
-      <PoweredBy />
     </SearchBoxContainer>
   )
 }
