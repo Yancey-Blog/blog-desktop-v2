@@ -456,7 +456,6 @@ a[class^='ais-'] {
   line-height: 1.8;
   font-style: normal;
   padding-bottom: 2px;
-
 }
 .ais-Hits-list,
 .ais-InfiniteHits-list,
@@ -839,4 +838,23 @@ a[class^='ais-'] {
   font-weight: 600;
   display: inline-block;
   margin-right: 4px;
+}
+
+.ais-SearchBox {
+  position: fixed;
+  top: 13px;
+  right: 12.4rem;
+  z-index: 201;
+}
+
+.ais-SearchBox-input {
+  padding: 0.8rem;
+  padding-left: 1.8rem;
+  width: 16.8rem;
+  font-size: 0.9rem;
+  color: #666;
+  background: transparent;
+  border: 1px solid #666;
+  border-radius: 0.3rem;
+  outline: none;
 }

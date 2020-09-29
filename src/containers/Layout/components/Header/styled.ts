@@ -34,7 +34,7 @@ export const NavBar = styled.nav`
 
 export const NavBarItem = styled.div`
   ${flexMixin('flex-start')}
-  margin-right: 10rem;
+  margin-right: 28.5rem;
 
   a {
     position: relative;

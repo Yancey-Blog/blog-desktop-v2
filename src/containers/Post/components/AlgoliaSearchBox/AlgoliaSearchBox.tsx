@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import React, { FC, useState, SyntheticEvent } from 'react'
 import algoliasearch from 'algoliasearch/lite'
 import {
   InstantSearch,
@@ -8,7 +8,7 @@ import {
   PoweredBy,
 } from 'react-instantsearch-dom'
 import Hit from './Hit'
-import { SearchBoxContainer, Result } from './styled'
+import { Result } from './styled'
 
 const searchClient = algoliasearch(
   process.env.NEXT_PUBLIC_ALGOLIA_SEARCH_APP_ID,
@@ -17,24 +17,34 @@ const searchClient = algoliasearch(
 )
 
 const AlgoliaSearchBox: FC = () => {
-  return (
-    <SearchBoxContainer>
-      <InstantSearch
-        indexName={process.env.NEXT_PUBLIC_ALGOLIA_SEARCH_INDEX_NAME}
-        searchClient={searchClient}
-      >
-        <Configure
-          attributesToSnippet={['content:120', 'description:50']}
-          snippetEllipsisText="..."
-        />
-        <SearchBox />
-        <Result>
-          <Hits hitComponent={Hit} />
-        </Result>
+  const [showSearchResultDrawer, setShowSearchResultDrawer] = useState(false)
 
-        <PoweredBy />
-      </InstantSearch>
-    </SearchBoxContainer>
+  const handleInputChange = (e: SyntheticEvent<HTMLInputElement, Event>) => {
+    const val = e.currentTarget.value.trim()
+    setShowSearchResultDrawer(!!val)
+  }
+
+  const handleResetChange = () => setShowSearchResultDrawer(false)
+  return (
+    <InstantSearch
+      indexName={process.env.NEXT_PUBLIC_ALGOLIA_SEARCH_INDEX_NAME}
+      searchClient={searchClient}
+    >
+      <Configure
+        attributesToSnippet={['content:120', 'description:50']}
+        snippetEllipsisText="..."
+      />
+      <SearchBox
+        onChange={(e) => handleInputChange(e)}
+        onReset={handleResetChange}
+      />
+      <Result
+        className={showSearchResultDrawer ? 'showSearchResultDrawer' : ''}
+      >
+        <Hits hitComponent={Hit} />
+      </Result>
+      <PoweredBy />
+    </InstantSearch>
   )
 }
 
