@@ -26,7 +26,7 @@ interface Props {
 
 const PostList: FC<Props> = ({ isSupportWebp }) => {
   const {
-    query: { title: searchTitle, tag: searchTag },
+    query: { tag: searchTag },
   } = useRouter()
 
   const [page, setPage] = useState(1)
@@ -49,13 +49,12 @@ const PostList: FC<Props> = ({ isSupportWebp }) => {
     notifyOnNetworkStatusChange: true,
   })
 
-  const fetchPosts = (currPage = 1, title?: string, tag?: string) => {
+  const fetchPosts = (currPage = 1, tag?: string) => {
     getPosts({
       variables: {
         input: {
           page: currPage,
           pageSize: 10,
-          title,
           tag,
         },
       },
@@ -65,14 +64,14 @@ const PostList: FC<Props> = ({ isSupportWebp }) => {
   // @ts-ignore
   const handlePageChange = (e: ChangeEvent<unknown>, val: number) => {
     setPage(val)
-    fetchPosts(val, searchTitle as string, searchTag as string)
+    fetchPosts(val, searchTag as string)
     window.scrollTo(0, 0)
   }
 
   useEffect(() => {
     setPage(1)
-    fetchPosts(1, searchTitle as string, searchTag as string)
-  }, [searchTitle, searchTag])
+    fetchPosts(1, searchTag as string)
+  }, [searchTag])
 
   return (
     <>
@@ -83,9 +82,8 @@ const PostList: FC<Props> = ({ isSupportWebp }) => {
 
       <PostContent>
         <PostItemContainer>
-          {(searchTitle || searchTag) && (
+          {searchTag && (
             <PostListStatus
-              searchTitle={searchTitle as string}
               searchTag={searchTag as string}
               postsLength={posts && posts.posts.items.length}
               fetchPosts={fetchPosts}
