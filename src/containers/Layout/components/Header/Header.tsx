@@ -1,5 +1,6 @@
 import React, { FC } from 'react'
 import Link from 'next/link'
+import AlgoliaSearchBox from 'src/containers/Post/components/AlgoliaSearchBox/AlgoliaSearchBox'
 import SearchBox from 'src/containers/Post/components/SearchBox/SearchBox'
 import { SVG_SPRITE } from 'src/shared/constants'
 import { IGlobalSetting } from 'src/containers/GlobalSetting/types'
@@ -60,6 +61,7 @@ const Header: FC<Props> = ({ globalSetting, isTop }) => {
           </a>
         </Link>
         <SearchBox />
+        <AlgoliaSearchBox />
       </NavBarItem>
     </NavBar>
   )

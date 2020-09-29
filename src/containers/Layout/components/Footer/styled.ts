@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { flexMixin } from '../../styled/mixins'
+import { flexMixin } from 'src/styled/mixins'
 
 export const FooterWrapper = styled.footer`
   margin: 4.8rem auto 2.4rem;
