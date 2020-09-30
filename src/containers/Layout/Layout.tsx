@@ -64,7 +64,6 @@ const Layout: FC<Props> = ({ title, children }) => {
     <Layouts>
       <Head title={title} />
       <Header
-        isTop={!scrollTopCount}
         globalSetting={data ? data.getGlobalSetting : initialGlobalSetting}
       />
       <Main>{children}</Main>

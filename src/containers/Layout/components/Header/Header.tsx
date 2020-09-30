@@ -6,14 +6,13 @@ import { Logo, NavBar, NavBarItem } from './styled'
 
 interface Props {
   globalSetting: IGlobalSetting
-  isTop: boolean
 }
 
-const Header: FC<Props> = ({ globalSetting, isTop }) => {
+const Header: FC<Props> = ({ globalSetting }) => {
   const { cvPostId } = globalSetting
 
   return (
-    <NavBar className={isTop ? 'hideNavBarBackground' : ''}>
+    <NavBar>
       <Link href="/" passHref>
         <Logo />
       </Link>

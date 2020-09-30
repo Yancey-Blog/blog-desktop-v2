@@ -7,7 +7,7 @@ export const Result = styled.div`
   width: 29.2rem;
   height: calc(100vh - 4.5rem);
   background: #fff;
-  box-shadow: 0 0.13333rem 4.2rem 0 rgba(#000, 0.15);
+  box-shadow: 0 0.13333rem 4.2rem 0 rgba(0, 0, 0, 0.15);
   z-index: 201;
   overflow-y: scroll;
   transform: translateX(30rem);

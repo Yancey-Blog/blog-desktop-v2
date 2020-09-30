@@ -19,17 +19,6 @@ export const NavBar = styled.nav`
   box-shadow: 0 1px 40px -8px ${({ theme }) => theme.colors.fiveOpcityBlack};
   z-index: ${({ theme }) => theme.zIndex.fixed};
   ${transitionMixin('background', 250, 'linear')};
-
-  &.hideNavBarBackground {
-    background: transparent;
-    box-shadow: none;
-  }
-
-  &:hover {
-    background: ${({ theme }) => theme.background.primary};
-    box-shadow: 0 1px 40px -8px ${({ theme }) => theme.colors.fiveOpcityBlack};
-    ${transitionMixin('background', 250, 'linear')};
-  }
 `
 
 export const NavBarItem = styled.div`
