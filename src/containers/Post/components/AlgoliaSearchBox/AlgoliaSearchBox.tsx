@@ -8,7 +8,7 @@ import {
   PoweredBy,
 } from 'react-instantsearch-dom'
 import Hit from './Hit'
-import { Result } from './styled'
+import { Result, SearchBoxWrapper } from './styled'
 
 const searchClient = algoliasearch(
   process.env.NEXT_PUBLIC_ALGOLIA_SEARCH_APP_ID,
@@ -34,16 +34,19 @@ const AlgoliaSearchBox: FC = () => {
         attributesToSnippet={['content:120', 'description:50']}
         snippetEllipsisText="..."
       />
-      <SearchBox
-        onChange={(e) => handleInputChange(e)}
-        onReset={handleResetChange}
-      />
+      <SearchBoxWrapper>
+        <SearchBox
+          onChange={(e) => handleInputChange(e)}
+          onReset={handleResetChange}
+        />
+      </SearchBoxWrapper>
+
       <Result
         className={showSearchResultDrawer ? 'showSearchResultDrawer' : ''}
       >
         <Hits hitComponent={Hit} />
+        <PoweredBy />
       </Result>
-      <PoweredBy />
     </InstantSearch>
   )
 }

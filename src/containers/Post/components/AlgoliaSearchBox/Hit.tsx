@@ -2,6 +2,7 @@ import React, { ComponentType } from 'react'
 import Link from 'next/link'
 import { Snippet, Highlight } from 'react-instantsearch-dom'
 import { Hit } from 'react-instantsearch-core'
+import { HitName, HitTag, HitDescription, HitContent } from './styled'
 
 interface HitParams {
   content: string
@@ -19,22 +20,20 @@ interface Props {
 const Hits: ComponentType<Props> = ({ hit }) => (
   <Link href={`/post/${hit.objectID}`}>
     <a>
-      <div className="hit-name">
+      <HitName>
         <Highlight attribute="name" hit={hit} />
         {hit.labels.map((val: string) => (
-          <span className="hit-tag" key={val}>
-            {val}
-          </span>
+          <HitTag key={val}>{val}</HitTag>
         ))}
-      </div>
+      </HitName>
       <br />
-      <div className="hit-description">
+      <HitDescription>
         <Snippet attribute="description" hit={hit} />
-      </div>
+      </HitDescription>
       <br />
-      <div className="hit-content">
+      <HitContent>
         <Snippet hit={hit} attribute="content" />
-      </div>
+      </HitContent>
     </a>
   </Link>
 )
