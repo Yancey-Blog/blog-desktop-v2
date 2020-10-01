@@ -33,18 +33,12 @@ const ResetBtn = styled.button`
 `
 
 interface Props {
-  searchTitle: string
   searchTag: string
   postsLength: number | undefined
   fetchPosts: Function
 }
 
-const PostListStatus: FC<Props> = ({
-  searchTitle,
-  searchTag,
-  postsLength,
-  fetchPosts,
-}) => {
+const PostListStatus: FC<Props> = ({ searchTag, postsLength, fetchPosts }) => {
   const { push } = useRouter()
   const onReset = () => {
     push('/post')
@@ -62,12 +56,7 @@ const PostListStatus: FC<Props> = ({
 
   return (
     <StatusWrapper>
-      {postsLength !== 0 &&
-        searchTitle &&
-        StatusItem('current search:', searchTitle)}
-
       {postsLength !== 0 && searchTag && StatusItem('current tag:', searchTag)}
-
       {postsLength === 0 && StatusItem('We couldn’t find relative posts.')}
     </StatusWrapper>
   )
