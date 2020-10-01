@@ -1,4 +1,4 @@
-import React, { FC, useState, useEffect, SyntheticEvent } from 'react'
+import React, { FC, useState, SyntheticEvent } from 'react'
 import algoliasearch from 'algoliasearch/lite'
 import {
   InstantSearch,
@@ -24,17 +24,18 @@ const AlgoliaSearchBox: FC = () => {
     setShowSearchResultDrawer(!!val)
   }
 
-  const closeSearchResultDrawer = () => setShowSearchResultDrawer(false)
+  // const closeSearchResultDrawer = () => setShowSearchResultDrawer(false)
 
-  useEffect(() => {
-    window.addEventListener('click', closeSearchResultDrawer, {
-      passive: true,
-    })
+  // useEffect(() => {
+  //   window.addEventListener('click', closeSearchResultDrawer, {
+  //     passive: true,
+  //   })
 
-    return () => {
-      window.removeEventListener('click', closeSearchResultDrawer)
-    }
-  }, [])
+  //   return () => {
+  //     window.removeEventListener('click', closeSearchResultDrawer)
+  //   }
+  // }, [])
+
   return (
     <InstantSearch
       indexName={process.env.NEXT_PUBLIC_ALGOLIA_SEARCH_INDEX_NAME}
@@ -47,7 +48,7 @@ const AlgoliaSearchBox: FC = () => {
       <SearchBoxWrapper>
         <SearchBox
           onChange={(e) => handleInputChange(e)}
-          onReset={closeSearchResultDrawer}
+          onReset={() => setShowSearchResultDrawer(false)}
         />
       </SearchBoxWrapper>
 
