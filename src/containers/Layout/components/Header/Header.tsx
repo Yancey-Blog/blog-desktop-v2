@@ -1,20 +1,18 @@
 import React, { FC } from 'react'
 import Link from 'next/link'
-import SearchInput from 'src/containers/Post/components/SearchInput/SearchInput'
 import { SVG_SPRITE } from 'src/shared/constants'
 import { IGlobalSetting } from 'src/containers/GlobalSetting/types'
 import { Logo, NavBar, NavBarItem } from './styled'
 
 interface Props {
   globalSetting: IGlobalSetting
-  isTop: boolean
 }
 
-const Header: FC<Props> = ({ globalSetting, isTop }) => {
+const Header: FC<Props> = ({ globalSetting }) => {
   const { cvPostId } = globalSetting
 
   return (
-    <NavBar className={isTop ? 'hideNavBarBackground' : ''}>
+    <NavBar>
       <Link href="/" passHref>
         <Logo />
       </Link>
@@ -59,7 +57,6 @@ const Header: FC<Props> = ({ globalSetting, isTop }) => {
             About
           </a>
         </Link>
-        <SearchInput />
       </NavBarItem>
     </NavBar>
   )

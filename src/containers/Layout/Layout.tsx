@@ -4,13 +4,14 @@ import { hotjar } from 'react-hotjar'
 import throttle from 'lodash.throttle'
 import { initGA, logPageView } from 'src/shared/analytics'
 import { BACK_TO_TOP_THRESHOLD } from 'src/shared/constants'
-import Head from 'src/components/Head/Head'
-import Header from 'src/components/Header/Header'
-import Footer from 'src/components/Footer/Footer'
-import BackToTop from 'src/components/BackToTop/BackToTop'
 import SVGSprite from 'src/components/SVGSprite/SVGSprite'
+import AlgoliaSearchBox from 'src/containers/Post/components/AlgoliaSearchBox/AlgoliaSearchBox'
 import { GET_GLOBAL_SETTING } from 'src/containers/GlobalSetting/typeDefs'
 import { GlobalSettingQuery } from 'src/containers/GlobalSetting/types'
+import Head from 'src/components/Head/Head'
+import Header from './components/Header/Header'
+import Footer from './components/Footer/Footer'
+import BackToTop from './components/BackToTop/BackToTop'
 import { Layouts, Main } from './styled'
 
 const initialGlobalSetting = {
@@ -63,7 +64,6 @@ const Layout: FC<Props> = ({ title, children }) => {
     <Layouts>
       <Head title={title} />
       <Header
-        isTop={!scrollTopCount}
         globalSetting={data ? data.getGlobalSetting : initialGlobalSetting}
       />
       <Main>{children}</Main>
@@ -72,6 +72,7 @@ const Layout: FC<Props> = ({ title, children }) => {
       />
       <SVGSprite />
       <BackToTop isShowCat={scrollTopCount >= BACK_TO_TOP_THRESHOLD} />
+      <AlgoliaSearchBox />
     </Layouts>
   )
 }
