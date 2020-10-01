@@ -2,6 +2,29 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.10.0](https://github.com/Yancey-Blog/blog-desktop-v2/compare/v2.9.0...v2.10.0) (2020-10-01)
+
+
+### Features
+
+* add env variables to next-env.d.ts ([80c2b70](https://github.com/Yancey-Blog/blog-desktop-v2/commit/80c2b7083d544bcbaabf26fc1f593996c570a2e0))
+* alaways show navbar's background whenerver scroll ([aed442c](https://github.com/Yancey-Blog/blog-desktop-v2/commit/aed442c5d4ab12a15976d3dd45d7673cbb0c0b93))
+* algoliaSearchBox ([cea6c3c](https://github.com/Yancey-Blog/blog-desktop-v2/commit/cea6c3c745f7b2d19442db93aa77ea33a3be1af6))
+* delete old serachBox ([a6b46e2](https://github.com/Yancey-Blog/blog-desktop-v2/commit/a6b46e20e2c263ee449d15ee1c0d81583f8e9ceb))
+* delete useless SeachBox's css style ([d866b44](https://github.com/Yancey-Blog/blog-desktop-v2/commit/d866b44882e944be9c93863a147bb33f2f6fff3d))
+* finish Algolia style ([308f203](https://github.com/Yancey-Blog/blog-desktop-v2/commit/308f203307b4c02cd455de8a1f1744157834b011))
+* hide closeSearchResultDrawer by clicking event listener ([8cd3a8f](https://github.com/Yancey-Blog/blog-desktop-v2/commit/8cd3a8fdddc63d85bb401616acfaa773d3defa8b))
+* migrate algolia keys to env file ([ad340f1](https://github.com/Yancey-Blog/blog-desktop-v2/commit/ad340f13de6a6cab634036f4f034a09a89fa3b6c))
+* migrate Header, Footer components to Layout component ([87b995c](https://github.com/Yancey-Blog/blog-desktop-v2/commit/87b995cccfe579ffdf9e002d32aea06c8bcbd365))
+* try algolia ([f72d13e](https://github.com/Yancey-Blog/blog-desktop-v2/commit/f72d13ea4853aac2194c3b7370eb4d76c028aaa8))
+* update AlgoliaSearchBox ([37e68d6](https://github.com/Yancey-Blog/blog-desktop-v2/commit/37e68d60be8f6495c5f9225b6fdde70b15c40aa9))
+* update AlgoliaSearchBox ([acdc8bd](https://github.com/Yancey-Blog/blog-desktop-v2/commit/acdc8bd79651e1ce5e65c239ccf0efc9901e4bc8))
+* update Algoloa Search component ([0a338ca](https://github.com/Yancey-Blog/blog-desktop-v2/commit/0a338ca83aea8d9f88698f4b09c72fc589d92c36))
+* update aligolia ([a58dc72](https://github.com/Yancey-Blog/blog-desktop-v2/commit/a58dc727394b731439fcf691660dae6b7bd9e771))
+* update styles ([6acb160](https://github.com/Yancey-Blog/blog-desktop-v2/commit/6acb1603a68d213c99dd86b3957c771261f05375))
+* update styles ([8baba25](https://github.com/Yancey-Blog/blog-desktop-v2/commit/8baba25070a06832f87dcbe50b16a5ed4a5c1e9e))
+* use algolia search box ([b3be524](https://github.com/Yancey-Blog/blog-desktop-v2/commit/b3be52487f7e0f1b8aeed8abe6b5d3fb8835b34b))
+
 ## [2.9.0](https://github.com/Yancey-Blog/blog-desktop-v2/compare/v2.8.1...v2.9.0) (2020-09-07)
 
 
