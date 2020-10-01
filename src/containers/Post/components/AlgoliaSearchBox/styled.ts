@@ -75,7 +75,7 @@ export const Result = styled.div`
   position: fixed;
   top: 4.5rem;
   right: 0;
-  width: 29.3rem;
+  width: 29.4rem;
   height: calc(100vh - 4.5rem);
   background: ${({ theme }) => theme.background.primary};
   box-shadow: 0 0.13333rem 4.2rem 0
@@ -145,15 +145,16 @@ export const Result = styled.div`
 export const HitName = styled.div`
   margin-right: 0.6rem;
   color: ${({ theme }) => theme.colors.postTagColor};
+  font-weight: 600;
 `
 
 export const HitDescription = styled.div`
+  color: ${({ theme }) => theme.text.post};
   word-break: break-all;
-  color: ${({ theme }) => theme.text.secondary};
 `
 
 export const HitContent = styled.div`
-  color: ${({ theme }) => theme.text.post};
+  color: ${({ theme }) => theme.text.secondary};
 `
 
 export const HitTag = styled.div`
