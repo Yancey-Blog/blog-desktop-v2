@@ -27,7 +27,7 @@
     "@sentry/browser": "^5.22.3",
     "@sentry/tracing": "^5.22.3",
     "@zeit/next-source-maps": "^0.0.3",
-    "algoliasearch": "^4.4.0",
+    "algoliasearch": "^4.5.1",
     "aplayer": "^1.10.1",
     "disqus-react": "^1.0.9",
     "graphql": "^15.3.0",
