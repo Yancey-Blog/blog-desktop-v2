@@ -4,6 +4,10 @@
     "browser": true,
     "node": true
   },
+  "globals": {
+    "__YANCEY_BLOG_VERSION__": true,
+    "__GIT_HASH__": true
+  },
   "parserOptions": {
     "project": "./tsconfig.json"
   },
