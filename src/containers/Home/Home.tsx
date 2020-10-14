@@ -1,6 +1,6 @@
 import React, { FC } from 'react'
 import { useQuery } from '@apollo/client'
-import Fireworks from 'src/components/Fireworks/Fireworks'
+import Fireworks from 'src/components/Activities/Fireworks/Fireworks'
 import {
   HomeContainer,
   MottoSocialMediaBar,
