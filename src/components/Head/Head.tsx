@@ -11,7 +11,7 @@ interface Props {
 }
 
 const MetaHead: FC<Props> = ({
-  title = 'Yancey Official Blog',
+  title = 'Yancey Official Blog | Yancey Inc.',
   useTwitterCard = false,
   postTitle,
   postSummary,
