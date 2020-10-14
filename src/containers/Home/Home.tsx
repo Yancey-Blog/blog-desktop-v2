@@ -1,5 +1,6 @@
 import React, { FC } from 'react'
 import { useQuery } from '@apollo/client'
+import Fireworks from 'src/components/Fireworks/Fireworks'
 import {
   HomeContainer,
   MottoSocialMediaBar,
@@ -34,6 +35,8 @@ const Home: FC<Props> = ({ isSupportWebp }) => {
   return (
     <HomeContainer>
       <CoverWrapper>
+        <Fireworks />
+
         <Cover
           isSupportWebp={isSupportWebp}
           covers={covers ? covers.getAllPublicCovers : []}
@@ -44,7 +47,6 @@ const Home: FC<Props> = ({ isSupportWebp }) => {
           <Motto mottos={mottos ? mottos.getMottos : []} />
         </MottoSocialMediaBar>
       </CoverWrapper>
-
       <HomeMain>
         <Announcement
           announcements={announcements ? announcements.getAnnouncements : []}

@@ -1,5 +1,9 @@
 {
   "extends": ["airbnb-typescript", "plugin:prettier/recommended"],
+  "env": {
+    "browser": true,
+    "node": true
+  },
   "parserOptions": {
     "project": "./tsconfig.json"
   },
@@ -13,6 +17,7 @@
     "@typescript-eslint/semi": "off",
     "@typescript-eslint/indent": "off",
     "@typescript-eslint/naming-convention": "off",
+    "@typescript-eslint/comma-dangle": "off",
     "jsx-a11y/anchor-is-valid": "off",
     "react/jsx-indent": "off",
     "react/prop-types": "off",
