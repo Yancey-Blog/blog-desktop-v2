@@ -1,6 +1,7 @@
-import React, { FC } from 'react'
+import React, { FC, useState, useEffect, ComponentType } from 'react'
 import { useQuery } from '@apollo/client'
-import Fireworks from 'src/components/Activities/Fireworks/Fireworks'
+import dynamic from 'next/dynamic'
+import { isAnniversary } from 'src/shared/utils'
 import {
   HomeContainer,
   MottoSocialMediaBar,
@@ -32,10 +33,25 @@ const Home: FC<Props> = ({ isSupportWebp }) => {
   const { data: openSources } = useQuery<OpenSourceQuery>(OPEN_SOURCES)
   const { data: mottos } = useQuery<MottoQuery>(MOTTOS)
 
+  const [
+    FireWorkComponent,
+    setFireWorkComponent,
+  ] = useState<ComponentType | null>(null)
+
+  useEffect(() => {
+    if (isAnniversary()) {
+      const DynamicComponent = dynamic(
+        () => import('src/components/Activities/Fireworks/Fireworks'),
+      )
+
+      setFireWorkComponent(DynamicComponent)
+    }
+  }, [])
+
   return (
     <HomeContainer>
       <CoverWrapper>
-        <Fireworks />
+        {FireWorkComponent && <FireWorkComponent />}
 
         <Cover
           isSupportWebp={isSupportWebp}

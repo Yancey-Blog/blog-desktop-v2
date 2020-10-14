@@ -43,3 +43,6 @@ export const generateAliOSSSuffix = (...props: AliOSSSuffix[]) => {
   })
   return suffix
 }
+
+export const isAnniversary = () =>
+  moment().month() + 1 === 10 && moment().date() === 14
