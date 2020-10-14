@@ -27,8 +27,7 @@ export const formatDate = (ISOString: string, format = 'YYYY-MM-DD HH:mm:ss') =>
 export const devToolsWarning = () => {
   // eslint-disable-next-line no-console
   console.log(
-    // eslint-disable-next-line no-undef
-    `${'\n'} %c Yancey Blog v${YANCEY_BLOG_VERSION} ${GIT_HASH.slice(
+    `${'\n'} %c Yancey Blog v${__YANCEY_BLOG_VERSION__} ${__GIT_HASH__.slice(
       0,
       7,
     )} %c https://yanceyleo.com ${'\n'}`,
@@ -44,3 +43,6 @@ export const generateAliOSSSuffix = (...props: AliOSSSuffix[]) => {
   })
   return suffix
 }
+
+export const isAnniversary = () =>
+  moment().month() + 1 === 10 && moment().date() === 14

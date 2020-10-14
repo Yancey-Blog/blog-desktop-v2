@@ -200,3 +200,52 @@ export const float = keyframes`
   100% {
     transform: translateY(0);
   }`
+
+export const bang = keyframes`
+  from {
+    box-shadow: 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white,
+      0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white,
+      0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white,
+      0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white,
+      0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white,
+      0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white,
+      0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white,
+      0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white,
+      0 0 white, 0 0 white, 0 0 white;
+  }
+}`
+
+export const gravity = keyframes`{
+  to {
+    transform: translateY(200px);
+    opacity: 0;
+  }
+}`
+
+export const position = keyframes`
+  0%,
+  19.9% {
+    margin-top: 10%;
+    margin-left: 40%;
+  }
+  20%,
+  39.9% {
+    margin-top: 40%;
+    margin-left: 30%;
+  }
+  40%,
+  59.9% {
+    margin-top: 20%;
+    margin-left: 70%;
+  }
+  60%,
+  79.9% {
+    margin-top: 30%;
+    margin-left: 20%;
+  }
+  80%,
+  99.9% {
+    margin-top: 30%;
+    margin-left: 80%;
+  }
+}`

@@ -24,8 +24,8 @@ module.exports = (phase, { defaultConfig }) =>
           new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
           new webpack.DefinePlugin({
             versionCommand: 'describe --always --tags --dirty',
-            YANCEY_BLOG_VERSION: `"${require('./package.json').version}"`,
-            GIT_HASH: JSON.stringify(new GitRevisionPlugin().commithash()),
+            __YANCEY_BLOG_VERSION__: `"${require('./package.json').version}"`,
+            __GIT_HASH__: JSON.stringify(new GitRevisionPlugin().commithash()),
           }),
         )
 

@@ -28,7 +28,6 @@ import 'aplayer/dist/APlayer.min.css'
 import 'highlight.js/styles/atom-one-dark.css'
 import 'tocbot/dist/tocbot.css'
 import 'src/static/css/nprogress.css'
-import 'src/components/Fireworks/styles.css'
 
 interface Props {
   apollo: ApolloClient<{}>
