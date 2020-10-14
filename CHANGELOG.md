@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.1.0](https://github.com/Yancey-Blog/blog-desktop-v2/compare/v3.0.0...v3.1.0) (2020-10-14)
+
+
+### Features
+
+* migrate Fireworks style to styled-component ([82f462d](https://github.com/Yancey-Blog/blog-desktop-v2/commit/82f462d4178dd9d8ea210edf037d972e069ffd06))
+* set isAnniversary for open Firework component ([b690658](https://github.com/Yancey-Blog/blog-desktop-v2/commit/b690658739517ab22b69b35f44195ca68695ca3d))
+* update global types for eslint ([1122c69](https://github.com/Yancey-Blog/blog-desktop-v2/commit/1122c69d0eaccd8b87efe0819e33323b47636b48))
+* update MetaHead component for SEO ([6e1198c](https://github.com/Yancey-Blog/blog-desktop-v2/commit/6e1198c5ef685448b6a2e923b953a0e4b8ec1250))
+
 ## [3.0.0](https://github.com/Yancey-Blog/blog-desktop-v2/compare/v2.10.0...v3.0.0) (2020-10-13)
 
 
