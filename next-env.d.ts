@@ -64,6 +64,8 @@ declare module 'aplayer' {
 interface Window {
   ga: Function
   GA_INITIALIZED: boolean
+  CRISP_WEBSITE_ID: string
+  $crisp: any[]
 }
 
 declare namespace NodeJS {
@@ -79,6 +81,7 @@ declare namespace NodeJS {
     NEXT_PUBLIC_ALGOLIA_SEARCH_APP_ID: string
     NEXT_PUBLIC_ALGOLIA_SEARCH_API_KEY: string
     NEXT_PUBLIC_ALGOLIA_SEARCH_INDEX_NAME: string
+    NEXT_PUBLIC_CRISP_WEBSITE_ID: string
   }
 }
 

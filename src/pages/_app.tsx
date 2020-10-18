@@ -13,6 +13,7 @@ import { lightTheme, darkTheme } from 'src/styled/theme'
 import GlobalStyle from 'src/styled/globalStyles'
 import { useDarkMode, ThemeMode } from 'src/hooks/useDarkMode'
 import ErrorBoundary from 'src/components/ErrorBoundary/ErrorBoundary'
+import CrispChat from 'src/components/CrispChat/CrispChat'
 import ToggleTheme from 'src/components/ToggleTheme/ToggleTheme'
 import { SnackbarUtilsConfigurator } from 'src/components/Toast/Toast'
 import withApollo from 'src/graphql/withApollo'
@@ -86,12 +87,11 @@ const YanceyBlog = ({ Component, pageProps, apollo }: AppProps & Props) => {
             anchorOrigin={SNACKBAR_ANCHOR_ORIGIN}
             autoHideDuration={SNACKBAR_AUTO_HIDE_DURATION}
           >
-            <>
-              <SnackbarUtilsConfigurator />
-              <Component {...pageProps} />
-              <Player />
-              <ToggleTheme theme={theme} onToggle={toggleTheme} />
-            </>
+            <SnackbarUtilsConfigurator />
+            <Component {...pageProps} />
+            <Player />
+            <ToggleTheme theme={theme} onToggle={toggleTheme} />
+            <CrispChat />
           </SnackbarProvider>
         </ApolloProvider>
       </ThemeProvider>
