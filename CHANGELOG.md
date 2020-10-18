@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.2.0](https://github.com/Yancey-Blog/blog-desktop-v2/compare/v3.1.0...v3.2.0) (2020-10-18)
+
+
+### Features
+
+* integrate Crisp Chat ([26e2c04](https://github.com/Yancey-Blog/blog-desktop-v2/commit/26e2c04367c85e24082394825f0268079c49887a))
+
 ## [3.1.0](https://github.com/Yancey-Blog/blog-desktop-v2/compare/v3.0.0...v3.1.0) (2020-10-14)
 
 
