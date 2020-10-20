@@ -59,7 +59,7 @@
   "devDependencies": {
     "@commitlint/cli": "^11.0.0",
     "@commitlint/config-conventional": "^11.0.0",
-    "@next/bundle-analyzer": "^9.5.2",
+    "@next/bundle-analyzer": "^9.5.5",
     "@types/lodash.orderby": "^4.6.6",
     "@types/lodash.throttle": "^4.1.6",
     "@types/markdown-to-jsx": "^6.11.2",
