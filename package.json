@@ -48,7 +48,7 @@
     "react-ga": "^3.1.2",
     "react-hotjar": "^2.2.1",
     "react-instantsearch-core": "^6.7.0",
-    "react-instantsearch-dom": "^6.7.0",
+    "react-instantsearch-dom": "^6.8.1",
     "react-lazyload": "^3.0.0",
     "react-share": "^4.2.1",
     "sitemap": "^6.3.2",
