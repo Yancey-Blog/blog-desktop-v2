@@ -1,4 +1,4 @@
-import React, { ComponentType } from 'react'
+import { ComponentType } from 'react'
 import Link from 'next/link'
 import { Snippet, Highlight } from 'react-instantsearch-dom'
 import { Hit } from 'react-instantsearch-core'

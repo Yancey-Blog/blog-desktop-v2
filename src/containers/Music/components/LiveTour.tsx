@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import { FC } from 'react'
 import styled from 'styled-components'
 import Carousel from 'nuka-carousel'
 import Picture from 'src/components/Picture/Picture'

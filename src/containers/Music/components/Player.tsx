@@ -1,4 +1,4 @@
-import React, { FC, useRef, useEffect } from 'react'
+import { FC, useRef, useEffect } from 'react'
 import { useQuery } from '@apollo/client'
 import APlayer from 'aplayer'
 import { AliOSSSuffix } from 'src/shared/constants'

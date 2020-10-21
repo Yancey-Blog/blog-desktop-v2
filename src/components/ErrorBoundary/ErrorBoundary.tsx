@@ -1,8 +1,8 @@
-import React from 'react'
+import { Component, ErrorInfo } from 'react'
 import * as Sentry from '@sentry/browser'
 
-class ErrorBoundary extends React.Component {
-  public componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
+class ErrorBoundary extends Component {
+  public componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     Sentry.withScope((scope) => {
       Object.keys(errorInfo).forEach((key) => {
         // @ts-ignore

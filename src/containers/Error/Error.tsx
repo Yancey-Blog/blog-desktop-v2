@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import { FC } from 'react'
 import Link from 'next/link'
 import styled from 'styled-components'
 import { ALI_OSS_FE_STATIC_PATH } from 'src/shared/constants'

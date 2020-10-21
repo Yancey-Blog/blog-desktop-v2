@@ -1,4 +1,4 @@
-import React, { FC, useState, SyntheticEvent } from 'react'
+import { FC, useState, SyntheticEvent } from 'react'
 import algoliasearch from 'algoliasearch/lite'
 import {
   InstantSearch,

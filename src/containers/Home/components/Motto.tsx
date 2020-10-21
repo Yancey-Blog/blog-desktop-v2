@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import { FC } from 'react'
 import styled, { css } from 'styled-components'
 import { SOCIAL_MEDIA, ALI_OSS_FE_STATIC_PATH } from 'src/shared/constants'
 import { flexMixin, transitionMixin, backgroundMixin } from 'src/styled/mixins'
