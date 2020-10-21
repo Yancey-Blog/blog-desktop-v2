@@ -35,7 +35,7 @@
     "isomorphic-unfetch": "^3.1.0",
     "lodash.orderby": "^4.6.0",
     "lodash.throttle": "^4.1.1",
-    "markdown-to-jsx": "^7.0.0",
+    "markdown-to-jsx": "^7.0.1",
     "moment": "^2.29.1",
     "next": "9.5.4",
     "next-with-apollo": "^5.1.0",
