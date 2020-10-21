@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import { FC } from 'react'
 import { Skeleton } from '@material-ui/lab'
 import styled from 'styled-components'
 

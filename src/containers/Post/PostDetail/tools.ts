@@ -1,11 +1,11 @@
-import React from 'react'
+import { RefObject } from 'react'
 import hljs from 'highlight.js'
 import tocbot from 'tocbot'
 
 const POST_DETAIL_CONTENT = 'postDetailContent'
 
 export const setupHighlight = (
-  markdownWrapperEl: React.RefObject<HTMLDivElement>,
+  markdownWrapperEl: RefObject<HTMLDivElement>,
 ) => {
   if (markdownWrapperEl?.current) {
     const preNodes = markdownWrapperEl.current.querySelectorAll('pre')

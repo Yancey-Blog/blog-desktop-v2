@@ -1,4 +1,3 @@
-import React from 'react'
 import { useQuery } from '@apollo/client'
 import { ALI_OSS_FE_STATIC_PATH } from 'src/shared/constants'
 import ImageHeader from 'src/components/ImageHeader/ImageHeader'

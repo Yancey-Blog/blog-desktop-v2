@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import { FC } from 'react'
 import styled from 'styled-components'
 import { noUserSelectMixin } from 'src/styled/mixins'
 import { glitchLoop1, glitchLoop2 } from 'src/styled/animations'

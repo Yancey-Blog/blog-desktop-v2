@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import { FC } from 'react'
 import { scrollToTop } from 'src/shared/utils'
 import { Cat } from './styled'
 

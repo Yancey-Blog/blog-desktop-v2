@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import { FC } from 'react'
 import { GetServerSidePropsContext } from 'next'
 import Layout from 'src/containers/Layout/Layout'
 import HomeContainer from 'src/containers/Home/Home'

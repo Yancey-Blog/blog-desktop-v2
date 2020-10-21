@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import { FC } from 'react'
 import Picture from 'src/components/Picture/Picture'
 import { ImageHeaderWrapper, Title } from './styled'
 

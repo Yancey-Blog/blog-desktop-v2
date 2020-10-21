@@ -1,4 +1,4 @@
-import React, { FC, useEffect, useRef } from 'react'
+import { FC, useEffect, useRef } from 'react'
 import { useRouter } from 'next/router'
 import { useQuery, useMutation } from '@apollo/client'
 import LazyLoad from 'react-lazyload'

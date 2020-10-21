@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import { FC } from 'react'
 import Link from 'next/link'
 import LazyLoad from 'react-lazyload'
 import Picture from 'src/components/Picture/Picture'

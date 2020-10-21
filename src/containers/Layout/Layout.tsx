@@ -1,4 +1,4 @@
-import React, { FC, useState, useEffect } from 'react'
+import { FC, useState, useEffect } from 'react'
 import { useQuery } from '@apollo/client'
 import { hotjar } from 'react-hotjar'
 import throttle from 'lodash.throttle'

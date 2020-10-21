@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import { FC } from 'react'
 import styled from 'styled-components'
 import { flexMixin, transitionMixin } from 'src/styled/mixins'
 import { SVG_SPRITE } from 'src/shared/constants'

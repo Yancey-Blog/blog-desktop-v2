@@ -1,4 +1,4 @@
-import React, { FC, Fragment } from 'react'
+import { FC, Fragment } from 'react'
 import moment from 'moment'
 import Link from 'next/link'
 import { useQuery } from '@apollo/client'

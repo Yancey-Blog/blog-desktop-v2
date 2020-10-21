@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import { FC } from 'react'
 import { useQuery } from '@apollo/client'
 import { SVG_SPRITE } from 'src/shared/constants'
 import PostCard from 'src/containers/Post/components/PostCard/PostCard'

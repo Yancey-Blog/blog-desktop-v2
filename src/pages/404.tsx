@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import { FC } from 'react'
 import Layout from 'src/containers/Layout/Layout'
 import ErrorContainer from 'src/containers/Error/Error'
 

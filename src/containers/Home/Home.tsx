@@ -1,4 +1,4 @@
-import React, { FC, useState, useEffect, ComponentType } from 'react'
+import { FC, useState, useEffect, ComponentType } from 'react'
 import { useQuery } from '@apollo/client'
 import dynamic from 'next/dynamic'
 import { isAnniversary } from 'src/shared/utils'

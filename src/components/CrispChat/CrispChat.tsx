@@ -1,4 +1,4 @@
-import React, { FC, useEffect } from 'react'
+import { FC, useEffect } from 'react'
 import { useScriptUrl } from 'src/hooks/useScript'
 
 const CrispChat: FC = () => {

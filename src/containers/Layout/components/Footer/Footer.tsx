@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import { FC } from 'react'
 import Link from 'next/link'
 import { SOCIAL_MEDIA } from 'src/shared/constants'
 import { IGlobalSetting } from 'src/containers/GlobalSetting/types'

@@ -1,4 +1,3 @@
-import React from 'react'
 import { AppProps } from 'next/app'
 import Router from 'next/router'
 import dynamic from 'next/dynamic'

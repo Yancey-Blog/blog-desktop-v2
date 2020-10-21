@@ -1,4 +1,4 @@
-import React, { FC, useState, useEffect, ChangeEvent } from 'react'
+import { FC, useState, useEffect, ChangeEvent } from 'react'
 import { useRouter } from 'next/router'
 import { useQuery, useLazyQuery } from '@apollo/client'
 import { Pagination } from '@material-ui/lab'

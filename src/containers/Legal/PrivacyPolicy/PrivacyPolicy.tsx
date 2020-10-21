@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import { FC } from 'react'
 import ImageHeader from 'src/components/ImageHeader/ImageHeader'
 import { SOCIAL_MEDIA, ALI_OSS_FE_STATIC_PATH } from 'src/shared/constants'
 import { Article, Menu, DetailList, UpdateDate, Anchor } from './styled'

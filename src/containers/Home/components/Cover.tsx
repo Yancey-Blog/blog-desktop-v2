@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import { FC } from 'react'
 import styled from 'styled-components'
 import dot from 'src/static/images/dot.png'
 import { backgroundMixin } from 'src/styled/mixins'
