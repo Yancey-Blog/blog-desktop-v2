@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.3.2](https://github.com/Yancey-Blog/blog-desktop-v2/compare/v3.3.1...v3.3.2) (2020-11-09)
+
+
+### Bug Fixes
+
+* to hide hotjar and crisp logo ([a601d37](https://github.com/Yancey-Blog/blog-desktop-v2/commit/a601d37218e6373325efef2a8a2d1354470e3dbd))
+
 ### [3.3.1](https://github.com/Yancey-Blog/blog-desktop-v2/compare/v3.3.0...v3.3.1) (2020-11-08)
 
 
