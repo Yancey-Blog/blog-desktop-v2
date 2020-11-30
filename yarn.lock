@@ -6900,17 +6900,17 @@ nprogress@^0.2.0:
   resolved "https://registry.npmjs.org/nprogress/-/nprogress-0.2.0.tgz#cb8f34c53213d895723fcbab907e9422adbcafb1"
   integrity sha1-y480xTIT2JVyP8urkH6UIq28r7E=
 
-nuka-carousel@^4.7.1:
-  version "4.7.1"
-  resolved "https://registry.yarnpkg.com/nuka-carousel/-/nuka-carousel-4.7.1.tgz#5bdc26b3a17382345a81b5956a0aaa1decb1f296"
-  integrity sha512-X/nmJC0JtrdEwO2X7pF7d9LyHA7p9ccG2y8ZLOBtN1RktFT8P+5lrBCi2fVZ3lQYgWdyJ5lHmsjdazH+RatBeg==
+nuka-carousel@^4.7.3:
+  version "4.7.3"
+  resolved "https://registry.yarnpkg.com/nuka-carousel/-/nuka-carousel-4.7.3.tgz#7a218a76031f27d03b76b3eb4177a07b70e54898"
+  integrity sha512-YAjxccNPWdEzOpNh0jGNUCT7PaTJiVgnbQpHU50o+rnBE6AqM466pPTitZPzlAMeDvASz7W8+rDWNZJd1yiWTw==
   dependencies:
     csstype "^2.6.6"
     d3-ease "^1.0.3"
     exenv "^1.2.0"
     prop-types "^15.6.0"
     react-move "^6.1.0"
-    wicg-inert "^3.0.3"
+    wicg-inert "^3.1.0"
 
 null-check@^1.0.0:
   version "1.0.0"
@@ -9807,10 +9807,10 @@ which@^2.0.1:
   dependencies:
     isexe "^2.0.0"
 
-wicg-inert@^3.0.3:
-  version "3.0.3"
-  resolved "https://registry.npmjs.org/wicg-inert/-/wicg-inert-3.0.3.tgz#7d05eaed64176887ee4c66fc0c4d6fe4b38ccce5"
-  integrity sha512-XwXf8K0NN4cpagjBlZ2/j/5Sjf6dW3HNbfywEy1y6Z8PJKvSHVGiuc5Id/9RZ6EmGq+GQCGTo7B2SK0Misbr6g==
+wicg-inert@^3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/wicg-inert/-/wicg-inert-3.1.0.tgz#6525f12db188b83f0051bed2ddcf6c1aa5b17590"
+  integrity sha512-P0ZiWaN9SxOkJbYtF/PIwmIRO8UTqTJtyl33QTQlHfAb6h15T0Dp5m7WTJ8N6UWIoj+KU5M0a8EtfRZLlHiP0Q==
 
 word-wrap@^1.0.3, word-wrap@^1.2.3:
   version "1.2.3"
