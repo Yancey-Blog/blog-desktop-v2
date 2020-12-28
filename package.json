@@ -50,7 +50,7 @@
     "react-instantsearch-core": "^6.8.2",
     "react-instantsearch-dom": "^6.8.1",
     "react-lazyload": "^3.0.0",
-    "react-share": "^4.2.1",
+    "react-share": "^4.3.1",
     "sitemap": "^6.3.2",
     "styled-components": "^5.0.1",
     "tocbot": "^4.12.0",
