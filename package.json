@@ -74,7 +74,7 @@
     "babel-plugin-transform-imports": "^2.0.0",
     "cz-conventional-changelog": "^3.3.0",
     "eslint": "^7.16.0",
-    "eslint-config-airbnb-typescript": "^11.0.0",
+    "eslint-config-airbnb-typescript": "^11.4.0",
     "eslint-config-prettier": "^6.15.0",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-jsx-a11y": "^6.4.1",
