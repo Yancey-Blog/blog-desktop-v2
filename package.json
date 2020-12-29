@@ -30,7 +30,7 @@
     "algoliasearch": "^4.5.1",
     "aplayer": "^1.10.1",
     "disqus-react": "^1.0.9",
-    "graphql": "^15.3.0",
+    "graphql": "^15.4.0",
     "highlight.js": "^10.5.0",
     "isomorphic-unfetch": "^3.1.0",
     "lodash.orderby": "^4.6.0",
