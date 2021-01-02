@@ -10,7 +10,7 @@ export const SearchBoxWrapper = styled.div`
 
   .ais-SearchBox-input {
     padding: 0.8rem;
-    padding-left: 1.8rem;
+    padding-left: 2rem;
     width: 16.8rem;
     font-size: 0.9rem;
     color: ${({ theme }) => theme.text.primary};
@@ -63,7 +63,7 @@ export const SearchBoxWrapper = styled.div`
   }
 
   .ais-SearchBox-submit {
-    left: 0.3rem;
+    left: 0.5rem;
   }
 
   .ais-SearchBox-reset {
