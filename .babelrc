@@ -1,7 +1,17 @@
 {
   "presets": ["next/babel"],
   "plugins": [
-    ["babel-plugin-styled-components", { "ssr": true, "pure": true }],
+    [
+      "babel-plugin-styled-components",
+      {
+        "ssr": true,
+        "pure": true,
+        "displayName": false,
+        "fileName": false,
+        "minify": true,
+        "transpileTemplateLiterals": true
+      }
+    ],
     [
       "babel-plugin-transform-imports",
       {
