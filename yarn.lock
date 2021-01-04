@@ -6952,10 +6952,10 @@ nprogress@^0.2.0:
   resolved "https://registry.npmjs.org/nprogress/-/nprogress-0.2.0.tgz#cb8f34c53213d895723fcbab907e9422adbcafb1"
   integrity sha1-y480xTIT2JVyP8urkH6UIq28r7E=
 
-nuka-carousel@^4.7.4:
-  version "4.7.4"
-  resolved "https://registry.yarnpkg.com/nuka-carousel/-/nuka-carousel-4.7.4.tgz#c42d2c3e253b97287c26dbb3532f571b2e88ef84"
-  integrity sha512-Gz1s4xhpQtiMBB/GxrP/rhS/yXwp0qEjZyrnG1PDbFD+N0TWsOSJbNs0aEvkkTyzJvIWXhtqZSB7HT1tbWK2xA==
+nuka-carousel@^4.7.5:
+  version "4.7.5"
+  resolved "https://registry.yarnpkg.com/nuka-carousel/-/nuka-carousel-4.7.5.tgz#820f18afdd06b3f23474f0d2d102409f12a1375e"
+  integrity sha512-E5zsWgRZQxNz6lJaaioz+/3aTJr5pAAkZpxTIW+lK+9OpGz813rGEGEroO9FzHhnMGhV7KcuUnQ8bJgdoUq+1w==
   dependencies:
     csstype "^2.6.6"
     d3-ease "^1.0.3"
