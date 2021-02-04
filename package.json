@@ -45,7 +45,7 @@
     "nuka-carousel": "^4.7.5",
     "react": "17.0.1",
     "react-dom": "17.0.1",
-    "react-ga": "^3.1.2",
+    "react-ga": "^3.3.0",
     "react-hotjar": "^2.2.1",
     "react-instantsearch-core": "^6.8.2",
     "react-instantsearch-dom": "^6.8.1",
