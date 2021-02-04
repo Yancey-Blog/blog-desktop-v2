@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.5.0](https://github.com/Yancey-Blog/blog-desktop-v2/compare/v3.4.0...v3.5.0) (2021-01-02)
+
+
+### Features
+
+* update style of searchbox ([0e95143](https://github.com/Yancey-Blog/blog-desktop-v2/commit/0e951431e829f82b09275f35269a4472980472ef))
+
 ## [3.4.0](https://github.com/Yancey-Blog/blog-desktop-v2/compare/v3.3.2...v3.4.0) (2020-12-28)
 
 
