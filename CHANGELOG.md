@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.6.0](https://github.com/Yancey-Blog/blog-desktop-v2/compare/v3.5.0...v3.6.0) (2021-02-05)
+
+
+### Features
+
+* delete Crisp ([377f4f7](https://github.com/Yancey-Blog/blog-desktop-v2/commit/377f4f77ba8ab0a264dc5145f40adc2c2ce865aa))
+
 ## [3.5.0](https://github.com/Yancey-Blog/blog-desktop-v2/compare/v3.4.0...v3.5.0) (2021-01-02)
 
 
