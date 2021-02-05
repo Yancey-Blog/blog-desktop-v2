@@ -5,7 +5,7 @@ export const SearchBoxWrapper = styled.div`
     position: fixed;
     top: 0.9rem;
     right: 12.4rem;
-    z-index: 9999999999; // to hide hotjar and crisp logo.
+    z-index: 9999999999;
   }
 
   .ais-SearchBox-input {
