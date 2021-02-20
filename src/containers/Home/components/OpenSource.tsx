@@ -1,19 +1,20 @@
 import { FC } from 'react'
 import styled from 'styled-components'
 import Picture from 'src/components/Picture/Picture'
-import { flexMixin, transitionMixin } from 'src/styled/mixins'
+import { transitionMixin } from 'src/styled/mixins'
 import { SVG_SPRITE } from 'src/shared/constants'
 import SubTitle from './SubTitle'
 import { IOpenSource } from '../types'
 
 const OpenSourceWrapper = styled.section`
-  ${flexMixin('space-between')}
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 1rem;
 `
 
 const OpenSourceItem = styled.div`
   display: block;
   position: relative;
-  width: 19.2rem;
   height: 11rem;
   border-radius: 0.8rem;
   box-shadow: 1px 1px 3px ${({ theme }) => theme.colors.threeOpcityBlack};
