@@ -59,7 +59,7 @@ const LiveTour: FC<Props> = ({ liveTours }) => {
             </Picture>
 
             <LiveTourMeta>
-              <Date>{formatDate(showTime, 'YYYY-MM-DD')}</Date>
+              <Date>{formatDate(showTime)}</Date>
               <Title>{title}</Title>
             </LiveTourMeta>
           </LiveTourContent>

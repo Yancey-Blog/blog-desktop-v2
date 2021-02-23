@@ -62,10 +62,10 @@ const PostMeta: FC<Props> = ({
     <CreatedAt
       data-last-modified-date={`last modified: ${formatDate(
         lastModifiedDate,
-        'MMM D, YYYY',
+        'FF',
       )}`}
     >
-      {formatDate(createdAt, 'MMM D, YYYY')}
+      {formatDate(createdAt, 'FF')}
     </CreatedAt>
     <Statistics>{pv} PV</Statistics>
     <Statistics>

@@ -19,6 +19,7 @@ export enum AliOSSSuffix {
   WEBP_SUFFIX = '/format,webp',
   THUMB_SUFFIX = '/resize,w_120',
   LOW_QUALITY_SUFFIX = '/quality,Q_10',
+  TINY_SUFFIX = '/resize,w_20',
 }
 
 export const SVG_SPRITE = {
@@ -88,3 +89,18 @@ export const SOCIAL_MEDIA: SocialMedia = {
     icon: SVG_SPRITE.email,
   },
 }
+
+export const months = [
+  'Jan',
+  'Feb',
+  'Mar',
+  'Apr',
+  'May',
+  'Jun',
+  'Jul',
+  'Aug',
+  'Sep',
+  'Oct',
+  'Nov',
+  'Dec',
+]

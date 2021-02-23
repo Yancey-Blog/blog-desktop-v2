@@ -1,9 +1,9 @@
 import { FC, useEffect, useRef } from 'react'
 import { useRouter } from 'next/router'
 import { useQuery, useMutation } from '@apollo/client'
-import LazyLoad from 'react-lazyload'
 import MarkDown from 'markdown-to-jsx'
 import { DiscussionEmbed } from 'disqus-react'
+import LazyLoadImage from 'src/components/LazyLoadImage/LazyLoadImage'
 import MetaHead from 'src/components/Head/Head'
 import Picture from 'src/components/Picture/Picture'
 import PostMeta from '../components/PostMeta/PostMeta'
@@ -54,11 +54,7 @@ const PostDetail: FC = () => {
     props: any
   }) => (
     <ImageGroup className="postImgGroup" {...props}>
-      <LazyLoad height={200}>
-        <Picture src={src}>
-          <img src={src} alt={alt} />
-        </Picture>
-      </LazyLoad>
+      <LazyLoadImage imageUrl={src} alt={alt} noAnimation />
       <ImageAlt className="postImgAlt">{alt}</ImageAlt>
     </ImageGroup>
   )

@@ -71,10 +71,7 @@ const GlobalStyle = createGlobalStyle`
     font-family: SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
   }
 
-  .lazyload-wrapper {
-    height: 100%;
-  }
-
+  /* aplayer CSS */
   .aplayer-list-title, .aplayer-title {
     color:#666 !important;
   }

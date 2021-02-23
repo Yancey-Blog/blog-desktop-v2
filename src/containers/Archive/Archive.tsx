@@ -1,9 +1,9 @@
 import { FC, Fragment } from 'react'
-import moment from 'moment'
+import { DateTime } from 'luxon'
 import Link from 'next/link'
 import { useQuery } from '@apollo/client'
 import orderBy from 'lodash.orderby'
-import { ALI_OSS_FE_STATIC_PATH } from 'src/shared/constants'
+import { ALI_OSS_FE_STATIC_PATH, months } from 'src/shared/constants'
 import { ARCHIVE } from 'src/containers/Post/typeDefs'
 import { ArchiveQuery } from 'src/containers/Post/types'
 import ImageHeader from 'src/components/ImageHeader/ImageHeader'
@@ -48,9 +48,7 @@ const Archive: FC = () => {
                       <label htmlFor={`archive_${year._id}_${month.month}`}>
                         <Month>
                           <MonthTxt>
-                            {moment()
-                              .month(month.month - 1)
-                              .format('MMM')}
+                            {months[month.month - 1]}
                             {'. '}({month.days.length}{' '}
                             {month.days.length > 1 ? 'posts' : 'post'})
                           </MonthTxt>
@@ -65,7 +63,7 @@ const Archive: FC = () => {
                             (day) => (
                               <DayItem key={day.id}>
                                 <Day>
-                                  {moment(day.createdAt).date()}
+                                  {DateTime.fromISO(day.createdAt).day}
                                   {': '}
                                 </Day>
                                 <Link href="/post/[id]" as={`/post/${day.id}`}>
