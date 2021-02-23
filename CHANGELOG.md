@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.7.0](https://github.com/Yancey-Blog/blog-desktop-v2/compare/v3.6.0...v3.7.0) (2021-02-20)
+
+
+### Features
+
+* use grid layout for OpenSource component ([c0637b9](https://github.com/Yancey-Blog/blog-desktop-v2/commit/c0637b99cadb012187df77e231801a8d0f23ff8f))
+
 ## [3.6.0](https://github.com/Yancey-Blog/blog-desktop-v2/compare/v3.5.0...v3.6.0) (2021-02-05)
 
 
