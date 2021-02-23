@@ -71,12 +71,43 @@ const GlobalStyle = createGlobalStyle`
     font-family: SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
   }
 
-  .lazyload-wrapper {
-    height: 100%;
-  }
-
+  /* aplayer CSS */
   .aplayer-list-title, .aplayer-title {
     color:#666 !important;
+  }
+
+  /* progressive image CSS */
+  .progressive {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    outline: none;
+  }
+
+  .progressive img {
+    display: block;
+    width: 100%;
+    max-width: none;
+    height: 22rem!important;
+    height: auto;
+    border: 0 none;
+  }
+
+  .progressive img.preview {
+    filter: blur(2vw);
+    transform: scale(1.05);
+  }
+
+  .progressive img.reveal {
+    position: absolute;
+    left: 0;
+    top: 0;
+    animation: progressiveReveal 1s linear;
+  }
+
+  @keyframes progressiveReveal {
+    0% { transform: scale(1.05); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
   }
 `
 
