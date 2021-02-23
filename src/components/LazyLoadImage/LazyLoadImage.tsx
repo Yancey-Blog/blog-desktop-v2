@@ -8,35 +8,33 @@ interface Props {
 }
 
 const LazyLoadImage: FC<Props> = ({ title, posterUrl }) => {
-  const lazyLoadImageWrapperRef = useRef<HTMLDivElement>(null)
+  const wrapperRef = useRef<HTMLDivElement>(null)
   const initProgressiveImage = () => {
     const classReplace = 'replace'
     const classPreview = 'preview'
     const classReveal = 'reveal'
 
-    const pItem = document.getElementsByClassName(`progressive ${classReplace}`)
-
     const rAF = window.requestAnimationFrame
 
     let timer: null | NodeJS.Timeout = null
 
-    function loadFullImage(item: HTMLElement, retry = 0) {
-      item.classList.remove(classReplace)
+    function loadFullImage($wrapperel: HTMLElement) {
+      $wrapperel.classList.remove(classReplace)
 
-      const href = item.getAttribute('data-href')
-      const pImg: HTMLImageElement | null = item.querySelector(
+      const href = $wrapperel.getAttribute('data-href')
+      const pImg: HTMLImageElement | null = $wrapperel.querySelector(
         `img.${classPreview}`,
       )
 
       if (!href || !pImg) return
 
       const img = new Image()
-      const ds = item.dataset
+      const {
+        dataset: { srcset, sizes },
+      } = $wrapperel
 
-      if (ds) {
-        if (ds.srcset) img.srcset = ds.srcset
-        if (ds.sizes) img.sizes = ds.sizes
-      }
+      if (srcset) img.srcset = srcset
+      if (sizes) img.sizes = sizes
 
       function addImg() {
         if (!pImg) return
@@ -47,48 +45,29 @@ const LazyLoadImage: FC<Props> = ({ title, posterUrl }) => {
         imgClass.add(classReveal)
         img.alt = pImg.alt || ''
 
-        rAF(() => {
-          item
-            .insertBefore(img, pImg.nextSibling)
-            .addEventListener('animationend', () => {
-              item.removeChild(pImg)
-              imgClass.remove(classReveal)
-            })
-        })
+        $wrapperel
+          .insertBefore(img, pImg.nextSibling)
+          .addEventListener('animationend', () => {
+            console.log($wrapperel)
+            $wrapperel.removeChild(pImg)
+            imgClass.remove(classReveal)
+          })
       }
 
       img.onload = addImg
-
-      if (retry < 2)
-        img.onerror = () => {
-          setTimeout(() => {
-            loadFullImage(item, retry + 1)
-          }, (retry + 1) * 3000)
-        }
 
       img.src = href
     }
 
     function inView() {
-      if (pItem.length)
-        rAF(() => {
-          const wH = window.innerHeight
-          let cRect = null
-          let cT
-          let cH
-          let p = 0
-          while (p < pItem.length) {
-            cRect = pItem[p].getBoundingClientRect()
-            cT = cRect.top
-            cH = cRect.height
+      rAF(() => {
+        if (!wrapperRef || !wrapperRef.current) return
 
-            if (cT + cH > 0 && wH > cT) {
-              loadFullImage(pItem[p] as HTMLElement)
-            } else {
-              p += 1
-            }
-          }
-        })
+        const { top, height } = wrapperRef.current.getBoundingClientRect()
+        if (top + height > 0 && window.innerHeight > top) {
+          loadFullImage(wrapperRef.current)
+        }
+      })
     }
 
     function throttle() {
@@ -114,11 +93,7 @@ const LazyLoadImage: FC<Props> = ({ title, posterUrl }) => {
     initProgressiveImage()
   }, [])
   return (
-    <div
-      data-href={posterUrl}
-      className="progressive replace"
-      ref={lazyLoadImageWrapperRef}
-    >
+    <div data-href={posterUrl} className="progressive replace" ref={wrapperRef}>
       <img
         src={`${posterUrl}${generateAliOSSSuffix(AliOSSSuffix.TINY_SUFFIX)}`}
         className="preview"
