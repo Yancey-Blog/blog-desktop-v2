@@ -66,7 +66,7 @@ const BestAlbum: FC<Props> = ({ bestAlbum }) => {
       </Picture>
 
       <Meta>
-        <Date>{formatDate(releaseDate, 'YYYY-MM-DD')}</Date>
+        <Date>{formatDate(releaseDate)}</Date>
         <Title>{title}</Title>
         <Artist>{artist}</Artist>
         <Divider />

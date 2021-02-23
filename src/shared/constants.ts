@@ -89,3 +89,18 @@ export const SOCIAL_MEDIA: SocialMedia = {
     icon: SVG_SPRITE.email,
   },
 }
+
+export const months = [
+  'Jan',
+  'Feb',
+  'Mar',
+  'Apr',
+  'May',
+  'Jun',
+  'Jul',
+  'Aug',
+  'Sep',
+  'Oct',
+  'Nov',
+  'Dec',
+]
