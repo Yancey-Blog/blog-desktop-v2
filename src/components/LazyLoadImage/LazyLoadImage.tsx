@@ -1,106 +1,72 @@
-import { FC, useEffect, useRef } from 'react'
+import { FC } from 'react'
+import ProgressiveImage from 'react-progressive-graceful-image'
+import styled from 'styled-components'
+import {
+  progressiveReveal,
+  progressiveRevealStatic,
+} from 'src/styled/animations'
 import { generateAliOSSSuffix } from 'src/shared/utils'
 import { AliOSSSuffix } from 'src/shared/constants'
 
 interface Props {
-  title: string
-  posterUrl: string
+  isSupportWebp?: boolean
+  imageUrl: string
+  alt: string
+  noAnimation?: boolean
 }
 
-const LazyLoadImage: FC<Props> = ({ title, posterUrl }) => {
-  const wrapperRef = useRef<HTMLDivElement>(null)
-  const initProgressiveImage = () => {
-    const classReplace = 'replace'
-    const classPreview = 'preview'
-    const classReveal = 'reveal'
+export const Image = styled.img`
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 
-    const rAF = window.requestAnimationFrame
-
-    let timer: null | NodeJS.Timeout = null
-
-    function loadFullImage($wrapperel: HTMLElement) {
-      $wrapperel.classList.remove(classReplace)
-
-      const href = $wrapperel.getAttribute('data-href')
-      const pImg: HTMLImageElement | null = $wrapperel.querySelector(
-        `img.${classPreview}`,
-      )
-
-      if (!href || !pImg) return
-
-      const img = new Image()
-      const {
-        dataset: { srcset, sizes },
-      } = $wrapperel
-
-      if (srcset) img.srcset = srcset
-      if (sizes) img.sizes = sizes
-
-      function addImg() {
-        if (!pImg) return
-
-        const imgClass = img.classList
-        img.className = pImg.className
-        imgClass.remove(classPreview)
-        imgClass.add(classReveal)
-        img.alt = pImg.alt || ''
-
-        $wrapperel
-          .insertBefore(img, pImg.nextSibling)
-          .addEventListener('animationend', () => {
-            console.log($wrapperel)
-            $wrapperel.removeChild(pImg)
-            imgClass.remove(classReveal)
-          })
-      }
-
-      img.onload = addImg
-
-      img.src = href
-    }
-
-    function inView() {
-      rAF(() => {
-        if (!wrapperRef || !wrapperRef.current) return
-
-        const { top, height } = wrapperRef.current.getBoundingClientRect()
-        if (top + height > 0 && window.innerHeight > top) {
-          loadFullImage(wrapperRef.current)
-        }
-      })
-    }
-
-    function throttle() {
-      timer =
-        timer ||
-        setTimeout(() => {
-          timer = null
-          inView()
-        }, 300)
-    }
-
-    const observer = new MutationObserver(throttle)
-    observer.observe(document.body, {
-      subtree: true,
-      childList: true,
-      attributes: true,
-    })
-
-    inView()
+  &.preview {
+    filter: blur(2vw);
+    transform: scale(1.05);
   }
 
-  useEffect(() => {
-    initProgressiveImage()
-  }, [])
+  &.reveal {
+    position: relative;
+    animation: ${progressiveReveal} 600ms linear;
+  }
+
+  &.preview-static {
+    filter: blur(0.4rem);
+    position: relative;
+  }
+
+  &.reveal-static {
+    position: relative;
+    animation: ${progressiveRevealStatic} 600ms linear;
+  }
+`
+
+const LazyLoadImage: FC<Props> = ({
+  isSupportWebp,
+  imageUrl,
+  alt,
+  noAnimation,
+}) => {
+  const configClass = (loading: boolean) => {
+    const previewClass = `preview${noAnimation ? '-static' : ''}`
+    const revealClass = `reveal${noAnimation ? '-static' : ''}`
+
+    return loading ? previewClass : revealClass
+  }
   return (
-    <div data-href={posterUrl} className="progressive replace" ref={wrapperRef}>
-      <img
-        src={`${posterUrl}${generateAliOSSSuffix(AliOSSSuffix.TINY_SUFFIX)}`}
-        className="preview"
-        alt={title}
-        loading="lazy"
-      />
-    </div>
+    <ProgressiveImage
+      src={`${imageUrl}${
+        isSupportWebp ? generateAliOSSSuffix(AliOSSSuffix.WEBP_SUFFIX) : ''
+      }`}
+      placeholder={`${imageUrl}${generateAliOSSSuffix(
+        AliOSSSuffix.TINY_SUFFIX,
+      )}`}
+      delay={1000}
+    >
+      {(src: string, loading: boolean) => (
+        <Image className={configClass(loading)} src={src} alt={alt} />
+      )}
+    </ProgressiveImage>
   )
 }
 

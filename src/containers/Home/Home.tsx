@@ -72,7 +72,7 @@ const Home: FC<Props> = ({ isSupportWebp }) => {
           openSources={openSources ? openSources.getOpenSources : []}
         />
 
-        <PostList />
+        <PostList isSupportWebp={isSupportWebp} />
 
         <ShowMore />
       </HomeMain>

@@ -21,6 +21,7 @@ export const PostCardWrapper = styled.section`
 `
 
 export const PosterAnchor = styled.a`
+  position: relative;
   width: 33rem;
   overflow: hidden;
   cursor: pointer;
