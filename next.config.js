@@ -9,7 +9,10 @@ module.exports = (phase, { defaultConfig }) =>
     withSourceMaps({
       compress: true,
       pageExtensions: ['mdx', 'jsx', 'js', 'ts', 'tsx'],
-      webpack: (config, options) => {
+      webpack: (
+        config,
+        { buildId, dev, isServer, defaultLoaders, webpack },
+      ) => {
         config.module.rules.push({
           test: [/\.bmp$/, /\.gif$/, /\.jpe?g$/, /\.png$/, /\.webp$/, /\.cur$/],
           use: [
