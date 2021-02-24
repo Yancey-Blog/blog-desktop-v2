@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.9.0](https://github.com/Yancey-Blog/blog-desktop-v2/compare/v3.8.0...v3.9.0) (2021-02-24)
+
 ## [3.8.0](https://github.com/Yancey-Blog/blog-desktop-v2/compare/v3.7.0...v3.8.0) (2021-02-24)
 
 ## [3.7.0](https://github.com/Yancey-Blog/blog-desktop-v2/compare/v3.6.0...v3.7.0) (2021-02-20)
