@@ -72,7 +72,7 @@ const PostDetail: FC = () => {
       variables: { id: id as string },
 
       onCompleted() {
-        setupHighlight(markdownWrapperEl)
+        setupHighlight()
         setupTocbot()
       },
 
