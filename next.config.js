@@ -19,8 +19,6 @@ module.exports = (phase, { defaultConfig }) =>
           ],
         })
 
-        config.plugins.push(new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/))
-
         return config
       },
     }),

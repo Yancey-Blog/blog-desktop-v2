@@ -6,7 +6,11 @@ import { POSTS } from 'src/containers/Post/typeDefs'
 import { PostQuery, PostVars } from 'src/containers/Post/types'
 import SubTitle from './SubTitle'
 
-const PostList: FC = () => {
+interface Props {
+  isSupportWebp: boolean
+}
+
+const PostList: FC<Props> = ({ isSupportWebp }) => {
   const { data } = useQuery<PostQuery, PostVars>(POSTS, {
     notifyOnNetworkStatusChange: true,
     variables: {
@@ -24,7 +28,11 @@ const PostList: FC = () => {
       {!data
         ? null
         : data.posts.items.map((post) => (
-            <PostCard post={post} key={post._id} />
+            <PostCard
+              isSupportWebp={isSupportWebp}
+              post={post}
+              key={post._id}
+            />
           ))}
     </>
   )

@@ -90,7 +90,7 @@ const Card: FC<Props> = ({ type, url, title, date, cover }) => {
       </Picture>
 
       <Meta>
-        <Date>{formatDate(date, 'YYYY-MM-DD')}</Date>
+        <Date>{formatDate(date)}</Date>
         <Title>{title}</Title>
         <Divider />
 

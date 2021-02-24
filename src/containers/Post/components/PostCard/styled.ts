@@ -21,21 +21,10 @@ export const PostCardWrapper = styled.section`
 `
 
 export const PosterAnchor = styled.a`
+  position: relative;
   width: 33rem;
   overflow: hidden;
   cursor: pointer;
-`
-
-export const Poster = styled.img`
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 500ms ease;
-
-  &:hover {
-    transform: scale(1.1);
-    transition: transform 500ms ease;
-  }
 `
 
 export const SVG = styled.svg`

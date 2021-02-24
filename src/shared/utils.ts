@@ -1,4 +1,4 @@
-import moment from 'moment'
+import { DateTime } from 'luxon'
 import { ALI_OSS_SUFFIX_BASE, AliOSSSuffix } from './constants'
 
 export const scrollToTop = () => {
@@ -21,8 +21,8 @@ export const scrollToTop = () => {
 
 export const noop = () => {}
 
-export const formatDate = (ISOString: string, format = 'YYYY-MM-DD HH:mm:ss') =>
-  moment(ISOString).format(format)
+export const formatDate = (ISOString: string, format = 'DDD') =>
+  DateTime.fromISO(ISOString).toFormat(format)
 
 export const devToolsWarning = () => {
   // eslint-disable-next-line no-console
@@ -41,5 +41,7 @@ export const generateAliOSSSuffix = (...props: AliOSSSuffix[]) => {
   return suffix
 }
 
-export const isAnniversary = () =>
-  moment().month() + 1 === 10 && moment().date() === 14
+export const isAnniversary = () => {
+  const now = DateTime.now()
+  return now.month + 1 === 10 && now.day === 14
+}

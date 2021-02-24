@@ -1,13 +1,11 @@
 import { FC } from 'react'
 import Link from 'next/link'
-import LazyLoad from 'react-lazyload'
-import Picture from 'src/components/Picture/Picture'
-import { SVG_SPRITE } from 'src/shared/constants'
+import LazyLoadImage from 'src/components/LazyLoadImage/LazyLoadImage'
 import { formatDate } from 'src/shared/utils'
+import { SVG_SPRITE } from 'src/shared/constants'
 import {
   PostCardWrapper,
   PosterAnchor,
-  Poster,
   SummaryWrapper,
   ReleasedAt,
   SVG,
@@ -21,20 +19,21 @@ import { IPostItem } from '../../types'
 
 interface Props {
   post: IPostItem
+  isSupportWebp: boolean
 }
 
-const PostCard: FC<Props> = ({ post }) => {
+const PostCard: FC<Props> = ({ post, isSupportWebp }) => {
   const { _id, createdAt, posterUrl, title, pv, like, tags, summary } = post
 
   return (
     <PostCardWrapper>
       <Link href={`/post/${_id}`} passHref prefetch={false}>
         <PosterAnchor>
-          <LazyLoad height={200}>
-            <Picture src={posterUrl}>
-              <Poster src={posterUrl} alt={title} />
-            </Picture>
-          </LazyLoad>
+          <LazyLoadImage
+            imageUrl={posterUrl}
+            alt={title}
+            isSupportWebp={isSupportWebp}
+          />
         </PosterAnchor>
       </Link>
       <SummaryWrapper>
