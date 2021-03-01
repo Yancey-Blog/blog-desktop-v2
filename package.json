@@ -40,7 +40,7 @@
     "next": "^10.0.6",
     "next-with-apollo": "^5.1.0",
     "normalize.css": "^8.0.1",
-    "notistack": "^1.0.3",
+    "notistack": "^1.0.5",
     "nprogress": "^0.2.0",
     "nuka-carousel": "^4.7.5",
     "react": "17.0.1",
