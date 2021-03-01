@@ -51,7 +51,7 @@
     "react-instantsearch-dom": "^6.8.1",
     "react-lazyload": "^3.1.0",
     "react-progressive-graceful-image": "^0.6.12",
-    "react-share": "^4.3.1",
+    "react-share": "^4.4.0",
     "sitemap": "^6.3.5",
     "styled-components": "^5.0.1",
     "tocbot": "^4.12.2",
