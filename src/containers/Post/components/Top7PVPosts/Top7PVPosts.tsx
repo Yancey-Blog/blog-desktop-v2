@@ -9,7 +9,7 @@ import { generateAliOSSSuffix } from 'src/shared/utils'
 import { PosterProps } from 'src/shared/types'
 import Top7PVPostsSkeleton from '../Top7PVPostsSkeleton/Top7PVPostsSkeleton'
 import SubHeader from '../SubTitle/SubTitle'
-import { generatePostUrl } from '../../PostDetail/tools'
+import { generatePostUrl } from '../../PostDetail/utils'
 import { GetTopPVPostsQuery } from '../../types'
 
 const CardItem = styled.div`
