@@ -18,7 +18,7 @@ import {
   removeEmbededTag,
   setupTocbot,
   generatePostUrl,
-} from './tools'
+} from './utils'
 import {
   PostDetailWrapper,
   Poster,
@@ -72,7 +72,7 @@ const PostDetail: FC = () => {
       variables: { id: id as string },
 
       onCompleted() {
-        setupHighlight()
+        setupHighlight(markdownWrapperEl)
         setupTocbot()
       },
 

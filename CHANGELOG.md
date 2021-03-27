@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.10.0](https://github.com/Yancey-Blog/blog-desktop-v2/compare/v3.9.0...v3.10.0) (2021-03-22)
+
+
+### Features
+
+* optimization <li /> style for post detail component ([4f466a8](https://github.com/Yancey-Blog/blog-desktop-v2/commit/4f466a85ffd57da0d200e483ac56cd8f26036f3b))
+
 ## [3.9.0](https://github.com/Yancey-Blog/blog-desktop-v2/compare/v3.8.0...v3.9.0) (2021-02-24)
 
 ## [3.8.0](https://github.com/Yancey-Blog/blog-desktop-v2/compare/v3.7.0...v3.8.0) (2021-02-24)

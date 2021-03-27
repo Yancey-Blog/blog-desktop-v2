@@ -106,6 +106,10 @@ export const Content = styled.article`
     position: relative;
     color: ${({ theme }) => theme.colors.linkBlue};
   }
+
+  li {
+    line-height: 1.8;
+  }
 `
 
 export const ImageGroup = styled.figure`
