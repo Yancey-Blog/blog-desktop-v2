@@ -31,7 +31,7 @@
     "aplayer": "^1.10.1",
     "disqus-react": "^1.0.9",
     "graphql": "^15.5.0",
-    "highlight.js": "^10.5.0",
+    "highlight.js": "^10.7.1",
     "isomorphic-unfetch": "^3.1.0",
     "lodash.orderby": "^4.6.0",
     "lodash.throttle": "^4.1.1",
