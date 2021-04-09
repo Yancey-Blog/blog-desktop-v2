@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.12.0](https://github.com/Yancey-Blog/blog-desktop-v2/compare/v3.11.0...v3.12.0) (2021-04-09)
+
+
+### Features
+
+* update <pre> tag's style ([e277794](https://github.com/Yancey-Blog/blog-desktop-v2/commit/e277794db97722ff83dfa6ea4d98e04220a54db3))
+
 ## [3.11.0](https://github.com/Yancey-Blog/blog-desktop-v2/compare/v3.10.0...v3.11.0) (2021-04-09)
 
 
