@@ -3,7 +3,7 @@ name: GitHub Actions for Blog Desktop v2
 on: [push, pull_request]
 
 jobs:
-  test:
+  pre-compile:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -27,9 +27,6 @@ jobs:
 
       - name: Install dependencies
         run: yarn
-
-      - name: Execute unit tests
-        run: yarn test
 
       - name: Pre compilation
         run: yarn build
