@@ -3,7 +3,7 @@ name: GitHub Actions for Blog Desktop v2
 on: [push, pull_request]
 
 jobs:
-  pre-compile:
+  test:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
