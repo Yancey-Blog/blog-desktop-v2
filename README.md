@@ -6,7 +6,7 @@ The **desktop website** for Yancey blog with React, Next.js, styled-components, 
 
 _This library is part of the [BEG (Blog Environment Group)](https://github.com/Yancey-Blog)_ ecosystem 📖
 
-[![Build Status](https://travis-ci.com/Yancey-Blog/blog-desktop-v2.svg?branch=master)](https://travis-ci.com/Yancey-Blog/blog-desktop-v2)
+![Build Status](https://github.com/Yancey-Blog/blog-desktop-v2/actions/workflows/github-actions.yml/badge.svg)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/8301052718f145cb9be68a6a28717f41)](https://www.codacy.com/app/YanceyOfficial/blog-desktop-v2?utm_source=github.com&utm_medium=referral&utm_content=Yancey-Blog/blog-desktop-v2&utm_campaign=Badge_Grade)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 ![Code Style](https://camo.githubusercontent.com/c83b8df34339bd302b7fd3fbb631f99ba25f87f8/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f636f64655f7374796c652d70726574746965722d6666363962342e737667)
