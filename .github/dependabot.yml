@@ -1,0 +1,69 @@
+version: 2
+updates:
+- package-ecosystem: npm
+  directory: "/"
+  schedule:
+    interval: weekly
+    time: "20:00"
+  open-pull-requests-limit: 10
+  target-branch: develop
+  ignore:
+  - dependency-name: "@typescript-eslint/eslint-plugin"
+    versions:
+    - 4.15.0
+    - 4.15.1
+    - 4.20.0
+    - 4.21.0
+  - dependency-name: highlight.js
+    versions:
+    - 10.7.1
+  - dependency-name: "@commitlint/cli"
+    versions:
+    - 12.0.1
+  - dependency-name: "@next/bundle-analyzer"
+    versions:
+    - 10.0.5
+    - 10.0.7
+    - 10.0.8
+    - 10.1.1
+  - dependency-name: stylelint
+    versions:
+    - 13.12.0
+  - dependency-name: y18n
+    versions:
+    - 4.0.1
+  - dependency-name: husky
+    versions:
+    - 5.1.2
+    - 5.1.3
+    - 5.2.0
+  - dependency-name: "@sentry/tracing"
+    versions:
+    - 6.2.1
+    - 6.2.2
+  - dependency-name: "@types/node"
+    versions:
+    - 14.14.31
+    - 14.14.32
+  - dependency-name: eslint
+    versions:
+    - 7.21.0
+  - dependency-name: algoliasearch
+    versions:
+    - 4.8.5
+  - dependency-name: notistack
+    versions:
+    - 1.0.3
+    - 1.0.5
+  - dependency-name: "@types/react-lazyload"
+    versions:
+    - 3.1.0
+  - dependency-name: "@types/react"
+    versions:
+    - 17.0.1
+  - dependency-name: standard-version
+    versions:
+    - 9.1.0
+  - dependency-name: react-ga
+    versions:
+    - 3.3.0
