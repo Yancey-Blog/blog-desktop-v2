@@ -6251,10 +6251,10 @@ react-hotjar@^2.2.1:
   resolved "https://registry.npmjs.org/react-hotjar/-/react-hotjar-2.2.1.tgz#5f06d15a146960262dba612657c828c8b58da8a3"
   integrity sha512-rkHdsFDfI7HCKeAwkHPf8Vq7ZbpX0oE4/5GgVvNambWw8z0PSKKxi59qWYX7H+dDYjchiL3z3hrAFQ+PohgQOA==
 
-react-instantsearch-core@^6.10.3, react-instantsearch-core@^6.8.1:
-  version "6.10.3"
-  resolved "https://registry.yarnpkg.com/react-instantsearch-core/-/react-instantsearch-core-6.10.3.tgz#00679b0a2fe228f3845924c43857a20b18a44978"
-  integrity sha512-7twp3OJrPGTFpyXwjJNeOTbQw7RTv+0cUyKkXR9njEyLdXKcPWfpeBirXfdQHjYIHEY2b0V2Vom1B9IHSDSUtQ==
+react-instantsearch-core@^6.11.0, react-instantsearch-core@^6.8.1:
+  version "6.11.0"
+  resolved "https://registry.yarnpkg.com/react-instantsearch-core/-/react-instantsearch-core-6.11.0.tgz#103fd4dd14c0e057fdde88e32bf419497b1fb55e"
+  integrity sha512-RE5pPuSL5e3+wgMl+QLY+MgyqgNXBrfppqk3podOXTdWpQ5VdaXVrpeWVcmFJlRRKPLJI6RGqCiHVRTaGt1HVw==
   dependencies:
     "@babel/runtime" "^7.1.2"
     algoliasearch-helper "^3.4.3"
