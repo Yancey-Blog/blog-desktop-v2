@@ -86,7 +86,7 @@
     "husky": "^4.3.6",
     "lint-staged": "^10.5.3",
     "prettier": "^2.2.1",
-    "standard-version": "^9.1.1",
+    "standard-version": "^9.3.0",
     "stylelint": "^13.13.1",
     "stylelint-config-recommended": "^3.0.0",
     "stylelint-config-styled-components": "^0.1.1",
