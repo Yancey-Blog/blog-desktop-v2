@@ -22,23 +22,23 @@ const CreatedAt = styled.time`
     position: absolute;
     content: '';
     top: 0.6rem;
-    left: 2.3rem;
+    left: 5rem;
     width: 0;
     height: 0;
     border: 0.6rem solid transparent;
-    border-bottom-color: ${({ theme }) => theme.colors.sevenOpcityBlack};
+    border-bottom-color: ${({ theme }) => theme.background.tooltip};
   }
 
   &:hover::after {
     position: absolute;
     content: attr(data-last-modified-date);
     top: 1.8rem;
-    left: -4rem;
-    padding: 0.2rem 0.1rem;
+    left: -1.3rem;
+    padding: 0.2rem;
     min-width: 14rem;
     text-align: center;
-    color: ${({ theme }) => theme.colors.white};
-    background: ${({ theme }) => theme.colors.sevenOpcityBlack};
+    color: ${({ theme }) => theme.text.tooltip};
+    background: ${({ theme }) => theme.background.tooltip};
     border-radius: 0.4rem;
   }
 `
@@ -60,12 +60,11 @@ const PostMeta: FC<Props> = ({
 }) => (
   <MetaWrapper>
     <CreatedAt
-      data-last-modified-date={`last modified: ${formatDate(
+      data-last-modified-date={`Last Modified At: ${formatDate(
         lastModifiedDate,
-        'FF',
       )}`}
     >
-      {formatDate(createdAt, 'FF')}
+      Released At {formatDate(createdAt)}
     </CreatedAt>
     <Statistics>{pv} PV</Statistics>
     <Statistics>

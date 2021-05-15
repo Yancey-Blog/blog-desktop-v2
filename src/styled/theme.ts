@@ -6,25 +6,23 @@ const light = {
     blurCard: 'rgba(245, 245, 245, .8)',
     bestAlbumCard: '#e6e6e6',
     skeleton: 'rgba(0, 0, 0, 0.04)',
+    tooltip: 'rgba(0, 0, 0, .7)',
   },
   text: {
     primary: '#666666',
     secondary: '#969696',
     header: '#504e4e',
     post: '#3b454e',
+    tooltip: '#fff',
   },
   link: {
     primary: '#666666',
     secondary: '#ffa500',
   },
   border: '#e6e6e6',
-
   toggleBorder: '#FFF',
-
   gradient: 'linear-gradient(#39598A, #79D7ED)',
-
   postSvg: '#fcf8db',
-
   codeEl: '#f0f0f0',
 }
 
@@ -36,25 +34,23 @@ const dark = {
     blurCard: 'rgba(27, 29, 30, .8)',
     bestAlbumCard: '#000000',
     skeleton: 'rgba(255, 255, 255, 0.08)',
+    tooltip: 'rgba(255, 255, 255, .7)',
   },
   text: {
     primary: '#f5f6f7',
     secondary: '#cbc8c0',
     header: '#f5f6f7',
     post: '#f5f6f7',
+    tooltip: '#000',
   },
   link: {
     primary: '#f5f6f7',
     secondary: '#ffa500',
   },
   border: '#5b5b5b',
-
   toggleBorder: '#6B8096',
-
   gradient: 'linear-gradient(#091236, #1E215D)',
-
   postSvg: '#181a1b',
-
   codeEl: '#181a1b',
 }
 
