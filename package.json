@@ -22,7 +22,7 @@
   },
   "dependencies": {
     "@apollo/client": "^3.3.16",
-    "@material-ui/core": "^4.11.3",
+    "@material-ui/core": "^4.11.4",
     "@material-ui/lab": "^4.0.0-alpha.57",
     "@sentry/browser": "^6.2.3",
     "@sentry/tracing": "^6.2.3",
@@ -85,7 +85,7 @@
     "eslint-plugin-react-hooks": "^4.2.0",
     "husky": "^4.3.6",
     "lint-staged": "^10.5.3",
-    "prettier": "^2.2.1",
+    "prettier": "^2.3.0",
     "standard-version": "^9.3.0",
     "stylelint": "^13.13.1",
     "stylelint-config-recommended": "^5.0.0",
