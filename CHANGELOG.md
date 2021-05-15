@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.13.0](https://github.com/Yancey-Blog/blog-desktop-v2/compare/v3.12.0...v3.13.0) (2021-05-15)
+
+
+### Features
+
+* show `Release At` text for the meta of blog detatil page ([2387237](https://github.com/Yancey-Blog/blog-desktop-v2/commit/2387237cbba33526dbc09356b7cfff61525c7d3d))
+
 ## [3.12.0](https://github.com/Yancey-Blog/blog-desktop-v2/compare/v3.11.0...v3.12.0) (2021-04-09)
 
 
