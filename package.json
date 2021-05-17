@@ -50,7 +50,7 @@
     "react-instantsearch-core": "^6.11.0",
     "react-instantsearch-dom": "^6.8.1",
     "react-lazyload": "^3.2.0",
-    "react-progressive-graceful-image": "^0.6.12",
+    "react-progressive-graceful-image": "^0.6.13",
     "react-share": "^4.4.0",
     "sitemap": "^6.3.5",
     "styled-components": "^5.0.1",
