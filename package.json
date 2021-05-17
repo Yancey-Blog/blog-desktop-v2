@@ -54,7 +54,7 @@
     "react-share": "^4.4.0",
     "sitemap": "^6.3.5",
     "styled-components": "^5.0.1",
-    "tocbot": "^4.12.2",
+    "tocbot": "^4.12.3",
     "yancey-js-util": "^3.0.0"
   },
   "devDependencies": {
