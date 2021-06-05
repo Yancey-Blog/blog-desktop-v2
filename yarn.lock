@@ -6237,10 +6237,10 @@ react-move@^6.1.0:
     kapellmeister "^3.0.1"
     prop-types "^15.7.2"
 
-react-progressive-graceful-image@^0.6.12:
-  version "0.6.12"
-  resolved "https://registry.npmjs.org/react-progressive-graceful-image/-/react-progressive-graceful-image-0.6.12.tgz#c505df911d9bd08a8c1d699a9bc2e44267ac83bc"
-  integrity sha512-ZDh1Nw7NoTtuuPT9jw7PpjkWxOyxwQKki/lFnm23DZ0322134Wx2mDVIFLgZ7UXUoNpg2RhCAqKxd0sG4Sl+6A==
+react-progressive-graceful-image@^0.6.13:
+  version "0.6.13"
+  resolved "https://registry.yarnpkg.com/react-progressive-graceful-image/-/react-progressive-graceful-image-0.6.13.tgz#5387788dab1987f1c6e5dc4496d0fcdc64f947f0"
+  integrity sha512-I7xbmb+vQI0ZopC+EbZ8/wXm8d2huQkuzvsLdOAtm+fwd/h5qp/qW5HaP+O0QpciGGQjfLFpSud6myxcXGQx6Q==
   dependencies:
     "@researchgate/react-intersection-observer" "^1.0.5"
 
