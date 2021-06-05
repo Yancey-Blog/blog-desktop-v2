@@ -33,10 +33,8 @@ const Home: FC<Props> = ({ isSupportWebp }) => {
   const { data: openSources } = useQuery<OpenSourceQuery>(OPEN_SOURCES)
   const { data: mottos } = useQuery<MottoQuery>(MOTTOS)
 
-  const [
-    FireWorkComponent,
-    setFireWorkComponent,
-  ] = useState<ComponentType | null>(null)
+  const [FireWorkComponent, setFireWorkComponent] =
+    useState<ComponentType | null>(null)
 
   useEffect(() => {
     if (isAnniversary()) {
