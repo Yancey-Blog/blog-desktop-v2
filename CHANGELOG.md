@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.15.0](https://github.com/Yancey-Blog/blog-desktop-v2/compare/v3.14.0...v3.15.0) (2021-06-05)
+
+
+### Features
+
+* limit the width of markdown image ([022ece8](https://github.com/Yancey-Blog/blog-desktop-v2/commit/022ece8ead40db5f040b86746ffb8276f6f70f32))
+
 ## [3.14.0](https://github.com/Yancey-Blog/blog-desktop-v2/compare/v3.13.0...v3.14.0) (2021-06-03)
 
 
