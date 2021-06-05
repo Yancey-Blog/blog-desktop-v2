@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.14.0](https://github.com/Yancey-Blog/blog-desktop-v2/compare/v3.13.0...v3.14.0) (2021-06-03)
+
+
+### Features
+
+* **image style:** add `object-fit: cover` for blog detail page's cover ([e42b19d](https://github.com/Yancey-Blog/blog-desktop-v2/commit/e42b19d75b48188860503b68bfb439e68d43e6ef))
+
 ## [3.13.0](https://github.com/Yancey-Blog/blog-desktop-v2/compare/v3.12.0...v3.13.0) (2021-05-15)
 
 
