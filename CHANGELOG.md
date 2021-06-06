@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.17.0](https://github.com/Yancey-Blog/blog-desktop-v2/compare/v3.16.0...v3.17.0) (2021-06-06)
+
+
+### Features
+
+* upgrade highlight.js to v11.x.x ([49a9fd2](https://github.com/Yancey-Blog/blog-desktop-v2/commit/49a9fd2569639c603b64d2ac8ef2d83a2bc571be))
+
 ## [3.16.0](https://github.com/Yancey-Blog/blog-desktop-v2/compare/v3.15.1...v3.16.0) (2021-06-06)
 
 
