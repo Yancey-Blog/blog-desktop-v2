@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.16.0](https://github.com/Yancey-Blog/blog-desktop-v2/compare/v3.15.1...v3.16.0) (2021-06-06)
+
+
+### Features
+
+* update to webpack5 ([d928f07](https://github.com/Yancey-Blog/blog-desktop-v2/commit/d928f07ee4a0d90a39ac1ad68c6859c213aa43a0))
+
 ### [3.15.1](https://github.com/Yancey-Blog/blog-desktop-v2/compare/v3.15.0...v3.15.1) (2021-06-06)
 
 
