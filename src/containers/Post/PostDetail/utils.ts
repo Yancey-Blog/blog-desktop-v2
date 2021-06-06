@@ -8,10 +8,10 @@ export const setupHighlight = (
   if (markdownWrapperEl?.current) {
     const preNodes = markdownWrapperEl.current.querySelectorAll('pre')
     preNodes.forEach((preNode) => {
-      hljs.highlightBlock(preNode)
+      hljs.highlightElement(preNode)
     })
   }
-  hljs.initHighlighting()
+  hljs.highlightAll()
 }
 
 export const addLineNumbers = () => {
