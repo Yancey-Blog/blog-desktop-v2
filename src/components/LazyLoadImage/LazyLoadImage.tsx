@@ -16,6 +16,10 @@ interface Props {
 }
 
 export const Image = styled.img`
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
   &.preview {
     filter: blur(2vw);
     transform: scale(1.05);
