@@ -74,9 +74,6 @@ export const Content = styled.article`
   img {
     display: block;
     margin: 0 auto 1rem;
-    width: fit-content;
-    max-width: 100%;
-    max-height: 100%;
   }
 
   iframe {

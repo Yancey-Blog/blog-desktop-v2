@@ -1,7 +1,10 @@
 import { FC, useEffect, useRef } from 'react'
 import { useRouter } from 'next/router'
 import { useQuery, useMutation } from '@apollo/client'
-import MarkDown from 'markdown-to-jsx'
+import ReactMarkdown from 'react-markdown'
+import gfm from 'remark-gfm'
+import SyntaxHighlighter from 'react-syntax-highlighter'
+import { atomDark } from 'react-syntax-highlighter/dist/cjs/styles/prism'
 import { DiscussionEmbed } from 'disqus-react'
 import LazyLoadImage from 'src/components/LazyLoadImage/LazyLoadImage'
 import MetaHead from 'src/components/Head/Head'
@@ -13,12 +16,7 @@ import PrevAndNext from '../components/PrevAndNext/PrevAndNext'
 import PostDetailSkeleton from '../components/PostDetailSkeleton/PostDetailSkeleton'
 import { GET_POST_BY_ID, UPDATE_PV } from '../typeDefs'
 import { GetPostByIdQuery, GetPostByIdVar } from '../types'
-import {
-  setupHighlight,
-  removeEmbededTag,
-  setupTocbot,
-  generatePostUrl,
-} from './utils'
+import { removeEmbededTag, setupTocbot, generatePostUrl } from './utils'
 import {
   PostDetailWrapper,
   Poster,
@@ -44,26 +42,41 @@ const PostDetail: FC = () => {
     onError() {},
   })
 
-  const MarkdownImg = ({
-    src,
-    alt,
-    ...props
-  }: {
-    src: string
-    alt: string
-    props: any
-  }) => (
-    <ImageGroup className="postImgGroup" {...props}>
-      <LazyLoadImage imageUrl={src} alt={alt} noAnimation />
-      <ImageAlt className="postImgAlt">{alt}</ImageAlt>
-    </ImageGroup>
-  )
-
-  const MarkdownTable = ({ ...props }) => (
-    <TableWrapper>
-      <table {...props} />
-    </TableWrapper>
-  )
+  const customMarkdownComponents = {
+    code({ node, inline, className, children, ...props }: any) {
+      const match = /language-(\w+)/.exec(className || '')
+      return !inline && match ? (
+        <SyntaxHighlighter
+          style={atomDark}
+          language={match[1]}
+          PreTag="div"
+          {...props}
+        >
+          {children.toString().replace(/\n$/, '')}
+        </SyntaxHighlighter>
+      ) : (
+        <code className={className} {...props}>
+          {children.toString()}
+        </code>
+      )
+    },
+    table({ node, inline, className, children, ...props }: any) {
+      return (
+        <TableWrapper>
+          <table {...props}>{children}</table>
+        </TableWrapper>
+      )
+    },
+    img({ node, inline, className, children, ...props }: any) {
+      const { src, alt } = props
+      return (
+        <ImageGroup {...props}>
+          <LazyLoadImage imageUrl={src} alt={alt} noAnimation />
+          <ImageAlt>{alt}</ImageAlt>
+        </ImageGroup>
+      )
+    },
+  }
 
   const { data: post } = useQuery<GetPostByIdQuery, GetPostByIdVar>(
     GET_POST_BY_ID,
@@ -72,7 +85,6 @@ const PostDetail: FC = () => {
       variables: { id: id as string },
 
       onCompleted() {
-        setupHighlight(markdownWrapperEl)
         setupTocbot()
       },
 
@@ -139,22 +151,14 @@ const PostDetail: FC = () => {
         />
         <div ref={markdownWrapperEl}>
           <Summary>{summary}</Summary>
-          <MarkDown
-            options={{
-              slugify: (str) => str,
-              overrides: {
-                img: {
-                  component: MarkdownImg,
-                },
-                table: {
-                  component: MarkdownTable,
-                },
-              },
-            }}
+
+          <ReactMarkdown
+            remarkPlugins={[gfm]}
+            components={customMarkdownComponents}
             className="postDetailContent"
           >
             {removeEmbededTag(content)}
-          </MarkDown>
+          </ReactMarkdown>
         </div>
 
         <PrevAndNext prev={prev} next={next} />
