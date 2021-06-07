@@ -4,7 +4,7 @@ import { useQuery, useMutation } from '@apollo/client'
 import ReactMarkdown from 'react-markdown'
 import gfm from 'remark-gfm'
 import SyntaxHighlighter from 'react-syntax-highlighter'
-import { atomDark } from 'react-syntax-highlighter/dist/cjs/styles/prism'
+import { atomOneDarkReasonable } from 'react-syntax-highlighter/dist/cjs/styles/hljs'
 import { DiscussionEmbed } from 'disqus-react'
 import LazyLoadImage from 'src/components/LazyLoadImage/LazyLoadImage'
 import MetaHead from 'src/components/Head/Head'
@@ -47,7 +47,7 @@ const PostDetail: FC = () => {
       const match = /language-(\w+)/.exec(className || '')
       return !inline && match ? (
         <SyntaxHighlighter
-          style={atomDark}
+          style={atomOneDarkReasonable}
           language={match[1]}
           PreTag="div"
           {...props}
