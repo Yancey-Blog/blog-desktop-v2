@@ -64,7 +64,7 @@ const GlobalStyle = createGlobalStyle`
   pre {
     padding: 1.2rem !important;
     line-height: 1.6;
-    background-color: #282c34 !important;
+    background-color: #1d1f21 !important;
   }
 
   code {

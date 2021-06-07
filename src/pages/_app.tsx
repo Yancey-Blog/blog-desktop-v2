@@ -24,7 +24,6 @@ import { devToolsWarning } from 'src/shared/utils'
 import { NextWebVitalsMetrics } from 'src/shared/types'
 import 'normalize.css'
 import 'aplayer/dist/APlayer.min.css'
-import 'highlight.js/styles/atom-one-dark.css'
 import 'tocbot/dist/tocbot.css'
 import 'src/static/css/nprogress.css'
 
