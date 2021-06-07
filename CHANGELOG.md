@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.18.1](https://github.com/Yancey-Blog/blog-desktop-v2/compare/v3.18.0...v3.18.1) (2021-06-07)
+
+
+### Bug Fixes
+
+* use highlight.js to render markdown code due to the response value ([fb8dce1](https://github.com/Yancey-Blog/blog-desktop-v2/commit/fb8dce115612f71d5905cf12d27d4b8e57202ff0))
+
 ## [3.18.0](https://github.com/Yancey-Blog/blog-desktop-v2/compare/v3.17.0...v3.18.0) (2021-06-07)
 
 
