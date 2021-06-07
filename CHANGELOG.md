@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.18.0](https://github.com/Yancey-Blog/blog-desktop-v2/compare/v3.17.0...v3.18.0) (2021-06-07)
+
+
+### Features
+
+* use react-markdown as the markdown parser ([be6b4e1](https://github.com/Yancey-Blog/blog-desktop-v2/commit/be6b4e1f5af63e2f3c00a9e9188ea6d3966fc825))
+
 ## [3.17.0](https://github.com/Yancey-Blog/blog-desktop-v2/compare/v3.16.0...v3.17.0) (2021-06-06)
 
 
