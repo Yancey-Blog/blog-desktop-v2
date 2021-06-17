@@ -66,7 +66,7 @@ const Archive: FC = () => {
                                   {DateTime.fromISO(day.createdAt).day}
                                   {': '}
                                 </Day>
-                                <Link href="/post/[id]" as={`/post/${day.id}`}>
+                                <Link href={`/post/${day.id}`}>
                                   <a>
                                     {day.title} ({day.pv} PV )
                                   </a>
