@@ -1,5 +1,5 @@
 import { createGlobalStyle } from 'styled-components'
-import cur from 'src/static/images/normal.cur'
+import cur from 'public/images/normal.cur'
 
 const UBUNTU_REGULAR = `${process.env.NEXT_PUBLIC_STATIC_FILE_URL}/fonts/Ubuntu-Regular.woff2`
 const UBUNTU_BOLD = `${process.env.NEXT_PUBLIC_STATIC_FILE_URL}/fonts/Ubuntu-Bold.ttf`

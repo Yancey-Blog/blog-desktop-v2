@@ -25,7 +25,7 @@ import { NextWebVitalsMetrics } from 'src/shared/types'
 import 'normalize.css'
 import 'aplayer/dist/APlayer.min.css'
 import 'tocbot/dist/tocbot.css'
-import 'src/static/css/nprogress.css'
+import 'src/styled/nprogress.css'
 
 interface Props {
   apollo: ApolloClient<{}>

@@ -8,9 +8,6 @@ module.exports = (phase, { defaultConfig }) =>
     withSourceMaps({
       compress: true,
       pageExtensions: ['mdx', 'jsx', 'js', 'ts', 'tsx'],
-      future: {
-        webpack5: true,
-      },
       webpack: (
         config,
         { buildId, dev, isServer, defaultLoaders, webpack },
