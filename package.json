@@ -6,9 +6,9 @@
   "author": "Yancey Leo <yanceyofficial@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "PORT=4000 next",
-    "build": "next build",
+    "dev": "next",
     "start": "next start",
+    "build": "next build",
     "analyze": "ANALYZE=true yarn build",
     "commit": "npx git-cz",
     "push": "git push --follow-tags origin master",
