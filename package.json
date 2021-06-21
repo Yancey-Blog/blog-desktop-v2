@@ -71,7 +71,7 @@
     "@types/nprogress": "^0.2.0",
     "@types/react": "^17.0.8",
     "@types/react-instantsearch-dom": "^6.10.0",
-    "@types/react-syntax-highlighter": "^13.5.0",
+    "@types/react-syntax-highlighter": "^13.5.1",
     "@types/styled-components": "^5.1.7",
     "@typescript-eslint/eslint-plugin": "^4.26.0",
     "babel-plugin-styled-components": "^1.12.0",
