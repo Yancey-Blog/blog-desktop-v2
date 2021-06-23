@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.19.0](https://github.com/Yancey-Blog/blog-desktop-v2/compare/v3.18.1...v3.19.0) (2021-06-23)
+
+
+### Features
+
+* `import { userouter }` instead of `import router` ([1c04eb0](https://github.com/Yancey-Blog/blog-desktop-v2/commit/1c04eb04a1b1eb9518324134f075e9bbd6377b7f))
+* upgrde next.js to v11 ([91a0ba1](https://github.com/Yancey-Blog/blog-desktop-v2/commit/91a0ba1c7008b4230b468e971f489d80bdb8c479))
+
 ### [3.18.1](https://github.com/Yancey-Blog/blog-desktop-v2/compare/v3.18.0...v3.18.1) (2021-06-07)
 
 
