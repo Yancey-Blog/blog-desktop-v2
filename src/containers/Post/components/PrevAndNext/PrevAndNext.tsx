@@ -75,7 +75,7 @@ const PrevAndNext: FC<Props> = ({ prev, next }) => {
     title: string,
     type: ItemType,
   ) => (
-    <Link href="/post/[id]" as={`/post/${id}`}>
+    <Link href={`/post/${id}`}>
       <a>
         <PictureContainer>
           <Picture src={posterUrl}>

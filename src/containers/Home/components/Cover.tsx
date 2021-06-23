@@ -1,7 +1,6 @@
 import { FC } from 'react'
 import styled from 'styled-components'
 import LazyLoadImage from 'src/components/LazyLoadImage/LazyLoadImage'
-import dot from 'src/static/images/dot.png'
 
 import { ICover } from '../types'
 
@@ -18,9 +17,8 @@ const Covers = styled.figure`
     height: 100%;
     top: 0;
     left: 0;
-    background-image: url(${dot});
+    background-image: url('images/dot.png');
     background-repeat: repeat;
-    background-attachment: scroll;
     opacity: 0.5;
   }
 `

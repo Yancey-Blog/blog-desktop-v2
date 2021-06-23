@@ -86,7 +86,7 @@ const Top7PVPosts: FC<Props> = ({ topPVPosts, isSupportWebp }) => {
         topPVPosts.getTopPVPosts.map((post) => {
           const { _id, title, posterUrl } = post
           return (
-            <Link href="/post/[id]" as={`/post/${_id}`} key={_id}>
+            <Link href={`/post/${_id}`} key={_id}>
               <a>
                 <CardItem>
                   <BlurBg

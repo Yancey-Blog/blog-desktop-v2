@@ -1,6 +1,6 @@
 import { FC, useState } from 'react'
 import { useMutation } from '@apollo/client'
-import Router from 'next/router'
+import { useRouter } from 'next/router'
 import styled from 'styled-components'
 import { TwitterShareButton } from 'react-share'
 import { flexMixin } from 'src/styled/mixins'
@@ -44,6 +44,7 @@ interface Props {
 }
 
 const SharePanel: FC<Props> = ({ id, title, like, postUrl }) => {
+  const router = useRouter()
   const [likeStatus, setLikeStatus] = useState(false)
 
   const [updateLike] = useMutation(UPDATE_LIKE, {
@@ -68,7 +69,7 @@ const SharePanel: FC<Props> = ({ id, title, like, postUrl }) => {
     }
   }
 
-  Router.events.on('routeChangeStart', () => {
+  router.events.on('routeChangeStart', () => {
     setLikeStatus(false)
   })
   return (
