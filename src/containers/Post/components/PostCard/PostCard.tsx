@@ -27,7 +27,7 @@ const PostCard: FC<Props> = ({ post, isSupportWebp }) => {
 
   return (
     <PostCardWrapper>
-      <Link href={`/post/${_id}`} passHref prefetch={false}>
+      <Link href={`/post/${_id}`} passHref>
         <PosterAnchor>
           <LazyLoadImage
             imageUrl={posterUrl}
@@ -44,7 +44,7 @@ const PostCard: FC<Props> = ({ post, isSupportWebp }) => {
           Released At {formatDate(createdAt)}
         </ReleasedAt>
 
-        <Link href="/post/[id]" as={`/post/${_id}`} prefetch={false}>
+        <Link href={`/post/${_id}`}>
           <a>
             <Title>{title}</Title>
           </a>
@@ -75,7 +75,7 @@ const PostCard: FC<Props> = ({ post, isSupportWebp }) => {
 
         <Summary>{summary}</Summary>
 
-        <Link href="/post/[id]" as={`/post/${_id}`} prefetch={false}>
+        <Link href={`/post/${_id}`}>
           <a>
             <ReadMoreSVG>
               <use xlinkHref={SVG_SPRITE.more} />

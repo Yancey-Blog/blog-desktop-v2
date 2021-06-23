@@ -1,5 +1,6 @@
+import { useEffect } from 'react'
 import { AppProps } from 'next/app'
-import Router from 'next/router'
+import { useRouter } from 'next/router'
 import dynamic from 'next/dynamic'
 import * as Sentry from '@sentry/browser'
 import { Integrations } from '@sentry/tracing'
@@ -25,7 +26,7 @@ import { NextWebVitalsMetrics } from 'src/shared/types'
 import 'normalize.css'
 import 'aplayer/dist/APlayer.min.css'
 import 'tocbot/dist/tocbot.css'
-import 'src/static/css/nprogress.css'
+import 'src/styled/nprogress.css'
 
 interface Props {
   apollo: ApolloClient<{}>
@@ -38,11 +39,11 @@ const Player = dynamic(import('src/containers/Music/components/Player'), {
   ssr: false,
 })
 
-Router.events.on('routeChangeStart', () => {
-  NProgress.start()
-})
-Router.events.on('routeChangeComplete', () => NProgress.done())
-Router.events.on('routeChangeError', () => NProgress.done())
+// Router.events.on('routeChangeStart', () => {
+//   NProgress.start()
+// })
+// Router.events.on('routeChangeComplete', () => NProgress.done())
+// Router.events.on('routeChangeError', () => NProgress.done())
 
 Sentry.init({
   dsn: process.env.NEXT_PUBLIC_SENTRY_DSN,
@@ -71,8 +72,17 @@ export function reportWebVitals({
 }
 
 const YanceyBlog = ({ Component, pageProps, apollo }: AppProps & Props) => {
+  const router = useRouter()
   const { theme, toggleTheme } = useDarkMode()
   const themeMode = theme === ThemeMode.LIGHT ? lightTheme : darkTheme
+
+  useEffect(() => {
+    router.events.on('routeChangeStart', () => {
+      NProgress.start()
+    })
+    router.events.on('routeChangeComplete', () => NProgress.done())
+    router.events.on('routeChangeError', () => NProgress.done())
+  }, [])
 
   return (
     <ErrorBoundary>
