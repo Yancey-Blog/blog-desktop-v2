@@ -41,25 +41,20 @@ export const Image = styled.img`
   }
 `
 
-const LazyLoadImage: FC<Props> = ({
-  isSupportWebp,
-  imageUrl,
-  alt,
-  noAnimation,
-}) => {
+const LazyLoadImage: FC<Props> = ({ imageUrl, alt, noAnimation }) => {
   const configClass = (loading: boolean) => {
     const previewClass = `preview${noAnimation ? '-static' : ''}`
     const revealClass = `reveal${noAnimation ? '-static' : ''}`
-
     return loading ? previewClass : revealClass
   }
+
+  const { WEBP_SUFFIX, TINY_SUFFIX } = AliOSSSuffix
   return (
     <ProgressiveImage
-      src={`${imageUrl}${
-        isSupportWebp ? generateAliOSSSuffix(AliOSSSuffix.WEBP_SUFFIX) : ''
-      }`}
+      src={`${imageUrl}${generateAliOSSSuffix(WEBP_SUFFIX)}`}
       placeholder={`${imageUrl}${generateAliOSSSuffix(
-        AliOSSSuffix.TINY_SUFFIX,
+        WEBP_SUFFIX,
+        TINY_SUFFIX,
       )}`}
       delay={1000}
     >
