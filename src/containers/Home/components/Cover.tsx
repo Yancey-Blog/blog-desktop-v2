@@ -28,14 +28,10 @@ interface Props {
   covers: ICover[]
 }
 
-const Cover: FC<Props> = ({ isSupportWebp, covers }) => {
+const Cover: FC<Props> = ({ covers }) => {
   return (
     <Covers>
-      <LazyLoadImage
-        isSupportWebp={isSupportWebp}
-        imageUrl={covers[0]?.coverUrl}
-        alt=""
-      />
+      <LazyLoadImage imageUrl={covers[0]?.coverUrl} alt="" />
     </Covers>
   )
 }

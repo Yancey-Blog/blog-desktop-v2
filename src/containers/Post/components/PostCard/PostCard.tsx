@@ -22,18 +22,14 @@ interface Props {
   isSupportWebp: boolean
 }
 
-const PostCard: FC<Props> = ({ post, isSupportWebp }) => {
+const PostCard: FC<Props> = ({ post }) => {
   const { _id, createdAt, posterUrl, title, pv, like, tags, summary } = post
 
   return (
     <PostCardWrapper>
       <Link href={`/post/${_id}`} passHref>
         <PosterAnchor>
-          <LazyLoadImage
-            imageUrl={posterUrl}
-            alt={title}
-            isSupportWebp={isSupportWebp}
-          />
+          <LazyLoadImage imageUrl={posterUrl} alt={title} />
         </PosterAnchor>
       </Link>
       <SummaryWrapper>
