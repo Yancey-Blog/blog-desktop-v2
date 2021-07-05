@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.21.0](https://github.com/Yancey-Blog/blog-desktop-v2/compare/v3.20.0...v3.21.0) (2021-07-05)
+
+
+### Features
+
+* **top7pvposts:** update css of Top7pvposts ([a3cdcb3](https://github.com/Yancey-Blog/blog-desktop-v2/commit/a3cdcb3e8f29a79cb2563af36f8be8a6af6b9e53))
+
 ## [3.20.0](https://github.com/Yancey-Blog/blog-desktop-v2/compare/v3.19.0...v3.20.0) (2021-06-29)
 
 
