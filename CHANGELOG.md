@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.21.1](https://github.com/Yancey-Blog/blog-desktop-v2/compare/v3.21.0...v3.21.1) (2021-07-07)
+
+
+### Bug Fixes
+
+* do not use useRouter event listener on SharePanel Component ([98bd65c](https://github.com/Yancey-Blog/blog-desktop-v2/commit/98bd65c1dc0515e28f59de92d93e22cd23ec3283))
+
 ## [3.21.0](https://github.com/Yancey-Blog/blog-desktop-v2/compare/v3.20.0...v3.21.0) (2021-07-05)
 
 
