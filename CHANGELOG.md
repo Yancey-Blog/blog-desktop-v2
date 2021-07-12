@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.21.2](https://github.com/Yancey-Blog/blog-desktop-v2/compare/v3.21.1...v3.21.2) (2021-07-12)
+
+
+### Bug Fixes
+
+* **iframe tag not be displayed:** use `rehype-raw` to parse pure HTML tag in markdown ([3144234](https://github.com/Yancey-Blog/blog-desktop-v2/commit/31442349711824b0c774075aa7d732db033a4eec))
+
 ### [3.21.1](https://github.com/Yancey-Blog/blog-desktop-v2/compare/v3.21.0...v3.21.1) (2021-07-07)
 
 
