@@ -2,6 +2,7 @@ import { FC } from 'react'
 import styled from 'styled-components'
 import { flexMixin, transitionMixin } from 'src/styled/mixins'
 import { SVG_SPRITE } from 'src/shared/constants'
+import breakpoints from 'src/styled/breakpoints'
 
 interface Props {
   theme: string
@@ -25,6 +26,10 @@ const ToggleContainer = styled.button`
   cursor: pointer;
   overflow: hidden;
   z-index: 200;
+
+  @media only screen and ${breakpoints.device.laptop} {
+    display: none;
+  }
 `
 
 const SVG = styled.svg<ButtonProps>`

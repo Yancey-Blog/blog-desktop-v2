@@ -2,6 +2,7 @@ import { FC } from 'react'
 import styled from 'styled-components'
 import Picture from 'src/components/Picture/Picture'
 import { transitionMixin } from 'src/styled/mixins'
+import breakpoints from 'src/styled/breakpoints'
 import { SVG_SPRITE } from 'src/shared/constants'
 import SubTitle from './SubTitle'
 import { IOpenSource } from '../types'
@@ -20,6 +21,10 @@ const OpenSourceItem = styled.div`
   box-shadow: 1px 1px 3px ${({ theme }) => theme.colors.threeOpcityBlack};
   overflow: hidden;
   ${transitionMixin('all', 400, 'linear')};
+
+  @media only screen and ${breakpoints.device.laptop} {
+    display: none;
+  }
 
   source,
   img {

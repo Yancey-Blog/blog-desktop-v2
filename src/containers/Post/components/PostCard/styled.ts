@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { flexMixin } from 'src/styled/mixins'
+import breakpoints from 'src/styled/breakpoints'
 
 export const PostCardWrapper = styled.section`
   display: flex;
@@ -17,6 +18,17 @@ export const PostCardWrapper = styled.section`
     flex-direction: row-reverse;
     text-align: left;
   }
+
+  @media only screen and ${breakpoints.device.laptop} {
+    flex-direction: column;
+    margin-bottom: 1rem;
+    height: auto;
+    text-align: left;
+
+    &:nth-of-type(2n) {
+      flex-direction: column;
+    }
+  }
 `
 
 export const PosterAnchor = styled.a`
@@ -24,6 +36,10 @@ export const PosterAnchor = styled.a`
   width: 33rem;
   overflow: hidden;
   cursor: pointer;
+
+  @media only screen and ${breakpoints.device.laptop} {
+    width: 100%;
+  }
 `
 
 export const SVG = styled.svg`
@@ -42,10 +58,19 @@ export const SummaryWrapper = styled.div`
   box-sizing: border-box;
   padding: 1.8rem 2.4rem;
   width: 26rem;
+
+  @media only screen and ${breakpoints.device.laptop} {
+    padding: 1.2rem;
+    width: 100%;
+  }
 `
 
 export const ReleasedAt = styled.p`
   font-size: 0.9rem;
+
+  @media only screen and ${breakpoints.device.laptop} {
+    display: none;
+  }
 `
 
 export const Title = styled.h2`
@@ -56,6 +81,10 @@ export const Title = styled.h2`
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+
+  @media only screen and ${breakpoints.device.laptop} {
+    margin-top: 0;
+  }
 `
 
 export const Meta = styled.div`
@@ -77,6 +106,12 @@ export const Summary = styled.p`
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 5;
   overflow: hidden;
+
+  @media only screen and ${breakpoints.device.laptop} {
+    min-height: 100%;
+    display: block;
+    margin: 1rem 0 0;
+  }
 `
 
 export const ReadMoreSVG = styled.svg`
@@ -87,5 +122,9 @@ export const ReadMoreSVG = styled.svg`
 
   &:hover {
     fill: ${({ theme }) => theme.colors.orange};
+  }
+
+  @media only screen and ${breakpoints.device.laptop} {
+    display: none;
   }
 `

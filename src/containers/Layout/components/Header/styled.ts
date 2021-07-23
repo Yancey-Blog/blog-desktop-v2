@@ -6,6 +6,7 @@ import {
   animationMixin,
 } from 'src/styled/mixins'
 import { wrench } from 'src/styled/animations'
+import breakpoints from 'src/styled/breakpoints'
 
 export const NavBar = styled.nav`
   box-sizing: border-box;
@@ -18,6 +19,10 @@ export const NavBar = styled.nav`
   box-shadow: 0 1px 40px -8px ${({ theme }) => theme.colors.fiveOpcityBlack};
   z-index: ${({ theme }) => theme.zIndex.fixed};
   ${transitionMixin('background', 250, 'linear')};
+
+  @media only screen and ${breakpoints.device.laptop} {
+    display: none;
+  }
 `
 
 export const NavBarItem = styled.div`

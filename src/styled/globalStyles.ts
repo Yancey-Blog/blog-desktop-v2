@@ -1,9 +1,14 @@
 import { createGlobalStyle } from 'styled-components'
 import cur from 'public/images/normal.cur'
+import breakpoints from './breakpoints'
 
 const GlobalStyle = createGlobalStyle`
   html {
     font-size: 16px;
+
+    @media only screen and ${breakpoints.device.laptop} {
+      overflow-x: hidden;
+    }
   }
 
   body {
@@ -39,6 +44,12 @@ const GlobalStyle = createGlobalStyle`
   /* aplayer CSS */
   .aplayer-list-title, .aplayer-title {
     color:#666 !important;
+  }
+
+  @media only screen and ${breakpoints.device.laptop} {
+    .aplayer {
+      display: none;
+    }
   }
 `
 

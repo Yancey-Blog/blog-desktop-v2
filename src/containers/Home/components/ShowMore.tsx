@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import styled from 'styled-components'
+import breakpoints from 'src/styled/breakpoints'
 
 const Button = styled.button`
   margin: 3rem 0;
@@ -18,6 +19,10 @@ const Button = styled.button`
 
   &:hover {
     transform: scale3d(1.05, 1.05, 1);
+  }
+
+  @media only screen and ${breakpoints.device.laptop} {
+    display: none;
   }
 `
 

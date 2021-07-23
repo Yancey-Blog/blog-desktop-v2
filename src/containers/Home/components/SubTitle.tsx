@@ -1,6 +1,7 @@
 import { FC } from 'react'
 import styled from 'styled-components'
 import { flexMixin } from 'src/styled/mixins'
+import breakpoints from 'src/styled/breakpoints'
 
 const Header = styled.h2`
   ${flexMixin('flex-start')}
@@ -12,6 +13,10 @@ const Header = styled.h2`
   color: ${({ theme }) => theme.text.primary};
   border-bottom: 1px dashed;
   border-bottom-color: ${({ theme }) => theme.border};
+
+  @media only screen and ${breakpoints.device.laptop} {
+    display: none;
+  }
 `
 
 const SVG = styled.svg`

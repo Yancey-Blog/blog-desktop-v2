@@ -11,7 +11,7 @@ const Slogans = styled.h2`
   ${noUserSelectMixin()}
 
   &::before,
-&::after {
+  &::after {
     position: absolute;
     content: attr(data-slogan);
     top: 0;
