@@ -4,14 +4,11 @@ import { flexMixin } from 'src/styled/mixins'
 export const PostDetailWrapper = styled.article`
   position: relative;
   margin: 10rem auto 0;
-  font-family: 'Ubuntu', sans-serif;
-  color: ${({ theme }) => theme.text.post};
 `
 
 export const Poster = styled.img`
   ${flexMixin()}
   width: 100%;
-  height: 32rem;
   object-fit: cover;
   border-radius: 1rem;
   box-shadow: 0 10px 15px -3px ${({ theme }) => theme.colors.oneOpcityBlack},
@@ -37,38 +34,39 @@ export const Summary = styled.blockquote`
 `
 
 export const Content = styled.article`
-  max-width: 60rem;
+  max-width: 58rem;
   margin: 0 auto;
 
-  h2,
-  h3 {
-    margin: 2rem 0;
-  }
-
   h2 {
-    font-size: 2.2rem;
+    margin: 2.5rem 0 1.25rem;
+    font-size: 2rem;
   }
 
   h3 {
-    font-size: 1.8rem;
+    margin: 1.875rem 0 1.25rem;
+    font-size: 1.5rem;
   }
 
   p {
-    margin-bottom: 1.2rem;
-    font-size: 1.1rem;
-    line-height: 1.8;
+    margin-bottom: 1.25rem;
+    font-size: 1rem;
+    line-height: 1.65;
 
     code {
-      background: ${({ theme }) => theme.codeEl};
-      color: ${({ theme }) => theme.colors.pink};
-      border-radius: 2px;
-      padding: 1px 6px;
+      background: ${({ theme }) => theme.background.inlineCode};
+      font-size: 90%;
+      border-radius: 0.4rem;
+      padding: 0.2rem 0.4rem;
     }
   }
 
   pre {
+    font-size: 90%;
     margin: 2rem 0;
-    border-radius: 0.8rem;
+    border-radius: 0.4rem;
+    padding: 1rem !important;
+    line-height: 1.5;
+    background-color: rgb(40, 44, 52) !important;
   }
 
   img {
@@ -104,11 +102,19 @@ export const Content = styled.article`
 
   a {
     position: relative;
-    color: ${({ theme }) => theme.colors.linkBlue};
+    color: ${({ theme }) => theme.colors.linkBase};
+
+    &:hover {
+      text-decoration: underline ${({ theme }) => theme.colors.linkBase};
+    }
+  }
+
+  ul {
+    padding-left: 2rem;
   }
 
   li {
-    line-height: 1.8;
+    line-height: 1.6;
   }
 `
 

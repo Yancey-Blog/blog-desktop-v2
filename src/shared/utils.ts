@@ -22,7 +22,7 @@ export const scrollToTop = () => {
 export const noop = () => {}
 
 export const formatDate = (ISOString: string, format = 'DDD') =>
-  DateTime.fromISO(ISOString).toFormat(format)
+  DateTime.fromISO(ISOString).toFormat(format, { locale: 'en-US' })
 
 export const devToolsWarning = () => {
   // eslint-disable-next-line no-console

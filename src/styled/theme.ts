@@ -7,6 +7,7 @@ const light = {
     bestAlbumCard: '#e6e6e6',
     skeleton: 'rgba(0, 0, 0, 0.04)',
     tooltip: 'rgba(0, 0, 0, .7)',
+    inlineCode: '#ebedf0',
   },
   text: {
     primary: '#666666',
@@ -14,6 +15,8 @@ const light = {
     header: '#504e4e',
     post: '#3b454e',
     tooltip: '#fff',
+    // ----------------
+    base: '#1c1e21',
   },
   link: {
     primary: '#666666',
@@ -35,6 +38,7 @@ const dark = {
     bestAlbumCard: '#000000',
     skeleton: 'rgba(255, 255, 255, 0.08)',
     tooltip: 'rgba(255, 255, 255, .7)',
+    inlineCode: '#444950',
   },
   text: {
     primary: '#f5f6f7',
@@ -42,6 +46,7 @@ const dark = {
     header: '#f5f6f7',
     post: '#f5f6f7',
     tooltip: '#000',
+    base: '#f5f6f7',
   },
   link: {
     primary: '#f5f6f7',
@@ -86,6 +91,7 @@ const defaultTheme = {
     fiveOpcityBlack: 'rgba(0, 0, 0, .5)',
     sixOpcityBlack: 'rgba(0, 0, 0, .6)',
     sevenOpcityBlack: 'rgba(0, 0, 0, .7)',
+    linkBase: '#25c3a0',
   },
   zIndex: {
     fixed: 200,

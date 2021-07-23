@@ -50,6 +50,11 @@ const Btn = styled.button`
   border-radius: 2rem;
   ${transitionMixin('all', 200, 'ease')}
   cursor: pointer;
+
+  &:hover {
+    background: ${({ theme }) => theme.colors.green};
+    color: ${({ theme }) => theme.colors.white};
+  }
 `
 
 interface Props {

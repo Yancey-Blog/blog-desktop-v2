@@ -42,7 +42,7 @@ const Title = styled.p`
   padding: 1rem 0 0.5rem;
   height: 3.1rem;
   color: ${({ theme }) => theme.text.header};
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   line-height: 1.4;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -63,7 +63,7 @@ const Btn = styled.button`
   border-radius: 2rem;
   color: ${({ theme }) => theme.colors.green};
   padding: 0.6rem 1.8rem;
-  font-size: 1rem;
+  font-size: 0.9rem;
   ${transitionMixin('all', 200, 'ease')}
   cursor: pointer;
 

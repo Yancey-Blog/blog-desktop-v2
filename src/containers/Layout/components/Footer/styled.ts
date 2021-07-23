@@ -4,7 +4,6 @@ import { flexMixin } from 'src/styled/mixins'
 export const FooterWrapper = styled.footer`
   margin: 4.8rem auto 2.4rem;
   width: 60rem;
-  font-family: 'Ubuntu', sans-serif;
 `
 
 export const CopyRight = styled.p`

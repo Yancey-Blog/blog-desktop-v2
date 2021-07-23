@@ -5,7 +5,6 @@ import { glitchLoop1, glitchLoop2 } from 'src/styled/animations'
 
 const Slogans = styled.h2`
   margin-bottom: 2.4rem;
-  font-family: 'Ubuntu', sans-serif;
   font-size: 5.4rem;
   text-align: center;
   color: ${({ theme }) => theme.colors.white};

@@ -13,7 +13,6 @@ export const NavBar = styled.nav`
   ${flexMixin('space-between')}
   width:100%;
   padding: 0 2.4rem;
-  font-family: 'Ubuntu', sans-serif;
   background: ${({ theme }) => theme.background.primary};
   opacity: 0.95;
   box-shadow: 0 1px 40px -8px ${({ theme }) => theme.colors.fiveOpcityBlack};
@@ -31,7 +30,7 @@ export const NavBarItem = styled.div`
     margin-left: 1.6rem;
     padding: 0 0.2rem;
     height: ${({ theme }) => theme.headerHeight};
-    font-size: 1.1rem;
+    font-size: 1rem;
     color: ${({ theme }) => theme.text.primary};
     ${transitionMixin('color')}
 

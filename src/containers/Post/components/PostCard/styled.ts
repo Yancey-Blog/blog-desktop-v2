@@ -5,7 +5,6 @@ export const PostCardWrapper = styled.section`
   display: flex;
   margin-bottom: 3rem;
   height: 22rem;
-  font-family: 'Ubuntu', sans-serif;
   text-align: right;
   color: ${({ theme }) => theme.text.secondary};
   background: ${({ theme }) => theme.background.postCard};

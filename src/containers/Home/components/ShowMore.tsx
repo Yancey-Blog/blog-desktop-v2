@@ -4,7 +4,6 @@ import styled from 'styled-components'
 const Button = styled.button`
   margin: 3rem 0;
   padding: 0.8rem 4.75rem;
-  font-family: 'Ubuntu', sans-serif;
   font-size: 1.5rem;
   color: ${({ theme }) => theme.colors.heartRed};
   background: ${({ theme }) => theme.background.primary};

@@ -6,7 +6,6 @@ import { flexMixin } from 'src/styled/mixins'
 const StatusWrapper = styled.div`
   margin-bottom: 2rem;
   font-size: 1.8rem;
-  font-family: 'Ubuntu', sans-serif;
   color: ${({ theme }) => theme.text.primary};
   text-align: center;
 `
