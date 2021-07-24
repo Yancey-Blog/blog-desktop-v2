@@ -1,9 +1,14 @@
 import styled from 'styled-components'
 import { flexMixin } from 'src/styled/mixins'
+import breakpoints from 'src/styled/breakpoints'
 
 export const PostDetailWrapper = styled.article`
   position: relative;
   margin: 10rem auto 0;
+
+  @media only screen and ${breakpoints.device.laptop} {
+    margin: 1rem;
+  }
 `
 
 export const Poster = styled.img`
@@ -154,6 +159,10 @@ export const Menu = styled.aside`
     &::before {
       background: ${({ theme }) => theme.colors.orange};
     }
+  }
+
+  @media only screen and ${breakpoints.device.laptop} {
+    display: none;
   }
 `
 
