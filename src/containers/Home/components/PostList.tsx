@@ -28,15 +28,6 @@ const PostList: FC<Props> = ({ isSupportWebp }) => {
       }
       setPage((_page) => _page + 1)
       setData({ posts: data.posts.concat(items) })
-
-      if (page > 1) {
-        setTimeout(() => {
-          window.scroll({
-            top: document.documentElement.scrollTop + 500,
-            behavior: 'smooth',
-          })
-        }, 0)
-      }
     },
   })
 
