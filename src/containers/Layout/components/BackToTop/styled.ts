@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import { transitionMixin, animationMixin } from 'src/styled/mixins'
 import { float } from 'src/styled/animations'
+import breakpoints from 'src/styled/breakpoints'
 
 export const Cat = styled.div`
   position: fixed;
@@ -13,6 +14,10 @@ export const Cat = styled.div`
   cursor: pointer;
   ${transitionMixin('all', 600, 'cubic-bezier(0.25, 0.1, 0.3, 1.5)')}
   ${animationMixin(float, 2000, 'linear', 'infinite')}
+
+  @media only screen and ${breakpoints.device.laptop} {
+    display: none;
+  }
 
   &.showCat {
     top: -10rem;

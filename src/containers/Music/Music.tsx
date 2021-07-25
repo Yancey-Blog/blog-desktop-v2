@@ -13,6 +13,7 @@ import BestAlbumSkeleton from './components/BestAlbumSkeleton'
 import { LiveTourQuery, YanceyMusicQuery, BestAlbumQuery } from './types'
 import { LIVE_TOURS, YANCEY_MUSIC, BEST_ALBUMS } from './typeDefs'
 import {
+  Title,
   MusicWrapper,
   SubTitle,
   LiveToursMusicNotes,
@@ -37,10 +38,12 @@ const Music = () => {
 
   return (
     <>
-      <ImageHeader
-        title="Music"
-        imageUrl={`/${ALI_OSS_FE_STATIC_PATH}/music_page_header.jpg`}
-      />
+      <Title>
+        <ImageHeader
+          title="Music"
+          imageUrl={`/${ALI_OSS_FE_STATIC_PATH}/music_page_header.jpg`}
+        />
+      </Title>
 
       <MusicWrapper>
         <LiveToursMusicNotes>

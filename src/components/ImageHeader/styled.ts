@@ -21,7 +21,6 @@ export const Title = styled.span`
   right: 0;
   bottom: 3rem;
   left: 0;
-  font-family: 'Ubuntu', sans-serif;
   font-size: 4rem;
   background: -webkit-gradient(
     linear,

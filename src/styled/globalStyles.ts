@@ -1,45 +1,22 @@
 import { createGlobalStyle } from 'styled-components'
 import cur from 'public/images/normal.cur'
-
-const UBUNTU_REGULAR = `${process.env.NEXT_PUBLIC_STATIC_FILE_URL}/fonts/Ubuntu-Regular.woff2`
-const UBUNTU_BOLD = `${process.env.NEXT_PUBLIC_STATIC_FILE_URL}/fonts/Ubuntu-Bold.ttf`
-const SFMONO_REGULAR = `${process.env.NEXT_PUBLIC_STATIC_FILE_URL}/fonts/SFMono-Regular.otf`
+import breakpoints from './breakpoints'
 
 const GlobalStyle = createGlobalStyle`
-  @font-face {
-  font-family: 'Ubuntu';
-  src: url('${UBUNTU_REGULAR}') format('woff');
-  font-style: normal;
-  font-weight: 400;
-  font-display: fallback;
-}
-
-  @font-face {
-    font-family: 'Ubuntu';
-    src: url('${UBUNTU_BOLD}') format('truetype');
-    font-style: normal;
-    font-weight: bold;
-    font-display: fallback;
-  }
-
-  @font-face {
-    font-family: 'SFMono-Regular';
-    src: url('${SFMONO_REGULAR}') format('opentype');
-    font-style: normal;
-    font-weight:400;
-    font-display: fallback;
-  }
-
   html {
-    font-size: 15px;
-  }
+    font-size: 16px;
 
+    @media only screen and ${breakpoints.device.laptop} {
+      font-size: 15px;
+      overflow-x: hidden;
+    }
+  }
 
   body {
-    font-family: -apple-system, BlinkMacSystemFont, Ubuntu, Helvetica Neue, PingFang SC, Microsoft YaHei, Source Han Sans SC, Noto Sans CJK SC, WenQuanYi Micro Hei, sans-serif;
+    font-family: system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
     -webkit-font-smoothing: antialiased;  
     background: ${({ theme }: { theme: any }) => theme.background.primary};
-    color: ${({ theme }: { theme: any }) => theme.text.primary};  
+    color: ${({ theme }: { theme: any }) => theme.text.base};  
     cursor: url(${cur}), auto;  
   }
 
@@ -61,19 +38,23 @@ const GlobalStyle = createGlobalStyle`
     outline: none;
   }
 
-  pre {
-    padding: 1.2rem !important;
-    line-height: 1.6;
-    background-color: #282c34 !important;
-  }
-
   code {
-    font-family: SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
+    font-family: Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
   }
 
   /* aplayer CSS */
   .aplayer-list-title, .aplayer-title {
     color:#666 !important;
+  }
+
+  @media only screen and ${breakpoints.device.laptop} {
+    .aplayer {
+      display: none;
+    }
+
+    .spinner-icon {
+      display: none!important;
+    }
   }
 `
 

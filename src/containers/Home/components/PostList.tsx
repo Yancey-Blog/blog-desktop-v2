@@ -1,40 +1,79 @@
-import { FC } from 'react'
-import { useQuery } from '@apollo/client'
+import { FC, useState } from 'react'
+import { useLazyQuery } from '@apollo/client'
 import { SVG_SPRITE } from 'src/shared/constants'
 import PostCard from 'src/containers/Post/components/PostCard/PostCard'
 import { POSTS } from 'src/containers/Post/typeDefs'
-import { PostQuery, PostVars } from 'src/containers/Post/types'
+import { PostQuery, PostVars, IPostItem } from 'src/containers/Post/types'
+import InfiniteScroll from 'src/components/InfiniteScroll/InfiniteScroll'
 import SubTitle from './SubTitle'
 
 interface Props {
   isSupportWebp: boolean
 }
 
+interface List {
+  posts: IPostItem[]
+}
+
 const PostList: FC<Props> = ({ isSupportWebp }) => {
-  const { data } = useQuery<PostQuery, PostVars>(POSTS, {
-    notifyOnNetworkStatusChange: true,
-    variables: {
-      input: {
-        page: 1,
-        pageSize: 10,
-      },
+  const [data, setData] = useState<List>({ posts: [] })
+  const [page, setPage] = useState(1)
+  const [hasMore, setHasMore] = useState(true)
+
+  const [getPosts, { loading }] = useLazyQuery<PostQuery, PostVars>(POSTS, {
+    onCompleted(continuousPosts) {
+      const { items, total, page: currentPage } = continuousPosts.posts
+      if (Math.ceil(total / 10) === currentPage) {
+        setHasMore(false)
+      }
+      setPage((_page) => _page + 1)
+      setData({ posts: data.posts.concat(items) })
+
+      if (page > 1) {
+        setTimeout(() => {
+          window.scroll({
+            top: document.documentElement.scrollTop + 500,
+            behavior: 'smooth',
+          })
+        }, 0)
+      }
     },
   })
 
+  const fetchPosts = (tag?: string) => {
+    if (loading) return
+
+    getPosts({
+      variables: {
+        input: {
+          page,
+          pageSize: 10,
+          tag,
+        },
+      },
+    })
+  }
+
   return (
-    <>
+    <InfiniteScroll
+      hasMoreData={hasMore}
+      isLoading={loading}
+      onBottomHit={fetchPosts}
+      loadOnMount
+    >
       <SubTitle icon={SVG_SPRITE.new} title="The Latest!" />
 
-      {!data
-        ? null
-        : data.posts.items.map((post) => (
-            <PostCard
-              isSupportWebp={isSupportWebp}
-              post={post}
-              key={post._id}
-            />
-          ))}
-    </>
+      {data.posts.map((post: IPostItem) => (
+        <PostCard isSupportWebp={isSupportWebp} post={post} key={post._id} />
+      ))}
+
+      <p style={{ marginBottom: '1rem' }}>
+        {
+          // eslint-disable-next-line no-nested-ternary
+          loading ? '正在加载中...' : hasMore ? '' : '没有更多了...'
+        }
+      </p>
+    </InfiniteScroll>
   )
 }
 

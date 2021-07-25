@@ -1,7 +1,9 @@
 import { FC } from 'react'
 import styled from 'styled-components'
+import { ThemeMode } from 'src/hooks/useDarkMode'
 import { flexMixin, transitionMixin } from 'src/styled/mixins'
 import { SVG_SPRITE } from 'src/shared/constants'
+import breakpoints from 'src/styled/breakpoints'
 
 interface Props {
   theme: string
@@ -25,6 +27,10 @@ const ToggleContainer = styled.button`
   cursor: pointer;
   overflow: hidden;
   z-index: 200;
+
+  @media only screen and ${breakpoints.device.laptop} {
+    display: none;
+  }
 `
 
 const SVG = styled.svg<ButtonProps>`
@@ -42,16 +48,44 @@ const SVG = styled.svg<ButtonProps>`
   }
 `
 
+export const ToggleContainerForMobile = styled.div`
+  display: none;
+
+  @media only screen and ${breakpoints.device.laptop} {
+    display: block;
+    position: fixed;
+    left: calc(50% - 1rem);
+    bottom: 4.7rem;
+    text-align: center;
+    svg {
+      width: 2rem;
+      height: 2rem;
+    }
+  }
+`
+
 const ToggleTheme: FC<Props> = ({ theme, onToggle }) => {
   return (
-    <ToggleContainer onClick={() => onToggle()}>
-      <SVG lightTheme={theme === 'light'}>
-        <use xlinkHref={SVG_SPRITE.sun} />
-      </SVG>
-      <SVG lightTheme={theme === 'light'}>
-        <use xlinkHref={SVG_SPRITE.moon} />
-      </SVG>
-    </ToggleContainer>
+    <>
+      <ToggleContainer onClick={() => onToggle()}>
+        <SVG lightTheme={theme === 'light'}>
+          <use xlinkHref={SVG_SPRITE.sun} />
+        </SVG>
+        <SVG lightTheme={theme === 'light'}>
+          <use xlinkHref={SVG_SPRITE.moon} />
+        </SVG>
+      </ToggleContainer>
+
+      <ToggleContainerForMobile onClick={() => onToggle()}>
+        <svg>
+          <use
+            xlinkHref={
+              theme === ThemeMode.LIGHT ? SVG_SPRITE.sun2 : SVG_SPRITE.moon2
+            }
+          />
+        </svg>
+      </ToggleContainerForMobile>
+    </>
   )
 }
 
