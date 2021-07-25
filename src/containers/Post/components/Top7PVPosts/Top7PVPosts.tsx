@@ -27,7 +27,6 @@ const BlurBg = styled.span<PosterProps>`
   left: 0;
   background-image: url(${({ imageUrl }) => imageUrl});
   background-size: cover;
-  background-position: 50%;
   background-repeat: no-repeat;
   filter: blur(10px);
 `

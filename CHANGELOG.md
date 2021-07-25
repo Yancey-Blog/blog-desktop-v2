@@ -2,6 +2,34 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.21.2](https://github.com/Yancey-Blog/blog-desktop-v2/compare/v3.21.1...v3.21.2) (2021-07-12)
+
+
+### Bug Fixes
+
+* **iframe tag not be displayed:** use `rehype-raw` to parse pure HTML tag in markdown ([3144234](https://github.com/Yancey-Blog/blog-desktop-v2/commit/31442349711824b0c774075aa7d732db033a4eec))
+
+### [3.21.1](https://github.com/Yancey-Blog/blog-desktop-v2/compare/v3.21.0...v3.21.1) (2021-07-07)
+
+
+### Bug Fixes
+
+* do not use useRouter event listener on SharePanel Component ([98bd65c](https://github.com/Yancey-Blog/blog-desktop-v2/commit/98bd65c1dc0515e28f59de92d93e22cd23ec3283))
+
+## [3.21.0](https://github.com/Yancey-Blog/blog-desktop-v2/compare/v3.20.0...v3.21.0) (2021-07-05)
+
+
+### Features
+
+* **top7pvposts:** update css of Top7pvposts ([a3cdcb3](https://github.com/Yancey-Blog/blog-desktop-v2/commit/a3cdcb3e8f29a79cb2563af36f8be8a6af6b9e53))
+
+## [3.20.0](https://github.com/Yancey-Blog/blog-desktop-v2/compare/v3.19.0...v3.20.0) (2021-06-29)
+
+
+### Features
+
+* use webp in ProgressiveImage ([ce67f6e](https://github.com/Yancey-Blog/blog-desktop-v2/commit/ce67f6ebd24cbf52996ad3df5557e47c10bf72e3))
+
 ## [3.19.0](https://github.com/Yancey-Blog/blog-desktop-v2/compare/v3.18.1...v3.19.0) (2021-06-23)
 
 

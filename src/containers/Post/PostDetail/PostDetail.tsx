@@ -3,6 +3,7 @@ import { useRouter } from 'next/router'
 import { useQuery, useMutation } from '@apollo/client'
 import ReactMarkdown from 'react-markdown'
 import gfm from 'remark-gfm'
+import rehypeRaw from 'rehype-raw'
 import SyntaxHighlighter from 'react-syntax-highlighter'
 import { atomOneDarkReasonable } from 'react-syntax-highlighter/dist/cjs/styles/hljs'
 import { DiscussionEmbed } from 'disqus-react'
@@ -154,6 +155,7 @@ const PostDetail: FC = () => {
 
           <ReactMarkdown
             remarkPlugins={[gfm]}
+            rehypePlugins={[rehypeRaw]}
             components={customMarkdownComponents}
             className="postDetailContent"
           >
