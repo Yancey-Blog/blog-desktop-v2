@@ -249,23 +249,3 @@ export const position = keyframes`
     margin-left: 80%;
   }
 }`
-
-export const progressiveReveal = keyframes`
-  0% { 
-    transform: scale(1.05); 
-    opacity: .1;
-  }
-  100% { 
-    transform: scale(1); 
-    opacity: 1;
-  };
-`
-
-export const progressiveRevealStatic = keyframes`
-  0% { 
-    opacity: .1;
-  }
-  100% { 
-    opacity: 1;
-  };
-`

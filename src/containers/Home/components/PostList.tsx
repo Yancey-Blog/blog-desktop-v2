@@ -58,7 +58,7 @@ const PostList: FC<Props> = ({ isSupportWebp }) => {
         <PostCard isSupportWebp={isSupportWebp} post={post} key={post._id} />
       ))}
 
-      <p style={{ marginBottom: '1rem' }}>
+      <p style={{ marginBottom: '1rem', height: '1rem' }}>
         {
           // eslint-disable-next-line no-nested-ternary
           loading ? '正在加载中...' : hasMore ? '' : '没有更多了...'
