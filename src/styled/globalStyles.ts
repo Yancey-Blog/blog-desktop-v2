@@ -51,6 +51,10 @@ const GlobalStyle = createGlobalStyle`
     .aplayer {
       display: none;
     }
+
+    .spinner-icon {
+      display: none!important;
+    }
   }
 `
 

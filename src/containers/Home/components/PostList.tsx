@@ -28,6 +28,15 @@ const PostList: FC<Props> = ({ isSupportWebp }) => {
       }
       setPage((_page) => _page + 1)
       setData({ posts: data.posts.concat(items) })
+
+      if (page > 1) {
+        setTimeout(() => {
+          window.scroll({
+            top: document.documentElement.scrollTop + 500,
+            behavior: 'smooth',
+          })
+        }, 0)
+      }
     },
   })
 
@@ -57,6 +66,13 @@ const PostList: FC<Props> = ({ isSupportWebp }) => {
       {data.posts.map((post: IPostItem) => (
         <PostCard isSupportWebp={isSupportWebp} post={post} key={post._id} />
       ))}
+
+      <p style={{ marginBottom: '1rem' }}>
+        {
+          // eslint-disable-next-line no-nested-ternary
+          loading ? '正在加载中...' : hasMore ? '' : '没有更多了...'
+        }
+      </p>
     </InfiniteScroll>
   )
 }

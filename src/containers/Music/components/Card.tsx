@@ -4,11 +4,16 @@ import styled from 'styled-components'
 import Picture from 'src/components/Picture/Picture'
 import { transitionMixin } from 'src/styled/mixins'
 import { formatDate } from 'src/shared/utils'
+import breakpoints from 'src/styled/breakpoints'
 
 const CardContaiener = styled.div`
   position: relative;
   height: 18.2rem;
   overflow-y: hidden;
+
+  @media only screen and ${breakpoints.device.laptop} {
+    margin-bottom: 1rem;
+  }
 `
 
 const Img = styled.img`
