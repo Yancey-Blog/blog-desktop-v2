@@ -3,11 +3,16 @@ import styled from 'styled-components'
 import Picture from 'src/components/Picture/Picture'
 import { transitionMixin } from 'src/styled/mixins'
 import { formatDate } from 'src/shared/utils'
+import breakpoints from 'src/styled/breakpoints'
 import { IBestAlbum } from '../types'
 
 const BestAlbumWrapper = styled.div`
   width: 100%;
   box-shadow: 1px 1px 10px 0 ${({ theme }) => theme.background.bestAlbumCard};
+
+  @media only screen and ${breakpoints.device.laptop} {
+    margin-bottom: 1rem;
+  }
 `
 
 const Img = styled.img`
@@ -50,6 +55,11 @@ const Btn = styled.button`
   border-radius: 2rem;
   ${transitionMixin('all', 200, 'ease')}
   cursor: pointer;
+
+  &:hover {
+    background: ${({ theme }) => theme.colors.green};
+    color: ${({ theme }) => theme.colors.white};
+  }
 `
 
 interface Props {

@@ -4,11 +4,16 @@ import styled from 'styled-components'
 import Picture from 'src/components/Picture/Picture'
 import { transitionMixin } from 'src/styled/mixins'
 import { formatDate } from 'src/shared/utils'
+import breakpoints from 'src/styled/breakpoints'
 
 const CardContaiener = styled.div`
   position: relative;
   height: 18.2rem;
   overflow-y: hidden;
+
+  @media only screen and ${breakpoints.device.laptop} {
+    margin-bottom: 1rem;
+  }
 `
 
 const Img = styled.img`
@@ -42,7 +47,7 @@ const Title = styled.p`
   padding: 1rem 0 0.5rem;
   height: 3.1rem;
   color: ${({ theme }) => theme.text.header};
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   line-height: 1.4;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -63,7 +68,7 @@ const Btn = styled.button`
   border-radius: 2rem;
   color: ${({ theme }) => theme.colors.green};
   padding: 0.6rem 1.8rem;
-  font-size: 1rem;
+  font-size: 0.9rem;
   ${transitionMixin('all', 200, 'ease')}
   cursor: pointer;
 

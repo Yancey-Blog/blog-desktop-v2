@@ -40,6 +40,7 @@ const CreatedAt = styled.time`
     color: ${({ theme }) => theme.text.tooltip};
     background: ${({ theme }) => theme.background.tooltip};
     border-radius: 0.4rem;
+    z-index: 1;
   }
 `
 
@@ -57,23 +58,25 @@ const PostMeta: FC<Props> = ({
   lastModifiedDate,
   pv,
   like,
-}) => (
-  <MetaWrapper>
-    <CreatedAt
-      data-last-modified-date={`Last Modified At: ${formatDate(
-        lastModifiedDate,
-      )}`}
-    >
-      Released At {formatDate(createdAt)}
-    </CreatedAt>
-    <Statistics>{pv} PV</Statistics>
-    <Statistics>
-      {like} {like > 1 ? 'Likes' : 'Like'}
-    </Statistics>
-    {tags.map((tag) => (
-      <Tag key={tag} tag={tag} />
-    ))}
-  </MetaWrapper>
-)
+}) => {
+  return (
+    <MetaWrapper>
+      <CreatedAt
+        data-last-modified-date={`Last Modified At: ${formatDate(
+          lastModifiedDate,
+        )}`}
+      >
+        Released At {formatDate(createdAt)}
+      </CreatedAt>
+      <Statistics>{pv} PV</Statistics>
+      <Statistics>
+        {like} {like > 1 ? 'Likes' : 'Like'}
+      </Statistics>
+      {tags.map((tag) => (
+        <Tag key={tag} tag={tag} />
+      ))}
+    </MetaWrapper>
+  )
+}
 
 export default PostMeta

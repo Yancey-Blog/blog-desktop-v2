@@ -14,7 +14,6 @@ const ErrorWrapper = styled.section`
   flex-direction: column;
   padding-top: ${({ theme }) => theme.headerHeight};
   min-height: 100vh;
-  font-family: 'Ubuntu' sans-serif;
 `
 
 const Header = styled.div`

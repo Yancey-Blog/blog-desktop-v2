@@ -21,7 +21,6 @@ import OpenSource from './components/OpenSource'
 import Cover from './components/Cover'
 import PostList from './components/PostList'
 import Slogan from './components/Slogan'
-import ShowMore from './components/ShowMore'
 
 interface Props {
   isSupportWebp: boolean
@@ -71,8 +70,6 @@ const Home: FC<Props> = ({ isSupportWebp }) => {
         />
 
         <PostList isSupportWebp={isSupportWebp} />
-
-        <ShowMore />
       </HomeMain>
     </HomeContainer>
   )

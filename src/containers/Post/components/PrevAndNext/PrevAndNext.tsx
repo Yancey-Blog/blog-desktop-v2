@@ -3,10 +3,16 @@ import Link from 'next/link'
 import styled from 'styled-components'
 import Picture from 'src/components/Picture/Picture'
 import { flexMixin } from 'src/styled/mixins'
-import { IPostItem } from '../../types'
+import breakpoints from 'src/styled/breakpoints'
+import { IPostItem } from 'src/containers/Post/types'
 
 const Wrapper = styled.section`
   ${flexMixin()}
+
+  @media only screen and ${breakpoints.device.laptop} {
+    flex-direction: column;
+    gap: 1rem;
+  }
 
   a {
     display: block;
@@ -21,6 +27,10 @@ const PictureContainer = styled.div`
   padding: 2rem;
   height: 10rem;
   color: ${({ theme }) => theme.colors.white};
+
+  @media only screen and ${breakpoints.device.laptop} {
+    margin: 0;
+  }
 
   picture {
     position: absolute;

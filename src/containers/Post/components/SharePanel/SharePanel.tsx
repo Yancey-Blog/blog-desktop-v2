@@ -4,8 +4,9 @@ import Router from 'next/router'
 import styled from 'styled-components'
 import { TwitterShareButton } from 'react-share'
 import { flexMixin } from 'src/styled/mixins'
+import breakpoints from 'src/styled/breakpoints'
 import { SVG_SPRITE } from 'src/shared/constants'
-import { UPDATE_LIKE } from '../../typeDefs'
+import { UPDATE_LIKE } from 'src/containers/Post/typeDefs'
 
 const SharePanelWrapper = styled.div`
   position: fixed;
@@ -18,6 +19,10 @@ const SharePanelWrapper = styled.div`
     height: 1.8rem;
     margin-bottom: 1.2rem;
     cursor: pointer;
+  }
+
+  @media only screen and ${breakpoints.device.laptop} {
+    display: none;
   }
 `
 

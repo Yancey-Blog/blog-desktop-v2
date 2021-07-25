@@ -5,7 +5,7 @@ import ReactMarkdown from 'react-markdown'
 import gfm from 'remark-gfm'
 import rehypeRaw from 'rehype-raw'
 import SyntaxHighlighter from 'react-syntax-highlighter'
-import { atomOneDarkReasonable } from 'react-syntax-highlighter/dist/cjs/styles/hljs'
+import { atomOneDark } from 'react-syntax-highlighter/dist/cjs/styles/hljs'
 import { DiscussionEmbed } from 'disqus-react'
 import LazyLoadImage from 'src/components/LazyLoadImage/LazyLoadImage'
 import MetaHead from 'src/components/Head/Head'
@@ -48,7 +48,7 @@ const PostDetail: FC = () => {
       const match = /language-(\w+)/.exec(className || '')
       return !inline && match ? (
         <SyntaxHighlighter
-          style={atomOneDarkReasonable}
+          style={atomOneDark}
           language={match[1]}
           PreTag="div"
           {...props}
@@ -75,6 +75,20 @@ const PostDetail: FC = () => {
           <LazyLoadImage imageUrl={src} alt={alt} noAnimation />
           <ImageAlt>{alt}</ImageAlt>
         </ImageGroup>
+      )
+    },
+    h2({ node, inline, className, children, ...props }: any) {
+      return (
+        <h2 {...props} id={children ? children[0] : ''}>
+          {children}
+        </h2>
+      )
+    },
+    h3({ node, inline, className, children, ...props }: any) {
+      return (
+        <h3 {...props} id={children ? children[0] : ''}>
+          {children}
+        </h3>
       )
     },
   }

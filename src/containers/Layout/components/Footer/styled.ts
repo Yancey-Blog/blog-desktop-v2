@@ -1,10 +1,14 @@
 import styled from 'styled-components'
 import { flexMixin } from 'src/styled/mixins'
+import breakpoints from 'src/styled/breakpoints'
 
 export const FooterWrapper = styled.footer`
   margin: 4.8rem auto 2.4rem;
   width: 60rem;
-  font-family: 'Ubuntu', sans-serif;
+
+  @media only screen and ${breakpoints.device.laptop} {
+    display: none;
+  }
 `
 
 export const CopyRight = styled.p`

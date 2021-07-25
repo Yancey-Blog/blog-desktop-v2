@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import breakpoints from 'src/styled/breakpoints'
 
 export const SearchBoxWrapper = styled.div`
   .ais-SearchBox {
@@ -68,6 +69,10 @@ export const SearchBoxWrapper = styled.div`
 
   .ais-SearchBox-reset {
     top: 0.76rem;
+  }
+
+  @media only screen and ${breakpoints.device.laptop} {
+    display: none;
   }
 `
 
