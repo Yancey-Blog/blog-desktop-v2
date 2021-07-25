@@ -22,16 +22,17 @@ export const Poster = styled.img`
 
 export const Title = styled.h1`
   margin: 2rem 0;
-  font-size: 2.6rem;
+  font-size: 2.4rem;
+  line-height: 1.6;
   text-align: center;
 `
 
 export const Summary = styled.blockquote`
   margin: 2rem 0 4rem 0;
   padding: 1.2rem;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   border-radius: 10px;
-  line-height: 1.8;
+  line-height: 1.6;
   background: 0 0;
   border: none;
   border: 2px solid ${({ theme }) => theme.text.secondary};

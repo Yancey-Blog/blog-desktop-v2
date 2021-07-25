@@ -7,6 +7,7 @@ const GlobalStyle = createGlobalStyle`
     font-size: 16px;
 
     @media only screen and ${breakpoints.device.laptop} {
+      font-size: 15px;
       overflow-x: hidden;
     }
   }

@@ -11,6 +11,7 @@ import { GlobalSettingQuery } from 'src/containers/GlobalSetting/types'
 import Head from 'src/components/Head/Head'
 import Header from './components/Header/Header'
 import Footer from './components/Footer/Footer'
+import Nav from './components/Nav/Nav'
 import BackToTop from './components/BackToTop/BackToTop'
 import { Layouts, Main } from './styled'
 
@@ -70,6 +71,7 @@ const Layout: FC<Props> = ({ title, children }) => {
       <Footer
         globalSetting={data ? data.getGlobalSetting : initialGlobalSetting}
       />
+      <Nav />
       <SVGSprite />
       <BackToTop isShowCat={scrollTopCount >= BACK_TO_TOP_THRESHOLD} />
       <AlgoliaSearchBox />
