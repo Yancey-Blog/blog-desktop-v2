@@ -33,7 +33,7 @@
     "isomorphic-unfetch": "^3.1.0",
     "lodash.orderby": "^4.6.0",
     "lodash.throttle": "^4.1.1",
-    "luxon": "^1.27.0",
+    "luxon": "^2.0.1",
     "next": "^11.0.1",
     "next-with-apollo": "^5.2.1",
     "normalize.css": "^8.0.1",
