@@ -57,6 +57,7 @@ export const ToggleContainerForMobile = styled.div`
     left: calc(50% - 1rem);
     bottom: 4.7rem;
     text-align: center;
+    z-index: 1000;
     svg {
       width: 2rem;
       height: 2rem;
