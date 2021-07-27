@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.0.3](https://github.com/Yancey-Blog/blog-desktop-v2/compare/v4.0.2...v4.0.3) (2021-07-27)
+
+
+### Bug Fixes
+
+* prev and next hide the nav ([560bc7e](https://github.com/Yancey-Blog/blog-desktop-v2/commit/560bc7e5f5293fe1e5a279d8b053213ede61824e))
+
 ### [4.0.2](https://github.com/Yancey-Blog/blog-desktop-v2/compare/v4.0.1...v4.0.2) (2021-07-25)
 
 
