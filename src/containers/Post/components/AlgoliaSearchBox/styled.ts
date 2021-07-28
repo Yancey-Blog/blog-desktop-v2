@@ -72,7 +72,34 @@ export const SearchBoxWrapper = styled.div`
   }
 
   @media only screen and ${breakpoints.device.laptop} {
-    display: none;
+    .ais-SearchBox-input {
+      width: 80%;
+      position: relative;
+      top: 0.75rem;
+    }
+
+    .ais-SearchBox {
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 999999999;
+      background: #fff;
+      height: 4.5rem;
+    }
+
+    .ais-SearchBox-form {
+      text-align: center;
+    }
+
+    .ais-SearchBox-submit {
+      left: 11%;
+      top: 1.6rem;
+    }
+
+    .ais-SearchBox-reset {
+      right: 11%;
+      top: 1.6rem;
+    }
   }
 `
 
@@ -144,6 +171,10 @@ export const Result = styled.div`
   .ais-PoweredBy-text {
     font-size: 0.8rem;
     line-height: 1.5;
+  }
+
+  @media only screen and ${breakpoints.device.laptop} {
+    width: 100%;
   }
 `
 

@@ -31,3 +31,8 @@ export const CoverWrapper = styled.div`
     display: none;
   }
 `
+
+export const Status = styled.p`
+  margin-bottom: 1rem;
+  height: calc(1.5rem + env(safe-area-inset-bottom));
+`

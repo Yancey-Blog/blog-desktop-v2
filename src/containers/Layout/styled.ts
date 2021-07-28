@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import breakpoints from 'src/styled/breakpoints'
 
 export const Layouts = styled.section`
   display: flex;
@@ -9,4 +10,8 @@ export const Layouts = styled.section`
 export const Main = styled.main`
   flex: 1;
   overflow-x: hidden;
+
+  @media only screen and ${breakpoints.device.laptop} {
+    margin-top: 4.5rem;
+  }
 `

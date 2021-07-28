@@ -10,7 +10,7 @@ export const NavBar = styled.nav`
     left: 50%;
     right: 50%;
     transform: translate3d(-50%, -50%, 0);
-    bottom: 2rem;
+    bottom: 1rem;
     padding: 0 1rem;
     width: 45%;
     height: 4rem;
