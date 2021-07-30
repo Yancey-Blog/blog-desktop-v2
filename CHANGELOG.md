@@ -2,6 +2,40 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.0.3](https://github.com/Yancey-Blog/blog-desktop-v2/compare/v4.0.2...v4.0.3) (2021-07-27)
+
+
+### Bug Fixes
+
+* prev and next hide the nav ([560bc7e](https://github.com/Yancey-Blog/blog-desktop-v2/commit/560bc7e5f5293fe1e5a279d8b053213ede61824e))
+
+### [4.0.2](https://github.com/Yancey-Blog/blog-desktop-v2/compare/v4.0.1...v4.0.2) (2021-07-25)
+
+
+### Features
+
+* optimize lazy load ([d6c795b](https://github.com/Yancey-Blog/blog-desktop-v2/commit/d6c795b367a23f6ebd744c39e6affc9f02774240))
+
+### [4.0.1](https://github.com/Yancey-Blog/blog-desktop-v2/compare/v4.0.0...v4.0.1) (2021-07-25)
+
+
+### Bug Fixes
+
+* delete smooth scroll ([e22a945](https://github.com/Yancey-Blog/blog-desktop-v2/commit/e22a94508bc4a2cebba4533290160879bdbb1530))
+
+## [4.0.0](https://github.com/Yancey-Blog/blog-desktop-v2/compare/v3.21.2...v4.0.0) (2021-07-25)
+
+
+### Features
+
+* add nav for moblie ([a0c0ab5](https://github.com/Yancey-Blog/blog-desktop-v2/commit/a0c0ab5320fe92bcadb73d5a6974686a9560f801))
+* music page for mobile ([d0fbe04](https://github.com/Yancey-Blog/blog-desktop-v2/commit/d0fbe0474d79089162a853327850aa5c892112da))
+* optimize the style of blog detail page ([9aaa608](https://github.com/Yancey-Blog/blog-desktop-v2/commit/9aaa60857f1ccb3ab3f17f878c880481a246f43b))
+* support mobile style for home page ([fef4201](https://github.com/Yancey-Blog/blog-desktop-v2/commit/fef42018f013a23b9964c900545f7f6c7f6deb0c))
+* supports infinite scroll ([1f5cf3b](https://github.com/Yancey-Blog/blog-desktop-v2/commit/1f5cf3ba06065e21388b9e51c81424ccf0c8c262))
+* supports responsive for blog detail page ([b0705f2](https://github.com/Yancey-Blog/blog-desktop-v2/commit/b0705f2fd377fb16b16abd39e24b6a2825aac1fe))
+* use indicator load new posts ([3f7af26](https://github.com/Yancey-Blog/blog-desktop-v2/commit/3f7af26827b5da5a2c9d9a3691fda7171f88662d))
+
 ### [3.21.2](https://github.com/Yancey-Blog/blog-desktop-v2/compare/v3.21.1...v3.21.2) (2021-07-12)
 
 

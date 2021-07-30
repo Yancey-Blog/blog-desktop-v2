@@ -72,7 +72,7 @@ const PostDetail: FC = () => {
       const { src, alt } = props
       return (
         <ImageGroup {...props}>
-          <LazyLoadImage imageUrl={src} alt={alt} noAnimation />
+          <LazyLoadImage imageUrl={src} alt={alt} />
           <ImageAlt>{alt}</ImageAlt>
         </ImageGroup>
       )
