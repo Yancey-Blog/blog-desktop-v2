@@ -72,7 +72,42 @@ export const SearchBoxWrapper = styled.div`
   }
 
   @media only screen and ${breakpoints.device.laptop} {
-    display: none;
+    .ais-SearchBox-input {
+      position: relative;
+      top: 1rem;
+      padding-left: 2.2rem;
+      width: calc(100% - 2rem);
+      box-shadow: 0px 5px 12px rgb(0 0 0 / 15%);
+      border: none;
+      border-radius: 2.6rem;
+      // iOS 需要加上这一句, 否则不会展示 box-shadow
+      -webkit-appearance: none;
+    }
+
+    .ais-SearchBox {
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 999999999;
+      background: #fff;
+      height: 4.6rem;
+    }
+
+    .ais-SearchBox-form {
+      text-align: center;
+    }
+
+    .ais-SearchBox-submit {
+      top: 1.85rem;
+      left: 1.5rem;
+    }
+
+    .ais-SearchBox-reset {
+      top: 1rem;
+      right: 1rem;
+      width: 2.6rem;
+      height: 2.6rem;
+    }
   }
 `
 
@@ -90,7 +125,12 @@ export const Result = styled.div`
   transform: translateX(30rem);
   transition: transform 250ms ease;
 
-  &.showSearchResultDrawer {
+  @media only screen and ${breakpoints.device.laptop} {
+    transform: translateX(60rem);
+    transition: transform 500ms ease;
+  }
+
+  &.showDrawer {
     transform: translateX(0);
     transition: transform 250ms ease;
   }
@@ -144,6 +184,10 @@ export const Result = styled.div`
   .ais-PoweredBy-text {
     font-size: 0.8rem;
     line-height: 1.5;
+  }
+
+  @media only screen and ${breakpoints.device.laptop} {
+    width: 100%;
   }
 `
 

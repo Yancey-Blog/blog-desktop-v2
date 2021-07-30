@@ -1,6 +1,7 @@
 import { FC } from 'react'
 import { Skeleton } from '@material-ui/lab'
 import styled from 'styled-components'
+import breakpoints from 'src/styled/breakpoints'
 
 const PostCardSkeletonWrapper = styled.div`
   display: flex;
@@ -16,6 +17,18 @@ const PostCardSkeletonWrapper = styled.div`
     flex-direction: row-reverse;
     text-align: left;
   }
+
+  @media only screen and ${breakpoints.device.laptop} {
+    flex-direction: column;
+    margin: 1rem 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+
+    &:nth-of-type(2n) {
+      flex-direction: column;
+    }
+  }
 `
 
 const SummarySkeleton = styled.div`
@@ -25,6 +38,12 @@ const SummarySkeleton = styled.div`
   align-items: flex-end;
   padding: 1.8rem 2.4rem;
   width: 26rem;
+
+  @media only screen and ${breakpoints.device.laptop} {
+    align-items: flex-start;
+    padding: 1rem;
+    width: 100%;
+  }
 `
 
 const TitleSkeleton = styled.p`
@@ -38,10 +57,25 @@ const MetaSkeleton = styled.div`
   width: 100%;
 `
 
+const CoverSkeleton = styled.div`
+  @media only screen and ${breakpoints.device.laptop} {
+    width: 100% !important;
+    height: 12rem !important;
+  }
+`
+
+const MoreSkeleton = styled.div`
+  @media only screen and ${breakpoints.device.laptop} {
+    display: none;
+  }
+`
+
 const PostCardSkeleton: FC = () => {
   return (
     <PostCardSkeletonWrapper>
-      <Skeleton animation="wave" variant="rect" width="33rem" height="100%" />
+      <CoverSkeleton>
+        <Skeleton animation="wave" variant="rect" width="33rem" height="100%" />
+      </CoverSkeleton>
 
       <SummarySkeleton>
         <Skeleton
@@ -114,13 +148,15 @@ const PostCardSkeleton: FC = () => {
           style={{ marginBottom: '0.6rem' }}
         />
 
-        <Skeleton
-          animation="wave"
-          variant="text"
-          width="20%"
-          height="0.8rem"
-          style={{ marginTop: '1.6rem', marginBottom: '0.6rem' }}
-        />
+        <MoreSkeleton>
+          <Skeleton
+            animation="wave"
+            variant="text"
+            width="20%"
+            height="0.8rem"
+            style={{ marginTop: '1.6rem', marginBottom: '0.6rem' }}
+          />
+        </MoreSkeleton>
       </SummarySkeleton>
     </PostCardSkeletonWrapper>
   )

@@ -17,24 +17,22 @@ const searchClient = algoliasearch(
 )
 
 const AlgoliaSearchBox: FC = () => {
-  const [showSearchResultDrawer, setShowSearchResultDrawer] = useState(false)
+  const [showDrawer, setShowDrawer] = useState(false)
+
+  const closeKeyboard = () => {
+    // @ts-ignore
+    document.activeElement?.blur()
+  }
 
   const handleInputChange = (e: SyntheticEvent<HTMLInputElement, Event>) => {
     const val = e.currentTarget.value.trim()
-    setShowSearchResultDrawer(!!val)
+    setShowDrawer(!!val)
   }
 
-  // const closeSearchResultDrawer = () => setShowSearchResultDrawer(false)
-
-  // useEffect(() => {
-  //   window.addEventListener('click', closeSearchResultDrawer, {
-  //     passive: true,
-  //   })
-
-  //   return () => {
-  //     window.removeEventListener('click', closeSearchResultDrawer)
-  //   }
-  // }, [])
+  const handleClose = () => {
+    setShowDrawer(false)
+    closeKeyboard()
+  }
 
   return (
     <InstantSearch
@@ -48,13 +46,11 @@ const AlgoliaSearchBox: FC = () => {
       <SearchBoxWrapper>
         <SearchBox
           onChange={(e) => handleInputChange(e)}
-          onReset={() => setShowSearchResultDrawer(false)}
+          onReset={handleClose}
         />
       </SearchBoxWrapper>
 
-      <Result
-        className={showSearchResultDrawer ? 'showSearchResultDrawer' : ''}
-      >
+      <Result className={showDrawer ? 'showDrawer' : ''}>
         <Hits hitComponent={Hit} />
         <PoweredBy />
       </Result>
