@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.1.0](https://github.com/Yancey-Blog/blog-desktop-v2/compare/v4.0.3...v4.1.0) (2021-07-30)
+
+
+### Features
+
+* support skeleton for Home's PostList ([94c70c4](https://github.com/Yancey-Blog/blog-desktop-v2/commit/94c70c40c8ffadf86f7d9ddb9b557c1ac89d0475))
+* supports search ([0e7b483](https://github.com/Yancey-Blog/blog-desktop-v2/commit/0e7b483ee560a89a11410c674d72cdf640a43b1d))
+* supports search box ([c395d03](https://github.com/Yancey-Blog/blog-desktop-v2/commit/c395d038afd0877cdbe5811a0018a38ae3c0d113))
+
 ### [4.0.3](https://github.com/Yancey-Blog/blog-desktop-v2/compare/v4.0.2...v4.0.3) (2021-07-27)
 
 
