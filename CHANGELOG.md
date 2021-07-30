@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.1.1](https://github.com/Yancey-Blog/blog-desktop-v2/compare/v4.1.0...v4.1.1) (2021-07-30)
+
+
+### Bug Fixes
+
+* 1. dark mode for mobile layout. 2. close serach drawer when router change ([05e150f](https://github.com/Yancey-Blog/blog-desktop-v2/commit/05e150fffe3797b101c8bf6f560db25ac15435af))
+
 ## [4.1.0](https://github.com/Yancey-Blog/blog-desktop-v2/compare/v4.0.3...v4.1.0) (2021-07-30)
 
 
