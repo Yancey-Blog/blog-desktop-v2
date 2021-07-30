@@ -288,7 +288,7 @@
   dependencies:
     regenerator-runtime "^0.13.4"
 
-"@babel/runtime@^7.1.2", "@babel/runtime@^7.10.2", "@babel/runtime@^7.10.3", "@babel/runtime@^7.11.2", "@babel/runtime@^7.14.5", "@babel/runtime@^7.3.1", "@babel/runtime@^7.4.4", "@babel/runtime@^7.5.5", "@babel/runtime@^7.8.3", "@babel/runtime@^7.8.7":
+"@babel/runtime@^7.1.2", "@babel/runtime@^7.10.2", "@babel/runtime@^7.11.2", "@babel/runtime@^7.14.5", "@babel/runtime@^7.3.1", "@babel/runtime@^7.4.4", "@babel/runtime@^7.5.5", "@babel/runtime@^7.8.3", "@babel/runtime@^7.8.7":
   version "7.14.5"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.14.5.tgz#665450911c6031af38f81db530f387ec04cd9a98"
   integrity sha512-121rumjddw9c3NCQ55KGkyE1h/nzWhU/owjhw0l4mQrkzz4x9SGS1X8gFLraHwX7td3Yo4QTL+qj0NcIzN87BA==
@@ -5829,16 +5829,16 @@ nprogress@^0.2.0:
   resolved "https://registry.npmjs.org/nprogress/-/nprogress-0.2.0.tgz#cb8f34c53213d895723fcbab907e9422adbcafb1"
   integrity sha1-y480xTIT2JVyP8urkH6UIq28r7E=
 
-nuka-carousel@^4.7.8:
-  version "4.7.8"
-  resolved "https://registry.yarnpkg.com/nuka-carousel/-/nuka-carousel-4.7.8.tgz#58d3dd98e4a9816c3f5778ce51f83f075b7657f4"
-  integrity sha512-+eaG7V2sxjQCIFG6mWoinCQgPbILFGzT/pMSOlkCpYsC/kptIh6yJVke3LwBDyVhPGxAuPxhH4q9qM7WhLir0Q==
+nuka-carousel@^4.7.9:
+  version "4.7.9"
+  resolved "https://registry.yarnpkg.com/nuka-carousel/-/nuka-carousel-4.7.9.tgz#6d7aaba6380e260e7eece1e50ddb7bd79aadcc22"
+  integrity sha512-n5QuCvaiNH1KQJk2B82GmSWihBQ+6+hpDssh85Lmes5isd98I2+17gQiqsLWcdFPJzB1A+dcrzRz6Z9R4EyhHA==
   dependencies:
     csstype "^2.6.6"
     d3-ease "^1.0.3"
     exenv "^1.2.0"
     prop-types "^15.6.0"
-    react-move "^6.1.0"
+    react-move "^6.5.0"
     wicg-inert "^3.1.0"
 
 null-check@^1.0.0:
@@ -6619,12 +6619,12 @@ react-markdown@^6.0.2:
     unist-util-visit "^2.0.0"
     vfile "^4.0.0"
 
-react-move@^6.1.0:
-  version "6.4.0"
-  resolved "https://registry.npmjs.org/react-move/-/react-move-6.4.0.tgz#9163a87c62fff94bf6e6980685c713739192650e"
-  integrity sha512-TNyDQESDZ0xsejnxFTQ9CKarJQN6NbgpImrvIEzOVe7+jt8y7uTjJwWxqFTfmvwskIs+RmUbCWdN7PAbGyhrdA==
+react-move@^6.5.0:
+  version "6.5.0"
+  resolved "https://registry.yarnpkg.com/react-move/-/react-move-6.5.0.tgz#4b337d75987f9266426193f80e982604d49e97ff"
+  integrity sha512-tl8zwCqtXXWfmrUJGnkyPMNhx8DUTy1NugEuPW/JTMp2TGSEC819aMXGYMG8FWFzV9I6jy4kbgoZJnBpmZRktA==
   dependencies:
-    "@babel/runtime" "^7.10.3"
+    "@babel/runtime" "^7.14.5"
     kapellmeister "^3.0.1"
     prop-types "^15.7.2"
 
