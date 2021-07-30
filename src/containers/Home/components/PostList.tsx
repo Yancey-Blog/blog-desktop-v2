@@ -2,6 +2,8 @@ import { FC, useState } from 'react'
 import { useLazyQuery } from '@apollo/client'
 import { SVG_SPRITE } from 'src/shared/constants'
 import PostCard from 'src/containers/Post/components/PostCard/PostCard'
+import PostCardSkeleton from 'src/containers/Post/components/PostCardSkeleton/PostCardSkeleton'
+import SkeletonIterator from 'src/components/SkeletonIterator/SkeletonIterator'
 import { POSTS } from 'src/containers/Post/typeDefs'
 import { PostQuery, PostVars, IPostItem } from 'src/containers/Post/types'
 import InfiniteScroll from 'src/components/InfiniteScroll/InfiniteScroll'
@@ -55,14 +57,22 @@ const PostList: FC<Props> = ({ isSupportWebp }) => {
     >
       <SubTitle icon={SVG_SPRITE.new} title="The Latest!" />
 
-      {data.posts.map((post: IPostItem) => (
-        <PostCard isSupportWebp={isSupportWebp} post={post} key={post._id} />
-      ))}
+      {data.posts.length === 0 && loading ? (
+        <SkeletonIterator count={3} skeletonComponent={PostCardSkeleton} />
+      ) : (
+        data.posts.map((post: IPostItem) => (
+          <PostCard isSupportWebp={isSupportWebp} post={post} key={post._id} />
+        ))
+      )}
 
       <Status>
         {
           // eslint-disable-next-line no-nested-ternary
-          loading ? '正在加载中...' : hasMore ? '' : '没有更多了...'
+          data.posts.length > 0 && loading
+            ? '正在加载中...'
+            : hasMore
+            ? ''
+            : '没有更多了...'
         }
       </Status>
     </InfiniteScroll>

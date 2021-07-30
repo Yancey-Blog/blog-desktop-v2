@@ -83,7 +83,6 @@ export const SearchBoxWrapper = styled.div`
       // iOS 需要加上这一句, 否则不会展示 box-shadow
       -webkit-appearance: none;
     }
-  }
 
     .ais-SearchBox {
       top: 0;
@@ -125,6 +124,11 @@ export const Result = styled.div`
   overflow-y: scroll;
   transform: translateX(30rem);
   transition: transform 250ms ease;
+
+  @media only screen and ${breakpoints.device.laptop} {
+    transform: translateX(60rem);
+    transition: transform 500ms ease;
+  }
 
   &.showDrawer {
     transform: translateX(0);
