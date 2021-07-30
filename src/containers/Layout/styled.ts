@@ -12,6 +12,6 @@ export const Main = styled.main`
   overflow-x: hidden;
 
   @media only screen and ${breakpoints.device.laptop} {
-    margin-top: 4.5rem;
+    margin-top: 3.6rem;
   }
 `

@@ -73,10 +73,17 @@ export const SearchBoxWrapper = styled.div`
 
   @media only screen and ${breakpoints.device.laptop} {
     .ais-SearchBox-input {
-      width: 80%;
       position: relative;
-      top: 0.75rem;
+      top: 1rem;
+      padding-left: 2.2rem;
+      width: calc(100% - 2rem);
+      box-shadow: 0px 5px 12px rgb(0 0 0 / 15%);
+      border: none;
+      border-radius: 2.6rem;
+      // iOS 需要加上这一句, 否则不会展示 box-shadow
+      -webkit-appearance: none;
     }
+  }
 
     .ais-SearchBox {
       top: 0;
@@ -84,7 +91,7 @@ export const SearchBoxWrapper = styled.div`
       width: 100%;
       z-index: 999999999;
       background: #fff;
-      height: 4.5rem;
+      height: 4.6rem;
     }
 
     .ais-SearchBox-form {
@@ -92,13 +99,15 @@ export const SearchBoxWrapper = styled.div`
     }
 
     .ais-SearchBox-submit {
-      left: 11%;
-      top: 1.6rem;
+      top: 1.85rem;
+      left: 1.5rem;
     }
 
     .ais-SearchBox-reset {
-      right: 11%;
-      top: 1.6rem;
+      top: 1rem;
+      right: 1rem;
+      width: 2.6rem;
+      height: 2.6rem;
     }
   }
 `
@@ -117,7 +126,7 @@ export const Result = styled.div`
   transform: translateX(30rem);
   transition: transform 250ms ease;
 
-  &.showSearchResultDrawer {
+  &.showDrawer {
     transform: translateX(0);
     transition: transform 250ms ease;
   }
