@@ -84,6 +84,12 @@ The performances of lighthouse as follows, we will optimize the a11y next time.
 
 ![lighthouse](https://static.yancey.app/Jietu20200514-122909.jpg)
 
+## Responsive Layout
+
+🔥 We are honored to announce that the blog supports responsive layout. This update will bring an unprecedented experience to the mobile.
+
+![IMG_0456 2.PNG](https://static.yancey.app/IMG_0456%202.PNG)
+
 ## Contributing
 
 The main purpose of this repository is to continue to evolve BEG (Blog Environment Group), making it faster and easier to use. Development of Blog Desktop v2 happens in the open on GitHub, and we are grateful to the community for contributing bugfixes and improvements. Read below to learn how you can take part in improving Blog Desktop v2.
@@ -110,7 +116,7 @@ Creates `.env.development.local` file or other env files to cover the default en
 
 ## TODOs
 
-- [ ] Support responsive layout
+- [x] Support responsive layout
 
 - [ ] Optimize the a11y
 
