@@ -26,7 +26,7 @@ const ToggleContainer = styled.button`
   border-radius: 3rem;
   cursor: pointer;
   overflow: hidden;
-  z-index: 200;
+  z-index: ${({ theme }) => theme.zIndex.fixed};
 
   @media only screen and ${breakpoints.device.laptop} {
     display: none;
@@ -57,7 +57,7 @@ export const ToggleContainerForMobile = styled.div`
     left: calc(50% - 1rem);
     bottom: 3.3rem;
     text-align: center;
-    z-index: 1000;
+    z-index: ${({ theme }) => theme.zIndex.overlay};
     svg {
       width: 2rem;
       height: 2rem;

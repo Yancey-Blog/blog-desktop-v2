@@ -6,7 +6,7 @@ export const SearchBoxWrapper = styled.div`
     position: fixed;
     top: 0.9rem;
     right: 12.4rem;
-    z-index: 9999999999;
+    z-index: ${({ theme }) => theme.zIndex.fixed};
   }
 
   .ais-SearchBox-input {
@@ -77,6 +77,7 @@ export const SearchBoxWrapper = styled.div`
       top: 1rem;
       padding-left: 2.2rem;
       width: calc(100% - 2rem);
+      background: ${({ theme }) => theme.background.searchBox};
       box-shadow: 0px 5px 12px rgb(0 0 0 / 15%);
       border: none;
       border-radius: 2.6rem;
@@ -88,8 +89,8 @@ export const SearchBoxWrapper = styled.div`
       top: 0;
       left: 0;
       width: 100%;
-      z-index: 999999999;
-      background: #fff;
+      z-index: ${({ theme }) => theme.zIndex.fixed};
+      background: ${({ theme }) => theme.background.primary};
       height: 4.6rem;
     }
 
@@ -120,7 +121,7 @@ export const Result = styled.div`
   background: ${({ theme }) => theme.background.primary};
   box-shadow: 0 0.13333rem 4.2rem 0
     ${({ theme }) => theme.colors.oneOpcityBlack};
-  z-index: 201;
+  z-index: ${({ theme }) => theme.zIndex.fixed};
   overflow-y: scroll;
   transform: translateX(30rem);
   transition: transform 250ms ease;

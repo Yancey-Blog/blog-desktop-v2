@@ -17,7 +17,7 @@ export const NavBar = styled.nav`
     border-radius: 3rem;
     background: rgba(255, 255, 255, 0.7);
     backdrop-filter: blur(16px);
-    z-index: 999;
+    z-index: ${({ theme }) => theme.zIndex.overlay};
   }
 `
 

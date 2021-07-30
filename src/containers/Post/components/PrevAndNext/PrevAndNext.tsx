@@ -38,7 +38,7 @@ const PictureContainer = styled.div`
     height: 100%;
     top: 0;
     left: 0;
-    z-index: -1;
+    z-index: ${({ theme }) => theme.zIndex.negative};
   }
 
   source,

@@ -58,7 +58,7 @@ const OpenSourceItem = styled.div`
     letter-spacing: 1px;
     color: #bbb;
     transform: translate3d(-50%, -50%, 0);
-    z-index: 2;
+    z-index: ${({ theme }) => theme.zIndex.positive};
     ${transitionMixin('all', 400, 'linear')}
   }
 

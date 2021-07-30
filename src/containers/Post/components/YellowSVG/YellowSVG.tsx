@@ -4,7 +4,7 @@ import styled from 'styled-components'
 const Svg = styled.svg`
   position: absolute;
   top: -3%;
-  z-index: -1;
+  z-index: ${({ theme }) => theme.zIndex.negative};
 
   & path {
     fill: ${({ theme }) => theme.postSvg};

@@ -8,6 +8,7 @@ const light = {
     skeleton: 'rgba(0, 0, 0, 0.04)',
     tooltip: 'rgba(0, 0, 0, .7)',
     inlineCode: '#ebedf0',
+    searchBox: '#ffffff',
   },
   text: {
     primary: '#666666',
@@ -39,6 +40,7 @@ const dark = {
     skeleton: 'rgba(255, 255, 255, 0.08)',
     tooltip: 'rgba(255, 255, 255, .7)',
     inlineCode: '#444950',
+    searchBox: '#202327',
   },
   text: {
     primary: '#f5f6f7',
@@ -94,6 +96,9 @@ const defaultTheme = {
     linkBase: '#25c3a0',
   },
   zIndex: {
+    negative: -1,
+    root: 0,
+    positive: 1,
     fixed: 200,
     overlay: 400,
   },

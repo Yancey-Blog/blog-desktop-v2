@@ -17,7 +17,7 @@ interface Props {
   hit: Hit<HitParams>
 }
 
-const Hits: ComponentType<Props> = ({ hit }) => {
+const HitComponent: ComponentType<Props> = ({ hit }) => {
   return (
     <Link href={`/post/${hit.objectID}`}>
       <a>
@@ -40,4 +40,4 @@ const Hits: ComponentType<Props> = ({ hit }) => {
   )
 }
 
-export default Hits
+export default HitComponent

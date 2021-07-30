@@ -11,7 +11,7 @@ export const ArchiveWrapper = styled.section`
   input {
     position: absolute;
     opacity: 0;
-    z-index: -1;
+    z-index: ${({ theme }) => theme.zIndex.negative};
   }
 
   input:checked ~ .dayListContainer {
@@ -39,7 +39,7 @@ export const YearList = styled.ul`
     width: 4px;
     height: 100%;
     background: ${({ theme }) => theme.colors.archiveBlue};
-    z-index: -1;
+    z-index: ${({ theme }) => theme.zIndex.negative};
   }
 `
 export const Month = styled.span`
@@ -57,7 +57,7 @@ export const Month = styled.span`
     height: 1.4rem;
     background: ${({ theme }) => theme.colors.white};
     border-radius: 50%;
-    z-index: 0;
+    z-index: ${({ theme }) => theme.zIndex.root};
   }
 
   &::before {
@@ -69,7 +69,7 @@ export const Month = styled.span`
     height: 1rem;
     background: ${({ theme }) => theme.colors.archiveBlue};
     border-radius: 50%;
-    z-index: 1;
+    z-index: ${({ theme }) => theme.zIndex.positive};
   }
 `
 
@@ -102,7 +102,7 @@ export const DayItem = styled.li`
     height: 1.1rem;
     background: ${({ theme }) => theme.colors.white};
     border-radius: 50%;
-    z-index: 0;
+    z-index: ${({ theme }) => theme.zIndex.negative};
   }
 
   &::before {
@@ -114,7 +114,7 @@ export const DayItem = styled.li`
     height: 0.7rem;
     background: ${({ theme }) => theme.colors.archiveBlue};
     border-radius: 50%;
-    z-index: 1;
+    z-index: ${({ theme }) => theme.zIndex.positive};
   }
 
   a {

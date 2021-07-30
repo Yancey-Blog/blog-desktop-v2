@@ -40,7 +40,7 @@ const CreatedAt = styled.time`
     color: ${({ theme }) => theme.text.tooltip};
     background: ${({ theme }) => theme.background.tooltip};
     border-radius: 0.4rem;
-    z-index: 1;
+    z-index: ${({ theme }) => theme.zIndex.fixed};
   }
 `
 
