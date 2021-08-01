@@ -26,5 +26,4 @@ yarn-error.log*
 
 # pwa
 public/sw.*
-public/workbox-*.js
-public/workbox-*.js.map
+public/workbox-*
