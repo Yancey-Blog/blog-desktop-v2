@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.2.0](https://github.com/Yancey-Blog/blog-desktop-v2/compare/v4.1.1...v4.2.0) (2021-08-01)
+
+
+### Features
+
+* supports PWA ([1a27399](https://github.com/Yancey-Blog/blog-desktop-v2/commit/1a273992c425bb67b1818bd5d32864c84ec6e133))
+
 ### [4.1.1](https://github.com/Yancey-Blog/blog-desktop-v2/compare/v4.1.0...v4.1.1) (2021-07-30)
 
 
