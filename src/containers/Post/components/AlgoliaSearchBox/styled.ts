@@ -127,7 +127,7 @@ export const Result = styled.div`
   transition: transform 250ms ease;
 
   @media only screen and ${breakpoints.device.laptop} {
-    transform: translateX(60rem);
+    transform: translateX(1024px);
     transition: transform 500ms ease;
   }
 
