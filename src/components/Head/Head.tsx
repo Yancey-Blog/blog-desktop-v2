@@ -19,55 +19,49 @@ const MetaHead: FC<Props> = ({
   postUrl,
 }) => {
   return (
-    <>
-      <Head>
-        <title>{title}</title>
-        <meta
-          name="viewport"
-          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, shrink-to-fit=no, user-scalable=0"
-        />
-      </Head>
+    <Head>
+      <title>{title}</title>
+      <meta charSet="utf-8" />
+      <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+      <meta
+        name="viewport"
+        content="width=device-width,initial-scale=1.0,maximum-scale=1.0,shrink-to-fit=no,user-scalable=0"
+      />
+      <meta name="theme-color" content="#ffffff" />
+      <meta name="keywords" content="Yancey,Blog,Technology,Music" />
+      <meta
+        name="description"
+        content="Technology, Music and Poems. | Yancey Official Blog | Yancey Inc."
+      />
 
-      <Head>
-        <meta name="theme-color" content="#ffffff" />
-      </Head>
-
-      <Head>
-        <meta
-          name="description"
-          content="Technology, Music and Poems. | Yancey Official Blog | Yancey Inc."
-        />
-      </Head>
+      <link rel="manifest" href="/manifest.json" />
+      <link
+        href="/icons/favicon-16x16.png"
+        rel="icon"
+        type="image/png"
+        sizes="16x16"
+      />
+      <link
+        href="/icons/favicon-32x32.png"
+        rel="icon"
+        type="image/png"
+        sizes="32x32"
+      />
+      <link rel="apple-touch-icon" href="/apple-icon.png" />
 
       {useTwitterCard && (
         <>
-          <Head>
-            <meta name="twitter:card" content="summary_large_image" />
-          </Head>
-          <Head>
-            <meta name="twitter:site" content="@YanceyOfficial" />
-          </Head>
-          <Head>
-            <meta name="twitter:creator" content="@YanceyOfficial" />
-          </Head>
-          <Head>
-            <meta name="twitter:title" content={postTitle} />
-          </Head>
-          <Head>
-            <meta name="twitter:description" content={postSummary} />
-          </Head>
-          <Head>
-            <meta name="twitter:image" content={postPosterUrl} />
-          </Head>
-          <Head>
-            <meta name="twitter:image:alt" content={postTitle} />
-          </Head>
-          <Head>
-            <meta name="twitter:url" content={postUrl} />
-          </Head>
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta name="twitter:site" content="@YanceyOfficial" />
+          <meta name="twitter:creator" content="@YanceyOfficial" />
+          <meta name="twitter:title" content={postTitle} />
+          <meta name="twitter:description" content={postSummary} />
+          <meta name="twitter:image" content={postPosterUrl} />
+          <meta name="twitter:image:alt" content={postTitle} />
+          <meta name="twitter:url" content={postUrl} />
         </>
       )}
-    </>
+    </Head>
   )
 }
 
