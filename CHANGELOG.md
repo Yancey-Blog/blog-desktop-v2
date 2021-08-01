@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.2.1](https://github.com/Yancey-Blog/blog-desktop-v2/compare/v4.2.0...v4.2.1) (2021-08-01)
+
+
+### Bug Fixes
+
+* fix some css issues ([48bce94](https://github.com/Yancey-Blog/blog-desktop-v2/commit/48bce94981e0ceba25f97efe73a31b96ecc1ee6c))
+
 ## [4.2.0](https://github.com/Yancey-Blog/blog-desktop-v2/compare/v4.1.1...v4.2.0) (2021-08-01)
 
 
