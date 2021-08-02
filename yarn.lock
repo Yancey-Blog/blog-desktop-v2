@@ -7837,27 +7837,27 @@ react-hotjar@^3.0.1:
   resolved "https://registry.yarnpkg.com/react-hotjar/-/react-hotjar-3.0.1.tgz#7917b57223d37f9ce3bf4638e5f83c5bc46e5e06"
   integrity sha512-3ZiZQhbsisJkK+iUlPVVTa7hUJXVQ/o/3+Bzocpjb2+of8lMh7uiDXLsSKxD6T4J3JR9sZ+L3v9CYyUgrp1R8g==
 
-react-instantsearch-core@^6.11.0, react-instantsearch-core@^6.12.0:
-  version "6.12.0"
-  resolved "https://registry.yarnpkg.com/react-instantsearch-core/-/react-instantsearch-core-6.12.0.tgz#f4bd044c0b5939d2129b95d3bf298e407a41a2b5"
-  integrity sha512-k7/sQLai5fhhiQxKFt7e3lA13SJpp843raQ6f8EtJL/bdFZPDHnOS3fPrxV/sduBkIrX7Hv+DrEOY1KkJGu2sA==
+react-instantsearch-core@^6.11.0, react-instantsearch-core@^6.12.1:
+  version "6.12.1"
+  resolved "https://registry.yarnpkg.com/react-instantsearch-core/-/react-instantsearch-core-6.12.1.tgz#314b420d4205b25745db4b81fa45cf1454bd4bf1"
+  integrity sha512-X4OqakDI3DOcFiS1S46z+cciKEQcKBmH8HGQLztzW14hoHRqFfZzuqWydlSxfJZN5WksMMm78EmL2jvoqIHd/A==
   dependencies:
     "@babel/runtime" "^7.1.2"
     algoliasearch-helper "^3.5.3"
     prop-types "^15.6.2"
     react-fast-compare "^3.0.0"
 
-react-instantsearch-dom@^6.12.0:
-  version "6.12.0"
-  resolved "https://registry.yarnpkg.com/react-instantsearch-dom/-/react-instantsearch-dom-6.12.0.tgz#fb2a95643cfa896b4199131e70d0de308baaf932"
-  integrity sha512-/UMnmX0SPkvT8yOL2mAAfjz89ohGSZScb9X6hql9hydcS94cGoojysIUHJ/C+/1f8ciF2zni6I8AYddMdaqrSg==
+react-instantsearch-dom@^6.12.1:
+  version "6.12.1"
+  resolved "https://registry.yarnpkg.com/react-instantsearch-dom/-/react-instantsearch-dom-6.12.1.tgz#9bfb8f3a0b7ed84497af2ad7b65f364e4c7009b3"
+  integrity sha512-KXk2UDmJ3OP9B57owPC0+7fdcVtmYAA6/UWimR9CXhvFGCMi11xlR/wscYMYxdPuxs9IkmnnLDIJSjSGADYnow==
   dependencies:
     "@babel/runtime" "^7.1.2"
     algoliasearch-helper "^3.5.3"
     classnames "^2.2.5"
     prop-types "^15.6.2"
     react-fast-compare "^3.0.0"
-    react-instantsearch-core "^6.12.0"
+    react-instantsearch-core "^6.12.1"
 
 react-is@17.0.2, "react-is@^16.8.0 || ^17.0.0", react-is@^17.0.0:
   version "17.0.2"
