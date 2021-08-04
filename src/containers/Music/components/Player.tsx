@@ -16,6 +16,7 @@ const Player: FC = () => {
         container: plyaerRef.current,
         fixed: true,
         lrcType: 1,
+        preload: 'none',
         audio: data.players.map((musicTrack) => {
           const { title, artist, lrc, coverUrl, musicFileUrl } = musicTrack
           return {

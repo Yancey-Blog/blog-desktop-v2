@@ -25,7 +25,7 @@ const MetaHead: FC<Props> = ({
       <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
       <meta
         name="viewport"
-        content="width=device-width,initial-scale=1.0,maximum-scale=1.0,shrink-to-fit=no,user-scalable=0"
+        content="width=device-width,initial-scale=1.0,maximum-scale=1.0,shrink-to-fit=no"
       />
       <meta name="theme-color" content="#ffffff" />
       <meta name="keywords" content="Yancey,Blog,Technology,Music" />

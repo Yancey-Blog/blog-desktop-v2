@@ -49,9 +49,10 @@ declare module 'aplayer' {
     lrcType: number
     fixed: boolean
     audio: Audio[]
+    preload: 'none' | 'metadata' | 'auto'
   }
   class APlayer {
-    constructor({ container, lrcType, fixed, audio }: Props) {}
+    constructor({ container, lrcType, fixed, audio, preload }: Props) {}
     public lrc: { show: Function }
   }
 
