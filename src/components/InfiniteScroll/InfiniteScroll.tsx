@@ -37,7 +37,9 @@ const InfiniteScroll: FC<Props> = ({
         onBottomHit()
       }
     }
-    document.addEventListener('scroll', onScroll)
+    document.addEventListener('scroll', onScroll, {
+      passive: true,
+    })
     return () => document.removeEventListener('scroll', onScroll)
   }, [onBottomHit, isLoading, hasMoreData])
 
