@@ -39,12 +39,6 @@ const Player = dynamic(import('src/containers/Music/components/Player'), {
   ssr: false,
 })
 
-// Router.events.on('routeChangeStart', () => {
-//   NProgress.start()
-// })
-// Router.events.on('routeChangeComplete', () => NProgress.done())
-// Router.events.on('routeChangeError', () => NProgress.done())
-
 Sentry.init({
   dsn: process.env.NEXT_PUBLIC_SENTRY_DSN,
   integrations: [new Integrations.BrowserTracing()],
