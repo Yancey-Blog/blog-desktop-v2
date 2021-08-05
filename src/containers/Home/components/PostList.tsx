@@ -57,7 +57,7 @@ const PostList: FC<Props> = ({ isSupportWebp }) => {
     >
       <SubTitle icon={SVG_SPRITE.new} title="The Latest!" />
 
-      {data.posts.length === 0 && loading ? (
+      {data.posts.length === 0 ? (
         <SkeletonIterator count={3} skeletonComponent={PostCardSkeleton} />
       ) : (
         data.posts.map((post: IPostItem) => (
