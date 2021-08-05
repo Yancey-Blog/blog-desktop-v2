@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.3.0](https://github.com/Yancey-Blog/blog-desktop-v2/compare/v4.2.1...v4.3.0) (2021-08-05)
+
+
+### Features
+
+* add passive: true for InfiniteScroll ([d4c96be](https://github.com/Yancey-Blog/blog-desktop-v2/commit/d4c96be9ace6e3d41bdb5327549bd0f06b2f167c))
+* fixed hight for PostCard image to avoid CLS ([8f6e990](https://github.com/Yancey-Blog/blog-desktop-v2/commit/8f6e990ee0ec76d62b55b6c43a6c38bd683c7409))
+* stop preload audio file at player ([1efea52](https://github.com/Yancey-Blog/blog-desktop-v2/commit/1efea5222d212c42d16cfba17544c4189041b099))
+* **a11y:** delete `user-scalable="no"` for low vision users ([d60524b](https://github.com/Yancey-Blog/blog-desktop-v2/commit/d60524bcbc5311b3d3a62699b230d1797e421f29))
+* **manifest.json:** add `"purpose": "any maskable"` for icons of manifest.json ([70162e9](https://github.com/Yancey-Blog/blog-desktop-v2/commit/70162e9d4e5952ff4570ff4d5e696e202a90293a))
+
 ### [4.2.1](https://github.com/Yancey-Blog/blog-desktop-v2/compare/v4.2.0...v4.2.1) (2021-08-01)
 
 
