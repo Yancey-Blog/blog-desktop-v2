@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.4.0](https://github.com/Yancey-Blog/blog-desktop-v2/compare/v4.3.1...v4.4.0) (2021-08-11)
+
+
+### Features
+
+* the `FireWorks` easter egg should be displayed at both desktop and mobile ([a578371](https://github.com/Yancey-Blog/blog-desktop-v2/commit/a578371526ae44620e4aef2d2702e8925ca29018))
+
 ### [4.3.1](https://github.com/Yancey-Blog/blog-desktop-v2/compare/v4.3.0...v4.3.1) (2021-08-11)
 
 
