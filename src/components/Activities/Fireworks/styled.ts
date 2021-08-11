@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import { bang, gravity, position } from 'src/styled/animations'
 
 export const FireworksWrapper = styled.section`
-  position: absolute;
+  position: fixed;
   width: 100%;
   height: 100%;
   z-index: ${({ theme }) => theme.zIndex.positive};
