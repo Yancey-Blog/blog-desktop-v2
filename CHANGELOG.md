@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.3.1](https://github.com/Yancey-Blog/blog-desktop-v2/compare/v4.3.0...v4.3.1) (2021-08-11)
+
+
+### Features
+
+* display skeleton if post is exmpty ([6c89834](https://github.com/Yancey-Blog/blog-desktop-v2/commit/6c898340dc147245cc2fa692ee9a16254186a3ca))
+
+
+### Bug Fixes
+
+* lazy load image's height should be set 16rem only at mobile ([3f89399](https://github.com/Yancey-Blog/blog-desktop-v2/commit/3f89399652814b63f1f1a961abceb216c042c278))
+
 ## [4.3.0](https://github.com/Yancey-Blog/blog-desktop-v2/compare/v4.2.1...v4.3.0) (2021-08-05)
 
 
