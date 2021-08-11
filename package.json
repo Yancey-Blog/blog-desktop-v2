@@ -38,7 +38,7 @@
     "next-pwa": "^5.2.24",
     "next-with-apollo": "^5.2.1",
     "normalize.css": "^8.0.1",
-    "notistack": "^1.0.9",
+    "notistack": "^1.0.10",
     "nprogress": "^0.2.0",
     "nuka-carousel": "^4.7.9",
     "react": "17.0.2",
