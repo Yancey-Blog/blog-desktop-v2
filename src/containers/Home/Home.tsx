@@ -47,9 +47,8 @@ const Home: FC<Props> = ({ isSupportWebp }) => {
 
   return (
     <HomeContainer>
+      {FireWorkComponent && <FireWorkComponent />}
       <CoverWrapper>
-        {FireWorkComponent && <FireWorkComponent />}
-
         <Cover
           isSupportWebp={isSupportWebp}
           covers={covers ? covers.getAllPublicCovers : []}
