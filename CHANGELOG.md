@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.5.0](https://github.com/Yancey-Blog/blog-desktop-v2/compare/v4.4.0...v4.5.0) (2021-08-13)
+
+
+### Features
+
+* **summarycomponent:** optimize the visual experience of the Summary Component ([8919846](https://github.com/Yancey-Blog/blog-desktop-v2/commit/89198468d9322e505aa5be4ccde592d818ecd63d))
+
 ## [4.4.0](https://github.com/Yancey-Blog/blog-desktop-v2/compare/v4.3.1...v4.4.0) (2021-08-11)
 
 
