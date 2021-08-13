@@ -11,7 +11,6 @@ import LazyLoadImage from 'src/components/LazyLoadImage/LazyLoadImage'
 import MetaHead from 'src/components/Head/Head'
 import Picture from 'src/components/Picture/Picture'
 import PostMeta from '../components/PostMeta/PostMeta'
-import YellowSVG from '../components/YellowSVG/YellowSVG'
 import SharePanel from '../components/SharePanel/SharePanel'
 import PrevAndNext from '../components/PrevAndNext/PrevAndNext'
 import PostDetailSkeleton from '../components/PostDetailSkeleton/PostDetailSkeleton'
@@ -141,8 +140,6 @@ const PostDetail: FC = () => {
         postPosterUrl={posterUrl}
         postUrl={generatePostUrl(id as string)}
       />
-
-      <YellowSVG />
 
       <SharePanel
         id={id as string}

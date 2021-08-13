@@ -29,14 +29,13 @@ export const Title = styled.h1`
 
 export const Summary = styled.blockquote`
   margin: 2rem 0 4rem 0;
-  padding: 1.2rem;
+  padding: 1rem;
   font-size: 1.1rem;
-  border-radius: 10px;
   line-height: 1.6;
-  background: 0 0;
-  border: none;
-  border: 2px solid ${({ theme }) => theme.text.secondary};
-  box-shadow: 0.4rem 0.4rem 0 0 ${({ theme }) => theme.text.secondary};
+  color: ${({ theme }) => theme.text.base};
+  background: ${({ theme }) => theme.background.summaryBg};
+  border-left: 0.3rem solid ${({ theme }) => theme.colors.summaryBar};
+  border-radius: 0.5rem;
 `
 
 export const Content = styled.article`
