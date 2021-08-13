@@ -7,7 +7,7 @@ The **desktop website** for Yancey blog with React, Next.js, styled-components, 
 _This library is part of the [BEG (Blog Environment Group)](https://github.com/Yancey-Blog)_ ecosystem 📖
 
 ![Build Status](https://github.com/Yancey-Blog/blog-desktop-v2/actions/workflows/github-actions.yml/badge.svg)
-[![Codacy Badge](https://app.codacy.com/project/badge/Grade/168e8ca93e0945ada9af80a8d11db0dc)](https://www.codacy.com/gh/Yancey-Blog/blog-desktop-v2/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Yancey-Blog/blog-desktop-v2&amp;utm_campaign=Badge_Grade)
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/168e8ca93e0945ada9af80a8d11db0dc)](https://www.codacy.com/gh/Yancey-Blog/blog-desktop-v2/dashboard?utm_source=github.com&utm_medium=referral&utm_content=Yancey-Blog/blog-desktop-v2&utm_campaign=Badge_Grade)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 ![Code Style](https://camo.githubusercontent.com/c83b8df34339bd302b7fd3fbb631f99ba25f87f8/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f636f64655f7374796c652d70726574746965722d6666363962342e737667)
 
@@ -88,7 +88,11 @@ The performances of lighthouse as follows, we will optimize the a11y next time.
 
 🔥 We are honored to announce that the blog supports responsive layout. This update will bring an unprecedented experience to the mobile.
 
-![IMG_0456 2.PNG](https://static.yancey.app/IMG_0456%202.PNG)
+![IMG_0456 2.PNG](https://static.yancey.app/IMG_0456%202.PNG?x-oss-process=image/resize,w_320)
+
+## Progressive Web Apps(PWAs)
+
+You can use Progressive Web Apps (PWAs) for a fast web experience on your computer or mobile device. You can install the PWA for faster access and additional functionality. Please follow the [ariticle](https://support.google.com/chrome/answer/9658361?hl=en&co=GENIE.Platform%3DDesktop&oco=1) to install it.
 
 ## Contributing
 
