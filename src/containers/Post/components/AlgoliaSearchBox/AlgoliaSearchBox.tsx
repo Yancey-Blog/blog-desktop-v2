@@ -7,7 +7,10 @@ import {
   SearchBox,
   Configure,
   PoweredBy,
+  connectStateResults,
 } from 'react-instantsearch-dom'
+import SkeletonIterator from 'src/components/SkeletonIterator/SkeletonIterator'
+import AlgoliaSarchBoxSkeleton from '../AlgoliaSarchBoxSkeleton/AlgoliaSarchBoxSkeleton'
 import Hit from './Hit'
 import { Result, SearchBoxWrapper } from './styled'
 
@@ -36,6 +39,12 @@ const AlgoliaSearchBox: FC = () => {
     closeKeyboard()
   }
 
+  const LoadingIndicator = connectStateResults(({ isSearchStalled }) =>
+    isSearchStalled ? (
+      <SkeletonIterator count={5} skeletonComponent={AlgoliaSarchBoxSkeleton} />
+    ) : null,
+  )
+
   useEffect(() => {
     router.events.on('routeChangeStart', () => {
       handleClose()
@@ -59,6 +68,7 @@ const AlgoliaSearchBox: FC = () => {
       </SearchBoxWrapper>
 
       <Result className={showDrawer ? 'showDrawer' : ''}>
+        <LoadingIndicator />
         <Hits hitComponent={Hit} />
         <PoweredBy />
       </Result>
