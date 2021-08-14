@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.6.0](https://github.com/Yancey-Blog/blog-desktop-v2/compare/v4.5.0...v4.6.0) (2021-08-14)
+
+
+### Features
+
+* show skeleton when algolia seaarch is fetching ([f1172e3](https://github.com/Yancey-Blog/blog-desktop-v2/commit/f1172e37fb47e20eaa6d688aa9864592066ac3b2))
+
 ## [4.5.0](https://github.com/Yancey-Blog/blog-desktop-v2/compare/v4.4.0...v4.5.0) (2021-08-13)
 
 
