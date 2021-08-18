@@ -28,6 +28,10 @@ export const PostCardWrapper = styled.section`
     &:nth-of-type(2n) {
       flex-direction: column;
     }
+
+    img {
+      height: 16rem;
+    }
   }
 `
 

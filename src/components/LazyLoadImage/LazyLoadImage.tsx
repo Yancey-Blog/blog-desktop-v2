@@ -3,7 +3,6 @@ import ProgressiveImage from 'react-progressive-graceful-image'
 import styled from 'styled-components'
 import { generateAliOSSSuffix } from 'src/shared/utils'
 import { AliOSSSuffix } from 'src/shared/constants'
-import breakpoints from 'src/styled/breakpoints'
 
 interface Props {
   isSupportWebp?: boolean
@@ -15,10 +14,6 @@ export const Image = styled.img`
   width: 100%;
   height: 100%;
   object-fit: cover;
-
-  @media only screen and ${breakpoints.device.laptop} {
-    height: 16rem;
-  }
 
   &.preview {
     filter: blur(0.4rem);

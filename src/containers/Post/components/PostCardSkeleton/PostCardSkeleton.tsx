@@ -59,7 +59,7 @@ const MetaSkeleton = styled.div`
 
 const CoverSkeleton = styled.div`
   @media only screen and ${breakpoints.device.laptop} {
-    height: 12rem;
+    height: 16rem;
 
     .MuiSkeleton-root {
       width: 100% !important;
