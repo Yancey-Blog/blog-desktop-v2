@@ -5,7 +5,10 @@
 
 version: 2
 updates:
-  - package-ecosystem: '' # See documentation for possible values
-    directory: '/' # Location of package manifests
+  - package-ecosystem: 'yarn'
+    directory: '/'
     schedule:
       interval: 'weekly'
+    target-branch: "develop"
+    commit-message:
+      prefix: 'deps'
