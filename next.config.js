@@ -26,7 +26,7 @@ module.exports = (phase, { defaultConfig }) => {
       },
       reactStrictMode: true,
       webpack5: true,
-      experimental: { esmExternals: true },
+      // experimental: { esmExternals: true },
       compress: true,
       pageExtensions: ['mdx', 'jsx', 'js', 'ts', 'tsx'],
       productionBrowserSourceMaps: true,
