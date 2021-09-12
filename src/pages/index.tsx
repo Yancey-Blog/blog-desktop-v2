@@ -3,14 +3,10 @@ import { GetServerSidePropsContext } from 'next'
 import Layout from 'src/containers/Layout/Layout'
 import HomeContainer from 'src/containers/Home/Home'
 
-interface Props {
-  isSupportWebp: boolean
-}
-
-const Index: FC<Props> = ({ isSupportWebp }) => {
+const Index: FC = () => {
   return (
     <Layout>
-      <HomeContainer isSupportWebp={isSupportWebp} />
+      <HomeContainer />
     </Layout>
   )
 }

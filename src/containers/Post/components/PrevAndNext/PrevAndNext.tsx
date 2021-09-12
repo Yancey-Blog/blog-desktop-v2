@@ -1,7 +1,6 @@
 import { FC } from 'react'
 import Link from 'next/link'
 import styled from 'styled-components'
-import Picture from 'src/components/Picture/Picture'
 import { flexMixin } from 'src/styled/mixins'
 import breakpoints from 'src/styled/breakpoints'
 import { IPostItem } from 'src/containers/Post/types'
@@ -68,6 +67,15 @@ const Title = styled.p`
   z-index: ${({ theme }) => theme.zIndex.overlay};
 `
 
+const Image = styled.img`
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  z-index: -1;
+`
+
 enum ItemType {
   prev = 'PREVIOUS',
   next = 'NEXT',
@@ -88,9 +96,7 @@ const PrevAndNext: FC<Props> = ({ prev, next }) => {
     <Link href={`/post/${id}`}>
       <a>
         <PictureContainer>
-          <Picture src={posterUrl}>
-            <img src={posterUrl} alt={title} />
-          </Picture>
+          <Image src={posterUrl} alt={title} />
           <Title>{type} POST</Title>
           <Title>{title}</Title>
         </PictureContainer>

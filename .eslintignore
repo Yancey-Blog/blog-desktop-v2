@@ -1,3 +1,6 @@
 next-env.d.ts
 shims-env.d.ts
 ecosystem.config.js
+next.config.js
+scripts/**/*.js
+babel.config.js

@@ -1,5 +1,5 @@
 import { FC } from 'react'
-import { Skeleton } from '@material-ui/lab'
+import { Skeleton } from '@material-ui/core'
 import styled from 'styled-components'
 
 const BestAlbumSkeletonWrapper = styled.div`
@@ -17,7 +17,12 @@ const BestAlbumSkeletonMeta = styled.div`
 const BestAlbumSkeleton: FC = () => {
   return (
     <BestAlbumSkeletonWrapper>
-      <Skeleton animation="wave" variant="rect" width="100%" height="25.2rem" />
+      <Skeleton
+        animation="wave"
+        variant="rectangular"
+        width="100%"
+        height="25.2rem"
+      />
 
       <BestAlbumSkeletonMeta>
         <Skeleton
@@ -41,7 +46,7 @@ const BestAlbumSkeleton: FC = () => {
         />
         <Skeleton
           animation="wave"
-          variant="rect"
+          variant="rectangular"
           width="8rem"
           height="2.5rem"
           style={{ marginTop: '5.8rem', borderRadius: '2rem' }}

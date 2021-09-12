@@ -19,10 +19,6 @@ module.exports = {
           transform: '@material-ui/core/${member}',
           preventFullImport: true,
         },
-        '@material-ui/lab': {
-          transform: '@material-ui/lab/${member}',
-          preventFullImport: true,
-        },
       },
     ],
   ],

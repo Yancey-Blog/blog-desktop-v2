@@ -1,7 +1,6 @@
 import { FC } from 'react'
 import styled from 'styled-components'
 import Carousel from 'nuka-carousel'
-import Picture from 'src/components/Picture/Picture'
 import { formatDate } from 'src/shared/utils'
 import { ILiveTour } from '../types'
 
@@ -54,9 +53,7 @@ const LiveTour: FC<Props> = ({ liveTours }) => {
         const { _id, posterUrl, title, showTime } = liveTour
         return (
           <LiveTourContent key={_id}>
-            <Picture src={posterUrl}>
-              <Img src={posterUrl} alt={title} />
-            </Picture>
+            <Img src={posterUrl} alt={title} />
 
             <LiveTourMeta>
               <Date>{formatDate(showTime)}</Date>

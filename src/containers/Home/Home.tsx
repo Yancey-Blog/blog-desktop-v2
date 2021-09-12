@@ -22,12 +22,9 @@ import Cover from './components/Cover'
 import PostList from './components/PostList'
 import Slogan from './components/Slogan'
 
-interface Props {
-  isSupportWebp: boolean
-}
-
-const Home: FC<Props> = ({ isSupportWebp }) => {
-  const { data: covers } = useQuery<CoverQuery>(COVERS)
+const Home: FC = () => {
+  const { data: covers, loading: isFetchingCovers } =
+    useQuery<CoverQuery>(COVERS)
   const { data: announcements } = useQuery<AnnouncementQuery>(ANNOUNCEMENTS)
   const { data: openSources } = useQuery<OpenSourceQuery>(OPEN_SOURCES)
   const { data: mottos } = useQuery<MottoQuery>(MOTTOS)
@@ -50,8 +47,8 @@ const Home: FC<Props> = ({ isSupportWebp }) => {
       {FireWorkComponent && <FireWorkComponent />}
       <CoverWrapper>
         <Cover
-          isSupportWebp={isSupportWebp}
           covers={covers ? covers.getAllPublicCovers : []}
+          loading={isFetchingCovers}
         />
 
         <MottoSocialMediaBar>
@@ -68,7 +65,7 @@ const Home: FC<Props> = ({ isSupportWebp }) => {
           openSources={openSources ? openSources.getOpenSources : []}
         />
 
-        <PostList isSupportWebp={isSupportWebp} />
+        <PostList />
       </HomeMain>
     </HomeContainer>
   )

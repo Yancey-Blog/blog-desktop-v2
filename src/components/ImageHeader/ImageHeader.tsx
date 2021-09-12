@@ -1,5 +1,4 @@
 import { FC } from 'react'
-import Picture from 'src/components/Picture/Picture'
 import { ImageHeaderWrapper, Title } from './styled'
 
 interface Props {
@@ -12,10 +11,8 @@ const ImageHeader: FC<Props> = ({ title, imageUrl }) => {
 
   return (
     <ImageHeaderWrapper>
-      <Picture src={imgUrl}>
-        <img src={imgUrl} alt={title} />
-        <Title>{title}</Title>
-      </Picture>
+      <img src={imgUrl} alt={title} />
+      <Title>{title}</Title>
     </ImageHeaderWrapper>
   )
 }

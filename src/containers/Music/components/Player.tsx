@@ -1,8 +1,6 @@
 import { FC, useRef, useEffect } from 'react'
 import { useQuery } from '@apollo/client'
 import APlayer from 'aplayer'
-import { AliOSSSuffix } from 'src/shared/constants'
-import { generateAliOSSSuffix } from 'src/shared/utils'
 import { PLAYERS } from '../typeDefs'
 import { PlayerQuery } from '../types'
 
@@ -23,9 +21,7 @@ const Player: FC = () => {
             name: title,
             artist,
             url: musicFileUrl,
-            cover: `${coverUrl}${generateAliOSSSuffix(
-              AliOSSSuffix.THUMB_SUFFIX,
-            )}`,
+            cover: coverUrl,
             lrc,
           }
         }),

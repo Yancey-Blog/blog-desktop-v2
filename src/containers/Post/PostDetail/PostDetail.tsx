@@ -7,9 +7,7 @@ import rehypeRaw from 'rehype-raw'
 import SyntaxHighlighter from 'react-syntax-highlighter'
 import { atomOneDark } from 'react-syntax-highlighter/dist/cjs/styles/hljs'
 import { DiscussionEmbed } from 'disqus-react'
-import LazyLoadImage from 'src/components/LazyLoadImage/LazyLoadImage'
 import MetaHead from 'src/components/Head/Head'
-import Picture from 'src/components/Picture/Picture'
 import PostMeta from '../components/PostMeta/PostMeta'
 import SharePanel from '../components/SharePanel/SharePanel'
 import PrevAndNext from '../components/PrevAndNext/PrevAndNext'
@@ -71,7 +69,7 @@ const PostDetail: FC = () => {
       const { src, alt } = props
       return (
         <ImageGroup {...props}>
-          <LazyLoadImage imageUrl={src} alt={alt} />
+          <img src={src} alt={alt} />
           <ImageAlt>{alt}</ImageAlt>
         </ImageGroup>
       )
@@ -150,9 +148,7 @@ const PostDetail: FC = () => {
       <Menu className="postMenu" />
 
       <Content>
-        <Picture src={posterUrl}>
-          <Poster src={posterUrl} alt={title} />
-        </Picture>
+        <Poster src={posterUrl} alt={title} />
         <Title>{title}</Title>
         <PostMeta
           tags={tags}

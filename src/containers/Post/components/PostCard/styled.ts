@@ -43,6 +43,7 @@ export const PosterAnchor = styled.a`
 
   @media only screen and ${breakpoints.device.laptop} {
     width: 100%;
+    height: 16rem;
   }
 `
 

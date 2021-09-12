@@ -1,5 +1,5 @@
 import { FC } from 'react'
-import { Skeleton } from '@material-ui/lab'
+import { Skeleton } from '@material-ui/core'
 import styled from 'styled-components'
 import breakpoints from 'src/styled/breakpoints'
 
@@ -41,7 +41,12 @@ const PostDetailSkeleton: FC = () => {
   return (
     <PostDetailSkeletonWrapper>
       <PostDetailSkeletonPoster>
-        <Skeleton animation="wave" variant="rect" width="100%" height="100%" />
+        <Skeleton
+          animation="wave"
+          variant="rectangular"
+          width="100%"
+          height="100%"
+        />
       </PostDetailSkeletonPoster>
 
       <Skeleton

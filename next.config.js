@@ -1,7 +1,6 @@
 const withBundleAnalyzer = require('@next/bundle-analyzer')({
   enabled: process.env.ANALYZE === 'true',
 })
-
 const withPWA = require('next-pwa')
 const runtimeCaching = require('next-pwa/cache')
 
@@ -9,12 +8,12 @@ module.exports = (phase, { defaultConfig }) => {
   /**
    * @type {import('next').NextConfig}
    */
-  const nextConfig = withPWA(
+  return withPWA(
     withBundleAnalyzer({
       env: {
         NEXT_PUBLIC_API_URL: 'https://api.yanceyleo.com/graphql',
         NEXT_PUBLIC_DOMAIN_URL: 'https://yanceyleo.com',
-        NEXT_PUBLIC_STATIC_FILE_URL: 'https://static.yancey.app',
+        NEXT_PUBLIC_STATIC_FILE_URL: 'https://edge.yancey.app/beg',
         NEXT_PUBLIC_GA_KEY: 'UA-114532340-1',
         NEXT_PUBLIC_SENTRY_DSN:
           'https://2998f0f7a05044969a7859a2596e6977@o265404.ingest.sentry.io/1468725',
@@ -35,6 +34,10 @@ module.exports = (phase, { defaultConfig }) => {
         dest: 'public',
         runtimeCaching,
       },
+      images: {
+        // TODO: 清洗完数据下掉 'static.yancey.app'
+        domains: ['edge.yancey.app', 'static.yancey.app'],
+      },
       webpack: (
         config,
         { buildId, dev, isServer, defaultLoaders, webpack },
@@ -52,6 +55,4 @@ module.exports = (phase, { defaultConfig }) => {
       },
     }),
   )
-
-  return nextConfig
 }
