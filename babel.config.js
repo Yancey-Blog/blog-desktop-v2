@@ -1,5 +1,3 @@
-const isEnvDevelopment = process.env.NODE_ENV === 'development'
-
 module.exports = {
   presets: ['next/babel'],
   plugins: [
@@ -8,8 +6,8 @@ module.exports = {
       {
         ssr: true,
         pure: true,
-        displayName: isEnvDevelopment,
-        fileName: isEnvDevelopment,
+        displayName: process.env.NODE_ENV !== 'production',
+        fileName: false,
         minify: true,
         transpileTemplateLiterals: true,
       },

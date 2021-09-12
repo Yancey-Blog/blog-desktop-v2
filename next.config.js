@@ -7,8 +7,28 @@ const runtimeCaching = require('next-pwa/cache')
 module.exports = (phase, { defaultConfig }) => {
   const { host } = new URL(process.env.NEXT_PUBLIC_STATIC_FILE_URL)
 
+  /**
+   * @type {import('next').NextConfig}
+   */
   return withPWA(
     withBundleAnalyzer({
+      env: {
+        NEXT_PUBLIC_API_URL: 'https://api.yanceyleo.com/graphql',
+        NEXT_PUBLIC_DOMAIN_URL: 'https://yanceyleo.com',
+        NEXT_PUBLIC_STATIC_FILE_URL: 'https://edge.yancey.app/beg',
+        NEXT_PUBLIC_GA_KEY: 'UA-114532340-1',
+        NEXT_PUBLIC_SENTRY_DSN:
+          'https://2998f0f7a05044969a7859a2596e6977@o265404.ingest.sentry.io/1468725',
+        NEXT_PUBLIC_HOTJAR_ID: '1514017',
+        NEXT_PUBLIC_HOTJAR_SV: '6',
+        NEXT_PUBLIC_DISCUSSION_KEY: 'yancey-blog',
+        NEXT_PUBLIC_ALGOLIA_SEARCH_APP_ID: '5Y6Y04WE04',
+        NEXT_PUBLIC_ALGOLIA_SEARCH_API_KEY: '46f32897c2a83b6495111a68bd1cd8c7',
+        NEXT_PUBLIC_ALGOLIA_SEARCH_INDEX_NAME: 'prod_YANCEY_BLOG',
+      },
+      reactStrictMode: true,
+      webpack5: true,
+      experimental: { esmExternals: true },
       compress: true,
       pageExtensions: ['mdx', 'jsx', 'js', 'ts', 'tsx'],
       productionBrowserSourceMaps: true,
