@@ -1,11 +1,11 @@
 import { FC } from 'react'
 import styled, { css } from 'styled-components'
-import { SOCIAL_MEDIA, ALI_OSS_FE_STATIC_PATH } from 'src/shared/constants'
+import { SOCIAL_MEDIA } from 'src/shared/constants'
 import { flexMixin, transitionMixin, backgroundMixin } from 'src/styled/mixins'
 import { IMotto } from '../types'
 
-const TWITTER_QRCODE = `${process.env.NEXT_PUBLIC_STATIC_FILE_URL}/${ALI_OSS_FE_STATIC_PATH}/twitter-qr-code.jpg`
-const WECHAT_QRCODE = `${process.env.NEXT_PUBLIC_STATIC_FILE_URL}/${ALI_OSS_FE_STATIC_PATH}/official-account-qr-code.jpg`
+const TWITTER_QRCODE = `${process.env.NEXT_PUBLIC_STATIC_FILE_URL}/twitter-qr-code.jpg`
+const WECHAT_QRCODE = `${process.env.NEXT_PUBLIC_STATIC_FILE_URL}/official-account-qr-code.jpg`
 
 const MottoBar = styled.section`
   position: relative;

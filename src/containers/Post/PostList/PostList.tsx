@@ -1,8 +1,7 @@
 import { FC, useState, useEffect, ChangeEvent } from 'react'
 import { useRouter } from 'next/router'
 import { useQuery, useLazyQuery } from '@apollo/client'
-import { Pagination } from '@material-ui/lab'
-import { ALI_OSS_FE_STATIC_PATH } from 'src/shared/constants'
+import { Pagination } from '@material-ui/core'
 import ImageHeader from 'src/components/ImageHeader/ImageHeader'
 import SkeletonIterator from 'src/components/SkeletonIterator/SkeletonIterator'
 import PostListStatus from '../components/PostListStatus/PostLIstStatus'
@@ -20,11 +19,7 @@ import {
 } from '../types'
 import { PostContent, PostItemContainer } from './styled'
 
-interface Props {
-  isSupportWebp: boolean
-}
-
-const PostList: FC<Props> = ({ isSupportWebp }) => {
+const PostList: FC = () => {
   const {
     query: { tag: searchTag },
   } = useRouter()
@@ -75,10 +70,7 @@ const PostList: FC<Props> = ({ isSupportWebp }) => {
 
   return (
     <>
-      <ImageHeader
-        title="Tech and Poems."
-        imageUrl={`/${ALI_OSS_FE_STATIC_PATH}/blog_page_header.jpg`}
-      />
+      <ImageHeader title="Tech and Poems." imageUrl="/blog_page_header.jpg" />
 
       <PostContent>
         <PostItemContainer>
@@ -94,11 +86,7 @@ const PostList: FC<Props> = ({ isSupportWebp }) => {
             <SkeletonIterator count={5} skeletonComponent={PostCardSkeleton} />
           ) : (
             posts.posts.items.map((post) => (
-              <PostCard
-                post={post}
-                key={post._id}
-                isSupportWebp={isSupportWebp}
-              />
+              <PostCard post={post} key={post._id} />
             ))
           )}
 
@@ -116,7 +104,7 @@ const PostList: FC<Props> = ({ isSupportWebp }) => {
         </PostItemContainer>
 
         <div>
-          <Top7PVPosts topPVPosts={topPVPosts} isSupportWebp={isSupportWebp} />
+          <Top7PVPosts topPVPosts={topPVPosts} />
           <TagCloud tagCloud={tagCloud ? tagCloud.getAllTags.tags : []} />
         </div>
       </PostContent>

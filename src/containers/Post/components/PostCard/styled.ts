@@ -28,6 +28,10 @@ export const PostCardWrapper = styled.section`
     &:nth-of-type(2n) {
       flex-direction: column;
     }
+
+    img {
+      height: 16rem;
+    }
   }
 `
 
@@ -39,6 +43,7 @@ export const PosterAnchor = styled.a`
 
   @media only screen and ${breakpoints.device.laptop} {
     width: 100%;
+    height: 16rem;
   }
 `
 

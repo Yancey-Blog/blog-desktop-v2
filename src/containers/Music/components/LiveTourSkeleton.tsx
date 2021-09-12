@@ -1,5 +1,5 @@
 import { FC } from 'react'
-import { Skeleton } from '@material-ui/lab'
+import { Skeleton } from '@material-ui/core'
 import styled from 'styled-components'
 
 const LiveTourSkeletonWrapper = styled.div`
@@ -22,7 +22,12 @@ const LiveTourSkeletonMeta = styled.div`
 const LiveTourSkeleton: FC = () => {
   return (
     <LiveTourSkeletonWrapper>
-      <Skeleton animation="wave" variant="rect" width="100%" height="19rem" />
+      <Skeleton
+        animation="wave"
+        variant="rectangular"
+        width="100%"
+        height="19rem"
+      />
 
       <LiveTourSkeletonMeta>
         <Skeleton

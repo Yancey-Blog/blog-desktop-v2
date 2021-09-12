@@ -1,5 +1,5 @@
 import { FC } from 'react'
-import { Skeleton } from '@material-ui/lab'
+import { Skeleton } from '@material-ui/core'
 import styled from 'styled-components'
 
 const CardSkeletonWrapper = styled.div`
@@ -17,7 +17,12 @@ const CardSkeletonMeta = styled.div`
 const CardSkeleton: FC = () => {
   return (
     <CardSkeletonWrapper>
-      <Skeleton animation="wave" variant="rect" width="100%" height="9.1rem" />
+      <Skeleton
+        animation="wave"
+        variant="rectangular"
+        width="100%"
+        height="9.1rem"
+      />
 
       <CardSkeletonMeta>
         <Skeleton

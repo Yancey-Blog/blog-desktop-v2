@@ -9,6 +9,7 @@ const light = {
     tooltip: 'rgba(0, 0, 0, .7)',
     inlineCode: '#ebedf0',
     searchBox: '#ffffff',
+    summaryBg: '#e6f6e6',
   },
   text: {
     primary: '#666666',
@@ -16,7 +17,6 @@ const light = {
     header: '#504e4e',
     post: '#3b454e',
     tooltip: '#fff',
-    // ----------------
     base: '#1c1e21',
   },
   link: {
@@ -41,6 +41,7 @@ const dark = {
     tooltip: 'rgba(255, 255, 255, .7)',
     inlineCode: '#444950',
     searchBox: '#202327',
+    summaryBg: '#003130',
   },
   text: {
     primary: '#f5f6f7',
@@ -85,6 +86,7 @@ const defaultTheme = {
     postTagColor: '#00965e',
     postTagBg: 'rgba(0, 150, 94, 0.1)',
     postTagBgHover: 'rgba(0, 150, 94, 0.2)',
+    summaryBar: 'rgba(0, 150, 94, 0.6)',
     linkBlue: '#0070ba',
     sloganBlue: '#00a7e0',
     archiveBlue: '#6ecaf5',

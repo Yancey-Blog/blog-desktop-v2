@@ -29,8 +29,8 @@
     "react/button-has-type": ["error", { "reset": true }],
     "react/jsx-uses-react": "off",
     "react/react-in-jsx-scope": "off",
+    "react/require-default-props": "off",
     "jsx-a11y/img-redundant-alt": "off",
     "jsx-a11y/anchor-is-valid": "off"
-  },
-  "ignorePatterns": ["next.config.js", "scripts"]
+  }
 }

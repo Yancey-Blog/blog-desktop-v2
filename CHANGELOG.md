@@ -2,6 +2,34 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.6.1](https://github.com/Yancey-Blog/blog-desktop-v2/compare/v4.6.0...v4.6.1) (2021-08-18)
+
+
+### Bug Fixes
+
+* only PostCard's height is 16rem on mobile ([4837458](https://github.com/Yancey-Blog/blog-desktop-v2/commit/48374588667d24b4960261f1d1ba20ad0caabfd0))
+
+## [4.6.0](https://github.com/Yancey-Blog/blog-desktop-v2/compare/v4.5.0...v4.6.0) (2021-08-14)
+
+
+### Features
+
+* show skeleton when algolia seaarch is fetching ([f1172e3](https://github.com/Yancey-Blog/blog-desktop-v2/commit/f1172e37fb47e20eaa6d688aa9864592066ac3b2))
+
+## [4.5.0](https://github.com/Yancey-Blog/blog-desktop-v2/compare/v4.4.0...v4.5.0) (2021-08-13)
+
+
+### Features
+
+* **summarycomponent:** optimize the visual experience of the Summary Component ([8919846](https://github.com/Yancey-Blog/blog-desktop-v2/commit/89198468d9322e505aa5be4ccde592d818ecd63d))
+
+## [4.4.0](https://github.com/Yancey-Blog/blog-desktop-v2/compare/v4.3.1...v4.4.0) (2021-08-11)
+
+
+### Features
+
+* the `FireWorks` easter egg should be displayed at both desktop and mobile ([a578371](https://github.com/Yancey-Blog/blog-desktop-v2/commit/a578371526ae44620e4aef2d2702e8925ca29018))
+
 ### [4.3.1](https://github.com/Yancey-Blog/blog-desktop-v2/compare/v4.3.0...v4.3.1) (2021-08-11)
 
 

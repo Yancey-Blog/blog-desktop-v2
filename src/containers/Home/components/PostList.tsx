@@ -10,15 +10,11 @@ import InfiniteScroll from 'src/components/InfiniteScroll/InfiniteScroll'
 import SubTitle from './SubTitle'
 import { Status } from '../styled'
 
-interface Props {
-  isSupportWebp: boolean
-}
-
 interface List {
   posts: IPostItem[]
 }
 
-const PostList: FC<Props> = ({ isSupportWebp }) => {
+const PostList: FC = () => {
   const [data, setData] = useState<List>({ posts: [] })
   const [page, setPage] = useState(1)
   const [hasMore, setHasMore] = useState(true)
@@ -61,7 +57,7 @@ const PostList: FC<Props> = ({ isSupportWebp }) => {
         <SkeletonIterator count={3} skeletonComponent={PostCardSkeleton} />
       ) : (
         data.posts.map((post: IPostItem) => (
-          <PostCard isSupportWebp={isSupportWebp} post={post} key={post._id} />
+          <PostCard post={post} key={post._id} />
         ))
       )}
 

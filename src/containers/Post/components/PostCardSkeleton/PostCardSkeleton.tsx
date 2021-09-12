@@ -1,5 +1,5 @@
 import { FC } from 'react'
-import { Skeleton } from '@material-ui/lab'
+import { Skeleton } from '@material-ui/core'
 import styled from 'styled-components'
 import breakpoints from 'src/styled/breakpoints'
 
@@ -59,7 +59,7 @@ const MetaSkeleton = styled.div`
 
 const CoverSkeleton = styled.div`
   @media only screen and ${breakpoints.device.laptop} {
-    height: 12rem;
+    height: 16rem;
 
     .MuiSkeleton-root {
       width: 100% !important;
@@ -77,7 +77,12 @@ const PostCardSkeleton: FC = () => {
   return (
     <PostCardSkeletonWrapper>
       <CoverSkeleton>
-        <Skeleton animation="wave" variant="rect" width="33rem" height="100%" />
+        <Skeleton
+          animation="wave"
+          variant="rectangular"
+          width="33rem"
+          height="100%"
+        />
       </CoverSkeleton>
 
       <SummarySkeleton>

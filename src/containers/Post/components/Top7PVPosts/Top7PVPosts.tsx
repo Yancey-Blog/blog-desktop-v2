@@ -2,10 +2,8 @@ import { FC } from 'react'
 import Link from 'next/link'
 import styled from 'styled-components'
 import SkeletonIterator from 'src/components/SkeletonIterator/SkeletonIterator'
-import Picture from 'src/components/Picture/Picture'
 import { flexMixin } from 'src/styled/mixins'
-import { SVG_SPRITE, AliOSSSuffix } from 'src/shared/constants'
-import { generateAliOSSSuffix } from 'src/shared/utils'
+import { SVG_SPRITE } from 'src/shared/constants'
 import { PosterProps } from 'src/shared/types'
 import Top7PVPostsSkeleton from '../Top7PVPostsSkeleton/Top7PVPostsSkeleton'
 import SubHeader from '../SubTitle/SubTitle'
@@ -70,11 +68,10 @@ const Thumb = styled.img`
 `
 
 interface Props {
-  isSupportWebp: boolean
   topPVPosts: GetTopPVPostsQuery | undefined
 }
 
-const Top7PVPosts: FC<Props> = ({ topPVPosts, isSupportWebp }) => {
+const Top7PVPosts: FC<Props> = ({ topPVPosts }) => {
   return (
     <>
       <SubHeader title="Top 7 Most Viewed" icon={SVG_SPRITE.topRank} />
@@ -88,31 +85,14 @@ const Top7PVPosts: FC<Props> = ({ topPVPosts, isSupportWebp }) => {
             <Link href={`/post/${_id}`} key={_id}>
               <a>
                 <CardItem>
-                  <BlurBg
-                    imageUrl={
-                      isSupportWebp
-                        ? `${posterUrl}${generateAliOSSSuffix(
-                            AliOSSSuffix.WEBP_SUFFIX,
-                          )}`
-                        : `${posterUrl}${generateAliOSSSuffix(
-                            AliOSSSuffix.THUMB_SUFFIX,
-                          )}`
-                    }
-                  />
+                  <BlurBg imageUrl={posterUrl} />
 
                   <CardContent>
                     <span>
                       <Title>{title}</Title>
                       <Url>{generatePostUrl(_id)}</Url>
                     </span>
-                    <Picture src={posterUrl}>
-                      <Thumb
-                        alt={title}
-                        src={`${posterUrl}${generateAliOSSSuffix(
-                          AliOSSSuffix.THUMB_SUFFIX,
-                        )}`}
-                      />
-                    </Picture>
+                    <Thumb alt={title} src={posterUrl} />
                   </CardContent>
                 </CardItem>
               </a>

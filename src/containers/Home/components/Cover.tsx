@@ -1,7 +1,6 @@
 import { FC } from 'react'
 import styled from 'styled-components'
 import LazyLoadImage from 'src/components/LazyLoadImage/LazyLoadImage'
-
 import { ICover } from '../types'
 
 const Covers = styled.figure`
@@ -24,14 +23,16 @@ const Covers = styled.figure`
 `
 
 interface Props {
-  isSupportWebp: boolean
   covers: ICover[]
+  loading: boolean
 }
 
-const Cover: FC<Props> = ({ covers }) => {
+const Cover: FC<Props> = ({ covers, loading }) => {
   return (
     <Covers>
-      <LazyLoadImage imageUrl={covers[0]?.coverUrl} alt="" />
+      {!loading && (
+        <LazyLoadImage src={covers[0].coverUrl} alt={covers[0].title} />
+      )}
     </Covers>
   )
 }

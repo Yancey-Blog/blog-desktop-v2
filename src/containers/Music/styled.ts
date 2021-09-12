@@ -10,6 +10,10 @@ export const Title = styled.div`
 export const MusicWrapper = styled.section`
   margin: 0 auto;
   padding: 0 2rem;
+
+  @media only screen and ${breakpoints.device.laptop} {
+    padding: 0 1rem;
+  }
 `
 
 export const SubTitle = styled.h2`

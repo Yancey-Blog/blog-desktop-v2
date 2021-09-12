@@ -1,8 +1,6 @@
 import { FC } from 'react'
 import Link from 'next/link'
 import styled from 'styled-components'
-import { ALI_OSS_FE_STATIC_PATH } from 'src/shared/constants'
-import Picture from 'src/components/Picture/Picture'
 import { flexMixin } from 'src/styled/mixins'
 
 interface ColorProps {
@@ -61,7 +59,7 @@ interface Props {
 }
 
 const Error: FC<Props> = ({ statusCode, imageUrl }) => {
-  const imgUrl = `${process.env.NEXT_PUBLIC_STATIC_FILE_URL}/${ALI_OSS_FE_STATIC_PATH}/${imageUrl}`
+  const imgUrl = `${process.env.NEXT_PUBLIC_STATIC_FILE_URL}/${imageUrl}`
   const is404Page = statusCode === 404
 
   return (
@@ -82,9 +80,7 @@ const Error: FC<Props> = ({ statusCode, imageUrl }) => {
           </Link>
         </div>
       </Header>
-      <Picture src={imgUrl}>
-        <ErrorImg src={imgUrl} alt={statusCode.toString()} />
-      </Picture>
+      <ErrorImg src={imgUrl} alt={statusCode.toString()} />
     </ErrorWrapper>
   )
 }

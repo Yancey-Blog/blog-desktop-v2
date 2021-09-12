@@ -1,5 +1,5 @@
 import { FC } from 'react'
-import { Skeleton } from '@material-ui/lab'
+import { Skeleton } from '@material-ui/core'
 import styled from 'styled-components'
 
 const Top7PVPostsSkeletonWrapper = styled.div`
@@ -35,7 +35,7 @@ const Top7PVPostsSkeleton: FC = () => {
       </div>
       <Skeleton
         animation="wave"
-        variant="rect"
+        variant="rectangular"
         width="4rem"
         height="4rem"
         style={{ borderRadius: '0.6rem' }}

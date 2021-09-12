@@ -1,6 +1,5 @@
 import { FC } from 'react'
 import styled from 'styled-components'
-import Picture from 'src/components/Picture/Picture'
 import { transitionMixin } from 'src/styled/mixins'
 import breakpoints from 'src/styled/breakpoints'
 import { SVG_SPRITE } from 'src/shared/constants'
@@ -111,9 +110,7 @@ const OpenSource: FC<Props> = ({ openSources }) => {
           return (
             <a href={url} target="_blank" rel="noopener noreferrer" key={_id}>
               <OpenSourceItem data-title={title} data-intro={description}>
-                <Picture src={posterUrl}>
-                  <img src={posterUrl} alt={title} />
-                </Picture>
+                <img src={posterUrl} alt={title} />
                 <Overlay className="openSourceOverlay" />
               </OpenSourceItem>
             </a>

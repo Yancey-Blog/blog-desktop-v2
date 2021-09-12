@@ -1,12 +1,13 @@
 const withBundleAnalyzer = require('@next/bundle-analyzer')({
   enabled: process.env.ANALYZE === 'true',
 })
-
 const withPWA = require('next-pwa')
 const runtimeCaching = require('next-pwa/cache')
 
-module.exports = (phase, { defaultConfig }) =>
-  withPWA(
+module.exports = (phase, { defaultConfig }) => {
+  const { host } = new URL(process.env.NEXT_PUBLIC_STATIC_FILE_URL)
+
+  return withPWA(
     withBundleAnalyzer({
       compress: true,
       pageExtensions: ['mdx', 'jsx', 'js', 'ts', 'tsx'],
@@ -14,6 +15,10 @@ module.exports = (phase, { defaultConfig }) =>
       pwa: {
         dest: 'public',
         runtimeCaching,
+      },
+      images: {
+        // TODO: 清洗完数据下掉 'static.yancey.app'
+        domains: [host, 'static.yancey.app'],
       },
       webpack: (
         config,
@@ -32,3 +37,4 @@ module.exports = (phase, { defaultConfig }) =>
       },
     }),
   )
+}
