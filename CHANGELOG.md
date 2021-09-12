@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.7.0](https://github.com/Yancey-Blog/blog-desktop-v2/compare/v4.6.1...v4.7.0) (2021-09-12)
+
+
+### Features
+
+* migrate to azure blob ([f5ced77](https://github.com/Yancey-Blog/blog-desktop-v2/commit/f5ced776b731d3d6996b527d7f252c58ac1b5b5a))
+* resolve conflict ([02964c3](https://github.com/Yancey-Blog/blog-desktop-v2/commit/02964c3ea1dea09e43b2034b29593ef164191ee3))
+* update next.config.js ([28d1951](https://github.com/Yancey-Blog/blog-desktop-v2/commit/28d1951e9c1da6a817d985711719e3c719654c33))
+* upgrade notistack ([0a9d638](https://github.com/Yancey-Blog/blog-desktop-v2/commit/0a9d638485b362650b4c80bcb67a73786e3f8441))
+
 ### [4.6.1](https://github.com/Yancey-Blog/blog-desktop-v2/compare/v4.6.0...v4.6.1) (2021-08-18)
 
 
