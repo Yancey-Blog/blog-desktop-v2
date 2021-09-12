@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.9.0](https://github.com/Yancey-Blog/blog-desktop-v2/compare/v4.8.0...v4.9.0) (2021-09-12)
+
+
+### Features
+
+* disable experimental feature of next.js ([19702b6](https://github.com/Yancey-Blog/blog-desktop-v2/commit/19702b65e2591cc4bf853382d097acade47be131))
+
 ## [4.8.0](https://github.com/Yancey-Blog/blog-desktop-v2/compare/v4.7.0...v4.8.0) (2021-09-12)
 
 ## [4.7.0](https://github.com/Yancey-Blog/blog-desktop-v2/compare/v4.6.1...v4.7.0) (2021-09-12)
