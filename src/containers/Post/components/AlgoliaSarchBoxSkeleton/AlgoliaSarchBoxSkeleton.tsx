@@ -1,5 +1,5 @@
 import { FC } from 'react'
-import { Skeleton } from '@material-ui/lab'
+import { Skeleton } from '@material-ui/core'
 import styled from 'styled-components'
 import SkeletonIterator from 'src/components/SkeletonIterator/SkeletonIterator'
 

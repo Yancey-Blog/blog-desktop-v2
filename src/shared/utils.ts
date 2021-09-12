@@ -1,5 +1,4 @@
 import { DateTime } from 'luxon'
-import { ALI_OSS_SUFFIX_BASE, AliOSSSuffix } from './constants'
 
 export const scrollToTop = () => {
   let timer: number = 0
@@ -31,14 +30,6 @@ export const devToolsWarning = () => {
     'color: #fadfa3; background: #030307; padding:5px 0;',
     'background: #fadfa3; padding:5px 0;',
   )
-}
-
-export const generateAliOSSSuffix = (...props: AliOSSSuffix[]) => {
-  let suffix = ALI_OSS_SUFFIX_BASE
-  props.forEach((val) => {
-    suffix += val
-  })
-  return suffix
 }
 
 export const isAnniversary = () => {

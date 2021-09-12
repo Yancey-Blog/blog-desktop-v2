@@ -19,7 +19,6 @@ import { IPostItem } from '../../types'
 
 interface Props {
   post: IPostItem
-  isSupportWebp: boolean
 }
 
 const PostCard: FC<Props> = ({ post }) => {
@@ -29,7 +28,7 @@ const PostCard: FC<Props> = ({ post }) => {
     <PostCardWrapper>
       <Link href={`/post/${_id}`} passHref>
         <PosterAnchor>
-          <LazyLoadImage imageUrl={posterUrl} alt={title} />
+          <LazyLoadImage src={posterUrl} alt={title} />
         </PosterAnchor>
       </Link>
       <SummaryWrapper>

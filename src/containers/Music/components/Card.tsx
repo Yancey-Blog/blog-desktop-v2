@@ -1,7 +1,6 @@
 import { FC } from 'react'
 import Link from 'next/link'
 import styled from 'styled-components'
-import Picture from 'src/components/Picture/Picture'
 import { transitionMixin } from 'src/styled/mixins'
 import { formatDate } from 'src/shared/utils'
 import breakpoints from 'src/styled/breakpoints'
@@ -90,9 +89,7 @@ interface Props {
 const Card: FC<Props> = ({ type, url, title, date, cover }) => {
   return (
     <CardContaiener>
-      <Picture src={cover}>
-        <Img src={cover} alt={title} />
-      </Picture>
+      <Img src={cover} alt={title} />
 
       <Meta>
         <Date>{formatDate(date)}</Date>

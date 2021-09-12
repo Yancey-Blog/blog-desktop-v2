@@ -124,9 +124,16 @@ export const Content = styled.article`
 `
 
 export const ImageGroup = styled.figure`
+  position: relative;
   display: block;
   margin: 3.5rem 0;
   text-align: center;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 `
 
 export const ImageAlt = styled.figcaption`

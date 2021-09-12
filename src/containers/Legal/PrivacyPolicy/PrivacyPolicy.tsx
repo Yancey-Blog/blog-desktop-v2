@@ -1,13 +1,11 @@
 import { FC } from 'react'
 import ImageHeader from 'src/components/ImageHeader/ImageHeader'
-import { SOCIAL_MEDIA, ALI_OSS_FE_STATIC_PATH } from 'src/shared/constants'
+import { SOCIAL_MEDIA } from 'src/shared/constants'
 import { Article, Menu, DetailList, UpdateDate, Anchor } from './styled'
 
 const PrivacyPolicy: FC = () => (
   <>
-    <ImageHeader
-      imageUrl={`/${ALI_OSS_FE_STATIC_PATH}/legal_page_header.jpg`}
-    />
+    <ImageHeader imageUrl="/legal_page_header.jpg" />
     <Article>
       <h1>Privacy Policy</h1>
       <Menu>

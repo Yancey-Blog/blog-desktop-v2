@@ -3,7 +3,7 @@ import { DateTime } from 'luxon'
 import Link from 'next/link'
 import { useQuery } from '@apollo/client'
 import orderBy from 'lodash.orderby'
-import { ALI_OSS_FE_STATIC_PATH, months } from 'src/shared/constants'
+import { months } from 'src/shared/constants'
 import { ARCHIVE } from 'src/containers/Post/typeDefs'
 import { ArchiveQuery } from 'src/containers/Post/types'
 import ImageHeader from 'src/components/ImageHeader/ImageHeader'
@@ -25,10 +25,7 @@ const Archive: FC = () => {
 
   return (
     <>
-      <ImageHeader
-        title="Archive"
-        imageUrl={`/${ALI_OSS_FE_STATIC_PATH}/archive_page_header.jpg`}
-      />
+      <ImageHeader title="Archive" imageUrl="/archive_page_header.jpg" />
 
       <ArchiveWrapper>
         {!data

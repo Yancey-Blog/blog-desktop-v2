@@ -1,6 +1,5 @@
 import { FC } from 'react'
 import styled from 'styled-components'
-import Picture from 'src/components/Picture/Picture'
 import { transitionMixin } from 'src/styled/mixins'
 import { formatDate } from 'src/shared/utils'
 import breakpoints from 'src/styled/breakpoints'
@@ -71,9 +70,7 @@ const BestAlbum: FC<Props> = ({ bestAlbum }) => {
 
   return (
     <BestAlbumWrapper>
-      <Picture src={coverUrl}>
-        <Img src={coverUrl} alt={title} />
-      </Picture>
+      <Img src={coverUrl} alt={title} />
 
       <Meta>
         <Date>{formatDate(releaseDate)}</Date>

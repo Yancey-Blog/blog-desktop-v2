@@ -19,9 +19,9 @@
     "target": "esnext",
     "baseUrl": ".",
     "paths": {
-      "src/*": ["src/*"],
+      "src/*": ["src/*"]
     }
   },
   "exclude": ["node_modules"],
-  "include": ["**/*.ts", "**/*.tsx", "src/checker.ts"]
+  "include": ["**/*.ts", "**/*.tsx"]
 }
