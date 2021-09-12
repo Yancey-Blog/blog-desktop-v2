@@ -1,8 +1,8 @@
 import { FC } from 'react'
-import { useSnackbar, VariantType, WithSnackbarProps } from 'notistack'
+import { useSnackbar, VariantType, ProviderContext } from 'notistack'
 
 interface Props {
-  setUseSnackbarRef: (showSnackbar: WithSnackbarProps) => void
+  setUseSnackbarRef: (showSnackbar: ProviderContext) => void
 }
 
 const InnerSnackbarUtilsConfigurator: FC<Props> = ({ setUseSnackbarRef }) => {
@@ -10,8 +10,8 @@ const InnerSnackbarUtilsConfigurator: FC<Props> = ({ setUseSnackbarRef }) => {
   return null
 }
 
-let useSnackbarRef: WithSnackbarProps
-const setUseSnackbarRef = (useSnackbarRefProp: WithSnackbarProps) => {
+let useSnackbarRef: ProviderContext
+const setUseSnackbarRef = (useSnackbarRefProp: ProviderContext) => {
   useSnackbarRef = useSnackbarRefProp
 }
 
