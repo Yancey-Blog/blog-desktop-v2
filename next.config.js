@@ -5,8 +5,6 @@ const withPWA = require('next-pwa')
 const runtimeCaching = require('next-pwa/cache')
 
 module.exports = (phase, { defaultConfig }) => {
-  const { host } = new URL(process.env.NEXT_PUBLIC_STATIC_FILE_URL)
-
   /**
    * @type {import('next').NextConfig}
    */
@@ -38,7 +36,7 @@ module.exports = (phase, { defaultConfig }) => {
       },
       images: {
         // TODO: 清洗完数据下掉 'static.yancey.app'
-        domains: [host, 'static.yancey.app'],
+        domains: ['edge.yancey.app', 'static.yancey.app'],
       },
       webpack: (
         config,
