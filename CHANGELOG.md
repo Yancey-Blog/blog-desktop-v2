@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.9.2](https://github.com/Yancey-Blog/blog-desktop-v2/compare/v4.9.1...v4.9.2) (2021-09-14)
+
+
+### Bug Fixes
+
+* remove box-shadow of algoriasearch in moblie ([8e9465e](https://github.com/Yancey-Blog/blog-desktop-v2/commit/8e9465e42244b68287d1ed0af9dcd526ad5dcde7))
+
 ### [4.9.1](https://github.com/Yancey-Blog/blog-desktop-v2/compare/v4.9.0...v4.9.1) (2021-09-14)
 
 
