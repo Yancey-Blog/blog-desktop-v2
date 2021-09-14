@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.6.2](https://github.com/Yancey-Blog/blog-desktop-v2/compare/v4.6.1...v4.6.2) (2021-09-14)
+
+
+### Bug Fixes
+
+* fix isAnniversary function ([c4920d0](https://github.com/Yancey-Blog/blog-desktop-v2/commit/c4920d098e2b03088311f36a0e3d2a046e5485cb))
+
 ### [4.6.1](https://github.com/Yancey-Blog/blog-desktop-v2/compare/v4.6.0...v4.6.1) (2021-08-18)
 
 
