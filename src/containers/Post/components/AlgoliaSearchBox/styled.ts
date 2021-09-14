@@ -129,6 +129,7 @@ export const Result = styled.div`
   @media only screen and ${breakpoints.device.laptop} {
     transform: translateX(1024px);
     transition: transform 500ms ease;
+    box-shadow: none;
   }
 
   &.showDrawer {
