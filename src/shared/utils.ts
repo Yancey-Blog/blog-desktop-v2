@@ -43,5 +43,5 @@ export const generateAliOSSSuffix = (...props: AliOSSSuffix[]) => {
 
 export const isAnniversary = () => {
   const now = DateTime.now()
-  return now.month + 1 === 10 && now.day === 14
+  return now.month === 10 && now.day === 14
 }
