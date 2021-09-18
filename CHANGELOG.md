@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.9.3](https://github.com/Yancey-Blog/blog-desktop-v2/compare/v4.9.2...v4.9.3) (2021-09-18)
+
+
+### Bug Fixes
+
+* add `unoptimized` for next/Image duo to Azure blob are not supporting ([a53fa31](https://github.com/Yancey-Blog/blog-desktop-v2/commit/a53fa31198928e874628165cd237a6325795d549))
+
 ### [4.9.2](https://github.com/Yancey-Blog/blog-desktop-v2/compare/v4.9.1...v4.9.2) (2021-09-14)
 
 
