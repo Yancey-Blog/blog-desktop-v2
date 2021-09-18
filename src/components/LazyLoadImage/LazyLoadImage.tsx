@@ -22,6 +22,7 @@ const LazyLoadImage: FC<Props> = ({
 }) => {
   return (
     <Image
+      unoptimized
       layout={layout ?? 'fill'}
       width={width ?? '100%'}
       height={height ?? '100%'}
