@@ -15,8 +15,8 @@ module.exports = {
     [
       'babel-plugin-transform-imports',
       {
-        '@material-ui/core': {
-          transform: '@material-ui/core/${member}',
+        '@mui/material': {
+          transform: '@mui/material/${member}',
           preventFullImport: true,
         },
       },

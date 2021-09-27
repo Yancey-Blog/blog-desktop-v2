@@ -11,7 +11,10 @@ const ImageHeader: FC<Props> = ({ title, imageUrl }) => {
 
   return (
     <ImageHeaderWrapper>
-      <img src={imgUrl} alt={title} />
+      {
+        // eslint-disable-next-line @next/next/no-img-element
+        <img src={imgUrl} alt={title} />
+      }
       <Title>{title}</Title>
     </ImageHeaderWrapper>
   )
