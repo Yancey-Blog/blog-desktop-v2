@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.10.0](https://github.com/Yancey-Blog/blog-desktop-v2/compare/v4.9.3...v4.10.0) (2021-09-27)
+
+
+### Features
+
+* migrate notistack to compatible mui-v5 ([8f93cf8](https://github.com/Yancey-Blog/blog-desktop-v2/commit/8f93cf87078b688c477a28ef50a6144b73d7e845))
+* **wip:** upgrade material-ui to v5, wait for compatible of `notistack` ([11551ea](https://github.com/Yancey-Blog/blog-desktop-v2/commit/11551ea11bebac48a61c2101f8aec3bc2f129646))
+
 ### [4.9.3](https://github.com/Yancey-Blog/blog-desktop-v2/compare/v4.9.2...v4.9.3) (2021-09-18)
 
 
