@@ -25,8 +25,6 @@ module.exports = (phase, { defaultConfig }) => {
         NEXT_PUBLIC_ALGOLIA_SEARCH_INDEX_NAME: 'prod_YANCEY_BLOG',
       },
       reactStrictMode: true,
-      webpack5: true,
-      experimental: { esmExternals: true },
       compress: true,
       pageExtensions: ['mdx', 'jsx', 'js', 'ts', 'tsx'],
       productionBrowserSourceMaps: true,

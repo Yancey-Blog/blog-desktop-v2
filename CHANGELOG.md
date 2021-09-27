@@ -2,6 +2,46 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.9.3](https://github.com/Yancey-Blog/blog-desktop-v2/compare/v4.9.2...v4.9.3) (2021-09-18)
+
+
+### Bug Fixes
+
+* add `unoptimized` for next/Image duo to Azure blob are not supporting ([a53fa31](https://github.com/Yancey-Blog/blog-desktop-v2/commit/a53fa31198928e874628165cd237a6325795d549))
+
+### [4.9.2](https://github.com/Yancey-Blog/blog-desktop-v2/compare/v4.9.1...v4.9.2) (2021-09-14)
+
+
+### Bug Fixes
+
+* remove box-shadow of algoriasearch in moblie ([8e9465e](https://github.com/Yancey-Blog/blog-desktop-v2/commit/8e9465e42244b68287d1ed0af9dcd526ad5dcde7))
+
+### [4.9.1](https://github.com/Yancey-Blog/blog-desktop-v2/compare/v4.9.0...v4.9.1) (2021-09-14)
+
+
+### Bug Fixes
+
+* fix isAnniversary function ([80594aa](https://github.com/Yancey-Blog/blog-desktop-v2/commit/80594aaaa0174ba81f004e6a5351a6eb176b11b1))
+
+## [4.9.0](https://github.com/Yancey-Blog/blog-desktop-v2/compare/v4.8.0...v4.9.0) (2021-09-12)
+
+
+### Features
+
+* disable experimental feature of next.js ([19702b6](https://github.com/Yancey-Blog/blog-desktop-v2/commit/19702b65e2591cc4bf853382d097acade47be131))
+
+## [4.8.0](https://github.com/Yancey-Blog/blog-desktop-v2/compare/v4.7.0...v4.8.0) (2021-09-12)
+
+## [4.7.0](https://github.com/Yancey-Blog/blog-desktop-v2/compare/v4.6.1...v4.7.0) (2021-09-12)
+
+
+### Features
+
+* migrate to azure blob ([f5ced77](https://github.com/Yancey-Blog/blog-desktop-v2/commit/f5ced776b731d3d6996b527d7f252c58ac1b5b5a))
+* resolve conflict ([02964c3](https://github.com/Yancey-Blog/blog-desktop-v2/commit/02964c3ea1dea09e43b2034b29593ef164191ee3))
+* update next.config.js ([28d1951](https://github.com/Yancey-Blog/blog-desktop-v2/commit/28d1951e9c1da6a817d985711719e3c719654c33))
+* upgrade notistack ([0a9d638](https://github.com/Yancey-Blog/blog-desktop-v2/commit/0a9d638485b362650b4c80bcb67a73786e3f8441))
+
 ### [4.6.1](https://github.com/Yancey-Blog/blog-desktop-v2/compare/v4.6.0...v4.6.1) (2021-08-18)
 
 

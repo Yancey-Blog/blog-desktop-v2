@@ -21,7 +21,7 @@ export const SnackbarUtilsConfigurator = () => {
   )
 }
 
-export default {
+const toast = {
   success(msg: string) {
     this.toast(msg, 'success')
   },
@@ -38,3 +38,5 @@ export default {
     useSnackbarRef.enqueueSnackbar(msg, { variant })
   },
 }
+
+export default toast
