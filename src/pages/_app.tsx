@@ -76,7 +76,7 @@ const YanceyBlog = ({ Component, pageProps, apollo }: AppProps & Props) => {
     })
     router.events.on('routeChangeComplete', () => NProgress.done())
     router.events.on('routeChangeError', () => NProgress.done())
-  }, [])
+  }, [router.events])
 
   return (
     <ErrorBoundary>
