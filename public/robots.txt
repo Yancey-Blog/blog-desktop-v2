@@ -1,4 +1,4 @@
-# If you would like to crawl Yancey Blog, please contact us at supports@yanceyleo.com.
+# If you would like to crawl Yancey Blog, please contact us at support@yanceyleo.com.
 
 User-agent: Baiduspider
 Disallow: /
