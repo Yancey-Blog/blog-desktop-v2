@@ -29,4 +29,5 @@ public/sw.*
 public/workbox-*
 
 # sitemap
-public/sitemap-article-index.xml
+public/rss.xml
+public/atom.xml
