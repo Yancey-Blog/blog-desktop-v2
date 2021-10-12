@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.11.0](https://github.com/Yancey-Blog/blog-desktop-v2/compare/v4.10.0...v4.11.0) (2021-10-12)
+
+
+### Features
+
+* upgrade email strategy ([565f85e](https://github.com/Yancey-Blog/blog-desktop-v2/commit/565f85eef462befec8db207d5d8e1a68c9d7bb79))
+
 ## [4.10.0](https://github.com/Yancey-Blog/blog-desktop-v2/compare/v4.9.3...v4.10.0) (2021-09-27)
 
 
