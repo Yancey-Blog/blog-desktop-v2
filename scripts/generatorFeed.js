@@ -1,5 +1,6 @@
 const fs = require('fs')
 const { Feed } = require('feed')
+const marked = require('marked')
 const fetch = require('isomorphic-unfetch')
 
 const generatorFeed = async () => {
@@ -26,6 +27,7 @@ const generatorFeed = async () => {
       posts(input: $input) {
         items {
           _id
+          createdAt
           lastModifiedDate
           title
           content
@@ -45,39 +47,51 @@ const generatorFeed = async () => {
     },
     body: JSON.stringify({
       query,
-      variables: { input: { page: 1, pageSize: 1000 } },
+      variables: { input: { page: 1, pageSize: 10 } },
     }),
   })
 
   const json = await res.json()
 
-  json.data.posts.items.forEach((post) => {
-    feed.addItem({
-      title: post.title,
-      id: post._id,
-      link: `https://yanceyleo.com/post/${post._id}`,
-      description: post.summary,
-      // content: post.content,
-      author: [
-        {
-          name: 'Yancey Leo',
-          email: 'yanceyofficial@gmail.com',
-          link: 'https://yanceyleo.com/',
-        },
-      ],
-      contributor: [
-        {
-          name: 'Yancey Leo',
-          email: 'yanceyofficial@gmail.com',
-          link: 'https://yanceyleo.com/',
-        },
-      ],
-      date: new Date(post.lastModifiedDate),
-      image: post.posterUrl,
-    })
-  })
-
-  feed.addCategory('Technologie')
+  json.data.posts.items.forEach(
+    ({
+      _id,
+      title,
+      summary,
+      content,
+      category,
+      posterUrl,
+      lastModifiedDate,
+      createdAt,
+    }) => {
+      feed.addItem({
+        title: title,
+        id: _id,
+        link: `https://yanceyleo.com/post/${_id}`,
+        date: new Date(lastModifiedDate),
+        description: summary,
+        content: marked(content),
+        category: category,
+        image: posterUrl,
+        author: [
+          {
+            name: 'Yancey Leo',
+            email: 'yanceyofficial@gmail.com',
+            link: 'https://yanceyleo.com/',
+          },
+        ],
+        contributor: [
+          {
+            name: 'Yancey Leo',
+            email: 'yanceyofficial@gmail.com',
+            link: 'https://yanceyleo.com/',
+          },
+        ],
+        published: new Date(createdAt),
+        copyright: 'Copyright (c) 2021 Yancey Inc. and its affiliates.',
+      })
+    },
+  )
 
   feed.addContributor({
     name: 'Yancey Leo',
