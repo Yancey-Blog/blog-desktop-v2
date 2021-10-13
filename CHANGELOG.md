@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.13.0](https://github.com/Yancey-Blog/blog-desktop-v2/compare/v4.12.0...v4.13.0) (2021-10-13)
+
+
+### Features
+
+* update feed generator ([d1c5fdb](https://github.com/Yancey-Blog/blog-desktop-v2/commit/d1c5fdb76f69994cdc618100f67868830ec011a1))
+
 ## [4.12.0](https://github.com/Yancey-Blog/blog-desktop-v2/compare/v4.11.0...v4.12.0) (2021-10-12)
 
 
