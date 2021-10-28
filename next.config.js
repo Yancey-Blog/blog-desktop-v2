@@ -24,6 +24,7 @@ module.exports = (phase, { defaultConfig }) => {
         NEXT_PUBLIC_ALGOLIA_SEARCH_API_KEY: '46f32897c2a83b6495111a68bd1cd8c7',
         NEXT_PUBLIC_ALGOLIA_SEARCH_INDEX_NAME: 'prod_YANCEY_BLOG',
       },
+      swcMinify: true,
       reactStrictMode: true,
       compress: true,
       pageExtensions: ['mdx', 'jsx', 'js', 'ts', 'tsx'],
@@ -33,8 +34,8 @@ module.exports = (phase, { defaultConfig }) => {
         runtimeCaching,
       },
       images: {
-        // TODO: 清洗完数据下掉 'static.yancey.app'
-        domains: ['edge.yancey.app', 'static.yancey.app'],
+        domains: ['edge.yancey.app'],
+        formats: ['image/avif', 'image/webp'],
       },
       webpack: (
         config,

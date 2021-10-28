@@ -36,3 +36,6 @@ export const isAnniversary = () => {
   const now = DateTime.now()
   return now.month === 10 && now.day === 14
 }
+
+export const transImageExtensionName = (url: string, extensionName = 'webp') =>
+  url.replace(/\.[^/.]+$/, `.${extensionName}`)

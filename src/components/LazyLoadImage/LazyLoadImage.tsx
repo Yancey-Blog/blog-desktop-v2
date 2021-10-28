@@ -1,5 +1,6 @@
 import { FC } from 'react'
 import Image from 'next/image'
+import { transImageExtensionName } from 'src/shared/utils'
 
 type ImgElementStyle = NonNullable<JSX.IntrinsicElements['img']['style']>
 
@@ -24,10 +25,10 @@ const LazyLoadImage: FC<Props> = ({
     <Image
       unoptimized
       layout={layout ?? 'fill'}
-      width={width ?? '100%'}
-      height={height ?? '100%'}
+      width={width}
+      height={height}
       placeholder="blur"
-      src={src}
+      src={transImageExtensionName(src)}
       alt={alt ?? ''}
       objectFit={objectFit ?? 'cover'}
       blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNMT0iYCQAEHwHCrSm2UwAAAABJRU5ErkJggg=="
