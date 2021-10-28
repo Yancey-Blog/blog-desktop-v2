@@ -24,7 +24,7 @@ module.exports = (phase, { defaultConfig }) => {
         NEXT_PUBLIC_ALGOLIA_SEARCH_API_KEY: '46f32897c2a83b6495111a68bd1cd8c7',
         NEXT_PUBLIC_ALGOLIA_SEARCH_INDEX_NAME: 'prod_YANCEY_BLOG',
       },
-      // All features take effect need to support babel configuration.
+      // TODO: All features take effect need to support babel configuration ready.
       swcMinify: true,
       reactStrictMode: true,
       compress: true,
