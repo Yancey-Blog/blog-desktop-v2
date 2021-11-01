@@ -3647,7 +3647,7 @@ diff-match-patch@^1.0.0:
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/diff-match-patch/-/diff-match-patch-1.0.5.tgz#abb584d5f10cd1196dfc55aa03701592ae3f7b37"
   integrity sha512-IayShXAgj/QMXgB0IWmKx+rOPuGMhqm5w6jvFxmVenXKIzRqTAAsbBPT3kWQeGANj3jGgvcvv4yK6SxqYmikgw==
-  
+
 diff@^4.0.1:
   version "4.0.2"
   resolved "https://registry.yarnpkg.com/diff/-/diff-4.0.2.tgz#60f3aecb89d5fae520c11aa19efc2bb982aade7d"
@@ -6777,10 +6777,10 @@ nprogress@^0.2.0:
   resolved "https://registry.npmjs.org/nprogress/-/nprogress-0.2.0.tgz#cb8f34c53213d895723fcbab907e9422adbcafb1"
   integrity sha1-y480xTIT2JVyP8urkH6UIq28r7E=
 
-nuka-carousel@^4.7.9:
-  version "4.8.0"
-  resolved "https://registry.npmjs.org/nuka-carousel/-/nuka-carousel-4.8.0.tgz#0d012615cbc13e4e02fb90793ca12e392d24354e"
-  integrity sha512-yZ20t2OjV1Rp2bV7IhtDyW55kag1V3yCgwIKFy39z6B1aqpYS1ou75zKP341tIIrluYVO9WGTDtFVr/vq2xQpw==
+nuka-carousel@^4.8.2:
+  version "4.8.2"
+  resolved "https://registry.yarnpkg.com/nuka-carousel/-/nuka-carousel-4.8.2.tgz#44835776ec5bbb36b0124ce4eaeced10b92d5535"
+  integrity sha512-EoSkyPNFnZWIVrNzc41MBKyeQlhh2FkWScZnDMohBJpfE1ouNxCmY6AFrGYAx7wO9owNPtIzXQwZKc25TrBiUQ==
   dependencies:
     csstype "^2.6.6"
     d3-ease "^1.0.3"
