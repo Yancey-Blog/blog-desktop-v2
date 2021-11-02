@@ -1,5 +1,6 @@
 import { FC } from 'react'
 import Head from 'next/head'
+import { useTheme } from 'styled-components'
 
 interface Props {
   title?: string
@@ -18,6 +19,8 @@ const MetaHead: FC<Props> = ({
   postPosterUrl,
   postUrl,
 }) => {
+  const theme = useTheme()
+
   return (
     <Head>
       <title>{title}</title>
@@ -27,7 +30,7 @@ const MetaHead: FC<Props> = ({
         name="viewport"
         content="width=device-width,initial-scale=1.0,maximum-scale=1.0,shrink-to-fit=no"
       />
-      <meta name="theme-color" content="#ffffff" />
+      <meta name="theme-color" content={theme.background.primary} />
       <meta name="keywords" content="Yancey,Blog,Technology,Music" />
       <meta
         name="description"
