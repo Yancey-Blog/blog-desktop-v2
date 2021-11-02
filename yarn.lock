@@ -1902,10 +1902,10 @@
   resolved "https://registry.npmjs.org/@types/source-list-map/-/source-list-map-0.1.2.tgz#0078836063ffaf17412349bba364087e0ac02ec9"
   integrity sha512-K5K+yml8LTo9bWJI/rECfIPrGgxdpeNbj+d53lwN4QjW1MCwlkhUms+gtdzigTeUyBr09+u8BwOIY3MXvHdcsA==
 
-"@types/styled-components@^5.1.12":
-  version "5.1.14"
-  resolved "https://registry.npmjs.org/@types/styled-components/-/styled-components-5.1.14.tgz#e9cf8cdb5eef9d139628183a84c083f630635d67"
-  integrity sha512-d6P1/tyNytqKwam3cQXq7a9uPtovc/mdAs7dBiz1YbDdNIT3X4WmuFU78YdSYh84TXVuhOwezZ3EeKuNBhwsHQ==
+"@types/styled-components@^5.1.15":
+  version "5.1.15"
+  resolved "https://registry.yarnpkg.com/@types/styled-components/-/styled-components-5.1.15.tgz#30855b40aa80b3b4e4c0e43a4af366e7c246d148"
+  integrity sha512-4evch8BRI3AKgb0GAZ/sn+mSeB+Dq7meYtMi7J/0Mg98Dt1+r8fySOek7Sjw1W+Wskyjc93565o5xWAT/FdY0Q==
   dependencies:
     "@types/hoist-non-react-statics" "*"
     "@types/react" "*"
@@ -2261,10 +2261,10 @@ ajv@^8.0.1, ajv@^8.6.0:
     require-from-string "^2.0.2"
     uri-js "^4.2.2"
 
-algoliasearch-helper@>=3, algoliasearch-helper@^3.5.3:
-  version "3.5.5"
-  resolved "https://registry.npmjs.org/algoliasearch-helper/-/algoliasearch-helper-3.5.5.tgz#05263869d3c8a7292278d7e49630f52520f204d7"
-  integrity sha512-JDH14gMpSj8UzEaKwVkrqKOeAOyK0dDWsFlKvWhk0Xl5yw9FyafYf1xZPb4uSXaPBAFQtUouFlR1Zt68BCY0/w==
+algoliasearch-helper@>=3, algoliasearch-helper@^3.6.2:
+  version "3.6.2"
+  resolved "https://registry.yarnpkg.com/algoliasearch-helper/-/algoliasearch-helper-3.6.2.tgz#45e19b12589cfa0c611b573287f65266ea2cc14a"
+  integrity sha512-Xx0NOA6k4ySn+R2l3UMSONAaMkyfmrZ3AP1geEMo32MxDJQJesZABZYsldO9fa6FKQxH91afhi4hO1G0Zc2opg==
   dependencies:
     events "^1.1.1"
 
@@ -3647,7 +3647,7 @@ diff-match-patch@^1.0.0:
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/diff-match-patch/-/diff-match-patch-1.0.5.tgz#abb584d5f10cd1196dfc55aa03701592ae3f7b37"
   integrity sha512-IayShXAgj/QMXgB0IWmKx+rOPuGMhqm5w6jvFxmVenXKIzRqTAAsbBPT3kWQeGANj3jGgvcvv4yK6SxqYmikgw==
-  
+
 diff@^4.0.1:
   version "4.0.2"
   resolved "https://registry.yarnpkg.com/diff/-/diff-4.0.2.tgz#60f3aecb89d5fae520c11aa19efc2bb982aade7d"
@@ -7583,27 +7583,27 @@ react-hotjar@^3.0.1:
   resolved "https://registry.npmjs.org/react-hotjar/-/react-hotjar-3.0.1.tgz#7917b57223d37f9ce3bf4638e5f83c5bc46e5e06"
   integrity sha512-3ZiZQhbsisJkK+iUlPVVTa7hUJXVQ/o/3+Bzocpjb2+of8lMh7uiDXLsSKxD6T4J3JR9sZ+L3v9CYyUgrp1R8g==
 
-react-instantsearch-core@^6.12.1:
-  version "6.12.1"
-  resolved "https://registry.npmjs.org/react-instantsearch-core/-/react-instantsearch-core-6.12.1.tgz#314b420d4205b25745db4b81fa45cf1454bd4bf1"
-  integrity sha512-X4OqakDI3DOcFiS1S46z+cciKEQcKBmH8HGQLztzW14hoHRqFfZzuqWydlSxfJZN5WksMMm78EmL2jvoqIHd/A==
+react-instantsearch-core@^6.12.1, react-instantsearch-core@^6.15.0:
+  version "6.15.0"
+  resolved "https://registry.yarnpkg.com/react-instantsearch-core/-/react-instantsearch-core-6.15.0.tgz#c07a2a053ba9afbeeccd363c97bb676cc0498985"
+  integrity sha512-mp6kWtyDvf3qeAuNxl8m/f+7pBpf1Enlao69oXyYiTsx582nayE8Wo3g2Des0o6l+D1L09UgvGa+1b/bmkTD2w==
   dependencies:
     "@babel/runtime" "^7.1.2"
-    algoliasearch-helper "^3.5.3"
+    algoliasearch-helper "^3.6.2"
     prop-types "^15.6.2"
     react-fast-compare "^3.0.0"
 
-react-instantsearch-dom@^6.12.1:
-  version "6.12.1"
-  resolved "https://registry.npmjs.org/react-instantsearch-dom/-/react-instantsearch-dom-6.12.1.tgz#9bfb8f3a0b7ed84497af2ad7b65f364e4c7009b3"
-  integrity sha512-KXk2UDmJ3OP9B57owPC0+7fdcVtmYAA6/UWimR9CXhvFGCMi11xlR/wscYMYxdPuxs9IkmnnLDIJSjSGADYnow==
+react-instantsearch-dom@^6.15.0:
+  version "6.15.0"
+  resolved "https://registry.yarnpkg.com/react-instantsearch-dom/-/react-instantsearch-dom-6.15.0.tgz#057a19de9fef2bac8f35a1c3c0a2f5d2a676a302"
+  integrity sha512-BGqlDNd9H4CsjA7lhEkK8pH5pXVjdWMCdIkqqWbS++zBmIJnR+F6h/z1g7x1B/q77EsVUU7LDbdpKayEEftFDA==
   dependencies:
     "@babel/runtime" "^7.1.2"
-    algoliasearch-helper "^3.5.3"
+    algoliasearch-helper "^3.6.2"
     classnames "^2.2.5"
     prop-types "^15.6.2"
     react-fast-compare "^3.0.0"
-    react-instantsearch-core "^6.12.1"
+    react-instantsearch-core "^6.15.0"
 
 react-is@17.0.2, react-is@^17.0.0, react-is@^17.0.2:
   version "17.0.2"
