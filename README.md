@@ -56,39 +56,39 @@ An optional way to use `git cz` if you don't want to install `commitizen` global
 
 ### Home page
 
-![Home page](https://static.yancey.app/Jietu20200518-234148.jpg)
+![Home page](https://edge.yancey.app/beg/Jietu20200518-234148.jpg)
 
 ### Blog page
 
 The whole site supports light and dark theme.
 
-![light mode](https://static.yancey.app/Jietu20200518-234218.jpg)
+![light mode](https://edge.yancey.app/beg/Jietu20200518-234218.jpg)
 
-![dark mode](https://static.yancey.app/Jietu20200518-234224.jpg)
+![dark mode](https://edge.yancey.app/beg/Jietu20200518-234224.jpg)
 
 ### Blog detail page
 
-![Blog detail page](https://static.yancey.app/Jietu20200518-234354.jpg)
+![Blog detail page](https://edge.yancey.app/beg/Jietu20200518-234354.jpg)
 
 ### Music page
 
-![Music page](https://static.yancey.app/Jietu20200518-234240.jpg)
+![Music page](https://edge.yancey.app/beg/Jietu20200518-234240.jpg)
 
 ### Privacy Policy page
 
-![Privacy Policy page](https://static.yancey.app/Jietu20200518-234420.jpg)
+![Privacy Policy page](https://edge.yancey.app/beg/Jietu20200518-234420.jpg)
 
 ## Lighthouse
 
 The performances of lighthouse as follows, we will optimize the a11y next time.
 
-![lighthouse](https://static.yancey.app/Jietu20200514-122909.jpg)
+![lighthouse](https://edge.yancey.app/beg/Jietu20200514-122909.jpg)
 
 ## Responsive Layout
 
 🔥 We are honored to announce that the blog supports responsive layout. This update will bring an unprecedented experience to the mobile.
 
-![IMG_0456 2.PNG](https://static.yancey.app/IMG_0456%202.PNG?x-oss-process=image/resize,w_320)
+![IMG_0456 2.PNG](https://edge.yancey.app/beg/IMG_0456%202.PNG?x-oss-process=image/resize,w_320)
 
 ## Progressive Web Apps(PWAs)
 
