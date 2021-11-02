@@ -214,7 +214,7 @@ export const HitTag = styled.div`
   padding: 0.2rem 0.4rem;
   font-size: 0.7rem;
   font-weight: 600;
-  color: ${({ theme }) => theme.colors.postTag};
+  color: ${({ theme }) => theme.colors.postTagColor};
   background: ${({ theme }) => theme.colors.postTagBg};
   border-radius: 0.3rem;
 `
