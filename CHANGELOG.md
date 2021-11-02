@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.14.0](https://github.com/Yancey-Blog/blog-desktop-v2/compare/v4.13.0...v4.14.0) (2021-11-02)
+
+
+### Features
+
+* add security group strategy ([965ba8f](https://github.com/Yancey-Blog/blog-desktop-v2/commit/965ba8ff732676ac6d35815f6d80b2b65e69ab40))
+* switch `theme-color` when theme changed ([15225b6](https://github.com/Yancey-Blog/blog-desktop-v2/commit/15225b6d0b48b08a007e835a958e78a5077d5c3d))
+
 ## [4.13.0](https://github.com/Yancey-Blog/blog-desktop-v2/compare/v4.12.0...v4.13.0) (2021-10-13)
 
 
