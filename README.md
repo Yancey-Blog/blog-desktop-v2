@@ -15,7 +15,7 @@ _This library is part of the [BEG (Blog Environment Group)](https://github.com/Y
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-green.svg)](https://github.com/Yancey-Blog/blog-desktop-v2/pulls)
 [![Average time to resolve an issue](https://isitmaintained.com/badge/resolution/Yancey-Blog/blog-desktop-v2.svg)](https://isitmaintained.com/project/Yancey-Blog/blog-desktop-v2)
 [![Percentage of issues still open](https://isitmaintained.com/badge/open/Yancey-Blog/blog-desktop-v2.svg)](https://isitmaintained.com/project/Yancey-Blog/blog-desktop-v2)
-[![Node](https://img.shields.io/badge/node-%3E%3D12.16.0-orange.svg)](https://nodejs.org/en/)
+[![Node](https://img.shields.io/badge/node-%3E%3D12.22.5-orange.svg)](https://nodejs.org/en/)
 [![Gitter](https://badges.gitter.im/yancey-official/community.svg)](https://gitter.im/yancey-official/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 
 [![DependaBot](https://camo.githubusercontent.com/1fe7004c016a5ab641008b9579409c784eaa1725/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f446570656e6461626f742d656e61626c65642d626c75652e737667)](https://dependabot.com/)
