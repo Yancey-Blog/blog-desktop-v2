@@ -42,7 +42,7 @@ module.exports = (phase, { defaultConfig }) => {
   return withPWA(
     withBundleAnalyzer({
       env: {
-        NEXT_PUBLIC_API_URL: 'https://api.yanceyleo.com/graphql',
+        NEXT_PUBLIC_API_URL: 'https://api.yanceyleo.com/beg/graphql',
         NEXT_PUBLIC_DOMAIN_URL: 'https://yanceyleo.com',
         NEXT_PUBLIC_STATIC_FILE_URL: 'https://edge.yancey.app/beg',
         NEXT_PUBLIC_GA_KEY: 'UA-114532340-1',
