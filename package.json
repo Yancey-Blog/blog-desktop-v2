@@ -38,7 +38,7 @@
     "luxon": "^2.0.2",
     "marked": "^3.0.8",
     "next": "^11.1.2",
-    "next-pwa": "^5.4.0",
+    "next-pwa": "^5.4.4",
     "next-with-apollo": "^5.2.1",
     "normalize.css": "^8.0.1",
     "notistack": "^2.0.2",
