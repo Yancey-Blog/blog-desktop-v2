@@ -50,7 +50,7 @@
     "react-hotjar": "^3.0.1",
     "react-instantsearch-core": "^6.12.1",
     "react-instantsearch-dom": "^6.15.0",
-    "react-markdown": "^7.0.1",
+    "react-markdown": "^7.1.2",
     "react-share": "^4.4.0",
     "react-syntax-highlighter": "^15.4.4",
     "rehype-raw": "^6.1.0",
